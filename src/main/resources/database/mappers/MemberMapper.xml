@@ -10,7 +10,7 @@
   	</insert>
   	
   	<insert id="setMemberRoleAdd" parameterType="MemberDTO">
-  		INSERT INTO MEMBER_ROLE (ID, ROLENUM)
+  		INSERT INTO MEMBERROLE (ID, ROLENUM)
   		VALUES (#{id}, (SELECT ROLENUM FROM ROLE WHERE ROLENAME='MEMBER') )
   	</insert>
   	
@@ -19,7 +19,7 @@
 		FROM 
 			 MEMBER M
 			 INNER JOIN
-			 MEMBER_ROLE MR
+			 MEMBERROLE MR
 			 ON (M.ID = MR.ID)
 			 INNER JOIN 
 			 ROLE R

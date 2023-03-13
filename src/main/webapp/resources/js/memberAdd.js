@@ -101,7 +101,7 @@ btn.addEventListener("click", function(){
     //if(idCheck && pwLengthCheck && pwNullCheck && pwEqualCheck){
     if(!checks.includes(false)){
         alert('회원가입 성공');
-        //frm.submit();
+        frm.submit();
     }else {
         alert("필수 사항을 입력하세요")
     }
