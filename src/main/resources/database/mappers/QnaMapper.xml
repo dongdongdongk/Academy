@@ -1,1 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.ac.home.qna.QnaDAO">
+  	
+  	<select id="getQnaList" resultType="QnaDTO">
+  		SELECT * FROM QNA
+  	</select>
+  
+  	<select id="getQnaDetail" parameterType="QnaDTO" resultType="QnaDTO">
+  		SELECT * FROM QNA
+  		WHERE NUM = #{num}
+  	</select>
+  	
+  	<insert id="setQnaAdd" parameterType="QnaDTO">
+  		INSERT INTO QNA
+  		VALUES (QNA_SEQ.NEXTVAL, #{title}, #{contents}, #{writer}, SYSDATE, 0, 0, 0, 0)
+  	</insert>
+  	
+  	<update id="setQnaUpdate" parameterType="QnaDTO">
+  		UPDATE QNA SET TITLE = #{title}, CONTENTS = #{contents}
+  		WHERE NUM = #{num}
+  	</update>
+  	
+  	<delete id="setQnaDelete" parameterType="QnaDTO">
+  		DELETE QNA WHERE NUM = #{num}
+  	</delete>
+  	
+  </mapper>

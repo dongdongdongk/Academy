@@ -5,10 +5,11 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
-
-<P>  The time on the server is ${serverTime}. </P>
+	<h1>
+		Home page
+	</h1>
+	
+	<a href="qna/qnaList">qnaList</a>
+	
 </body>
 </html>
