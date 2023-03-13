@@ -31,6 +31,7 @@
   		<id column="ID" property="id"/>
   		<result column="PW" property="pw"/>
   		<result column="NAME" property="name"/>
+  		<result column="ADDRESS" property="address"/>
   		<result column="PHONE" property="phone"/>
   		<result column="EMAIL" property="email"/>
   		<association property="roleDTO" javaType="RoleDTO">

@@ -50,6 +50,11 @@
 		</div>
 		
 		<div class="mb-3">
+			<label for="name" class="form-label fw-bold">주소</label> 
+			<input type="text" name="address" class="form-control" id="address" placeholder="주소 입력">
+		</div>
+				
+		<div class="mb-3">
 			<label for="phone" class="form-label fw-bold">전화번호</label> 
 			<input type="tel" name="phone" class="form-control" id="phone" placeholder="010-OOOO-OOOO">
 		</div>
