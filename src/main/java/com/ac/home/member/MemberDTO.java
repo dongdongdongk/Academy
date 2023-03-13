@@ -1,5 +1,7 @@
 package com.ac.home.member;
 
+import com.ac.home.member.RoleDTO;
+
 public class MemberDTO {
 	
 	private String id;
@@ -8,10 +10,16 @@ public class MemberDTO {
 	private String address;
 	private String phone;
 	private String email;
+	private RoleDTO roleDTO;
 	
 	
 	
-	
+	public RoleDTO getRoleDTO() {
+		return roleDTO;
+	}
+	public void setRoleDTO(RoleDTO roleDTO) {
+		this.roleDTO = roleDTO;
+	}
 	public String getId() {
 		return id;
 	}

@@ -20,7 +20,7 @@
  		<typeAlias type="com.iu.s1.board.qna.QnaDTO" alias="QnaDTO"/> -->
  		
  		<typeAlias type="com.ac.home.member.MemberDTO" alias="MemberDTO"/>
- 		
+ 		<typeAlias type="com.ac.home.member.RoleDTO" alias="RoleDTO"/>
  		
  		<!-- <typeAlias type="com.iu.s1.util.Pager" alias="Pager"/>
  		
