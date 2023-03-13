@@ -13,7 +13,7 @@
 <c:import url="./template/header.jsp"></c:import>
 
 Home
-
+<a href="qna/qnaList">qnaList</a>
 <c:import url="./template/common_js.jsp"></c:import>
 <script src="/resources/js/noticeTop5.js"></script>
 </body>

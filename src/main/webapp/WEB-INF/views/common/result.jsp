@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>알림</title>
 </head>
 <body>
-<script type="text/javascript">
-	let message ='${result}';
-	if(message != ''){
-		alert(message);		
-	}
-	location.href='${url}';
-</script>
+	<script type="text/javascript">
+		let message = '${result}';
+		if(message != '') {
+			alert(message);
+		}
+		location.href = "${url}"
+	</script>
 </body>
 </html>
