@@ -4,6 +4,11 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.ac.home.member.MemberDAO">
+  <insert id="">
+  
+  
+  </insert>
+  	
   	
   </mapper>
 		

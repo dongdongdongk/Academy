@@ -10,8 +10,13 @@ import org.springframework.stereotype.Repository;
 public class MemberDAO {
 	 
 	 @Autowired
-	 private SqlSession session;
-	 private final String NAMESPACE="com.iu.memeber.MemberDAO.";
+	 private SqlSession sqlSession;
+	 private final String NAMESPACE="com.ac.home.memeber.MemberDAO.";
+	 
+	 public int setMemberAdd(MemberDTO memberDTO)throws Exception{
+		 
+		 return sqlSession.insert(NAMESPACE+"setMemberAdd", memberDTO);
+	 }
 	 
 
 	
