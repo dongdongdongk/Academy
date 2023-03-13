@@ -1,4 +1,4 @@
-package com.iu.s1.member;
+package com.ac.home.member;
 
 public class MemberDTO {
 	
