@@ -1,9 +1,9 @@
 package com.ac.home.util;
 
 public class Pager {
-//	private Long bookNumber;
-//	private String kind;
-//	private String search;
+	private Long num;
+	private String kind;
+	private String search;
 	
 	private Long page;
 	private Long perPage;
@@ -133,5 +133,33 @@ public class Pager {
 
 	public Long getTotalPage() {
 		return totalPage;
+	}
+
+	public Long getNum() {
+		return num;
+	}
+
+	public void setNum(Long num) {
+		this.num = num;
+	}
+
+	public String getKind() {
+		return kind;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
+	}
+
+	public String getSearch() {
+		return search;
+	}
+
+	public void setSearch(String search) {
+		this.search = search;
+	}
+
+	public void setTotalPage(Long totalPage) {
+		this.totalPage = totalPage;
 	}
 }

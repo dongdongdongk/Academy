@@ -7,5 +7,7 @@
   	<typeAliases>
   		<typeAlias type="com.ac.home.qna.QnaDTO" alias="QnaDTO"/>
   		
+  		<typeAlias type="com.ac.home.util.Pager" alias="Pager"/>
+  		
   	</typeAliases>
   </configuration>

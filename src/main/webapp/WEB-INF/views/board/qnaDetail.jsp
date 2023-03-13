@@ -25,25 +25,36 @@
 	  					<label for="writer" class="form-label">${detail.writer}</label>
 	  				</div>
 	  				
-	  				
-	  				<div class="col-md-12 mt-5">
+	  				<div class="col-md-6">
 	    				<label for="title" class="form-label">제목</label>
-	    				<label for="title" class="form-label">${detail.title}</label>
 	  				</div>
 	  				
-	  				<div class="col-md-12 mt-5">
+	  				<div class="col-md-6">
+	  					<label for="title" class="form-label">${detail.title}</label>
+	  				</div>
+	  				
+	  				<div class="col-md-6">
 	    				<label for="contents" class="form-label">내용</label>
-	    				<label for="contents" class="form-label">${detail.contents}</label>
-	  				</div>
-	
-	  				<div class="col-md-12 mt-5">
-	    				<label for="regDate" class="form-label">등록일</label>
-	    				<label for="regDate" class="form-label">${detail.regDate}</label>
 	  				</div>
 	  				
-	  				<div class="col-md-12 mt-5">
+	  				<div class="col-md-6">
+	  					<label for="contents" class="form-label">${detail.contents}</label>
+	  				</div>
+	  				
+	  				<div class="col-md-6">
+	    				<label for="regDate" class="form-label">등록일</label>	    				
+	  				</div>
+	  				
+	  				<div class="col-md-6">
+	  					<label for="regDate" class="form-label">${detail.regDate}</label>
+	  				</div>
+	  				
+	  				<div class="col-md-6">
 	    				<label for="hit" class="form-label">조회수</label>
-	    				<label for="hit" class="form-label">${detail.hit}</label>
+	  				</div>
+	  				
+	  				<div class="col-md-6">
+	  					<label for="hit" class="form-label">${detail.hit}</label>
 	  				</div>
 	
 					<div class="row col-md-2 mx-auto mt-5">
