@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace = "com.ac.home.notice.NoticeDAO">
+  
+  
+  
+  	<!-- <sql id="noticeCondition">
+  		<where>
+  			<if test="kind=='title'">
+  				TITLE LIKE '%'||#{search}||'%'
+  			</if>
+  			<if test="kind=='contents'">
+  				CONTENTS LIKE '%'||#{search}||'%'
+  			</if>
+  			<if test="kind=='writer'">
+  				WRITER LIKE '%'||#{search}||'%'
+  			</if>
+  		</where>
+  	</sql> -->
+  
+  
+  
+  <select id="getNoticeList" resultType="NoticeDTO">
+	  	SELECT * FROM NOTICE
+  	</select>
+  
+ 
+ <!-- <select id="getTotalCount" parameterType="pager" resultType="Long">
+  		SELECT COUNT(NUM) FROM NOTICE
+  		<include refid="noticeCondition"></include>
+ </select> -->
+  
+  
+  <insert id="setNoticeAdd" parameterType="NoticeDTO">
+  		<selectKey keyProperty="num" resultType="Long" order="BEFORE">
+  			SELECT NOTICE_SEQ.NEXTVAL FROM DUAL
+  		</selectKey>
+  		INSERT INTO NOTICE (NUM, TITLE, CONTENTS, WRITER, REGDATE, HIT)
+  		VALUES(#{num}, #{title}, #{contents}, #{writer}, sysdate, 0)
+  </insert>
+  
+  
+  	<delete id="setNoticeDelete" parameterType="NoticeDTO">
+  		DELETE NOTICE WHERE NUM=#{num}
+  	</delete>
+  
+ 	 
+ 	 
+ 	 <select id="getNoticeDetail" parameterType="NoticeDTO" resultType="NoticeDTO">
+ 	 	SELECT *
+		FROM NOTICE 
+		WHERE NUM = #{num}
+ 	 </select>
+ 	 
+ 	 <update id="setNoticedUpdate" parameterType="NoticeDTO">
+  		UPDATE NOTICE SET TITLE=#{title}, CONTENTS=#{contents} WHERE NUM=#{num}
+  	</update>
+ 	 
+ 	<!--  <resultMap type="NoticeDTO" id="getBoardDetailResult">
+  		<id column="num" property="num"/>
+  		<result column="title" property="title"/>
+  		<result column="writer" property="writer"/>
+  		<result column="contents" property="contents"/>
+  		<result column="regDate" property="regDate"/>
+  		<result column="hit" property="hit"/>
+  	</resultMap> -->
+ 	 
+ 	 
+ 	 
+ 	 
+ 	 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </mapper>
