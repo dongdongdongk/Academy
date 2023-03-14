@@ -40,4 +40,20 @@ public class QnaService {
 	public int setQnaHit(QnaDTO qnaDTO) throws Exception {
 		return qnaDAO.setQnaHit(qnaDTO);
 	}
+	
+	public int setReplyAdd(QnaDTO qnaDTO) throws Exception {
+		QnaDTO parent = (QnaDTO)qnaDAO.getQnaDetail(qnaDTO);
+		
+		qnaDTO.setRef(parent.getRef());
+		
+		qnaDTO.setStep(parent.getStep() + 1);
+		
+		qnaDTO.setDepth(parent.getDepth() + 1);
+		
+		int result = qnaDAO.setStepUpdate(parent);
+		
+		result = qnaDAO.setReplyAdd(qnaDTO);
+		
+		return result; 
+	}
 }

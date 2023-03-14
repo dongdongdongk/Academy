@@ -46,8 +46,11 @@
   	</select>
   	
   	<insert id="setQnaAdd" parameterType="QnaDTO">
+  		<selectKey keyProperty="num" resultType="Long" order="BEFORE">
+			SELECT QNA_SEQ.NEXTVAL FROM DUAL
+		</selectKey>
   		INSERT INTO QNA
-  		VALUES (QNA_SEQ.NEXTVAL, #{title}, #{contents}, #{writer}, SYSDATE, 0, 0, 0, 0)
+  		VALUES (#{num}, #{title}, #{contents}, #{writer}, SYSDATE, 0, #{num}, 0, 0)
   	</insert>
   	
   	<update id="setQnaUpdate" parameterType="QnaDTO">
@@ -63,5 +66,15 @@
   		UPDATE QNA SET HIT = #{hit} + 1
 		WHERE NUM = #{num}
   	</update>
+  	
+  	<update id="setStepUpdate" parameterType="QnaDTO">
+  		UPDATE QNA SET STEP = STEP + 1 
+  		WHERE REF = #{ref} AND STEP > #{step}  
+	</update>
+	
+	<insert id="setReplyAdd" parameterType="QnaDTO">
+  		INSERT INTO QNA (NUM, TITLE, CONTENTS, WRITER, REGDATE, HIT, REF, STEP, DEPTH)
+  		VALUES (QNA_SEQ.NEXTVAL, #{title}, #{contents}, #{writer}, SYSDATE, 0, #{ref}, #{step}, #{depth})
+	</insert>
   	
   </mapper>

@@ -43,4 +43,12 @@ public class QnaDAO {
 	public int setQnaHit(QnaDTO qnaDTO) throws Exception {
 		return sqlSession.update(NAMESPACE + "setQnaHit", qnaDTO);
 	}
+	
+	public int setStepUpdate(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.update(NAMESPACE + "setStepUpdate", qnaDTO);
+	}
+	
+	public int setReplyAdd(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.insert(NAMESPACE + "setReplyAdd", qnaDTO);
+	}
 }

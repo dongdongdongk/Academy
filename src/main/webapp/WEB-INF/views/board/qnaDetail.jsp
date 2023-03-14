@@ -69,6 +69,11 @@
 					<div class="row col-md-2 mx-auto mt-5">
 						<a class="btn btn-primary" href="./qnaList">글 목록</a>
 					</div>
+					
+					<div class="row col-md-2 mx-auto mt-5">
+						<a class="btn btn-primary" href="./qnaReply?num=${detail.num}">답글 작성</a>
+					</div>
+					
 				</div>
 			</div>
 		</div>

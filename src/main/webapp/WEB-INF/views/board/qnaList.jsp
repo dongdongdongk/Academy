@@ -27,7 +27,10 @@
 			  		<c:forEach items="${list}" var="dto">
 						<tr>
 							<td>${dto.num}</td>
-							<td><a href="./qnaDetail?num=${dto.num}">${dto.title}</a></td>
+							<td>
+								<c:forEach begin="1" end="${dto.depth}">--</c:forEach>	
+								<a href="./qnaDetail?num=${dto.num}">${dto.title}</a>
+							</td>
 							<td>${dto.writer}</td>
 							<td>${dto.hit}</td>
 						</tr>
