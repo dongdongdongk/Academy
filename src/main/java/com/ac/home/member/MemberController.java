@@ -50,53 +50,30 @@ public class MemberController {
 				mv.setViewName("redirect:../");
 				return mv;
 			}
-		@RequestMapping(value = "memberLogin", method = RequestMethod.GET)
-		public ModelAndView getMemberLogin(HttpServletRequest request)throws Exception{
-			
-			ModelAndView mv = new ModelAndView();
-			mv.setViewName("member/memberLogin");
-			
-			Cookie [] cookies = request.getCookies();
-			
-			for(Cookie cookie:cookies) {
-				System.out.println(cookie.getName());
-				System.out.println(cookie.getValue());
-				System.out.println(cookie.getDomain());
-				System.out.println(cookie.getPath());
-				System.out.println("--------------");
-				if(cookie.getName().equals("rememberId")) {
-					mv.addObject("rememberId", cookie.getValue());
-					break;
-				}
-			}
-			
-			return mv;
-		}
-		@RequestMapping(value = "memberLogin", method = RequestMethod.POST)
-		public ModelAndView getMemberLogin(MemberDTO memberDTO, HttpServletRequest request, String remember, HttpServletResponse response)throws Exception{
-			
-			ModelAndView mv = new ModelAndView();
-			
-			if(remember!=null && remember.equals("remember")) {
-				Cookie cookie = new Cookie("rememberId", memberDTO.getId());
-				cookie.setMaxAge(-1);//√ ¥‹¿ß
-				response.addCookie(cookie);	
-			}else {
-				Cookie cookie = new Cookie("rememberId", "");
-				cookie.setMaxAge(0);
-				response.addCookie(cookie);
-				
-			}
-//			memberDTO = memberService.getMemberLogin(memberDTO);
-//			if(memberDTO != null) {
-//				HttpSession session = request.getSession();
-//				session.setAttribute("member", memberDTO);
-//			}
-			
-			mv.setViewName("redirect:../");
-			return mv;
-			
-		}
+		   @RequestMapping(value = "memberLogin", method = RequestMethod.GET)
+		      public ModelAndView getMemberLogin()throws Exception{
+		         
+		         ModelAndView mv = new ModelAndView();
+		         mv.setViewName("member/memberLogin");
+		         return mv;
+		      }
+		      @RequestMapping(value = "memberLogin", method = RequestMethod.POST)
+		      public ModelAndView getMemberLogin(MemberDTO memberDTO, HttpServletRequest request)throws Exception{
+		         
+		         ModelAndView mv = new ModelAndView();
+		         memberDTO = memberService.getMemberLogin(memberDTO);
+//		         System.out.println("member:"+ memberDTO.getId());
+		         HttpSession session= request.getSession();
+		         if(memberDTO != null) {
+		        	 
+		            session.setAttribute("member", memberDTO);
+		         }
+//		         System.out.println(session.getAttribute("member") !=null);
+		         
+		         mv.setViewName("redirect:../");
+		         return mv;
+		         
+		      }
 		@RequestMapping(value = "memberLogout", method = RequestMethod.GET)
 		public ModelAndView getMemberLogout(HttpSession session)throws Exception{
 			ModelAndView mv = new ModelAndView();

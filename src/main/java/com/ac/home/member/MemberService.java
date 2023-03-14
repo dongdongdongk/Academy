@@ -31,6 +31,7 @@ public class MemberService {
     public MemberDTO getMemberLogin(MemberDTO memberDTO)throws Exception{
     	
     	MemberDTO result = memberDAO.getMemberLogin(memberDTO);
+    	System.out.println(result !=null);
     	
     	if(result != null && memberDTO.getPw().equals(result.getPw())) {
     		memberDTO.setPw(null);
