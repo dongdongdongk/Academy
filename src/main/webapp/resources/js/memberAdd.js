@@ -22,6 +22,7 @@ let checks = [false, false, false, false]
 id.addEventListener("blur", function(){
     //중복검사
     let xhttp = new XMLHttpRequest();
+    
 
     //url, method
     xhttp.open("POST", "./memberIdCheck");

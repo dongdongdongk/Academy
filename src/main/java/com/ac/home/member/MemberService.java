@@ -11,7 +11,7 @@ public class MemberService {
 	private MemberDAO memberDAO;
     
     
-    public boolean getMeberIdCheck(MemberDTO memberDTO)throws Exception{
+    public boolean getMemberIdCheck(MemberDTO memberDTO)throws Exception{
 		 memberDTO = memberDAO.getMemberLogin(memberDTO);
 		 
 		 boolean check = true;

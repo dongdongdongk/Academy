@@ -49,7 +49,7 @@
 		
 		<div class="mb-3">
 			<label for="address" class="form-label fw-bold ">주소</label> 
-			<input type="text" name="address" class="form-control" id="address" placeholder="example@gmail.com">
+			<input type="text" name="address" class="form-control" id="address" placeholder="대한민국 경기도....">
 		</div>
 		
 		
