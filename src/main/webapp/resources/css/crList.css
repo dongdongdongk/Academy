@@ -1,0 +1,326 @@
+.sample1,.sample2,.sample3,.sample4,.sample5,.sample6,.sample7,.sample8,.sample9,.sample10{
+    width:480px;
+    margin:50px auto;
+  }
+  .sample1 blockquote{
+    position:relative;
+    border-left:3px solid #DA8596;
+    padding-left:10px;
+  }
+  .sample1 blockquote:before{
+    position:absolute;
+    font-family:'FontAwesome';
+    content:'\f10d';
+    font-size: 20px;
+    color:#DA8596;
+  }
+  .sample1 blockquote p{
+    position:relative;
+    padding-left:30px;
+  }
+  .sample1 blockquote cite{
+    display: block;
+    font-size:0.8rem;
+    color:#F8C8B2;
+    text-align:right;
+  }
+  .sample2 blockquote{
+    position:relative;
+    border:1px solid #8BC0B8;
+    border-radius:10px;
+    padding:20px;
+  }
+  .sample2 blockquote:before{
+    position:absolute;
+    font-family:'FontAwesome';
+    content:'\f10d';
+    font-size: 20px;
+    color:#8BC0B8;
+    top:10px;
+    left:10px;
+  }
+  .sample2 blockquote:after{
+    position:absolute;
+    font-family:'FontAwesome';
+    content:'\f10e';
+    font-size: 20px;
+    color:#8BC0B8;
+    right:10px;
+    bottom:10px;  
+  }
+  .sample2 blockquote cite {
+    display: block;
+    font-size: 0.8rem;
+    text-align: right;
+    color: #D4DED7;
+    padding-right:20px;
+  }
+  
+  .sample3 blockquote{
+    position:relative;
+    border-top:1px solid #7A87B0;
+    border-bottom:1px solid #7A87B0;
+    padding:10px;
+  }
+  .sample3 blockquote:before{
+    position:absolute;
+    background-color:#FFFFFF;
+    color:#7A87B0;
+    font-family:'FontAwesome';
+    content:'\f10d';
+    line-height:1;
+    text-align:center;
+    top:-20px;
+    left:-10px;
+    padding:10px;
+    font-size:20px;
+  }
+  .sample3 blockquote:after{
+    position:absolute;
+    right:-10px;
+    bottom:-20px;
+    background-color:#FFFFFF;
+    padding:10px;
+    color:#7A87B0;
+    font-family:'FontAwesome';
+    content:'\f10e';
+    line-height:1;
+    text-align:center;
+    font-size:20px;
+  }
+  .sample3 blockquote cite {
+    display: block;
+    padding-right:30px;
+    font-size: 0.8rem;
+    text-align: right;
+    color: #808080;
+  }
+  .sample4 blockquote{
+    position:relative;
+    background:#FBDFDF;
+    border-radius:10px;
+    padding:20px;
+  }
+  .sample4 blockquote:before{
+    position:absolute;
+    left:45%;
+    top:-24px;
+    background-color:#FFFFFF;
+    color:#808080;
+    border:2px solid #FBDFDF; 
+    box-sizing:border-box;
+    font-family:'FontAwesome';
+    content:'\f10e';
+    line-height:1;
+    padding-top:12px;
+    text-align:center;
+    width:48px;
+    height:48px;
+    font-size:20px;
+    border-radius:24px;
+  }
+  .sample4 blockquote p {
+    color:#808080
+  }
+  .sample4 blockquote cite {
+    display: block;
+    border-top:1px solid #808080;
+    padding-top:10px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #808080;
+  }
+  
+  .sample5 blockquote {
+    position: relative;
+    background-color: #f9fbf9;
+    border-top: 1px solid #B7D7B7;
+    border-bottom: 1px solid #B7D7B7;
+    box-shadow: 0 0 0 10px #f9fbf9;
+    padding: 20px;
+  }
+  .sample5 blockquote p {
+    margin-top: 20px;
+  }
+  .sample5 blockquote p::before {
+    font-family:'FontAwesome';
+    content:'\f10d';
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    color: #B7D7B7;
+  }
+  .sample5 blockquote cite {
+    display: block;
+    font-size: 0.8rem;
+    text-align: right;
+    color: #B7D7B7;
+  }
+  .sample6 blockquote{
+    position:relative;
+    border-left:3px double #997bad;
+    padding-left:10px;
+    background:#e5e6f4;
+  }
+  .sample6 blockquote:before{
+    position:absolute;
+    font-family:'FontAwesome';
+    content:'\f10d';
+    font-size: 18px;
+    color:#997bad;
+    padding-top:10px;
+  }
+  .sample6 blockquote p{
+    position:relative;
+    padding: 30px 10px 0px;
+  }
+  .sample6 blockquote cite{
+    display: block;
+    font-size:0.8rem;
+    color:#997bad;
+    text-align:right;
+    padding:10px;
+  }
+  .sample7 blockquote{
+    position:relative;
+    background:#F9eada;
+    border-radius:10px;
+    padding:20px;
+  }
+  .sample7 blockquote:before{
+    position:absolute;
+    left:5%;
+    top:-24px;
+    color:#808080;
+    box-sizing:border-box;
+    font-family:'FontAwesome';
+    content:'\f10d';
+    line-height:1;
+    padding-top:12px;
+    text-align:left;
+    font-size:40px;
+  }
+  .sample7 blockquote p {
+    color:#808080
+  }
+  .sample7 blockquote cite {
+    display: block;
+    border-top:1px solid #808080;
+    padding-top:10px;
+    font-size: 0.8rem;
+    text-align: right;
+    color: #808080;
+  }
+  
+  .sample8 blockquote{
+    position:relative;
+    border:1px solid #a3c7db;
+    background:#FFFFF;
+    padding:20px;
+  }
+  .sample8 blockquote:before{
+    position:absolute;
+    left:45%;
+    top:-24px;
+    background-color:#a3c7db;
+    color:#FFFFFF;
+    border:2px solid #a3c7db; 
+    box-sizing:border-box;
+    font-family:'FontAwesome';
+    content:'\f10d';
+    line-height:1;
+    padding-top:12px;
+    text-align:center;
+    width:48px;
+    height:48px;
+    font-size:20px;
+    border-radius:24px;
+  }
+  .sample8 blockquote p {
+    color:#808080
+  }
+  .sample8 blockquote cite {
+    display: block;
+    padding-top:10px;
+    font-size: 0.8rem;
+    text-align: right;
+    color: #808080;
+  }
+  
+  .sample9 blockquote{
+    position:relative;
+    background:#CDE7EE;
+    padding:20px;
+  }
+  .sample9 blockquote:before{
+    position:absolute;
+    left:5%;
+    top:-24px;
+    color:#3CAAB1;
+    box-sizing:border-box;
+    font-family:'FontAwesome';
+    content:'\f10d';
+    line-height:1;
+    padding-top:12px;
+    text-align:left;
+    font-size:40px;
+  }
+  .sample9 blockquote p {
+    color:#808080
+  }
+  .sample9 blockquote cite {
+    display: block;
+    border-top:1px dashed #FFFFFF;
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size: 0.8rem;
+    text-align: right;
+    color: #808080;
+  }
+  .sample9 blockquote:after{
+    position:absolute;
+    right:5%;
+    bottom:-25px;
+    color:#3CAAB1;
+    box-sizing:border-box;
+    font-family:'FontAwesome';
+    content:'\f10e';
+    line-height:1;
+    padding-bottom:10px;
+    text-align:left;
+    font-size:40px;
+  }
+  
+  .sample10 blockquote{
+    position:relative;
+    border-left:2px solid #A5CC80;
+    border-right:2px solid #A5CC80;
+    padding:20px;
+    background:#DDE8C2;
+  }
+  .sample10 blockquote:before{
+    position:absolute;
+    font-family:'FontAwesome';
+    content:'\f10d';
+    font-size: 28px;
+    color:#A5CC80;
+    top:5px;
+    left:10px;
+  }
+  .sample10 blockquote:after{
+    position:absolute;
+    font-family:'FontAwesome';
+    content:'\f10e';
+    font-size: 28px;
+    color:#A5CC80;
+    right:10px;
+    bottom:5px;  
+  }
+  .sample10 blockquote cite {
+    display: block;
+    font-size: 0.8rem;
+    text-align: right;
+    color: #808080;
+    padding-right:20px;
+  }

@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>수강후기 목록</title>
 <c:import url="../template/common_css.jsp"></c:import>
+<link rel="stylesheet" href="/resources/css/crList.css">
 </head>
 <body>
 	
@@ -36,6 +37,71 @@
 			</table>
 		</div>
 	</div>
+
+	<div class="sample1">
+		<blockquote>
+		<p>aaaaaaaaaa</p>
+		<cite>sssssssss</cite>
+		</blockquote>
+	  </div>
+	  <div class="sample2">
+		<blockquote>
+		<p>bbbbbbbbbb</p>
+		<cite>ssssssss</cite>
+		</blockquote>
+	  </div>
+	  <div class="sample3">
+		<blockquote>
+		<p>cccccccccccc</p>
+		<cite>ssssssssss</cite>
+		</blockquote>
+	  </div>
+	  <div class="sample4">
+		<blockquote>
+		<p>sssssssss</p>
+		<cite>ssssssssss</cite>
+		</blockquote>
+	  </div>
+	  <div class="sample5">
+		<blockquote>
+		<p></p>
+		<cite></cite>
+		</blockquote>
+	  </div>
+	  <div class="sample6">
+		<blockquote>
+		<p></p>
+		<cite></cite>
+		</blockquote>
+	  </div>
+	  <div class="sample7">
+		<blockquote>
+		<p></p>
+		<cite></cite>
+		</blockquote>
+	  </div>
+	  
+	  <div class="sample8">
+		<blockquote>
+		<p></p>
+		<cite></cite>
+		</blockquote>
+	  </div>
+	  
+	  <div class="sample9">
+		<blockquote>
+		<p></p>
+		<cite></cite>
+		</blockquote>
+	  </div>
+	  
+	  <div class="sample10">
+		<blockquote>
+		<p></p>
+		<cite></cite>
+		</blockquote>
+	  </div>
+
 	
 	<c:import url="../template/common_js.jsp"></c:import>
 </body>
