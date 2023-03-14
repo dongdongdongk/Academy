@@ -21,7 +21,7 @@ public class QnaService {
 		return qnaDAO.getQnaList(pager);
 	}
 	
-	public QnaDTO getQnaDetail(QnaDTO qnaDTO) throws Exception {
+	public QnaDTO getQnaDetail(QnaDTO qnaDTO) throws Exception {	
 		return qnaDAO.getQnaDetail(qnaDTO);
 	}
 	
@@ -35,5 +35,9 @@ public class QnaService {
 	
 	public int setQnaDelete(QnaDTO qnaDTO) throws Exception {
 		return qnaDAO.setQnaDelete(qnaDTO);
+	}
+	
+	public int setQnaHit(QnaDTO qnaDTO) throws Exception {
+		return qnaDAO.setQnaHit(qnaDTO);
 	}
 }

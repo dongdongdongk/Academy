@@ -36,6 +36,8 @@ public class QnaController {
 		
 		qnaDTO = qnaService.getQnaDetail(qnaDTO);
 		
+		int result = qnaService.setQnaHit(qnaDTO);
+		
 		mv.addObject("detail", qnaDTO);
 		mv.setViewName("board/qnaDetail");
 		

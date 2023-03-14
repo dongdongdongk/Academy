@@ -26,8 +26,8 @@
 			  	<tbody>
 			  		<c:forEach items="${list}" var="dto">
 						<tr>
-							<td><a href="./qnaDetail?num=${dto.num}">${dto.num}</a></td>
-							<td>${dto.title}</td>
+							<td>${dto.num}</td>
+							<td><a href="./qnaDetail?num=${dto.num}">${dto.title}</a></td>
 							<td>${dto.writer}</td>
 							<td>${dto.hit}</td>
 						</tr>
@@ -72,7 +72,7 @@
 			
 			
 			<div class="row">
-				<form class="row g-3" action="./list" method="get" id="searchForm">
+				<form class="row g-3" action="./qnaList" method="get" id="searchForm">
 					<input type="hidden" name="page" value="1" id="page">
 				  <div class="col-auto">
 				    <label for="kind" class="visually-hidden">Kind</label>
@@ -103,5 +103,6 @@
 	</div>
 	
 	<c:import url="../template/common_js.jsp"></c:import>
+	<script src="../resources/js/pageing.js"></script>
 </body>
 </html>

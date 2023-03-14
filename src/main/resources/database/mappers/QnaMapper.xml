@@ -59,4 +59,9 @@
   		DELETE QNA WHERE NUM = #{num}
   	</delete>
   	
+  	<update id="setQnaHit" parameterType="QnaDTO">
+  		UPDATE QNA SET HIT = #{hit} + 1
+		WHERE NUM = #{num}
+  	</update>
+  	
   </mapper>

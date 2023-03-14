@@ -9,6 +9,7 @@ public class Pager {
 	private Long perPage;
 	private Long perBlock;
 	private Long totalPage;
+	
 	private Long startRow;
 	private Long lastRow;
 	

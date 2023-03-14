@@ -17,7 +17,7 @@ public class QnaDAO {
 	private final String NAMESPACE = "com.ac.home.qna.QnaDAO.";
 	
 	public List<QnaDTO> getQnaList(Pager pager) throws Exception {
-		return sqlSession.selectList(NAMESPACE + "getQnaList");
+		return sqlSession.selectList(NAMESPACE + "getQnaList", pager);
 	}
 	
 	public QnaDTO getQnaDetail(QnaDTO qnaDTO) throws Exception {
@@ -37,6 +37,10 @@ public class QnaDAO {
 	}
 	
 	public Long getTotalCount(Pager pager) throws Exception {
-		return sqlSession.selectOne(NAMESPACE + "getQnaCount", pager);
+		return sqlSession.selectOne(NAMESPACE + "getTotalCount", pager);
+	}
+	
+	public int setQnaHit(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.update(NAMESPACE + "setQnaHit", qnaDTO);
 	}
 }

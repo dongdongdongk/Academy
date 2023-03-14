@@ -56,13 +56,14 @@
 	  				<div class="col-md-6">
 	  					<label for="hit" class="form-label">${detail.hit}</label>
 	  				</div>
-	
-					<div class="row col-md-2 mx-auto mt-5">
-						<a class="btn btn-primary" href="./qnaUpdate?num=${detail.num}">글 수정</a>
-					</div>
-					
-					<div class="row col-md-2 mx-auto mt-5">
-						<a class="btn btn-primary" href="./qnaDelete?num=${detail.num}">글 삭제</a>
+	  				
+	  				
+	  				<div>
+						<form action="./qnaUpdate" id="frm">
+							<input type="hidden" name="num" value="${detail.num}">
+							<button id="update" type="submit" class="btn btn-primary col-md-2 mt-4">글 수정</button>
+							<button id="delete" type="button" class="btn btn-primary col-md-2 mt-4">글 삭제</button>
+						</form>
 					</div>
 					
 					<div class="row col-md-2 mx-auto mt-5">
@@ -72,11 +73,7 @@
 			</div>
 		</div>
 		
-		
-		
-		
-		
-		
+		<script src="../resources/js/boardForm.js"></script>
 		<c:import url="../template/common_js.jsp"></c:import>
 </body>
 </html>
