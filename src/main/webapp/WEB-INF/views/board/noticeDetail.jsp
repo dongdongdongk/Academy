@@ -14,6 +14,10 @@
 	<h3>${dto.regDate}</h3>
 	<h3>${dto.hit}</h3>
 	<h3>${dto.contents}</h3>
+	
+	<c:forEach items="${dto.noticeFileDTOs}" var="fileDTO">
+		<a href="./fileDown?fileNum=${fileDTO.fileNum}">${fileDTO.oriName}</a>
+	</c:forEach>
 
 	<a href= "./delete?num=${dto.num}">삭제</a>
 	<a href= "./update?num=${dto.num}">수정</a>
