@@ -49,15 +49,48 @@
   
  	 
  	 
- 	 <select id="getNoticeDetail" parameterType="NoticeDTO" resultType="NoticeDTO">
- 	 	SELECT *
-		FROM NOTICE 
-		WHERE NUM = #{num}
+ 	 <select id="getNoticeDetail" parameterType="NoticeDTO" resultMap="getNoticeDetailResult">
+ 	 	SELECT N.*, NF.*
+		FROM NOTICE N
+			 LEFT JOIN
+			 NOTICEFILES NF
+			 ON(N.NUM = NF.NUM)
+		WHERE N.NUM=#{num}	
  	 </select>
  	 
- 	 <update id="setNoticedUpdate" parameterType="NoticeDTO">
+ 	 
+ 	<resultMap type="NoticeDTO" id="getNoticeDetailResult">
+  		<id column="num" property="num"/>
+  		<result column="title" property="title"/>
+  		<result column="writer" property="writer"/>
+  		<result column="contents" property="contents"/>
+  		<result column="regDate" property="regDate"/>
+  		<result column="hit" property="hit"/>
+  		
+  		<collection property="noticeFileDTOs" javaType="List" ofType="NoticeFileDTO">
+  			<id column="fileNum" property="fileNum"/>
+  			<result column="fileName" property="fileName"/>
+  			<result column="oriName" property="oriName"/>
+  		</collection>
+  	
+  	</resultMap>
+ 	 
+ 	 <update id="setNoticeUpdate" parameterType="NoticeDTO">
   		UPDATE NOTICE SET TITLE=#{title}, CONTENTS=#{contents} WHERE NUM=#{num}
   	</update>
+  	
+  	
+  	<insert id="setNoticeFileAdd" parameterType="NoticeFileDTO">
+  		INSERT INTO NOTICEFILES (FILENUM, NUM, FILENAME, ORINAME)
+  		VALUES(NOTICE_SEQ.NEXTVAL ,#{num}, #{fileName}, #{oriName})
+  	</insert>
+  	
+  	<!--  <select id="getNoticeFileDetail" parameterType="NoticeFileDTO" resultType="NoticeFileDTO">
+  		SELECT * FROM NOTICEFILES WHERE FILENUM=#{fileNum}
+  	</select>
+  	 -->
+  	
+  	
  	 
  	<!--  <resultMap type="NoticeDTO" id="getBoardDetailResult">
   		<id column="num" property="num"/>

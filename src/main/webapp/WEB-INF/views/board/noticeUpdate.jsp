@@ -11,10 +11,12 @@
 	<div >
 		<form class="col-md-7" action="./update" method="post" >
 			<input type="hidden" name="num" value="${dto.num}">
-			<div class="mb-3">
-			  <label for="writer" class="form-label">작성자</label>
-			  <input type="text" name="writer" readonly value="${dto.writer}"id="writer">
-			</div>
+		 	<div class="mb-3">
+			 
+			 
+			  <label for="writer" class="form-label"></label>
+			  <input type="hidden" name="writer" readonly value="${dto.writer}"id="writer">
+			</div> 
 			
 			<div class="mb-3">
 			  <label for="title" class="form-label">제목</label>
@@ -25,9 +27,13 @@
 			  <label for="contents" class="form-label">내용</label>
 			  <textarea name="contents" class="form-control" id="contents" placeholder="내용 입력" rows="7">${dto.contents}</textarea>
 			</div>
+			
+		<div class="mb-3">
+			<button type="submit">수정</button>
+		</div>
 		</form>
 	</div>
-
+	<a href="./list">취소</a>
 
 </body>
 </html>

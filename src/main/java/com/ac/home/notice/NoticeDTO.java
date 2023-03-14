@@ -1,6 +1,7 @@
 package com.ac.home.notice;
 
 import java.sql.Date;
+import java.util.List;
 
 public class NoticeDTO {
 
@@ -10,6 +11,8 @@ public class NoticeDTO {
 	private String writer;
 	private Date regDate;
 	private Long hit;
+	private List<NoticeFileDTO> noticeFileDTOs;
+	
 	public Long getNum() {
 		return num;
 	}
@@ -46,5 +49,10 @@ public class NoticeDTO {
 	public void setHit(Long hit) {
 		this.hit = hit;
 	}
-	
+	public List<NoticeFileDTO> getNoticeFileDTOs() {
+		return noticeFileDTOs;
+	}
+	public void setNoticeFileDTOs(List<NoticeFileDTO> noticeFileDTOs) {
+		this.noticeFileDTOs = noticeFileDTOs;
+	}
 }

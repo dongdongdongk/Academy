@@ -2,16 +2,24 @@ package com.ac.home.notice;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.ac.home.util.FileManager;
 import com.ac.home.util.Pager;
+
 
 @Service
 public class NoticeService {
 
 	@Autowired
 	private NoticeDAO noticeDAO;
+	
+	@Autowired
+	private FileManager fileManager;
 	
 	public List<NoticeDTO> getNoticeList() throws Exception {
 		
@@ -20,9 +28,31 @@ public class NoticeService {
 		
 	}
 	
-	public int setNoticeAdd(NoticeDTO noticeDTO) throws Exception {
-		
+	public int setNoticeAdd(NoticeDTO noticeDTO, MultipartFile [] files, HttpSession session) throws Exception {
 		int result = noticeDAO.setNoticeAdd(noticeDTO);
+		
+		//file HDD에 저장
+		String realPath = session.getServletContext().getRealPath("resources/upload/notice");
+		System.out.println(realPath);
+		
+		for(MultipartFile multipartFile: files) {
+			
+			if(multipartFile.isEmpty()) {
+				continue;
+			}
+			
+			String fileName = fileManager.fileSave(multipartFile, realPath);
+					
+			//DB INSERT
+			NoticeFileDTO noticeFileDTO = new NoticeFileDTO();
+			noticeFileDTO.setNum(noticeDTO.getNum());
+			noticeFileDTO.setFileName(fileName);
+			noticeFileDTO.setOriName(multipartFile.getOriginalFilename());
+			
+			result = noticeDAO.setNoticeFileAdd(noticeFileDTO);
+			
+		}
+		
 		return result;
 	}
 	
@@ -39,6 +69,5 @@ public class NoticeService {
 	public int setNoticeUpdate(NoticeDTO noticeDTO) throws Exception {
 		return noticeDAO.setNoticeUpdate(noticeDTO);
 	}
-	
 	
 }

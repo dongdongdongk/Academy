@@ -32,5 +32,7 @@
 				
 				</table>
 			</div>
+			<a href="./add">글쓰기</a>
+			
 </body>
 </html>

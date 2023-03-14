@@ -2,6 +2,8 @@ package com.ac.home.notice;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.home.util.Pager;
@@ -50,10 +53,11 @@ public class NoticeController {
 	}
 	
 	@PostMapping("add")
-	public ModelAndView setNoticeAdd(NoticeDTO noticeDTO) throws Exception {
+	public ModelAndView setNoticeAdd(NoticeDTO noticeDTO, MultipartFile [] files, HttpSession session) throws Exception {
 	
 		ModelAndView mv = new ModelAndView();
-		int result = noticeService.setNoticeAdd(noticeDTO);
+		
+		int result = noticeService.setNoticeAdd(noticeDTO, files, session);
 		
 		mv.setViewName("redirect:./list");
 		
@@ -68,6 +72,9 @@ public class NoticeController {
 	public ModelAndView setNoticeDelete(NoticeDTO noticeDTO) throws Exception {
 		
 		ModelAndView mv = new ModelAndView();
+		
+		int result = noticeService.setNoticeDelete(noticeDTO);
+		
 		mv.setViewName("redirect:./list");
 		return mv;
 		
@@ -85,17 +92,27 @@ public class NoticeController {
 	
 	}
 	
+	//update
 	
+	@GetMapping("update")
 	public ModelAndView setNoticeUpdate(NoticeDTO noticeDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		noticeDTO = noticeService.getNoticeDetail(noticeDTO);
 		
 		mv.addObject("dto",noticeDTO);
-		mv.setViewName("board/update");
+		mv.setViewName("board/noticeUpdate");
 		return mv;
 	}
 	
+	@PostMapping("update")
+	public ModelAndView setNoticeUpdate(ModelAndView mv, NoticeDTO noticeDTO ) throws Exception {
+		
+		int result = noticeService.setNoticeUpdate(noticeDTO);
+		mv.setViewName("redirect:./list");
+		return mv;
+	}
 	
+
 	
 
 	
