@@ -29,9 +29,9 @@ public class NoticeController {
 	private NoticeService noticeService;
 	
 	@GetMapping("list")
-	public ModelAndView getNoticeList() throws Exception {
+	public ModelAndView getNoticeList(Pager pager) throws Exception {
 		ModelAndView mv = new ModelAndView();
-		List<NoticeDTO> ar = noticeService.getNoticeList();
+		List<NoticeDTO> ar = noticeService.getNoticeList(pager);
 		
 		mv.addObject("list",ar);
 		mv.setViewName("board/noticeList");
@@ -86,6 +86,9 @@ public class NoticeController {
 	public ModelAndView getNoticeDetail(NoticeDTO noticeDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		noticeDTO = noticeService.getNoticeDetail(noticeDTO);
+		
+		int result = noticeService.setNoticeHit(noticeDTO);
+		
 		mv.addObject("dto",noticeDTO);
 		mv.setViewName("board/noticeDetail");
 		return mv;
@@ -111,6 +114,8 @@ public class NoticeController {
 		mv.setViewName("redirect:./list");
 		return mv;
 	}
+	
+	
 	
 
 	

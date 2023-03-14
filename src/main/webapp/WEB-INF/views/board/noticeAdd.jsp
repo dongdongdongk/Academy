@@ -13,7 +13,7 @@
 			<label for="title" class="form-label">제목</label>
 			<input type="text" name="title" id="title">
 		</div>
-		<div class="mb-3">
+		<div class="mb-3" hidden="">
 			<label for="writer" class="form-label">작성자</label>
 			<input type="text" name="writer" id="writer">
 		</div>

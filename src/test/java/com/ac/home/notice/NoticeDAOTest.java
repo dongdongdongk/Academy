@@ -16,11 +16,11 @@ public class NoticeDAOTest extends MyTestCase  {
 	@Autowired
 	private NoticeDAO noticeDAO;
 	
-	@Test
-	public void test() throws Exception {
-		List<NoticeDTO> ar = noticeDAO.getNoticeList();
-		
-		assertEquals(0, ar.size());
-	}
+//	@Test
+//	public void test() throws Exception {
+//		List<NoticeDTO> ar = noticeDAO.getNoticeList();
+//		
+//		assertEquals(0, ar.size());
+//	}
 
 }

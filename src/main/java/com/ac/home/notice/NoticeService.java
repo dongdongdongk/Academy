@@ -21,10 +21,13 @@ public class NoticeService {
 	@Autowired
 	private FileManager fileManager;
 	
-	public List<NoticeDTO> getNoticeList() throws Exception {
+	public List<NoticeDTO> getNoticeList(Pager pager) throws Exception {
 		
+		pager.makeRow();
+		
+		pager.makeNum(noticeDAO.getTotalCount(pager));
 
-		return noticeDAO.getNoticeList();
+		return noticeDAO.getNoticeList(pager);
 		
 	}
 	
@@ -70,4 +73,7 @@ public class NoticeService {
 		return noticeDAO.setNoticeUpdate(noticeDTO);
 	}
 	
+	public int setNoticeHit (NoticeDTO noticeDTO) throws Exception {
+		return noticeDAO.setNoticeHit(noticeDTO);
+	}
 }

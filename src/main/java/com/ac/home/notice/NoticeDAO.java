@@ -16,9 +16,9 @@ public class NoticeDAO {
 	private final String NAMESPACE = "com.ac.home.notice.NoticeDAO.";
 	
 	
-	public List<NoticeDTO>getNoticeList() throws Exception {
+	public List<NoticeDTO>getNoticeList(Pager pager) throws Exception {
 	
-		return sqlSession.selectList(NAMESPACE + "getNoticeList");
+		return sqlSession.selectList(NAMESPACE + "getNoticeList" ,pager);
 	}
 
 	public Long getTotalCount(Pager pager) throws Exception {
@@ -48,6 +48,10 @@ public class NoticeDAO {
 	public int setNoticeFileAdd(NoticeFileDTO noticeFileDTO) throws Exception {
 		
 		return sqlSession.insert(NAMESPACE + "setNoticeFileAdd" ,noticeFileDTO);
+	}
+	
+	public int setNoticeHit(NoticeDTO noticeDTO) throws Exception {
+		return sqlSession.update(NAMESPACE + "setNoticeHit" , noticeDTO);
 	}
 
 }
