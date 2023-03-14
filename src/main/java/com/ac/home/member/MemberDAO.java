@@ -4,7 +4,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import oracle.net.aso.m;
+import com.ac.home.member.MemberDTO;
 
 @Repository
 public class MemberDAO {
@@ -26,5 +26,9 @@ public class MemberDAO {
 	
 	public int setMemberUpdate(MemberDTO memberDTO)throws Exception{
 		return sqlSession.update(NAMESPACE+"setMemberUpdate", memberDTO);
+	}
+	
+	public int setMemberDelete(MemberDTO memberDTO)throws Exception{
+		return sqlSession.delete(NAMESPACE+"setMemberDelete", memberDTO);
 	}
 }

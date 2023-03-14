@@ -1,6 +1,6 @@
 package com.ac.home.member;
 
-import java.util.List;
+import com.ac.home.member.RoleDTO;
 
 public class MemberDTO {
 	

@@ -3,6 +3,8 @@ package com.ac.home.member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ac.home.member.MemberDTO;
+
 @Service
 public class MemberService {
 	

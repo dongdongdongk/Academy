@@ -1,15 +1,20 @@
 package com.ac.home.member;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.ac.home.member.MemberDTO;
+
 
 @Controller
 @RequestMapping("/member/**")
@@ -55,15 +60,26 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value = "memberLogin", method = RequestMethod.POST)
-	public ModelAndView getMemberLogin(MemberDTO memberDTO, HttpServletRequest request)throws Exception{
-		ModelAndView mv = new ModelAndView();
-		memberDTO = memberService.getMemberLogin(memberDTO);
-		if(memberDTO != null) {
-			HttpSession session = request.getSession();
-			session.setAttribute("member", memberDTO);
-		}
-		mv.setViewName("redirect:../");
-		return mv;
+	public ModelAndView getMemberLogin(MemberDTO memberDTO, HttpServletRequest request, HttpServletResponse response) throws Exception {
+	    ModelAndView mv = new ModelAndView();
+	    memberDTO = memberService.getMemberLogin(memberDTO);
+	    if (memberDTO != null) {
+	        HttpSession session = request.getSession();
+	        session.setAttribute("member", memberDTO);
+
+	        String remember = request.getParameter("remember");
+	        if ("true".equals(remember)) {
+	            Cookie cookie = new Cookie("rememberId", memberDTO.getId());
+	            cookie.setMaxAge(60 * 60 * 24 * 30); // 30일간 유지
+	            response.addCookie(cookie);
+	        } else {
+	            Cookie cookie = new Cookie("rememberId", "");
+	            cookie.setMaxAge(0);
+	            response.addCookie(cookie);
+	        }
+	    }
+	    mv.setViewName("redirect:../");
+	    return mv;
 	}
 	
 	@RequestMapping(value = "memberLogout", method = RequestMethod.GET)
@@ -92,9 +108,11 @@ public class MemberController {
 		
 		memberDTO = memberService.getMemberPage(memberDTO);
 		mv.addObject("dto", memberDTO);
+
 		mv.setViewName("member/memberUpdate");
 		return mv;
 	}
+
 	@RequestMapping(value = "memberUpdate", method = RequestMethod.POST)
 	public ModelAndView getMemberUpdate(MemberDTO memberDTO, HttpSession session)throws Exception{
 		ModelAndView mv = new ModelAndView();

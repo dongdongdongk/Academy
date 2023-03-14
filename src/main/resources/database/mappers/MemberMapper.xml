@@ -6,7 +6,7 @@
   <mapper namespace="com.ac.home.member.MemberDAO">
   	<insert id="setMemberAdd" parameterType="MemberDTO">
   		INSERT INTO MEMBER
-  		VALUES (#{id}, #{pw}, #{name}, #{address}, #{phone}, #{email})
+  		VALUES (#{id},#{pw},#{name},#{address},#{phone},#{email})
   	</insert>
   	
   	<insert id="setMemberRoleAdd" parameterType="MemberDTO">
@@ -42,7 +42,7 @@
   	
   	
  	<update id="setMemberUpdate" parameterType="MemberDTO">
-		Update MEMBER SET NAME=#{name},PHONE=#{phone},EMAIL=#{email}
+		UPDATE MEMBER SET NAME=#{name},PHONE=#{phone},EMAIL=#{email}
 		WHERE ID=#{id}
 	</update> 	
   	
