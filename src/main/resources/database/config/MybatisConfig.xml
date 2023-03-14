@@ -22,6 +22,8 @@
  		<typeAlias type="com.ac.home.member.MemberDTO" alias="MemberDTO"/>
  		<typeAlias type="com.ac.home.member.RoleDTO" alias="RoleDTO"/>
  		
+ 		
+ 		<typeAlias type="com.ac.home.product.ProductDTO" alias="ProductDTO"/>
  		<!-- <typeAlias type="com.iu.s1.util.Pager" alias="Pager"/>
  		
  		<typeAlias type="java.lang.Long" alias="Long"/> -->

@@ -9,10 +9,10 @@
     </button>	
      <div class="collapse navbar-collapse" id="navbarSupportedContent">
      		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item"><a class="nav-link active" href="#">공지사항</a></li>
-					<li class="nav-item"><a class="nav-link active" href="#">제품</a></li>
-					<li class="nav-item"><a class="nav-link active" href="#">저축상품</a></li>
-					<li class="nav-item"><a class="nav-link active" href="#">Q&A</a></li>
+					<li class="nav-item"><a class="nav-link active" href="#"></a></li>
+					<li class="nav-item"><a class="nav-link active" href="/product/List">PRODUCT</a></li>
+					<li class="nav-item"><a class="nav-link active" href="#"></a></li>
+					<li class="nav-item"><a class="nav-link active" href="#"></a></li>
 			</ul>
 
 				<ul class="navbar-nav">
