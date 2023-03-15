@@ -6,7 +6,7 @@
   <mapper namespace="com.ac.home.member.MemberDAO">
   	<insert id="setMemberAdd" parameterType="MemberDTO">
   		INSERT INTO MEMBER
-  		VALUES (#{id},#{pw},#{name},#{address},#{phone},#{email})
+  		VALUES (#{id},#{pw},#{name},#{address},#{phone},#{email},#{emaildomain})
   	</insert>
   	
   	<insert id="setMemberRoleAdd" parameterType="MemberDTO">
@@ -34,6 +34,7 @@
   		<result column="ADDRESS" property="address"/>
   		<result column="PHONE" property="phone"/>
   		<result column="EMAIL" property="email"/>
+		<result column="EMAILDOMAIN" property="emaildomain"/>
   		<association property="roleDTO" javaType="RoleDTO">
   			<id column="ROLENUM" property="roleNum"/>
   			<result column="ROLENAME" property="roleName"/>

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.home.member.MemberDTO;
+import com.ac.home.member.mail.*;
 
 
 @Controller
@@ -23,6 +24,12 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 	
+    @Autowired
+    private MailSendController mailSendController;
+    
+	@Autowired
+	private MailSendService mailService;
+    
 	@PostMapping("memberIdCheck")
 	public ModelAndView getMemberIdCheck(MemberDTO memberDTO)throws Exception{
 		boolean check = memberService.getMemberIdCheck(memberDTO);

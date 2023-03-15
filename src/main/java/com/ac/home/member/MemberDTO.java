@@ -10,6 +10,7 @@ public class MemberDTO {
 	private String address;
 	private String phone;
 	private String email;
+	private String emaildomain;
 	private RoleDTO roleDTO;
 	
 	public String getId() {
@@ -47,6 +48,12 @@ public class MemberDTO {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getEmaildomain() {
+		return emaildomain;
+	}
+	public void setEmaildomain(String emaildomain) {
+		this.emaildomain = emaildomain;
 	}
 	public RoleDTO getRoleDTO() {
 		return roleDTO;
