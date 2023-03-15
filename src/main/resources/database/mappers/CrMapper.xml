@@ -8,4 +8,14 @@
   		SELECT * FROM CR
   	</select>
   	
+  	<insert id="setCrAdd" parameterType="CrDTO">
+  		INSERT INTO CR
+  		VALUES (CR_SEQ.NEXTVAL, #{title}, #{contents}, #{writer}, SYSDATE, 0)
+  	</insert>
+  	
+  	<delete id="setCrDelete" parameterType="CrDTO">
+  		DELETE CR WHERE NUM = #{num}
+  	</delete>
+  	
+  	
   </mapper>

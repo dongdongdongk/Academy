@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -23,6 +24,37 @@ public class CrController {
 		
 		mv.addObject("list", ar);
 		mv.setViewName("board/crList");
+		
+		return mv;
+	}
+	
+	@GetMapping(value = "crAdd")
+	public ModelAndView setCrAdd() throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("board/crAdd");
+		
+		return mv;
+	}
+	
+	@PostMapping(value = "crAdd")
+	public ModelAndView setCrAdd(CrDTO crDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		int result = crService.setCrAdd(crDTO);
+		
+		mv.setViewName("redirect:./crList");
+		
+		return mv;
+	}
+	
+	@GetMapping(value = "crDelete")
+	public ModelAndView setCrDelete(CrDTO crDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		int result = crService.setCrDelete(crDTO);
+		
+		mv.setViewName("redirect:./crList");
 		
 		return mv;
 	}

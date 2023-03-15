@@ -14,4 +14,12 @@ public class CrService {
 	public List<CrDTO> getCrList() throws Exception {
 		return crDAO.getCrList();
 	}
+	
+	public int setCrAdd(CrDTO crDTO) throws Exception {
+		return crDAO.setCrAdd(crDTO);
+	}
+	
+	public int setCrDelete(CrDTO crDTO) throws Exception {
+		return crDAO.setCrDelete(crDTO);
+	}
 }

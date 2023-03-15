@@ -18,4 +18,11 @@ public class CrDAO {
 		return sqlSession.selectList(NAMESPACE + "getCrList");
 	}
 	
+	public int setCrAdd(CrDTO crDTO) throws Exception {
+		return sqlSession.insert(NAMESPACE + "setCrAdd", crDTO);
+	}
+	
+	public int setCrDelete(CrDTO crDTO) throws Exception {
+		return sqlSession.delete(NAMESPACE + "setCrDelete", crDTO);
+	}
 }

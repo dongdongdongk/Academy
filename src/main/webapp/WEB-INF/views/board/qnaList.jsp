@@ -95,13 +95,13 @@
 				</form>
 			</div>
 			
-				<div class="row col-auto mx-auto">
-					<a class="btn btn-primary mb-3" href="./qnaAdd">글 등록</a>
-				</div>	
+			<div class="row col-auto mx-auto">
+				<a class="btn btn-primary mb-3" href="./qnaAdd">글 등록</a>
+			</div>	
 				
-				<div class="row col-auto mx-auto">
-					<a class="btn btn-primary mb-3" href="/">홈</a>
-				</div>	
+			<div class="row col-auto mx-auto">
+				<a class="btn btn-primary mb-3" href="/">홈</a>
+			</div>	
 		</div>
 	</div>
 	
