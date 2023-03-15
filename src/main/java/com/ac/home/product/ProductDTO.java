@@ -1,6 +1,9 @@
 package com.ac.home.product;
 
 import java.util.Date;
+import java.util.List;
+
+import com.ac.home.product.ProductImgDTO;
 
 public class ProductDTO {
 	
@@ -11,9 +14,14 @@ public class ProductDTO {
 	private String info;
 	private Date regDate;
 	private Double grade;
+	private List<ProductImgDTO> productImgDTOs;
 	
-	
-	
+	public List<ProductImgDTO> getProductImgDTOs() {
+		return productImgDTOs;
+	}
+	public void setProductImgDTOs(List<ProductImgDTO> productImgDTOs) {
+		this.productImgDTOs = productImgDTOs;
+	}
 	public Long getNum() {
 		return num;
 	}

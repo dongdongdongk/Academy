@@ -4,7 +4,112 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.ac.home.product.ProductDAO">
-  
+  	<sql id="searchCondition">
+ 		 <if test="kind == 'title'">
+ 			WHERE TITLE LIKE  '%' || #{search} || '%'
+ 		</if>
+ 		
+ 		<if test="kind == 'info'">
+ 			WHERE INFO LIKE  '%' || #{search} || '%'
+ 		</if>
+ 	
+ 	</sql>
+ 	
+ 	<sql id="searchCondition2">
+ 		WHERE
+						
+			<choose>
+				<when test="kind == 'title'">
+					TITLE  
+				</when>
+				<otherwise>
+					INFO
+				</otherwise>
+			</choose>
+		 LIKE  '%' || #{search} || '%'
+ 	
+ 	</sql>
+ 	
+ 	
+ 	
+ 	<select id="getProductCount" parameterType="Pager" resultType="Long">
+ 		SELECT COUNT(NUM) FROM PRODUCT
+ 	 	<include refid="searchCondition"></include>	
+ 	</select>
+ 
+ 
+ 	<select id="getProductList" parameterType="Pager" resultType="ProductDTO">
+ 		SELECT * FROM
+			(
+				SELECT ROWNUM R, B.* FROM
+					(
+						SELECT * FROM PRODUCT
+						<include refid="searchCondition"></include>						
+						ORDER BY NUM DESC
+					) B 
+			)
+		WHERE R BETWEEN #{startRow}  AND #{lastRow} 
+	</select>
+	
+ 	<select id="getProductDetail" parameterType="ProductDTO" resultMap="productDetailResult">
+ 		SELECT B.*, BI.*
+		FROM PRODUCT B
+			 LEFT OUTER JOIN
+			 PRODUCTIMG BI
+			 ON (B.NUM = BI.NUM)
+		WHERE B.NUM	=#{num}
+ 	</select>
+ 	
+ 	<resultMap type="ProductDTO" id="productDetailResult">
+ 		<!-- Primary key -->
+ 		<id column="NUM" property="num"/>
+ 		<!-- 그외 나머지 -->
+ 		<result column="TITLE" property="title"/>
+ 		<result column="PRICE" property="price"/>
+ 		<result column="SALEQTY" property="saleQty"/>
+ 		<result column="INFO" property="info"/>
+ 		<result column="REGDATE" property="regDate"/>
+ 		<result column="GRADE" property="grade"/>
+ 		<!-- 1:1 -->
+ 		<collection property="productImgDTOs" javaType="List" ofType="ProductImgDTO">
+ 			<id column="FILENUM" property="fileNum"/>
+ 			<result column="SAVE" property="save"/>
+ 			<result column="UPLOAD" property="upLoad"/>
+ 		</collection>
+ 		<!-- 1:N -->
+ 		<!-- <collection property=""></collection> -->
+ 		
+ 	</resultMap>
+
+ 	<insert id="setProductAdd" parameterType="ProductDTO">
+ 		<selectKey keyProperty="num" resultType="Long" order="BEFORE">
+ 			SELECT PRODUCT_SEQ.NEXTVAL FROM DUAL
+ 		</selectKey>
+ 		INSERT INTO PRODUCT 
+ 		VALUES (#{num} ,#{title}, #{price}, 0, #{info},SYSDATE, 0.0)
+ 	</insert>
+ 	
+
+ 	<delete id="setProductDelete" parameterType="ProductDTO">
+ 		DELETE PRODUCT WHERE NUM=#{num}
+ 		
+ 	</delete> 
+ 	
+ 	<update id="setProductUpdate" parameterType="ProductDTO">
+ 		UPDATE PRODUCT SET TITLE=#{title}, PRICE=#{price}, SALEQTY=#{saleQty}, INFO=#{info}, SYSDATE, 0.0
+ 		WHERE NUM=#{num}
+ 	</update>
+ 	
+ 	<insert id="setProductImgAdd" parameterType="ProductImgDTO">
+ 		INSERT INTO PRODUCTIMG
+ 		VALUES (PRODUCT_SEQ.NEXTVAL, #{num}, #{save}, #{upLoad})
+ 	</insert>
+ 	 
+ 	 <select id="getProductFileList" resultType="ProductImgDTO" parameterType="ProductDTO">
+  		SELECT * FROM PRODUCTIMG WHERE NUM = #{num}
+	</select>
+	
+	
   	
   </mapper>
 		

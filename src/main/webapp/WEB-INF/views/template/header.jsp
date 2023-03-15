@@ -10,9 +10,9 @@
      <div class="collapse navbar-collapse" id="navbarSupportedContent">
      		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link active" href="#"></a></li>
-					<li class="nav-item"><a class="nav-link active" href="/product/List">PRODUCT</a></li>
-					<li class="nav-item"><a class="nav-link active" href="#"></a></li>
-					<li class="nav-item"><a class="nav-link active" href="#"></a></li>
+					<li class="nav-item"><a class="nav-link active" href="/product/list">교재</a></li>
+					<li class="nav-item"><a class="nav-link active" href="/oders/list">주문</a></li>
+					<li class="nav-item"><a class="nav-link active" href="/#"></a></li>
 			</ul>
 
 				<ul class="navbar-nav">

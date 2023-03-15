@@ -24,9 +24,10 @@
  		
  		
  		<typeAlias type="com.ac.home.product.ProductDTO" alias="ProductDTO"/>
- 		<!-- <typeAlias type="com.iu.s1.util.Pager" alias="Pager"/>
+ 		<typeAlias type="com.ac.home.product.ProductImgDTO" alias="ProductImgDTO"/>
+ 		<typeAlias type="com.ac.home.util.Pager" alias="Pager"/>
  		
- 		<typeAlias type="java.lang.Long" alias="Long"/> -->
+ 		<typeAlias type="java.lang.Long" alias="Long"/>
  		
  	</typeAliases>
  	 
