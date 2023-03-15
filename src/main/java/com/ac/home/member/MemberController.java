@@ -24,8 +24,8 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 	
-    @Autowired
-    private MailSendController mailSendController;
+	@Autowired
+	private MailSendController mailSendController;
     
 	@Autowired
 	private MailSendService mailService;
