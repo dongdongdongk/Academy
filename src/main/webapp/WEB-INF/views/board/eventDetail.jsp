@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>NoticeDetail</title>
+<title>EventDetail</title>
 </head>
 <body>
 	<h3 hidden="">${dto.num}</h3>
@@ -16,9 +16,9 @@
 	<h3>${dto.contents}</h3>
 	
 	<div>
-		<c:forEach items="${dto.noticeFileDTOs}" var="fileDTO">
-			<c:if test="${not empty dto.noticeFileDTOs}">
-				<img src="../resources/upload/notice/${fileDTO.fileName}">
+		<c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
+			<c:if test="${not empty dto.eventFileDTOs}">
+				<img src="../resources/upload/event/${fileDTO.fileName}">
 			</c:if>
 		</c:forEach>
 	</div>

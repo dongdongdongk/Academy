@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace = "com.ac.home.event.EventDAO">
+  
+  <sql id="eventCondition">
+  		<where>
+  			<if test="kind=='title'">
+  				TITLE LIKE '%'||#{search}||'%'
+  			</if>
+  			<if test="kind=='contents'">
+  				CONTENTS LIKE '%'||#{search}||'%'
+  			</if>
+  			<if test="kind=='writer'">
+  				WRITER LIKE '%'||#{search}||'%'
+  			</if>
+  		</where>
+  	</sql>
+  
+  
+  
+  <select id="getEventList" parameterType="Pager" resultType="EventDTO">
+	  	SELECT * FROM
+	  	(
+		  	SELECT ROWNUM R, N.* FROM
+		  		(
+			  		SELECT NUM, WRITER, TITLE, REGDATE, HIT FROM EVENT
+			  		<include refid="eventCondition"></include>
+			  		ORDER BY NUM DESC
+		  		) N
+	  	)
+	  	WHERE R BETWEEN #{startRow} AND #{lastRow}
+  	</select>
+  
+  <insert id="setEventAdd" parameterType="EventDTO">
+  		<selectKey keyProperty="num" resultType="Long" order="BEFORE">
+  			SELECT EVENT_SEQ.NEXTVAL FROM DUAL
+  		</selectKey>
+  		INSERT INTO EVENT (NUM, TITLE, CONTENTS, WRITER, REGDATE, HIT)
+  		VALUES(#{num}, #{title}, #{contents}, #{writer}, sysdate, 0)
+  </insert>
+  
+  
+  <insert id="setEventFileAdd" parameterType="EventFileDTO">
+  		INSERT INTO EVENTFILES (FILENUM, NUM, FILENAME, ORINAME)
+  		VALUES(EVENT_SEQ.NEXTVAL ,#{num}, #{fileName}, #{oriName})
+  </insert>
+ 
+ 
+ <resultMap type="EventDTO" id="getEventDetailResult">
+  		<id column="num" property="num"/>
+  		<result column="title" property="title"/>
+  		<result column="writer" property="writer"/>
+  		<result column="contents" property="contents"/>
+  		<result column="regDate" property="regDate"/>
+  		<result column="hit" property="hit"/>
+  		
+  		<collection property="eventFileDTOs" javaType="List" ofType="EventFileDTO">
+  			<id column="fileNum" property="fileNum"/>
+  			<result column="fileName" property="fileName"/>
+  			<result column="oriName" property="oriName"/>
+  		</collection>
+  	
+  </resultMap>
+  
+  <select id="getTotalCount" parameterType="Pager" resultType="Long">
+  		SELECT COUNT(NUM) FROM EVENT
+  		<include refid="eventCondition"></include>
+ </select>
+ 
+ 
+ <select id="getEventDetail" parameterType="EventDTO" resultMap="getEventDetailResult">
+ 	 	SELECT N.*, NF.*
+		FROM EVENT N
+			 LEFT JOIN
+			 EVENTFILES NF
+			 ON(N.NUM = NF.NUM)
+		WHERE N.NUM=#{num}	
+  </select>
+  
+  <delete id="setEventDelete" parameterType="EventDTO">
+  		DELETE EVENT WHERE NUM=#{num}
+  </delete>
+  
+  
+   <update id="setEventUpdate" parameterType="EventDTO">
+  		UPDATE EVENT SET TITLE=#{title}, CONTENTS=#{contents} WHERE NUM=#{num}
+  	</update>
+ 
+ 
+  </mapper>

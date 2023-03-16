@@ -2,6 +2,7 @@ package com.ac.home.notice;
 
 import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,9 @@ import com.ac.home.util.Pager;
 @Service
 public class NoticeService {
 
+	@Autowired
+	private ServletContext servletContext;
+	
 	@Autowired
 	private NoticeDAO noticeDAO;
 	
