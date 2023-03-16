@@ -1,0 +1,24 @@
+header {
+    width: 100%;
+    height: 200px;
+    background-color: blue;
+    background-repeat: repeat-x;
+}
+
+ul {
+    list-style:none;
+}
+ 
+li {
+    
+    float: left;
+}
+
+.title {
+   padding-top: 50px;
+   padding-left: 50px;
+}
+
+header .container-fluid .homeImg {
+    height: 100px;
+}
