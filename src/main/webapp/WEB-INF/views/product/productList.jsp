@@ -6,6 +6,44 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<style>
+.goods_table_wrap{
+	padding: 20px 35px
+}
+.goods_table{
+	width: 100%;
+    border: 1px solid #d3d8e1;
+    text-align: center;
+    border-collapse: collapse;
+}
+.goods_table td{
+	padding: 10px 5px;
+	border : 1px solid #e9ebf0;
+}
+.goods_table thead{
+	background-color: #f8f9fd;	
+	font-weight: 600;
+}
+.goods_table a{
+	color:#1088ed;
+	font-weight: 500;
+}
+.th_column_1{
+	width:120px;
+}
+.th_column_3{
+	width:110px;
+}
+.th_column_4{
+	width:140px;
+}
+.th_column_5{
+	width:140px;
+}
+.th_column_6{
+}
+
+</style>
 <title></title>
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
@@ -15,42 +53,67 @@
 <div class="container- fluid my-5">
 	
 <div class="row mb-4 ">
-	<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">PRODUCT List page</h1>
+	<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품 LIST</h1>
 	</div>
 	
-
-	<div class="row col-md-7 mx-auto">
-	<table class="table table-hover">
-		<thead>
-			<tr>
-				<th>교재명</th>
-				<th>가격</th>
-				<th>판매가능여부</th>
-			</tr>
+		<div class="goods_table_wrap">
+                    	<!-- 상품 리스트 O -->
+	                    <c:if test="${listcheck != 'empty'}">
+	                    	<table class="goods_table">
+	                    		<thead>
+	                    			<tr>
+								<!-- 	<div class="row col-md-7 mx-auto">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+											<tr> -->
+										<td class="th_column_1">상품 번호</td>
+	                    				<td class="th_column_2">상품 이름</td>
+	                    				<td class="th_column_3">가격</td>
+	                    				<td class="th_column_4">등록날짜</td>
+	                    				<td class="th_column_5">재고</td>
+	                    				<td class="th_column_6">카테고리</td>
+	                    			</tr>
 		</thead>
 		<tbody class="table-group-divider">
 		
 		<c:forEach items="${list}" var="dto">
+					<%-- 		<tr>
+	                    			<td><c:out value="${dto.num}"></c:out></td>
+	                    			<td><c:out value="${dto.title}"></c:out></td>
+	                    			<td><c:out value="${dto.price}"></c:out></td>
+	                    			<td><c:out value="${dto.cateName}"></c:out></td>
+	                    			<td><c:out value="${dto.bookStock}"></c:out></td>
+	                    			<td><fmt:formatDate value="${dto.regDate}" pattern="yyyy-MM-dd"/></td>
+	                    	</tr> --%>
 			<tr>
-				<td><a href="./productDetail?num=${dto.num}">${dto.title}</a></td>
+				<td >${dto.num}</td>
+				<td class="tbl_td"><a href="./productDetail?num=${dto.num}">${dto.title}</a></td>
 				<td class="tbl_td">${dto.price}</td>
+				<td class="tbl_td">${dto.regDate}</td>
 				
-				<td class="tbl_td">
-					<c:choose>
+				
+			<%-- 		<c:choose>
 						<c:when test="${dto.grade eq 1}">판매중</c:when>
 						<c:otherwise>판매중</c:otherwise>
 					</c:choose>
-						<%-- <c:if test="${dto.grade eq 1}">판매중</c:if>
-						<c:if test="${dto.grade eq 0}">판매중단</c:if> --%>
-				</td>
+						<c:if test="${dto.grade eq 1}">판매중</c:if>
+						<c:if test="${dto.grade eq 0}">판매중단</c:if>
+				 --%>
 				
 			</tr>
 		</c:forEach>
 		</tbody>
 	</table>
-	
+	</c:if>
+	</div>
+	<!-- <div class="pageMaker_wrap">
+                		<ul class="pageMaker">
+                		
+              	</ul>
+		</div>  		 -->
 			<!-- paging -->
-		<div class="row">
+		<div class="row col-md-7 mx-auto">
 			<nav aria-label="Page navigation example">
 			  <ul class="pagination">
 			  	<li class="page-item">
@@ -90,16 +153,17 @@
 			</nav>
 		</div>
 		
+	
 		<!-- 검색창 -->
-		<div class="row">
+		<div class="row col-md-7 mx-auto">
 			<form class="row g-3" action="./list" method="get" id="searchForm">
 				<input type="hidden" name="page" value="1" id="page">
 				<div class="col-auto">
 				  <label for="kind" class="visually-hidden">Kind</label>
 				  <select class="form-select" name="kind" id="kind" aria-label="Default select example">
 					<option value="title" ${pager.kind eq 'title'? 'selected':''}>Title</option>
-					<option value="contents" ${pager.kind eq 'contents'? 'selected':''}>Contents</option>
-					<option value="writer" ${pager.kind eq 'writer'? 'selected':''}>Writer</option>
+					<%-- <option value="contents" ${pager.kind eq 'info'? 'selected':''}>info</option> --%>
+					<%-- <option value="writer" ${pager.kind eq 'writer'? 'selected':''}>Writer</option> --%>
 				  </select>
 				</div>
 				<div class="col-auto">
@@ -122,10 +186,13 @@
 		
 		</div>
 		
-	</div>	
-</div>
+		</div>
+		
+	
+
 
 <c:import url="../template/common_js.jsp"></c:import>
+<script src="/resources/css/goodsManage.css"></script>
 <script src="../resources/js/pageing.js"></script>
 <script>
 	setMax(3);
