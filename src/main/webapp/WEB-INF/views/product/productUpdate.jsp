@@ -14,19 +14,19 @@
 				<input type="hidden" name="num" value="${dto.num}">
 				
 				<fieldset>
-					<legend>제품명</legend>
+					<legend>교재명</legend>
 		 			<input type="text" name="title" value="${dto.title}"  id="title" placeholder="제품명 입력">
 		 		</fieldset>
 		 		<fieldset>
-		 			<legend>이자율</legend>
+		 			<legend>가격</legend>
 					<input type="text" name="price" value="${dto.price}" id="price" placeholder="이자율 입력">
 				</fieldset>
 				<fieldset>
-					<legend>상세정보</legend>
-					<textarea rows="" cols="" name="info" id="info" placeholder="설명 입력" rows="7">${dto.bookDetail}</textarea>
+					<legend>내용</legend>
+					<textarea name="info" class="form-control" id="info" placeholder="설명 입력" rows="7">${dto.info}</textarea>
 				</fieldset>
-				<fieldset>
-					<%-- <legend>판매여부</legend>
+				<%-- <fieldset>
+					<legend>판매여부</legend>
 						
 						<label for="bs1">판매</label>
 						<input id="bs1" type="radio" ${dto.bookSale eq '1' ? 'checked':''} name="bookSale" value="${dto.bookSale}">
@@ -36,17 +36,16 @@
 						<!-- <option selected value="0">판매중단</option> -->
 					
 				</fieldset> --%>
-				<fieldset>
+				<!-- <fieldset>
 					<legend>판매여부</legend>
 					<select name="bookSale">
 						<option value="1">판매</option>
 						<option selected value="0">판매중단</option>
 					</select>
-				</fieldset>
+				</fieldset> -->
 				<fieldset>
-					
 					<input type="submit" value="수정">
-					<button type="button">수정</button>
+					
 				</fieldset>
 			
 		</form>

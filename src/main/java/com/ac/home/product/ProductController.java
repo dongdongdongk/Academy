@@ -38,11 +38,12 @@ public class ProductController {
 		
 			List<ProductDTO> ar = productService.getProductList(pager);
 			
-		       mv.addObject("list",ar);
+			
+		      mv.addObject("list",ar);
 		      
-		       mv.addObject("pager", pager);
+		     
 		       
-		       mv.setViewName("product/productList");
+		      mv.setViewName("product/productList");
 		       
 			return mv;
 		}
@@ -110,7 +111,7 @@ public class ProductController {
 			
 			int result= productService.setProductUpdate(productDTO);
 			
-			mv.setViewName("redirect:./productList");
+			mv.setViewName("redirect:./list");
 			return mv;
 			
 		}

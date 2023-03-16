@@ -32,7 +32,6 @@ public class ProductService {
 		
 		
 		Long totalCount = productDAO.getProductCount(pager);//30
-		
 		pager.makeNum(totalCount);
 		
 		 

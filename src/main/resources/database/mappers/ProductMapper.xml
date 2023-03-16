@@ -38,14 +38,17 @@
  	</select>
  
  
- 	<select id="getProductList" parameterType="Pager" resultType="ProductDTO">
+ 	<select id="getProductList" parameterType="Pager" resultMap="productDetailResult">
  		SELECT * FROM
 			(
 				SELECT ROWNUM R, B.* FROM
 					(
-						SELECT * FROM PRODUCT
+						SELECT * FROM PRODUCT R
+						LEFT OUTER JOIN
+						PRODUCTIMG B
+						ON(R.NUM = B.NUM)
 						<include refid="searchCondition"></include>						
-						ORDER BY NUM DESC
+						ORDER BY ROWNUM DESC
 					) B 
 			)
 		WHERE R BETWEEN #{startRow}  AND #{lastRow} 
@@ -96,7 +99,7 @@
  	</delete> 
  	
  	<update id="setProductUpdate" parameterType="ProductDTO">
- 		UPDATE PRODUCT SET TITLE=#{title}, PRICE=#{price}, SALEQTY=#{saleQty}, INFO=#{info}, SYSDATE, 0.0
+ 		UPDATE PRODUCT SET TITLE=#{title}, PRICE=#{price}, INFO=#{info}
  		WHERE NUM=#{num}
  	</update>
  	
