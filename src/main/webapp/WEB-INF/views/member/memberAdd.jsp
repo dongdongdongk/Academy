@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>회원가입</title>
 <c:import url="../template/common_css.jsp"></c:import>
 <style>
 	.redResult{
@@ -22,7 +22,7 @@
 <c:import url="../template/header.jsp"></c:import>
 <div class="container-fluid my-5">
 	<div class="row justify-content-center">
-		<h1 class="col-md-6 text-center fw-bold">MemberJoin Page</h1>
+		<h1 class="col-md-6 text-center fw-bold">회원가입</h1>
 	</div>
 	<div class = "row justify-content-center">
 		<form class="col-md-6" id="frm" action="./memberAdd" method="post">

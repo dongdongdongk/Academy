@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Find ID</title>
+<title>아이디 찾기</title>
 <c:import url="../../template/common_css.jsp"></c:import>
 </head>
 <body>
@@ -31,7 +31,7 @@
     <div class="row justify-content-center my-5">
         <form class="col-md-7" action="./findId" method="post">
             <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
+                <label for="name" class="form-label">이름</label>
                 <input type="text" class="form-control" id="name" name="name">
             </div>
             <div class="mb-3">
@@ -47,7 +47,7 @@
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Find ID</button>
+            <button type="submit" class="btn btn-primary">아이디 찾기</button>
         </form>
     </div>
 </div>

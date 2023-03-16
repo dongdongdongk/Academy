@@ -5,14 +5,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>회원정보</title>
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
 	<div class="container-fluid">
 		<div class="row">
-			<h1>Member Page</h1>
+			<h1>회원정보</h1>
 		</div>
 		
 		<div class="row">
@@ -20,7 +20,7 @@
 			<h3>Phone : ${dto.phone}</h3>
 			<h3>Email : ${dto.email}${dto.emaildomain}</h3>
 			<h3>Role  : ${dto.roleDTO.roleName}</h3>
-			<a href="./memberUpdate" class="btn btn-info">정보수정</a>
+			<a href="./memberUpdate" class="btn btn-info">회원정보 수정</a>
 		</div>
 	</div>
 

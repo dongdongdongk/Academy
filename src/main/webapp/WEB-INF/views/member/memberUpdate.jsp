@@ -5,14 +5,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MemberUpdate</title>
+<title>회원정보 수정</title>
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
 <div class="container-fluid">
 		<div class="row">
-			<h1>MemberUpdate Page</h1>
+			<h1>회원정보 수정</h1>
 		</div>
 		
 		<div class="row">

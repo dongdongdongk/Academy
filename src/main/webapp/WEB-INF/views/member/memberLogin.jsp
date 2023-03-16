@@ -5,14 +5,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Member Login</title>
+<title>로그인</title>
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
 <div class="container-fluid">
 	<div class="row justify-content-center">
-		<h1 class="col-md-7 my-5">Member Login</h1>
+		<h1 class="col-md-7 my-5">로그인</h1>
 	</div>
 	<div class="row justify-content-center my-5">
 		<form class="col-md-7" action="memberLogin" method="post">
@@ -26,7 +26,7 @@
 			</div>
 			<div class="mb-3 form-check">
 			  	<input type="checkbox" name="remember" value="true" class="form-check-input" id="remember">
-			  	<label class="form-check-label" for="remember">ID 기억하기</label>
+			  	<label class="form-check-label" for="remember">아이디 기억하기</label>
 			</div>
 	  		<button type="submit" class="btn btn-primary">Submit</button>  		
 		</form>

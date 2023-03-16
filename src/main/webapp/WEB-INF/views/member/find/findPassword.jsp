@@ -31,11 +31,11 @@
     <div class="row justify-content-center my-5">
         <form class="col-md-7" action="./findPassword" method="post">
             <div class="mb-3">
-                <label for="id" class="form-label">아이디:</label>
+                <label for="id" class="form-label">아이디</label>
                 <input type="text" id="id" name="id" required class="form-control">
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label fw-bold">이메일:</label>
+                <label for="email" class="form-label fw-bold">이메일</label>
                 <div class="input-group">
                     <input type="text" id="email" name="email" required class="form-control">
                     <select id="emaildomain" name="emaildomain" class="form-control">

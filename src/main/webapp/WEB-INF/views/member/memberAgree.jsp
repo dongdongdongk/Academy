@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>약관 확인</title>
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
