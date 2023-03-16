@@ -33,8 +33,8 @@
 	</div>
     <div class="row justify-content-center my-3">
         <div class="col-md-7 d-flex justify-content-between">
-            <a href="./find/findId">아이디 찾기</a>
-            <a href="./find/findPassword">비밀번호 찾기</a>
+            <a href="./find/findId" class="btn btn-outline-secondary">아이디 찾기</a>
+            <a href="./find/findPassword" class="btn btn-outline-secondary">비밀번호 찾기</a>
         </div>
     </div>
 </div>
