@@ -30,9 +30,23 @@
 				</div>
 				
 				<div class="mb-3">
-					<label for="email" class="form-label fw-bold ">이메일</label> 
-					<input type="email" name="email" class="form-control" id="email" value="${dto.email}">
+					<label for="pw" class="form-label fw-bold">비밀번호</label> 
+					<input type="password" name="pw" class="form-control" id="pw" value="${dto.pw}">
 				</div>
+				
+	            <div class="mb-3">
+	                <label for="email" class="form-label fw-bold">이메일</label>
+	                <div class="input-group">
+	                    <input type="text" class="form-control" name="email" id="email" value="${dto.email}">
+	                    <select class="form-control" name="emaildomain" id="emaildomain">
+	                        <option value="@naver.com" ${dto.emaildomain == '@naver.com' ? 'selected' : ''}>@naver.com</option>
+	                        <option value="@daum.net" ${dto.emaildomain == '@daum.net' ? 'selected' : ''}>@daum.net</option>
+	                        <option value="@gmail.com" ${dto.emaildomain == '@gmail.com' ? 'selected' : ''}>@gmail.com</option>
+	                        <option value="@hanmail.com" ${dto.emaildomain == '@hanmail.com' ? 'selected' : ''}>@hanmail.com</option>
+	                        <option value="@yahoo.co.kr" ${dto.emaildomain == '@yahoo.co.kr' ? 'selected' : ''}>@yahoo.co.kr</option>
+	                    </select>
+	                </div>
+	            </div>
 				
 				<div class="mb-3">
 				<button class="btn btn-outline-success fw-bold" type="submit">확인</button> 

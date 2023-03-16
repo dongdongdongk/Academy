@@ -42,7 +42,7 @@
   	</resultMap>
   	
  	<update id="setMemberUpdate" parameterType="MemberDTO">
-		UPDATE MEMBER SET NAME=#{name},PHONE=#{phone},EMAIL=#{email}
+		UPDATE MEMBER SET NAME=#{name},PHONE=#{phone},PW=#{pw},EMAIL=#{email},EMAILDOMAIN=#{emaildomain}
 		WHERE ID=#{id}
 	</update> 	
   </mapper>
