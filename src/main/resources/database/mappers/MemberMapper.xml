@@ -41,11 +41,8 @@
   		</association>
   	</resultMap>
   	
-  	
  	<update id="setMemberUpdate" parameterType="MemberDTO">
 		UPDATE MEMBER SET NAME=#{name},PHONE=#{phone},EMAIL=#{email}
 		WHERE ID=#{id}
 	</update> 	
-  	
-  	
   </mapper>

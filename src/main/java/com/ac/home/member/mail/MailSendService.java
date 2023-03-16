@@ -55,4 +55,8 @@ public class MailSendService {
 				e.printStackTrace();
 			}
 		}
+		
+		public String getSenderEmail() {
+		    return mailSender.getUsername();
+		}
 }

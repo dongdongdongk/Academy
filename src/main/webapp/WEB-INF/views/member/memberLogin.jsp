@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Member Login</title>
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
@@ -28,10 +28,17 @@
 			  	<input type="checkbox" name="remember" value="true" class="form-check-input" id="remember">
 			  	<label class="form-check-label" for="remember">ID 기억하기</label>
 			</div>
-	  		<button type="submit" class="btn btn-primary">Submit</button>
+	  		<button type="submit" class="btn btn-primary">Submit</button>  		
 		</form>
 	</div>
+    <div class="row justify-content-center my-3">
+        <div class="col-md-7 d-flex justify-content-between">
+            <a href="./find/findId">아이디 찾기</a>
+            <a href="./find/findPassword">비밀번호 찾기</a>
+        </div>
+    </div>
 </div>
 <c:import url="../template/common_js.jsp"></c:import>
 </body>
 </html>
+

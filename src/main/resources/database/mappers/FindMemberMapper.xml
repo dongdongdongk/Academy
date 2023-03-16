@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ac.home.member.find.FindMemberDAO">
+
+	<select id="getMemberId" resultType="com.ac.home.member.MemberDTO" parameterType="com.ac.home.member.MemberDTO">
+	  SELECT id
+	  FROM MEMBER
+	  WHERE name=#{name} AND email=#{email} AND emaildomain=#{emaildomain, jdbcType=VARCHAR}
+	</select>
+	
+	<select id="findMemberByIdAndEmail" resultType="com.ac.home.member.MemberDTO" parameterType="com.ac.home.member.MemberDTO">
+	  SELECT *
+	  FROM MEMBER
+	  WHERE id=#{id} AND email=#{email} AND emaildomain=#{emaildomain, jdbcType=VARCHAR}
+	</select>
+
+	<update id="updatePassword" parameterType="com.ac.home.member.MemberDTO">
+	  UPDATE MEMBER SET pw=#{pw}
+	  WHERE id=#{id}
+	</update>
+
+</mapper>
