@@ -113,10 +113,15 @@ public class FindMemberController {
 
     private void sendEmailWithTempPassword(String email, String emaildomain, String tempPassword) {
         String combinedEmail = email + emaildomain;
-        String setFrom = mailSendService.getSenderEmail(); // 발신 이메일 주소를 가져옵니다.
+        String setFrom = mailSendService.getSenderEmail();
         String subject = "임시 비밀번호 발급 안내";
-        String content = "귀하의 임시 비밀번호는 다음과 같습니다.\n\n임시 비밀번호: " + tempPassword + "\n\n임시 비밀번호로 로그인 한 후, 비밀번호를 변경해 주시기 바랍니다.";
-
+        String content = 
+			"귀하의 임시 비밀번호는 다음과 같습니다." +
+	        "<br><br>" + 
+		    "임시 비밀번호는 " + tempPassword + "입니다." + 
+		    "<br>" + 
+		    "임시 비밀번호로 로그인 한 후, 비밀번호를 변경해 주시기 바랍니다.";
+        
         mailSendService.mailSend(setFrom, combinedEmail, subject, content);
     }
 }

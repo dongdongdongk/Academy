@@ -13,6 +13,21 @@
     <div class="row justify-content-center">
         <h1 class="col-md-7 my-5">비밀번호 찾기</h1>
     </div>
+    
+    <!-- 성공 메시지 출력 -->
+    <c:if test="${not empty successMessage}">
+        <div class="alert alert-success" role="alert">
+            ${successMessage}
+        </div>
+    </c:if>
+
+    <!-- 에러 메시지 출력 -->
+    <c:if test="${not empty errorMessage}">
+        <div class="alert alert-danger" role="alert">
+            ${errorMessage}
+        </div>
+    </c:if>
+    
     <div class="row justify-content-center my-5">
         <form class="col-md-7" action="./findPassword" method="post">
             <div class="mb-3">
