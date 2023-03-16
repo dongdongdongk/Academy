@@ -42,12 +42,12 @@ public class FindMemberController {
         memberDTO = findMemberService.getMemberId(memberDTO);
 
         if (memberDTO != null) {
-            model.addAttribute("result", "찾으시는 아이디는 " + memberDTO.getId() + " 입니다.");
+            model.addAttribute("successMessage", "찾으시는 아이디는 " + memberDTO.getId() + " 입니다.");
         } else {
-            model.addAttribute("result", "일치하는 회원 정보가 없습니다.");
+            model.addAttribute("errorMessage", "일치하는 회원 정보가 없습니다.");
         }
 
-        return "member/find/findIdResult";
+        return "member/find/findId";
     }
 
     // 비밀번호 찾기
