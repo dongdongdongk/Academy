@@ -35,7 +35,7 @@
                 <input type="text" id="id" name="id" required class="form-control">
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label fw-bold">이메일</label>
+                <label for="email" class="form-label">이메일</label>
                 <div class="input-group">
                     <input type="text" id="email" name="email" required class="form-control">
                     <select id="emaildomain" name="emaildomain" class="form-control">

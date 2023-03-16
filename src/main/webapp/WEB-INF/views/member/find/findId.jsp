@@ -11,7 +11,7 @@
 <c:import url="../../template/header.jsp"></c:import>
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <h1 class="col-md-7 my-5">Find ID</h1>
+        <h1 class="col-md-7 my-5">아이디 찾기</h1>
     </div>
     
     <!-- 성공 메시지 출력 -->
@@ -35,7 +35,7 @@
                 <input type="text" class="form-control" id="name" name="name">
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label fw-bold">이메일</label>
+                <label for="email" class="form-label">이메일</label>
                 <div class="input-group">
                     <input type="text" class="form-control" name="email" id="email" placeholder="이메일 입력">
                     <select class="form-control" name="emaildomain" id="emaildomain">

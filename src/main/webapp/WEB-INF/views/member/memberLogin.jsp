@@ -17,18 +17,18 @@
 	<div class="row justify-content-center my-5">
 		<form class="col-md-7" action="memberLogin" method="post">
 			<div class="mb-3">
-	    		<label for="id" class="form-label">ID</label>
+	    		<label for="id" class="form-label">아이디</label>
 	    		<input type="text" class="form-control" id="id" name="id" value="${cookie.rememberId.value}">
 		  	</div>
 		  	<div class="mb-3">
-				<label for="pw" class="form-label">Password</label>
+				<label for="pw" class="form-label">비밀번호</label>
 			  	<input type="password" class="form-control" id="pw" name="pw">
 			</div>
 			<div class="mb-3 form-check">
 			  	<input type="checkbox" name="remember" value="true" class="form-check-input" id="remember">
 			  	<label class="form-check-label" for="remember">아이디 기억하기</label>
 			</div>
-	  		<button type="submit" class="btn btn-primary">Submit</button>  		
+	  		<button type="submit" class="btn btn-primary">로그인</button>  		
 		</form>
 	</div>
     <div class="row justify-content-center my-3">
