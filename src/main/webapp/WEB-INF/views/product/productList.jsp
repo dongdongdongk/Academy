@@ -206,10 +206,10 @@
 
 
 
-	<c:import url="../template/common_js.jsp"></c:import>
-	<script src="/resources/css/goodsManage.css"></script>
-	<script src="../resources/js/pageing.js"></script>
-	<script src="../resources/js/fileManger.js"></script>
+<c:import url="../template/common_js.jsp"></c:import>
+<script src="/resources/css/goodsManage.css"></script>
+<script src="../resources/js/pageing.js"></script>
+<script src="../resources/js/fileManger.js"></script>
 	<script>
 	setMax(1);
 	$("#bookDetail").summernote();
