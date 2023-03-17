@@ -9,7 +9,6 @@ public class Pager {
 	private Long perPage;
 	private Long perBlock;
 	private Long totalPage;
-	
 	private Long startRow;
 	private Long lastRow;
 	
@@ -19,6 +18,27 @@ public class Pager {
 	private boolean before;
 	private boolean after;
 	
+	
+	public String getKind() {
+		return kind;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
+	}
+
+	public String getSearch() {
+		return search;
+	}
+
+	public void setSearch(String search) {
+		this.search = search;
+	}
+
+	public void setTotalPage(Long totalPage) {
+		this.totalPage = totalPage;
+	}
+
 	public Pager() {
 		this.perPage = 10L;
 	}
@@ -143,24 +163,5 @@ public class Pager {
 	public void setNum(Long num) {
 		this.num = num;
 	}
-
-	public String getKind() {
-		return kind;
-	}
-
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
-
-	public String getSearch() {
-		return search;
-	}
-
-	public void setSearch(String search) {
-		this.search = search;
-	}
-
-	public void setTotalPage(Long totalPage) {
-		this.totalPage = totalPage;
-	}
+	
 }
