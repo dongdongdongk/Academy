@@ -85,7 +85,7 @@ public class QnaController {
 		return mv;
 	}
 	
-	@GetMapping(value = "qnaDelete")
+	@GetMapping(value = "delete")
 	public ModelAndView setQnaDelete(QnaDTO qnaDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		
