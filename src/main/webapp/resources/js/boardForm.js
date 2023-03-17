@@ -9,4 +9,4 @@ del.addEventListener("click", function(){
         frm.setAttribute("method", "get");
         frm.submit();
     }
-})
+});

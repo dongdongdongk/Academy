@@ -1,7 +1,7 @@
 package com.ac.home.util;
 
 public class Pager {
-
+	private Long num;
 	private String kind;
 	private String search;
 	
@@ -20,6 +20,27 @@ public class Pager {
 	private boolean before;
 	private boolean after;
 	
+	
+	public String getKind() {
+		return kind;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
+	}
+
+	public String getSearch() {
+		return search;
+	}
+
+	public void setSearch(String search) {
+		this.search = search;
+	}
+
+	public void setTotalPage(Long totalPage) {
+		this.totalPage = totalPage;
+	}
+
 	public Pager() {
 		this.perPage=10L;
 	}
@@ -95,25 +116,6 @@ public class Pager {
 			this.perPage=10L;
 		}
 		return perPage;
-	}
-	
-	public String getKind() {
-		return kind;
-	}
-
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
-
-	public String getSearch() {
-		if(search == null) {
-			search="";
-		}
-		return search; //"%"+search+"%";
-	}
-
-	public void setSearch(String search) {
-		this.search = search;
 	}
 
 	public Long getTotalPage() {

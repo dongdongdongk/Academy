@@ -10,7 +10,7 @@ for(let p of pl){
        let v = p.getAttribute('data-board-page')
        page.value=v; 
        searchForm.submit();
-    })
+    });
 }
 
 let data='';

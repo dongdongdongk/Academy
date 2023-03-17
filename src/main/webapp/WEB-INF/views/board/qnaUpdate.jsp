@@ -7,6 +7,8 @@
 <meta charset="UTF-8">
 <title>글 업데이트</title>
 <c:import url="../template/common_css.jsp"></c:import>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body>
 	
@@ -41,5 +43,8 @@
 	</div>
 	
 	<c:import url="../template/common_js.jsp"></c:import>
+	<script>
+		$("#contents").summernote();
+	</script>
 </body>
 </html>

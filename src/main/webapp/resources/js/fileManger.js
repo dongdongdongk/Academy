@@ -1,7 +1,7 @@
 //FileManger.js
 
 
-const fileAdd = document.getElementById("fileAdd");
+//const fileAdd = document.getElementById("fileAdd");
 const fileList = document.getElementById("fileList");
 
 let count=0;

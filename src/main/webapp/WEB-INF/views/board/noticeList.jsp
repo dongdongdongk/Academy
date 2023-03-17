@@ -1,44 +1,42 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Qna 목록</title>
+<title>Insert title here</title>
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
-
-	<div class="container-fluid">
-		<div class="row my-5 col-md-2 mx-auto">
-			<h1>질문응답게시판</h1>
-		</div>
-		
-		<div class="row col-md-7 mx-auto">
-			<table class="table">
-			  	<thead class="table-dark">
-			 		<tr>
-						<th>NUM</th><th>TITLE</th><th>WRITER</th><th>HIT</th>
-					</tr>
-			 	</thead>
-			 	
-			  	<tbody>
-			  		<c:forEach items="${list}" var="dto">
+	<h1>noticeList</h1>
+		<div class="row">
+				<table class="table table-hover">
+					<thead>
 						<tr>
-							<td>${dto.num}</td>
-							<td>
-								<c:forEach begin="1" end="${dto.depth}">--</c:forEach>	
-								<a href="./qnaDetail?num=${dto.num}">${dto.title}</a>
-							</td>
-							<td>${dto.writer}</td>
-							<td>${dto.hit}</td>
+							<th>NUM</th><th>TITLE</th><th>WRITER</th><th>DATE</th><th>HIT</th>
 						</tr>
-					</c:forEach>
-			  	</tbody>
-			</table>
+					</thead>
+					<tbody>
+						<c:forEach items="${list}" var="dto">
+							<tr>
+								<td>${dto.num}</td>
+								<td>
+								<a href="./detail?num=${dto.num}">${dto.title}</a></td>
+								<td>
+								<td>${dto.writer}</td>
+								<td>${dto.regDate}</td>
+								<td>${dto.hit}</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				
+				</table>
+			</div>
+			<a href="./add">글쓰기</a>
 			
-			<div class="row">
+			
+		<div class="row">
 				<nav aria-label="Page navigation example">
 				  <ul class="pagination">
 				  
@@ -75,7 +73,7 @@
 			
 			
 			<div class="row">
-				<form class="row g-3" action="./qnaList" method="get" id="searchForm">
+				<form class="row g-3" action="./list" method="get" id="searchForm">
 					<input type="hidden" name="page" value="1" id="page">
 				  <div class="col-auto">
 				    <label for="kind" class="visually-hidden">Kind</label>
@@ -94,18 +92,8 @@
 				  </div>
 				</form>
 			</div>
-			
-			<div class="row col-auto mx-auto">
-				<a class="btn btn-primary mb-3" href="./qnaAdd">글 등록</a>
-			</div>	
-				
-			<div class="row col-auto mx-auto">
-				<a class="btn btn-primary mb-3" href="/">홈</a>
-			</div>	
-		</div>
-	</div>
 	
-	<c:import url="../template/common_js.jsp"></c:import>
+	<c:import url="../template/common_js.jsp"></c:import>		
 	<script src="../resources/js/pageing.js"></script>
 </body>
 </html>

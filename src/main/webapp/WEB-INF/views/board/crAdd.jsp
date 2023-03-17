@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>글 등록</title>
+<title>수강후기 등록</title>
 <c:import url="../template/common_css.jsp"></c:import>
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
@@ -14,11 +14,11 @@
 	
 	<div class="container-fluid my-5">
 		<div class="row mb-4">
-			<h3 class="col-md-7 mx-auto text-center border-bottom border-dark pb-4">질문응답등록</h3>
+			<h3 class="col-md-7 mx-auto text-center border-bottom border-dark pb-4">수강후기 등록</h3>
 		</div>
 	
 		<div class="row col-md-7 mx-auto">
-			<form class="row g-3" action="./qnaAdd" method="post">
+			<form class="row g-3" action="./crAdd" method="post">
 				<div class="col-md-6">
     				<label for="writer" class="form-label">작성자</label>
     				<input type="text" name="writer" class="form-control" id="writer">

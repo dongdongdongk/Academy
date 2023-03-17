@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ac.home.util.Pager;
+
 @Controller
 @RequestMapping(value = "/qna/*")
 public class QnaController {
@@ -17,10 +19,10 @@ public class QnaController {
 	private QnaService qnaService;
 	
 	@GetMapping(value = "qnaList")
-	public ModelAndView getQnaList() throws Exception {
+	public ModelAndView getQnaList(Pager pager) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		
-		List<QnaDTO> ar = qnaService.getQnaList();
+		List<QnaDTO> ar = qnaService.getQnaList(pager);
 		
 		mv.addObject("list", ar);
 		mv.setViewName("board/qnaList");
@@ -33,6 +35,8 @@ public class QnaController {
 		ModelAndView mv = new ModelAndView();
 		
 		qnaDTO = qnaService.getQnaDetail(qnaDTO);
+		
+		int result = qnaService.setQnaHit(qnaDTO);
 		
 		mv.addObject("detail", qnaDTO);
 		mv.setViewName("board/qnaDetail");
@@ -88,6 +92,33 @@ public class QnaController {
 		int result = qnaService.setQnaDelete(qnaDTO);
 		
 		mv.setViewName("redirect:./qnaList");
+		
+		return mv;
+	}
+	
+	@GetMapping(value = "qnaReply")
+	public ModelAndView setReplyAdd(QnaDTO qnaDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("board/qnaReply");
+		
+		return mv;
+	}
+	
+	@PostMapping(value = "qnaReply")
+	public ModelAndView setReplyAdd(QnaDTO qnaDTO, ModelAndView mv) throws Exception {
+		
+		int result = qnaService.setReplyAdd(qnaDTO);
+		
+		String message = "등록 실패";
+		
+		if(result > 0) {
+			message = "글이 등록 되었습니다";
+		}
+		
+		mv.addObject("url", "./qnaDetail?num=" + qnaDTO.getNum());
+		mv.addObject("result", message);
+		mv.setViewName("common/result");
 		
 		return mv;
 	}

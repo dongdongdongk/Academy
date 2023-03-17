@@ -5,20 +5,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>글 등록</title>
-<c:import url="../template/common_css.jsp"></c:import>
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<title>답글 등록</title>
+	<c:import url="../template/common_css.jsp"></c:import>
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body>
-	
+
 	<div class="container-fluid my-5">
 		<div class="row mb-4">
-			<h3 class="col-md-7 mx-auto text-center border-bottom border-dark pb-4">질문응답등록</h3>
+			<h3 class="col-md-7 mx-auto text-center border-bottom border-dark pb-4">답글 등록하기</h3>
 		</div>
 	
 		<div class="row col-md-7 mx-auto">
-			<form class="row g-3" action="./qnaAdd" method="post">
+			<form class="row g-3" action="./qnaReply" method="post">
+				<input type="hidden" name="num" value="${qnaDTO.num}">
+				
 				<div class="col-md-6">
     				<label for="writer" class="form-label">작성자</label>
     				<input type="text" name="writer" class="form-control" id="writer">
@@ -33,14 +35,14 @@
     				<label for="contents" class="form-label">내용</label>
     				<textarea class="form-control" name="contents" id="contents" placeholder="내용을 입력하세요"></textarea>
   				</div>
-
+				
 				<div class="row col-md-2 mx-auto mt-5">
 					<button type="submit" class="btn btn-primary">글등록</button>
 				</div>
 			</form>
 		</div>
 	</div>
-	
+
 	<c:import url="../template/common_js.jsp"></c:import>
 	<script>
 		$("#contents").summernote();

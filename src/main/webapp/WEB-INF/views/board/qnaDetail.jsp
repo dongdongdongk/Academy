@@ -25,47 +25,60 @@
 	  					<label for="writer" class="form-label">${detail.writer}</label>
 	  				</div>
 	  				
-	  				
-	  				<div class="col-md-12 mt-5">
+	  				<div class="col-md-6">
 	    				<label for="title" class="form-label">제목</label>
-	    				<label for="title" class="form-label">${detail.title}</label>
 	  				</div>
 	  				
-	  				<div class="col-md-12 mt-5">
+	  				<div class="col-md-6">
+	  					<label for="title" class="form-label">${detail.title}</label>
+	  				</div>
+	  				
+	  				<div class="col-md-6">
 	    				<label for="contents" class="form-label">내용</label>
-	    				<label for="contents" class="form-label">${detail.contents}</label>
-	  				</div>
-	
-	  				<div class="col-md-12 mt-5">
-	    				<label for="regDate" class="form-label">등록일</label>
-	    				<label for="regDate" class="form-label">${detail.regDate}</label>
 	  				</div>
 	  				
-	  				<div class="col-md-12 mt-5">
-	    				<label for="hit" class="form-label">조회수</label>
-	    				<label for="hit" class="form-label">${detail.hit}</label>
+	  				<div class="col-md-6">
+	  					<label for="contents" class="form-label">${detail.contents}</label>
 	  				</div>
-	
-					<div class="row col-md-2 mx-auto mt-5">
-						<a class="btn btn-primary" href="./qnaUpdate?num=${detail.num}">글 수정</a>
-					</div>
-					
-					<div class="row col-md-2 mx-auto mt-5">
-						<a class="btn btn-primary" href="./qnaDelete?num=${detail.num}">글 삭제</a>
+	  				
+	  				<div class="col-md-6">
+	    				<label for="regDate" class="form-label">등록일</label>	    				
+	  				</div>
+	  				
+	  				<div class="col-md-6">
+	  					<label for="regDate" class="form-label">${detail.regDate}</label>
+	  				</div>
+	  				
+	  				<div class="col-md-6">
+	    				<label for="hit" class="form-label">조회수</label>
+	  				</div>
+	  				
+	  				<div class="col-md-6">
+	  					<label for="hit" class="form-label">${detail.hit}</label>
+	  				</div>
+	  				
+	  				
+	  				<div>
+						<form action="./qnaUpdate" id="frm">
+							<input type="hidden" name="num" value="${detail.num}">
+							<button id="update" type="submit" class="btn btn-primary col-md-2 mt-4">글 수정</button>
+							<button id="delete" type="button" class="btn btn-primary col-md-2 mt-4">글 삭제</button>
+						</form>
 					</div>
 					
 					<div class="row col-md-2 mx-auto mt-5">
 						<a class="btn btn-primary" href="./qnaList">글 목록</a>
 					</div>
+					
+					<div class="row col-md-2 mx-auto mt-5">
+						<a class="btn btn-primary" href="./qnaReply?num=${detail.num}">답글 작성</a>
+					</div>
+					
 				</div>
 			</div>
 		</div>
 		
-		
-		
-		
-		
-		
+		<script src="../resources/js/boardForm.js"></script>
 		<c:import url="../template/common_js.jsp"></c:import>
 </body>
 </html>

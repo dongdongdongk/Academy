@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.ac.home.util.Pager;
+
 @Repository
 public class QnaDAO {
 	
@@ -14,8 +16,8 @@ public class QnaDAO {
 	
 	private final String NAMESPACE = "com.ac.home.qna.QnaDAO.";
 	
-	public List<QnaDTO> getQnaList() throws Exception {
-		return sqlSession.selectList(NAMESPACE + "getQnaList");
+	public List<QnaDTO> getQnaList(Pager pager) throws Exception {
+		return sqlSession.selectList(NAMESPACE + "getQnaList", pager);
 	}
 	
 	public QnaDTO getQnaDetail(QnaDTO qnaDTO) throws Exception {
@@ -32,5 +34,21 @@ public class QnaDAO {
 	
 	public int setQnaDelete(QnaDTO qnaDTO) throws Exception {
 		return sqlSession.delete(NAMESPACE + "setQnaDelete", qnaDTO);
+	}
+	
+	public Long getTotalCount(Pager pager) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + "getTotalCount", pager);
+	}
+	
+	public int setQnaHit(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.update(NAMESPACE + "setQnaHit", qnaDTO);
+	}
+	
+	public int setStepUpdate(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.update(NAMESPACE + "setStepUpdate", qnaDTO);
+	}
+	
+	public int setReplyAdd(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.insert(NAMESPACE + "setReplyAdd", qnaDTO);
 	}
 }

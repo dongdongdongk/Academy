@@ -4,9 +4,40 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.ac.home.qna.QnaDAO">
+  
+  	<sql id="qnaCondition">
+	  			
+	  	<if test="kind == 'title'">
+	  		WHERE TITLE LIKE '%' || #{search} || '%'
+	  	</if>
+	  			
+	  	<if test="kind == 'contents'">
+	  		WHERE CONTENTS LIKE '%' || #{search} || '%'
+	  	</if>
+	  			
+	  	<if test="kind == 'writer'">
+	  		WHERE WRITER LIKE '%' || #{search} || '%'
+	  	</if>
+	  		
+  	</sql>
+  
+ 	<select id="getTotalCount" resultType="Long" parameterType="Pager">
+		SELECT COUNT(NUM) FROM QNA
+		
+		<include refid="qnaCondition"></include>
+	</select>
   	
-  	<select id="getQnaList" resultType="QnaDTO">
-  		SELECT * FROM QNA
+  	<select id="getQnaList" parameterType="Pager" resultType="QnaDTO">
+  		SELECT * FROM
+  			(
+	  			SELECT ROWNUM R, N.* FROM
+		  			(
+			  			SELECT NUM, TITLE, WRITER, REGDATE, HIT, DEPTH FROM QNA
+			  			<include refid="qnaCondition"></include>
+			  			ORDER BY REF DESC, STEP ASC
+		  			) N
+  			)
+  			WHERE R BETWEEN #{startRow} AND #{lastRow}
   	</select>
   
   	<select id="getQnaDetail" parameterType="QnaDTO" resultType="QnaDTO">
@@ -15,8 +46,11 @@
   	</select>
   	
   	<insert id="setQnaAdd" parameterType="QnaDTO">
+  		<selectKey keyProperty="num" resultType="Long" order="BEFORE">
+			SELECT QNA_SEQ.NEXTVAL FROM DUAL
+		</selectKey>
   		INSERT INTO QNA
-  		VALUES (QNA_SEQ.NEXTVAL, #{title}, #{contents}, #{writer}, SYSDATE, 0, 0, 0, 0)
+  		VALUES (#{num}, #{title}, #{contents}, #{writer}, SYSDATE, 0, #{num}, 0, 0)
   	</insert>
   	
   	<update id="setQnaUpdate" parameterType="QnaDTO">
@@ -27,5 +61,20 @@
   	<delete id="setQnaDelete" parameterType="QnaDTO">
   		DELETE QNA WHERE NUM = #{num}
   	</delete>
+  	
+  	<update id="setQnaHit" parameterType="QnaDTO">
+  		UPDATE QNA SET HIT = #{hit} + 1
+		WHERE NUM = #{num}
+  	</update>
+  	
+  	<update id="setStepUpdate" parameterType="QnaDTO">
+  		UPDATE QNA SET STEP = STEP + 1 
+  		WHERE REF = #{ref} AND STEP > #{step}  
+	</update>
+	
+	<insert id="setReplyAdd" parameterType="QnaDTO">
+  		INSERT INTO QNA (NUM, TITLE, CONTENTS, WRITER, REGDATE, HIT, REF, STEP, DEPTH)
+  		VALUES (QNA_SEQ.NEXTVAL, #{title}, #{contents}, #{writer}, SYSDATE, 0, #{ref}, #{step}, #{depth})
+	</insert>
   	
   </mapper>
