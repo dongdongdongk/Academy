@@ -60,28 +60,24 @@
 		  <input type="text" name="phone" class="form-control" id="phone" placeholder="전화번호 입력" required>
 		</div>
 		
-		<!-- <div class="mb-3">
-		  <label for="email" class="form-label fw-bold">이메일</label>
-		  <input type="email" name="email" class="form-control" id="email" placeholder="이메일 입력" required>
-		</div> -->
-
 		<div class="mb-3">
 		    <label for="email" class="form-label fw-bold">이메일</label>
 		    <div class="input-group">
 		        <input type="text" class="form-control" name="email" id="email" placeholder="이메일 입력" >
 		        <select class="form-control" name="emaildomain" id="emaildomain" >
-		        	<option value="@naver.com">@naver.com</option>
-		        	<option value="@daum.net">@daum.net</option>
-		        	<option value="@gmail.com">@gmail.com</option>
-		        	<option value="@hanmail.com">@hanmail.com</option>
-		        	<option value="@yahoo.co.kr">@yahoo.co.kr</option>
+		            <option value="@naver.com">@naver.com</option>
+		            <option value="@daum.net">@daum.net</option>
+		            <option value="@gmail.com">@gmail.com</option>
+		            <option value="@hanmail.com">@hanmail.com</option>
+		            <option value="@yahoo.co.kr">@yahoo.co.kr</option>
 		        </select>
-		    </div>   
+		    </div>
 		    <div class="input-group mt-3">
 		        <input class="form-control mail-check-input" placeholder="인증번호 6자리를 입력해주세요!" disabled="disabled" maxlength="6">
 		        <button type="button" class="btn btn-primary" id="mail-Check-Btn">인증번호 발송</button>
 		        <button type="button" class="btn btn-secondary d-none" id="mail-Confirm-Btn">인증번호 확인</button>
 		    </div>
+		    <span id="emailResult"></span>
 		    <span id="mail-check-warn"></span>
 		</div>
 

@@ -44,6 +44,16 @@ public class MemberController {
 		return mv;
 	}
 	
+	@PostMapping("memberEmailCheck")
+	public ModelAndView getMemberEmailCheck(MemberDTO memberDTO)throws Exception {
+	    boolean check = memberService.getMemberEmailCheck(memberDTO);
+	    ModelAndView mv = new ModelAndView();
+
+	    mv.addObject("result", check);
+	    mv.setViewName("common/ajaxResult");
+	    return mv;
+	}
+	
 	@RequestMapping(value="memberAgree", method = RequestMethod.GET)
 	public void setMemberAgree()throws Exception{
 		

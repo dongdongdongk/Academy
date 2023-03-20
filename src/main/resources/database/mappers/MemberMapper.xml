@@ -26,6 +26,12 @@
 			 ON (MR.ROLENUM = R.ROLENUM)
 		WHERE M.ID=#{id}
   	</select>
+
+	<select id="getMemberByEmail" resultType="MemberDTO">
+	    SELECT * FROM member
+	    WHERE email = #{email} AND emaildomain = #{emaildomain}
+	</select>
+  	
   	
   	<resultMap type="MemberDTO" id="getMemberLoginResult">
   		<id column="ID" property="id"/>
