@@ -26,11 +26,14 @@ public class EventController {
 	
 	//list
 	@GetMapping("list")
-	public ModelAndView getEventList(Pager pager) throws Exception {
+	public ModelAndView getEventList(Pager pager, EventDTO eventDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
-		List<EventDTO> ar = eventService.getEventList(pager); 
-		mv.addObject("list", ar);
+		List<EventDTO> ar = eventService.getEventList(pager);
+	
 		
+		
+		
+		mv.addObject("list", ar);
 		mv.setViewName("board/eventList");
 		return mv;
 		

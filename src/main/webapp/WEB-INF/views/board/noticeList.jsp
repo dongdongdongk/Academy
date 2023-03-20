@@ -33,8 +33,12 @@
 				
 				</table>
 			</div>
-			<a href="./add">글쓰기</a>
 			
+			<c:if test="${not empty member}">
+            <c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
+			<a href="./add">글쓰기</a>
+			</c:if>
+			</c:if>
 			
 		<div class="row">
 				<nav aria-label="Page navigation example">
