@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="/resources/css/eventIcon.css">
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
@@ -30,7 +31,10 @@
 			  			<c:forEach items="${list}" var="dto">
 					<tr>
 						<td>${dto.num}</td>
-						<td><a href="./detail?num=${dto.num}">${dto.title}</a></td>
+						<td><a href="./detail?num=${dto.num}">${dto.title}</a>
+						<c:forEach items="${dto.noticeFileDTOs}" var="fileDTO">
+							<c:if test="${fileDTO.oriName ne null}"><img class="material-symbols-outlined" src="/resources/images/file1.png"></c:if>
+						</c:forEach></td>
 						<td>${dto.writer}</td>
 						<td>${dto.regDate}</td>
 						<td>${dto.hit}</td>
