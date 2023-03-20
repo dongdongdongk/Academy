@@ -7,9 +7,31 @@
 <meta charset="UTF-8">
 <title>Qna 목록</title>
 <c:import url="../template/common_css.jsp"></c:import>
+
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="/resources/css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="/resources/css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="/resources/css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/resources/css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 <body>
+	
+	<c:import url="../template/header.jsp"></c:import>
 
+	<hr>
+	
 	<div class="container-fluid">
 		<div class="row my-5 col-md-2 mx-auto">
 			<h1>질문응답게시판</h1>
