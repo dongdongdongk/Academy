@@ -50,10 +50,22 @@
                             <div class="col-md-9 info-text">${dto.email}${dto.emaildomain}</div>
                         </div>
                         <div class="info-divider"></div>
-                        <div class="row">
-                            <div class="col-md-3 info-label">등급</div>
-                            <div class="col-md-9 info-text">${dto.roleDTO.roleName}</div>
-                        </div>
+						<div class="row">
+						    <div class="col-md-3 info-label">등급</div>
+						    <div class="col-md-9 info-text">
+						        <c:choose>
+						            <c:when test="${dto.roleDTO.roleName eq 'ADMIN'}">
+						                관리자
+						            </c:when>
+						            <c:when test="${dto.roleDTO.roleName eq 'MANAGER'}">
+						                매니저
+						            </c:when>
+						            <c:when test="${dto.roleDTO.roleName eq 'MEMBER'}">
+						                일반 회원
+						            </c:when>
+						        </c:choose>
+						    </div>
+						</div>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center mt-3">
