@@ -1,31 +1,74 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-	<div class="container-fluid">
-		<a href="/" class="navbar-brand"><img src="/resources/images/logo1.png" alt=""></a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>	
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-     		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-			<li class="nav-item"><a class="nav-link active" href="#"></a></li>
-			<li class="nav-item"><a class="nav-link active" href="/product/list">교재</a></li>
-			<li class="nav-item"><a class="nav-link active" href="/oders/list">주문</a></li>
-			<li class="nav-item"><a class="nav-link active" href="/#"></a></li>
-		</ul>
 
-		<ul class="navbar-nav ms-auto">
-			<c:if test="${empty member}">
-			<li class="nav-item"><a class="nav-link" href="/member/memberLogin" style="font-size: 14px;">LOGIN</a></li>
-			<li class="nav-item"><a class="nav-link" href="/member/memberAgree">JOIN</a></li>
-			</c:if>
-			<c:if test="${not empty member}">
-			<li class="nav-item"><a class="nav-link" href="/member/memberPage" style="font-size: 14px;">MYPAGE</a></li>
-			<li class="nav-item"><a class="nav-link" href="/member/memberLogout">LOGOUT</a></li>
-			</c:if>
-		</ul>
-     </div>  	
-    </div>
-</nav>
-
+<div class="hero-content">
+	 <header class="site-header">
+	            <div class="top-header-bar">
+	                <div class="container-fluid">
+	                    <div class="row">
+	                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+	                            <div class="header-bar-email d-flex align-items-center">
+	                                <i class="fa fa-envelope"></i><a href="#">Academy@gmail.com</a>
+	                            </div><!-- .header-bar-email -->
+	
+	                            <div class="header-bar-text lg-flex align-items-center">
+	                                <p><i class="fa fa-phone"></i>010-1234-5678 </p>
+	                            </div><!-- .header-bar-text -->
+	                        </div><!-- .col -->
+	
+	                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+	                            <div class="header-bar-search">
+	                                <form class="flex align-items-stretch">
+	                                    <input type="search" placeholder="무엇을 배우고 싶습니까?">
+	                                    <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button>
+	                                </form>
+	                            </div><!-- .header-bar-search -->
+	
+	                            <div class="header-bar-menu">
+	                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+	                                    <li><a href="/member/memberAdd">회원가입</a></li>
+	                                    <li><a href="/member/memberLogin">로그인</a></li>
+	                                </ul>
+	                            </div><!-- .header-bar-menu -->
+	                        </div><!-- .col -->
+	                    </div><!-- .row -->
+	                </div><!-- .container-fluid -->
+	            </div><!-- .top-header-bar -->
+	
+	            <div class="nav-bar">
+	                <div class="container">
+	                    <div class="row">
+	                        <div class="col-9 col-lg-3">
+	                            <div class="site-branding">
+	                                <h1 class="site-title"><a href="/" rel="home">Acade<span>my</span></a></h1>
+	                            </div><!-- .site-branding -->
+	                        </div><!-- .col -->
+	
+	                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+	                            <nav class="site-navigation flex justify-content-end align-items-center">
+	                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+	                                    <li class="current-menu-item"><a href="/">Home</a></li>
+	                                    <li><a href="/cr/crList">Review</a></li>
+	                                    <li><a href="/product/list">Courses</a></li>
+	                                    <li><a href="/notice/list">Notice</a></li>
+	                                    <li><a href="/qna/qnaList">QNA</a></li>
+	                                </ul>
+	
+	                                <div class="hamburger-menu d-lg-none">
+	                                    <span></span>
+	                                    <span></span>
+	                                    <span></span>
+	                                    <span></span>
+	                                </div><!-- .hamburger-menu -->
+	
+	                                <div class="header-bar-cart">
+	                                    <a href="#" class="flex justify-content-center align-items-center"><span aria-hidden="true" class="icon_bag_alt"></span></a>
+	                                </div><!-- .header-bar-search -->
+	                            </nav><!-- .site-navigation -->
+	                        </div><!-- .col -->
+	                    </div><!-- .row -->
+	                </div><!-- .container -->
+	            </div><!-- .nav-bar -->
+	        </header><!-- .site-header -->
+		</div><!-- .hero-content -->
