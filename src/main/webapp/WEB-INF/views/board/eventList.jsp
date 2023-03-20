@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>EventList</title>
 <c:import url="../template/common_css.jsp"></c:import>
+<link rel="stylesheet" href="/resources/css/eventIcon.css">
 </head>
 <body>
 	<div class="container-fluid">
@@ -30,7 +31,17 @@
 			  			<c:forEach items="${list}" var="dto">
 					<tr>
 						<td>${dto.num}</td>
-						<td><a href="./detail?num=${dto.num}">${dto.title}</a><c:if test="${not empty dto.eventFileDTOs.fileName}">아이콘</c:if></td>
+						
+						<td><a href="./detail?num=${dto.num}">${dto.title}</a>
+						<c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
+							<c:if test="${fileDTO.oriName ne null}"><img class="material-symbols-outlined" src="/resources/images/file1.png"></c:if>
+						</c:forEach></td>
+						
+						<%-- <c:if test="${not empty dto.eventFileDTOs.oriName}">
+							<td>${dto.eventFileDTOs.oriName}</td>
+						</c:if> --%>
+						
+						
 						<td>${dto.writer}</td>
 						<td>${dto.regDate}</td>
 						<td>${dto.hit}</td>
@@ -190,6 +201,8 @@
 				  </div>
 				</form>
 			</div> --%>
+			
+			
 	<c:import url="../template/common_js.jsp"></c:import>		
 	<script src="../resources/js/pageing.js"></script>
 
