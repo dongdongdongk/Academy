@@ -38,7 +38,7 @@
   		<result column="PW" property="pw"/>
   		<result column="NAME" property="name"/>
   		<result column="ADDRESS" property="address"/>
-  		<result column="ADDRESS" property="addressDetail"/>
+  		<result column="ADDRESSDETAIL" property="addressDetail"/>
   		<result column="PHONE" property="phone"/>
   		<result column="EMAIL" property="email"/>
 		<result column="EMAILDOMAIN" property="emaildomain"/>
