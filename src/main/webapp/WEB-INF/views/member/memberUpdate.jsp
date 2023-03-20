@@ -56,6 +56,16 @@
                             </div>
                             
                             <div class="mb-3">
+                                <label for="address" class="form-label fw-bold">주소</label>
+                                <input type="text" name="address" class="form-control" id="address" value="${dto.address}" readonly>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="addressDetail" class="form-label fw-bold">상세 주소</label>
+                                <input type="text" name="addressDetail" class="form-control" id="addressDetail" value="${dto.addressDetail}">
+                            </div>
+                            
+                            <div class="mb-3">
                                 <label for="email" class="form-label fw-bold">이메일</label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" name="email" id="email" value="${dto.email}">
@@ -78,6 +88,19 @@
             </div>
         </div>
     </div>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+    window.onload = function(){
+        document.getElementById("address").addEventListener("click", function(){
+            //카카오 지도 발생
+            new daum.Postcode({
+                oncomplete: function(data) { //선택시 입력값 세팅
+                    document.getElementById("address").value = data.address;
+                }
+            }).open();
+        });
+    }
+</script>
 <c:import url="../template/common_js.jsp"></c:import>
 </body>
 </html>

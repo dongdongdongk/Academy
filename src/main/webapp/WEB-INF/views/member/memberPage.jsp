@@ -44,6 +44,16 @@
                             <div class="col-md-3 info-label">전화번호</div>
                             <div class="col-md-9 info-text">${dto.phone}</div>
                         </div>
+						<div class="info-divider"></div>
+						<div class="row mb-3">
+						    <div class="col-md-3 info-label">주소</div>
+						    <div class="col-md-9 info-text">${dto.address}</div>
+						</div>
+						<div class="info-divider"></div>
+						<div class="row mb-3">
+						    <div class="col-md-3 info-label">상세 주소</div>
+						    <div class="col-md-9 info-text">${dto.addressDetail}</div>
+						</div>
                         <div class="info-divider"></div>
                         <div class="row mb-3">
                             <div class="col-md-3 info-label">이메일</div>

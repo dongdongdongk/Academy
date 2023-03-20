@@ -48,8 +48,15 @@
   		</association>
   	</resultMap>
   	
- 	<update id="setMemberUpdate" parameterType="MemberDTO">
-		UPDATE MEMBER SET NAME=#{name},PHONE=#{phone},PW=#{pw},EMAIL=#{email},EMAILDOMAIN=#{emaildomain}
-		WHERE ID=#{id}
-	</update> 	
+	<update id="setMemberUpdate" parameterType="MemberDTO">
+	    UPDATE MEMBER
+	    SET NAME=#{name},
+	        PHONE=#{phone},
+	        PW=#{pw},
+	        ADDRESS=#{address},
+	        ADDRESSDETAIL=#{addressDetail},
+	        EMAIL=#{email},
+	        EMAILDOMAIN=#{emaildomain}
+	    WHERE ID=#{id}
+	</update>
   </mapper>
