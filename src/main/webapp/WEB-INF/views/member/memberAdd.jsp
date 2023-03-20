@@ -52,7 +52,12 @@
 		
 		<div class="mb-3">
 		  <label for="address" class="form-label fw-bold">주소</label>
-		  <input type="text" name="address" class="form-control" id="address" placeholder="주소 입력" required>
+		  <input type="text" name="address" class="form-control" id="address" placeholder="주소 입력" readonly required>
+		</div>
+		
+		<div class="mb-3">
+		  <label for="addressDetail" class="form-label fw-bold">상세주소</label>
+		  <input type="text" name="addressDetail" class="form-control" id="addressDetail" placeholder="상세주소 입력" required>
 		</div>
 		
 		<div class="mb-3">
