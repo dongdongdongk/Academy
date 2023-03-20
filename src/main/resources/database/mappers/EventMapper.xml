@@ -21,17 +21,22 @@
   
   
   
-  <select id="getEventList" parameterType="Pager" resultType="EventDTO">
+  <select id="getEventList" parameterType="Pager" resultMap="getEventDetailResult">
+	  
 	  	SELECT * FROM
-	  	(
-		  	SELECT ROWNUM R, N.* FROM
-		  		(
-			  		SELECT NUM, WRITER, TITLE, REGDATE, HIT FROM EVENT
-			  		<include refid="eventCondition"></include>
-			  		ORDER BY NUM DESC
-		  		) N
-	  	)
-	  	WHERE R BETWEEN #{startRow} AND #{lastRow}
+			(
+				SELECT ROWNUM R, B.* FROM
+					(
+						SELECT * FROM EVENT R
+						LEFT OUTER JOIN
+						EVENTFILES B
+						ON(R.NUM = B.NUM)
+						<include refid="eventCondition"></include>						
+						ORDER BY ROWNUM DESC
+					) B 
+			)
+		WHERE R BETWEEN #{startRow}  AND #{lastRow} 
+	
   	</select>
   
   <insert id="setEventAdd" parameterType="EventDTO">

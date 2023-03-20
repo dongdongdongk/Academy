@@ -29,6 +29,7 @@ public class EventController {
 	public ModelAndView getEventList(Pager pager) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		List<EventDTO> ar = eventService.getEventList(pager); 
+		
 		mv.addObject("list", ar);
 		
 		mv.setViewName("board/eventList");

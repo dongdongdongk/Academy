@@ -45,7 +45,7 @@ public class NoticeController {
 	//Add
 	
 	@GetMapping("add")
-	public ModelAndView setNoticeAdd() throws Exception {
+	public ModelAndView setNoticeAdd(NoticeDTO noticeDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("board/noticeAdd");
 		return mv;
