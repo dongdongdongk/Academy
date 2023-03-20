@@ -36,7 +36,7 @@
             <div class="terms-container">
                 <div class="terms-title">약관 확인</div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkAll">
+                    <input class="form-check-input checks" type="checkbox" value="" id="checkAll">
                     <label class="form-check-label" for="checkAll">
                         전체동의
                     </label>
@@ -45,8 +45,8 @@
 				<!-- 이용약관 -->
 				<div class="card mb-4">
 				    <div class="card-header">
-				        <input class="form-check-input checks" type="checkbox" value="" id="check1">
-				        <label class="form-check-label" for="check1">
+				        <input class="form-check-input checks ml-1" type="checkbox" value="" id="check1">
+				        <label class="form-check-label ml-2" for="check1">
 				            이용약관 동의 (필수)
 				        </label>
 				    </div>
@@ -67,8 +67,8 @@
 				<!-- 개인정보 처리방침 -->
 				<div class="card mb-4">
 				    <div class="card-header">
-				        <input class="form-check-input checks" type="checkbox" value="" id="check2">
-				        <label class="form-check-label" for="check2">
+				        <input class="form-check-input checks ml-1" type="checkbox" value="" id="check2">
+				        <label class="form-check-label ml-2" for="check2">
 				            개인정보 처리방침 동의 (필수)
 				        </label>
 				    </div>
@@ -87,8 +87,8 @@
 				<!-- 위치정보 이용약관 -->
 				<div class="card mb-4">
 				    <div class="card-header">
-				        <input class="form-check-input checks" type="checkbox" value="" id="check3">
-				        <label class="form-check-label" for="check3">
+				        <input class="form-check-input checks ml-1" type="checkbox" value="" id="check3">
+				        <label class="form-check-label ml-2" for="check3">
 				            위치정보 이용약관 동의 (필수)
 				        </label>
 				    </div>
@@ -105,7 +105,7 @@
 				</div>
 
                 <div class="agree-btn">
-                    <button id="agree" class="btn btn-primary">회원가입</button>
+                    <button id="agree" class="btn btn-outline-secondary">회원가입</button>
                 </div>
             </div>
         </div>

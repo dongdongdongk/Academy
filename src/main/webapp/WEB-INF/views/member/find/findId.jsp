@@ -47,7 +47,7 @@
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">아이디 찾기</button>
+            <button type="submit" class="btn btn-outline-secondary">아이디 찾기</button>
         </form>
     </div>
 </div>

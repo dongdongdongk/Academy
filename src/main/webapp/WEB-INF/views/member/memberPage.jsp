@@ -14,10 +14,6 @@
     .info-text {
         padding-bottom: 1em;
     }
-    .btn-info {
-        background-color: #007bff;
-        color: #ffffff;
-    }
     .info-divider {
         border-bottom: 1px solid #e0e0e0;
         margin-bottom: 1em;
@@ -79,7 +75,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center mt-3">
-                    <a href="./memberUpdate" class="btn btn-info">회원정보 수정</a>
+                    <a href="./memberUpdate" class="btn btn-outline-secondary">회원정보 수정</a>
                 </div>
             </div>
         </div>

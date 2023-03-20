@@ -47,7 +47,7 @@
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">임시 비밀번호 발급</button>
+            <button type="submit" class="btn btn-outline-secondary">임시 비밀번호 발급</button>
         </form>
     </div>
 </div>

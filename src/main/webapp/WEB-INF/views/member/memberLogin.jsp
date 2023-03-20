@@ -25,11 +25,11 @@
 				<label for="pw" class="form-label">비밀번호</label>
 			  	<input type="password" class="form-control" id="pw" name="pw">
 			</div>
-			<div class="mb-3 form-check">
-			  	<input type="checkbox" name="remember" value="true" class="form-check-input" id="remember">
-			  	<label class="form-check-label" for="remember">아이디 기억하기</label>
-			</div>
-	  		<button type="submit" class="btn btn-primary">로그인</button>  		
+		    <div class="form-check">
+		        <input type="checkbox" name="remember" value="true" class="form-check-input" id="remember">
+		        <label class="form-check-label" for="remember">아이디 기억하기</label>
+		    </div>
+	  		<button type="submit" class="btn btn-outline-secondary">로그인</button>	
 		</form>
 	</div>
     <div class="row justify-content-center my-3">

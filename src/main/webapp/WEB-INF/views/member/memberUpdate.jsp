@@ -18,10 +18,6 @@
     .info-text {
         padding-bottom: 1em;
     }
-    .btn-info {
-        background-color: #007bff;
-        color: #ffffff;
-    }
     .info-divider {
         border-bottom: 1px solid #e0e0e0;
         margin-bottom: 1em;
@@ -80,7 +76,7 @@
                             </div>
                             
 						    <div class="mb-3 single-btn">
-						        <button class="btn btn-info" type="submit">확인</button> 
+						        <button class="btn btn-outline-secondary" type="submit">확인</button> 
 						    </div>
                         </form>
                     </div>
