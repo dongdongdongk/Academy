@@ -30,7 +30,7 @@
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
-<div class="container">
+<div class="container-fluid page-content">
     <div class="row">
         <div class="col-md-8 mx-auto">
             <div class="terms-container">
