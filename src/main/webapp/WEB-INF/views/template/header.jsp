@@ -2,6 +2,39 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="/resources/css/font-awesome.min.css">
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="/resources/css/elegant-fonts.css">
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="/resources/css/themify-icons.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/resources/css/swiper.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/resources/css/style.css">
+    
+    <style>
+        .site-header {
+            background-color: rgba(128, 128, 128, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        .page-content {
+            padding-top: 150px;
+        }
+    </style>
+    
+</head>
 <div class="hero-content">
 	 <header class="site-header">
 	            <div class="top-header-bar">
