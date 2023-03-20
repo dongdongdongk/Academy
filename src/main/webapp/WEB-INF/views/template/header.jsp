@@ -27,7 +27,7 @@
 	
 	                            <div class="header-bar-menu">
 	                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
-	                                    <li><a href="/member/memberAdd">회원가입</a></li>
+	                                    <li><a href="/member/memberAgree">회원가입</a></li>
 	                                    <li><a href="/member/memberLogin">로그인</a></li>
 	                                </ul>
 	                            </div><!-- .header-bar-menu -->
