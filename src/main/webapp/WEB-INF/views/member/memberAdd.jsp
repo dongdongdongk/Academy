@@ -22,7 +22,7 @@
 <c:import url="../template/header.jsp"></c:import>
 <div class="container-fluid page-content">
 	<div class="row justify-content-center">
-		<h1 class="col-md-6 text-center fw-bold">회원가입</h1>
+		<h1 class="col-md-7 my-5 text-center fw-bold">회원가입</h1>
 	</div>
 	<div class = "row justify-content-center">
 		<form class="col-md-6" id="frm" action="./memberAdd" method="post">
