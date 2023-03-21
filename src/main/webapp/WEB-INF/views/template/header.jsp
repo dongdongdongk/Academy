@@ -51,12 +51,12 @@
 	                        </div><!-- .col -->
 	
 	                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-	                            <div class="header-bar-search">
+	                            <!-- <div class="header-bar-search">
 	                                <form class="flex align-items-stretch">
 	                                    <input type="search" placeholder="무엇을 배우고 싶습니까?">
 	                                    <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button>
 	                                </form>
-	                            </div><!-- .header-bar-search -->
+	                            </div>.header-bar-search -->
 	
 	                            <div class="header-bar-menu">
 	                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
@@ -65,7 +65,8 @@
 	                                    <li><a href="/member/memberLogin">로그인</a></li>
 	                                </c:if>
 	                                <c:if test="${not empty member}">
-	                                	<li><a href="/member/memberPage">회원정보</a></li>
+	                                	<span id="login_log" style="border-bottom: 1px solid white;">${member.id} 님, 환영합니다.</span>
+	                                	<li><a href="/member/memberPage">마이페이지</a></li>
 	                                    <li><a href="/member/memberLogout">로그아웃</a></li>
 	                                </c:if>
 	                                </ul>

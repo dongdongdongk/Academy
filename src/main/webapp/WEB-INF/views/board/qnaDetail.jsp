@@ -9,6 +9,7 @@
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
+	<c:import url="../template/header.jsp"></c:import>
 	
 		<div class="container-fluid my-5">
 			<div class="row mb-4">
@@ -67,11 +68,11 @@
 					</div>
 					
 					<div class="row col-md-2 mx-auto mt-5">
-						<a class="btn btn-primary" href="./qnaList">글 목록</a>
+						<a class="btn" href="./qnaList">글 목록</a>
 					</div>
 					
 					<div class="row col-md-2 mx-auto mt-5">
-						<a class="btn btn-primary" href="./qnaReply?num=${detail.num}">답글 작성</a>
+						<a class="btn" href="./qnaReply?num=${detail.num}">답글 작성</a>
 					</div>
 					
 				</div>

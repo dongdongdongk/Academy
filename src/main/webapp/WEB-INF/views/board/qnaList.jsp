@@ -25,6 +25,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/resources/css/style.css">
+
+	<link rel="stylesheet" href="/resources/css/list.css">
 </head>
 <body>
 	
@@ -33,8 +35,8 @@
 	<hr>
 	
 	<div class="container-fluid">
-		<div class="row my-5 col-md-2 mx-auto">
-			<h1>질문응답게시판</h1>
+		<div class="row my-5 col-md-1 mx-auto title">
+			<h1>QNA</h1>
 		</div>
 		
 		<div class="row col-md-7 mx-auto">
@@ -60,7 +62,7 @@
 			  	</tbody>
 			</table>
 			
-			<div class="row">
+			<div class="row pager">
 				<nav aria-label="Page navigation example">
 				  <ul class="pagination">
 				  
@@ -96,7 +98,7 @@
 			</div>
 			
 			
-			<div class="row">
+			<div class="row searchs">
 				<form class="row g-3" action="./qnaList" method="get" id="searchForm">
 					<input type="hidden" name="page" value="1" id="page">
 				  <div class="col-auto">
@@ -118,12 +120,9 @@
 			</div>
 			
 			<div class="row col-auto mx-auto">
-				<a class="btn btn-primary mb-3" href="./qnaAdd">글 등록</a>
+				<a class="btn mb-3" href="./qnaAdd">글 등록</a>
 			</div>	
 				
-			<div class="row col-auto mx-auto">
-				<a class="btn btn-primary mb-3" href="/">홈</a>
-			</div>	
 		</div>
 	</div>
 	

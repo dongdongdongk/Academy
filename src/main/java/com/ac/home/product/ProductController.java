@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.home.product.ProductService;
+import com.ac.home.util.Naver;
 import com.ac.home.util.Pager;
 import com.ac.home.product.ProductDTO;
 
@@ -26,9 +28,9 @@ public class ProductController {
 	
 	   @Autowired
 	   private ProductService productService;
-	   
-	   
-	   
+	  
+	   @Autowired
+	   private Naver naver;
 	   
 	   
 	   //list
@@ -115,9 +117,6 @@ public class ProductController {
 			return mv;
 			
 		}
-	 
-		
-
 	}
 	   
 	   

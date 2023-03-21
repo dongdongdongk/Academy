@@ -46,12 +46,12 @@
                         </div><!-- .col -->
 
                         <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-                            <div class="header-bar-search">
+                            <!-- <div class="header-bar-search">
                                 <form class="flex align-items-stretch">
                                     <input type="search" placeholder="무엇을 배우고 싶습니까?">
                                     <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button>
                                 </form>
-                            </div><!-- .header-bar-search -->
+                            </div>.header-bar-search -->
 
                             <div class="header-bar-menu">
                                 <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
@@ -60,7 +60,13 @@
 	                                    <li><a href="/member/memberLogin">로그인</a></li>
 	                                </c:if>
 	                                <c:if test="${not empty member}">
-	                                	<li><a href="/member/memberPage">회원정보</a></li>
+	                                	<span id="login_log" style="border-bottom: 1px solid white;">${member.id} 님, 환영합니다.</span>
+	                                	<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
+	                                		<li><a id="adminPage" href="/member/adminPage">관리자페이지</a></li>
+	                                	</c:if>
+	                                	<c:if test="${member.roleDTO.roleName eq 'MEMBER'}">
+	                                		<li><a href="/member/memberPage">마이페이지</a></li>
+	                                	</c:if>
 	                                    <li><a href="/member/memberLogout">로그아웃</a></li>
 	                                </c:if>
                                 </ul>
@@ -659,7 +665,7 @@
                 </div><!-- .col -->
 
                 <div class="col-12 px-25 flex justify-content-center">
-                    <a class="btn" href="#">전체 강의 보기</a>
+                    <a class="btn" href="/product/list">전체 강의 보기</a>
                 </div><!-- .col -->
             </div><!-- .row -->
         </div><!-- .container -->
@@ -677,7 +683,7 @@
                 <div class="col-12 col-lg-6">
                     <div class="featured-event-content">
                         <figure class="event-thumbnail position-relative m-0">
-                            <a href="#"><img src="/resources/images/event-1.jpg" alt=""></a>
+                            <a href="/event/list"><img src="/resources/images/event-1.jpg" alt=""></a>
 
                             <div class="posted-date position-absolute">
                                 <div class="day">23</div>
@@ -698,7 +704,7 @@
                 <div class="col-12 col-lg-6 mt-5 mt-lg-0">
                     <div class="event-content flex flex-wrap justify-content-between align-content-stretch">
                         <figure class="event-thumbnail">
-                            <a href="#"><img src="/resources/images/event-2.jpg" alt=""></a>
+                            <a href="/event/list"><img src="/resources/images/event-2.jpg" alt=""></a>
                         </figure><!-- .course-thumbnail -->
 
                         <div class="event-content-wrap">
@@ -724,7 +730,7 @@
 
                     <div class="event-content flex flex-wrap justify-content-between align-content-lg-stretch">
                         <figure class="event-thumbnail">
-                            <a href="#"><img src="/resources/images/event-3.jpg" alt=""></a>
+                            <a href="/event/list"><img src="/resources/images/event-3.jpg" alt=""></a>
                         </figure><!-- .course-thumbnail -->
 
                         <div class="event-content-wrap">

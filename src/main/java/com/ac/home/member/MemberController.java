@@ -1,5 +1,7 @@
 package com.ac.home.member;
 
+import java.util.List;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -145,4 +148,25 @@ public class MemberController {
 		return mv;
 	}
 	
+	// 관리자 페이지
+	@GetMapping(value = "adminPage")
+	public ModelAndView getAdminPage() throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("member/adminPage");
+		
+		return mv;
+	}
+	
+	@GetMapping(value = "memberList")
+	public ModelAndView getMemberList() throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		List<MemberDTO> ar = memberService.getMemberList();
+		
+		mv.addObject("list", ar);
+		mv.setViewName("member/memberList");
+		
+		return mv;
+	}
 }

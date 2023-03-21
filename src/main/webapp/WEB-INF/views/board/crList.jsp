@@ -11,8 +11,12 @@
 <link rel="stylesheet" href="/resources/css/reset.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
 </head>
 <body>
+
+	<c:import url="../template/header.jsp"></c:import>
 
 		<div class="container-fluid">
 			<div id="sub_banner" class="bgColor">
@@ -21,22 +25,18 @@
 				</h2>
 			</div>
 	
-			<div class="row col-md-2 mx-auto mt-5">
-				<a class="btn btn-primary" href="/">홈</a>
-			</div>
-	
 			<div class="page-wrapper" style="position:relative;">
 				<div class="post-slider">
 				  <h1 class="silder-title">수강후기</h1>
-				  <i class="fas fa-chevron-left prev"></i>
-				  <i class="fas fa-chevron-right next"></i>
+				  <!-- <i class="fas fa-chevron-left prev material-symbols-outlined"></i>
+				  <i class="fas fa-chevron-right next material-symbols-outlined"></i> -->
 				  <div class="post-wrapper">
-	
+					
 					<div class="post">
 					  <img src="/resources/images/winter.jpg" class="slider-image">
 					  <div class="post-info">
 						<h4><a href="#" class="post-subject">제목</a></h4>
-						<i class="far fa-user" style="height:10%;">작성자</i>
+						<h4>작성자</h4>
 					  </div>
 					</div>
 	
@@ -44,7 +44,7 @@
 					  <img src="/resources/images/winter2.jpg" class="slider-image">
 					  <div class="post-info">
 						<h4><a href="#">제목</a></h4>
-						<i class="far fa-user" style="height:10%;">작성자</i>
+						<h4>작성자</h4>
 					  </div>
 					</div>
 	
@@ -52,7 +52,7 @@
 					  <img src="/resources/images/winter.jpg" class="slider-image">
 					  <div class="post-info">
 						<h4><a href="#">제목</a></h4>
-						<i class="far fa-user" style="height:10%;">작성자</i>
+						<h4>작성자</h4>
 					  </div> 
 					</div>
 	
@@ -60,7 +60,7 @@
 					  <img src="/resources/images/winter2.jpg" class="slider-image">
 					  <div class="post-info">
 						<h4><a href="#">제목</a></h4>
-						<i class="far fa-user" style="height:10%;">작성자</i>
+						<h4>작성자</h4>
 					  </div>
 					</div>
 	
