@@ -23,6 +23,17 @@ public class MemberService {
 		
 	}
 	
+	public boolean getMemberEmailCheck(MemberDTO memberDTO) throws Exception {
+	    memberDTO = memberDAO.getMemberByEmail(memberDTO);
+
+	    boolean check = true;
+
+	    if (memberDTO != null) {
+	        check = false;
+	    }
+	    return check;
+	}
+	
 	public int setMemberAdd(MemberDTO memberDTO)throws Exception{
 		int result = memberDAO.setMemberAdd(memberDTO);
 		

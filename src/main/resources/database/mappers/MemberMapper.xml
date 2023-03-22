@@ -6,7 +6,7 @@
   <mapper namespace="com.ac.home.member.MemberDAO">
   	<insert id="setMemberAdd" parameterType="MemberDTO">
   		INSERT INTO MEMBER
-  		VALUES (#{id},#{pw},#{name},#{address},#{phone},#{email},#{emaildomain})
+  		VALUES (#{id},#{pw},#{name},#{address},#{phone},#{email},#{emaildomain},#{addressDetail})
   	</insert>
   	
   	<insert id="setMemberRoleAdd" parameterType="MemberDTO">
@@ -26,12 +26,19 @@
 			 ON (MR.ROLENUM = R.ROLENUM)
 		WHERE M.ID=#{id}
   	</select>
+
+	<select id="getMemberByEmail" resultType="MemberDTO">
+	    SELECT * FROM member
+	    WHERE email = #{email} AND emaildomain = #{emaildomain}
+	</select>
+  	
   	
   	<resultMap type="MemberDTO" id="getMemberLoginResult">
   		<id column="ID" property="id"/>
   		<result column="PW" property="pw"/>
   		<result column="NAME" property="name"/>
   		<result column="ADDRESS" property="address"/>
+  		<result column="ADDRESSDETAIL" property="addressDetail"/>
   		<result column="PHONE" property="phone"/>
   		<result column="EMAIL" property="email"/>
 		<result column="EMAILDOMAIN" property="emaildomain"/>
@@ -41,8 +48,15 @@
   		</association>
   	</resultMap>
   	
- 	<update id="setMemberUpdate" parameterType="MemberDTO">
-		UPDATE MEMBER SET NAME=#{name},PHONE=#{phone},PW=#{pw},EMAIL=#{email},EMAILDOMAIN=#{emaildomain}
-		WHERE ID=#{id}
-	</update> 	
+	<update id="setMemberUpdate" parameterType="MemberDTO">
+	    UPDATE MEMBER
+	    SET NAME=#{name},
+	        PHONE=#{phone},
+	        PW=#{pw},
+	        ADDRESS=#{address},
+	        ADDRESSDETAIL=#{addressDetail},
+	        EMAIL=#{email},
+	        EMAILDOMAIN=#{emaildomain}
+	    WHERE ID=#{id}
+	</update>
   </mapper>

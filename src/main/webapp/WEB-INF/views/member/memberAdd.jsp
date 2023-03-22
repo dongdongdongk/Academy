@@ -20,9 +20,9 @@
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
-<div class="container-fluid my-5">
+<div class="container-fluid page-content">
 	<div class="row justify-content-center">
-		<h1 class="col-md-6 text-center fw-bold">회원가입</h1>
+		<h1 class="col-md-7 my-5 text-center fw-bold">회원가입</h1>
 	</div>
 	<div class = "row justify-content-center">
 		<form class="col-md-6" id="frm" action="./memberAdd" method="post">
@@ -52,7 +52,12 @@
 		
 		<div class="mb-3">
 		  <label for="address" class="form-label fw-bold">주소</label>
-		  <input type="text" name="address" class="form-control" id="address" placeholder="주소 입력" required>
+		  <input type="text" name="address" class="form-control" id="address" placeholder="주소 입력" readonly required>
+		</div>
+		
+		<div class="mb-3">
+		  <label for="addressDetail" class="form-label fw-bold">상세주소</label>
+		  <input type="text" name="addressDetail" class="form-control" id="addressDetail" placeholder="상세주소 입력" required>
 		</div>
 		
 		<div class="mb-3">
@@ -60,28 +65,24 @@
 		  <input type="text" name="phone" class="form-control" id="phone" placeholder="전화번호 입력" required>
 		</div>
 		
-		<!-- <div class="mb-3">
-		  <label for="email" class="form-label fw-bold">이메일</label>
-		  <input type="email" name="email" class="form-control" id="email" placeholder="이메일 입력" required>
-		</div> -->
-
 		<div class="mb-3">
 		    <label for="email" class="form-label fw-bold">이메일</label>
 		    <div class="input-group">
 		        <input type="text" class="form-control" name="email" id="email" placeholder="이메일 입력" >
 		        <select class="form-control" name="emaildomain" id="emaildomain" >
-		        	<option value="@naver.com">@naver.com</option>
-		        	<option value="@daum.net">@daum.net</option>
-		        	<option value="@gmail.com">@gmail.com</option>
-		        	<option value="@hanmail.com">@hanmail.com</option>
-		        	<option value="@yahoo.co.kr">@yahoo.co.kr</option>
+		            <option value="@naver.com">@naver.com</option>
+		            <option value="@daum.net">@daum.net</option>
+		            <option value="@gmail.com">@gmail.com</option>
+		            <option value="@hanmail.com">@hanmail.com</option>
+		            <option value="@yahoo.co.kr">@yahoo.co.kr</option>
 		        </select>
-		    </div>   
+		    </div>
 		    <div class="input-group mt-3">
 		        <input class="form-control mail-check-input" placeholder="인증번호 6자리를 입력해주세요!" disabled="disabled" maxlength="6">
 		        <button type="button" class="btn btn-primary" id="mail-Check-Btn">인증번호 발송</button>
 		        <button type="button" class="btn btn-secondary d-none" id="mail-Confirm-Btn">인증번호 확인</button>
 		    </div>
+		    <span id="emailResult"></span>
 		    <span id="mail-check-warn"></span>
 		</div>
 

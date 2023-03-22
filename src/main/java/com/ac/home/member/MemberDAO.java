@@ -31,4 +31,8 @@ public class MemberDAO {
 	public int setMemberDelete(MemberDTO memberDTO)throws Exception{
 		return sqlSession.delete(NAMESPACE+"setMemberDelete", memberDTO);
 	}
+	
+	public MemberDTO getMemberByEmail(MemberDTO memberDTO)throws Exception {
+	    return sqlSession.selectOne(NAMESPACE + "getMemberByEmail", memberDTO);
+	}
 }

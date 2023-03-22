@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:import url="../../template/header.jsp"></c:import>
-<div class="container-fluid">
+<div class="container-fluid page-content">
     <div class="row justify-content-center">
         <h1 class="col-md-7 my-5">아이디 찾기</h1>
     </div>
@@ -47,7 +47,7 @@
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">아이디 찾기</button>
+            <button type="submit" class="btn btn-outline-secondary">아이디 찾기</button>
         </form>
     </div>
 </div>

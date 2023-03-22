@@ -12,6 +12,10 @@ const pwCheckResult = document.getElementById("pwCheckResult");
 const frm = document.getElementById("frm");
 const btn = document.getElementById("btn");
 
+const email = document.getElementById("email");
+const emaildomain = document.getElementById("emaildomain");
+const emailResult = document.getElementById("emailResult");
+
 // let idCheck=false;
 // let pwLengthCheck=false;
 // let pwNullCheck=false;
@@ -94,6 +98,45 @@ pwCheck.addEventListener("blur", function(){
         checks[3]=false;
     }
 });
+
+
+// Email 검증
+function validateEmail() {
+    // 중복 검사
+    let xhttp = new XMLHttpRequest();
+
+    // URL, method 설정
+    xhttp.open("POST", "./memberEmailCheck");
+
+    // 헤더 설정
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    // 요청 발생 POST일 경우 파라미터 전송
+    xhttp.send("email=" + email.value + "&emaildomain=" + emaildomain.value);
+
+	// 응답 처리
+	xhttp.addEventListener("readystatechange", function () {
+	    if (this.readyState == 4 && this.status == 200) {
+	        const mailCheckBtn = document.getElementById("mail-Check-Btn");
+	        if (this.responseText.trim() == "true") {
+	            checks[1] = true;
+	            emailResult.innerHTML = "사용 가능한 이메일";
+	            emailResult.classList.add("blueResult");
+	            emailResult.classList.remove("redResult");
+	            mailCheckBtn.disabled = false;
+	        } else {
+	            checks[1] = false;
+	            emailResult.innerHTML = "이미 등록된 이메일";
+	            emailResult.classList.add("redResult");
+	            emailResult.classList.remove("blueResult");
+	            mailCheckBtn.disabled = true;
+	        }
+	    }
+	});
+}
+
+email.addEventListener("blur", validateEmail);
+emaildomain.addEventListener("change", validateEmail);
 
 // email 발송 버튼 클릭 시
 $('#mail-Check-Btn').click(function() {
