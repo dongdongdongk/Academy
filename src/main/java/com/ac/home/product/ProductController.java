@@ -28,9 +28,6 @@ public class ProductController {
 	   private ProductService productService;
 	   
 	   
-	   
-	   
-	   
 	   //list
 	   @RequestMapping(value="list", method = RequestMethod.GET)
 		public ModelAndView getProductList(Pager pager)throws Exception{

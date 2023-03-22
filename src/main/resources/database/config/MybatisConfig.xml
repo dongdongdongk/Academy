@@ -17,6 +17,8 @@
 
   		<typeAlias type="com.ac.home.event.EventDTO" alias="EventDTO"/>
   		<typeAlias type="com.ac.home.event.EventFileDTO" alias="EventFileDTO"/>
+  		
+  		<typeAlias type="com.ac.home.orders.OrdersDTO" alias="OrdersDTO"/>
 
  		<typeAlias type="com.ac.home.product.ProductDTO" alias="ProductDTO"/>
  		<typeAlias type="com.ac.home.product.ProductImgDTO" alias="ProductImgDTO"/>

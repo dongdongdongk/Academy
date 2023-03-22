@@ -92,6 +92,7 @@
 	                                    <li><a href="/product/list">Courses</a></li>
 	                                    <li><a href="/notice/list">Notice</a></li>
 	                                    <li><a href="/qna/qnaList">QNA</a></li>
+	                                    <li><a href="/orders/ordersList">주문</a></li>
 	                                </ul>
 	
 	                                <div class="hamburger-menu d-lg-none">
