@@ -15,13 +15,13 @@
 	<h3>${dto.hit}</h3>
 	<h3>${dto.contents}</h3>
 	
-	<div>
+	<!-- <div>
 		<c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
 			<c:if test="${not empty dto.eventFileDTOs}">
 				<img src="../resources/upload/event/${fileDTO.fileName}">
 			</c:if>
 		</c:forEach>
-	</div>
+	</div> -->
 	
 	
 	<%-- <c:forEach items="${dto.noticeFileDTOs}" var="fileDTO">

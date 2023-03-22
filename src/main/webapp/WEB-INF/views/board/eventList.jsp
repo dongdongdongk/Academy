@@ -27,6 +27,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/resources/css/style.css">
+    <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body class="courses-page">
     <div class="page-header">
@@ -125,7 +126,7 @@
             <div class="col-12">
                 <div class="breadcrumbs">
                     <ul class="flex flex-wrap align-items-center p-0 m-0">
-                        <li><a href="#"><i class="fa fa-home"></i> 홈</a></li>
+                        <li><a href="/"><i class="fa fa-home"></i> 홈</a></li>
                         <li>이벤트</li>
                     </ul>
                 </div><!-- .breadcrumbs -->
@@ -133,7 +134,7 @@
         </div><!-- .row -->
 
         <div class="row">
-            <div class="col-12 col-lg-8">
+            <div class="col-7col-lg-8">
                 <div class="featured-courses courses-wrap">
                     <div class="row mx-m-25">
                         
@@ -142,10 +143,20 @@
                         
                         
                     <c:forEach items="${list}" var="dto">
-                        <div class="col-7 col-md-4 px-25">
+                        <div class="col-3 col-md-3 px-25">
                             <div class="course-content">
                                 <figure class="course-thumbnail">
-                                    <a href="#"><img src="/resources/images/1.jpg" alt=""></a>
+
+                                    <c:set var="loop_flag" value="false" />
+                                    <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
+                                        <c:if test="${not loop_flag }">
+                                            <c:if test="${not empty dto.eventFileDTOs}">
+                                                <img src="../resources/upload/event/${fileDTO.fileName}">
+                                                <c:set var="loop_flag" value="true" />
+                                            </c:if>
+                                        </c:if>
+                                    </c:forEach>
+
                                 </figure><!-- .course-thumbnail -->
 
                                 <div class="course-content-wrap">
@@ -153,16 +164,17 @@
                                         <h2 class="entry-title"><a href="./detail?num=${dto.num}">${dto.title}</a></h2>
 
                                         <div class="entry-meta flex flex-wrap align-items-center">
-                                            <div class="course-author"><a href="#">Ms. Lara Croft </a></div>
+                                            <div class="course-author"><a href="#">${dto.writer} </a></div>
 
-                                            <div class="course-date">July 21, 2018</div>
+                                            <div class="course-date">작성일${dto.regDate}</div>
+                                            <div class="course-date">조회수${dto.hit}</div>
                                         </div><!-- .course-date -->
                                     </header><!-- .entry-header -->
 
-                                    <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
+                                    <!-- <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
                                         <div class="course-cost">
-                                            $45 <span class="price-drop">$68</span>
-                                        </div><!-- .course-cost -->
+                                            $45 <span class="">${dto.hit}</span>
+                                        </div>
 
                                         <div class="course-ratings flex justify-content-end align-items-center">
                                             <span class="fa fa-star checked"></span>
@@ -171,9 +183,9 @@
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star-o"></span>
 
-                                            <span class="course-ratings-count">(4 votes)</span>
-                                        </div><!-- .course-ratings -->
-                                    </footer><!-- .entry-footer -->
+                                            <span class="course-ratings-count">${dto.hit}</span>
+                                        </div>
+                                    </footer> -->
                                 </div><!-- .course-content-wrap -->
                             </div><!-- .course-content -->
                         </div><!-- .col -->
@@ -186,123 +198,46 @@
                     </div><!-- .row -->
                 </div><!-- .featured-courses -->
 
-                <div class="pagination flex flex-wrap justify-content-between align-items-center">
-                    <div class="col-12 col-lg-4 order-2 order-lg-1 mt-3 mt-lg-0">
-                        <ul class="flex flex-wrap align-items-center order-2 order-lg-1 p-0 m-0">
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-12 flex justify-content-start justify-content-lg-end col-lg-8 order-1 order-lg-2">
-                        <div class="pagination-results flex flex-wrap align-items-center">
-                            <p class="m-0">Showing 1–3 of 12 results</p>
-
-                            <form>
-                                <select>
-                                    <option>Show: 06</option>
-                                    <option>Show: 12</option>
-                                    <option>Show: 18</option>
-                                    <option>Show: 24</option>
-                                </select>
-                            </form>
-                        </div><!-- .pagination-results -->
-                    </div>
-                </div><!-- .pagination -->
+                <div class="row">
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination">
+                      
+                      <li class="page-item ${pager.before ? 'disabled' : ''}">
+                          <a class="page-link" href="#" aria-label="Previous" data-board-page="1">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                     
+                        <li class="page-item ${pager.before ? 'disabled' : ''}">
+                          <a class="page-link" href="#" aria-label="Previous" data-board-page="${pager.startNum-1}">
+                            <span aria-hidden="true">&lsaquo;</span>
+                          </a>
+                        </li>
+                        
+                        <c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
+                            <li class="page-item"><a class="page-link" href="#" data-board-page="${i}">${i}</a></li>
+                        </c:forEach>
+                        
+                        <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
+                          <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.lastNum+1}">
+                            <span aria-hidden="true">&rsaquo;</span>
+                          </a>
+                        </li>
+                        
+                        <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
+                          <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.totalPage}">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                </div>
             </div><!-- .col -->
 
-            <div class="col-12 col-lg-4">
-                <div class="sidebar">
-                    <div class="search-widget">
-                        <form class="flex flex-wrap align-items-center">
-                            <input type="search" placeholder="Search...">
-                            <button type="submit" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button>
-                        </form><!-- .flex -->
-                    </div><!-- .search-widget -->
-
-                    <div class="cat-links">
-                        <h2>Categories</h2>
-
-                        <ul class="p-0 m-0">
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Design</a></li>
-                            <li><a href="#">Marketing</a></li>
-                            <li><a href="#">MBA Courses</a></li>
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Web Development</a></li>
-                        </ul>
-                    </div><!-- .cat-links -->
-
-                    <div class="latest-courses">
-                        <h2>Latest Courses</h2>
-
-                        <ul class="p-0 m-0">
-                            <li class="flex flex-wrap justify-content-between align-items-center">
-                                <img src="/resources/images/t-1.jpg" alt="">
-
-                                <div class="content-wrap">
-                                    <h3><a href="#">The Complete Financial Analyst Training</a></h3>
-
-                                    <div class="course-cost free-cost">Free</div>
-                                </div><!-- .content-wrap -->
-                            </li>
-
-                            <li class="flex flex-wrap justify-content-between align-items-center">
-                                <img src="/resources/images/t-2.jpg" alt="">
-
-                                <div class="content-wrap">
-                                    <h3><a href="#">Complete Java
-                                        Masterclass</a></h3>
-
-                                    <div class="course-cost free-cost">Free</div>
-                                </div><!-- .content-wrap -->
-                            </li>
-
-                            <li class="flex flex-wrap justify-content-between align-items-center">
-                                <img src="/resources/images/t-3.jpg" alt="">
-
-                                <div class="content-wrap">
-                                    <h3><a href="#">The Complete Digital Marketing Course</a></h3>
-
-                                    <div class="course-cost">$24</div>
-                                </div><!-- .content-wrap -->
-                            </li>
-
-                            <li class="flex flex-wrap justify-content-between align-items-center">
-                                <img src="/resources/images/t-4.jpg" alt="">
-
-                                <div class="content-wrap">
-                                    <h3><a href="#">Photoshop CC 2018
-                                        MasterClass</a></h3>
-
-                                    <div class="course-cost">$18</div>
-                                </div><!-- .content-wrap -->
-                            </li>
-                        </ul>
-                    </div><!-- .latest-courses -->
-
-                    <div class="ads">
-                        <img src="/resources/images/ads.jpg" alt="">
-                    </div><!-- .ads -->
-
-                    <div class="popular-tags">
-                        <h2>Popular Tags</h2>
-
-                        <ul class="flex flex-wrap align-items-center p-0 m-0">
-                            <li><a href="#">Creative</a></li>
-                            <li><a href="#">Unique</a></li>
-                            <li><a href="#">Photography</a></li>
-                            <li><a href="#">ideas</a></li>
-                            <li><a href="#">Wordpress Template</a></li>
-                            <li><a href="#">startup</a></li>
-                        </ul>
-                    </div><!-- .popular-tags -->
-                </div><!-- .sidebar -->
-            </div><!-- .col -->
+            
         </div><!-- .row -->
     </div><!-- .container -->
+    <a href="./add">글쓰기</a>
 
     <div class="clients-logo">
         <div class="container">
@@ -421,6 +356,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div><!-- .footer-bar -->
     </footer><!-- .site-footer -->
 
+    <c:import url="../template/common_js.jsp"></c:import>		
+	<script src="../resources/js/pageing.js"></script>
     <script type='text/javascript' src='/resources/js/jquery.js'></script>
     <script type='text/javascript' src='/resources/js/swiper.min.js'></script>
     <script type='text/javascript' src='/resources/js/masonry.pkgd.min.js'></script>
