@@ -584,19 +584,19 @@ a:hover, a:active {
 
 .course-date {
     position: relative;
-    padding-left: 10px;
-    margin-left: 5px;
+    padding-left: 0px;
+    margin-left: 0px;
     color: #757686;
 }
 
-.course-date::before {
-    content: '/';
+/* .course-date::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 10px;
     text-align: center;
-}
+} */
 
 .course-content .entry-footer {
     margin-top: 14px;
@@ -2716,3 +2716,12 @@ p.footer-copyright {
 .footer-bar-nav ul li a:hover {
     color: #34d986;
 }
+
+
+.radius {
+border-radius: 30px;
+}
+
+
+
+

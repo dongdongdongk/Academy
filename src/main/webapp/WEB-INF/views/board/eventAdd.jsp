@@ -35,12 +35,27 @@
 						class="form-control" name="title" id="title"
 						placeholder="제목을 입력하세요">
 				</div>
+				
+				<div class="col-md-12 mt-5">
+					<label for="startDate" class="form-label">시작날짜</label> <input type="date"
+						class="form-control" name="startDate" id="startDate"
+						placeholder="시작날짜 입력">
+				</div>
+				
+				
+				<div class="col-md-12 mt-5">
+					<label for="endDate" class="form-label">종료날짜</label> <input type="date"
+						class="form-control" name="endDate" id="endDate"
+						placeholder="종료날짜 입력">
+				</div>
 
 				<div class="col-md-12 mt-5">
 					<label for="contents" class="form-label">내용</label>
 					<textarea class="form-control" name="contents" id="contents"
 						placeholder="내용을 입력하세요"></textarea>
 				</div>
+				
+				
 
 				<div id="fileList" class="my-5">
 					<div class="input-group mb-3">

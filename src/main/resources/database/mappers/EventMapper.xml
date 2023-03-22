@@ -43,8 +43,8 @@
   		<selectKey keyProperty="num" resultType="Long" order="BEFORE">
   			SELECT EVENT_SEQ.NEXTVAL FROM DUAL
   		</selectKey>
-  		INSERT INTO EVENT (NUM, TITLE, CONTENTS, WRITER, REGDATE, HIT)
-  		VALUES(#{num}, #{title}, #{contents}, #{writer}, sysdate, 0)
+  		INSERT INTO EVENT (NUM, TITLE, CONTENTS, WRITER, REGDATE, HIT, STARTDATE, ENDDATE)
+  		VALUES(#{num}, #{title}, #{contents}, #{writer}, sysdate, 0, #{startDate}, #{endDate})
   </insert>
   
   

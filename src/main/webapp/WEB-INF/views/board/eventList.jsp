@@ -121,6 +121,30 @@
         </div><!-- .page-header-overlay -->
     </div><!-- .page-header -->
 
+    
+    
+    
+
+
+
+
+    <ul class="nav justify-content-center grey lighten-4 py-4">
+        <li class="nav-item">
+          <a class="nav-link active" href="#!">전체</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!">진행중</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!">종료</a>
+        </li>
+      </ul>
+
+
+
+
+
+
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -129,9 +153,9 @@
                         <li><a href="/"><i class="fa fa-home"></i> 홈</a></li>
                         <li>이벤트</li>
                     </ul>
-                </div><!-- .breadcrumbs -->
-            </div><!-- .col -->
-        </div><!-- .row -->
+                </div>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-7col-lg-8">
@@ -151,7 +175,7 @@
                                     <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
                                         <c:if test="${not loop_flag }">
                                             <c:if test="${not empty dto.eventFileDTOs}">
-                                                <img src="../resources/upload/event/${fileDTO.fileName}">
+                                                <img class="radius" src="../resources/upload/event/${fileDTO.fileName}">
                                                 <c:set var="loop_flag" value="true" />
                                             </c:if>
                                         </c:if>
@@ -161,15 +185,27 @@
 
                                 <div class="course-content-wrap">
                                     <header class="entry-header">
-                                        <h2 class="entry-title"><a href="./detail?num=${dto.num}">${dto.title}</a></h2>
+                                        <h2 class="entry-title"><a href="./detail?num=${dto.num}">${dto.title}</a>
+                                           
+                                            <c:set var="loop_flag" value="false" />
+                                                <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
+                                                    <c:if test="${not loop_flag }">
+							                          <c:if test="${fileDTO.oriName ne null}"><img class="material-symbols-outlined" src="/resources/images/file_icon.gif">
+                                                         <c:set var="loop_flag" value="true" />
+                                                      </c:if>
+                                                     </c:if>
+						                    </c:forEach></td>
+                                        </h2>
 
+                                        
+                                        
                                         <div class="entry-meta flex flex-wrap align-items-center">
                                             <div class="course-author"><a href="#">${dto.writer} </a></div>
-
                                             <div class="course-date">작성일${dto.regDate}</div>
                                             <div class="course-date">조회수${dto.hit}</div>
                                         </div><!-- .course-date -->
                                     </header><!-- .entry-header -->
+
 
                                     <!-- <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
                                         <div class="course-cost">
@@ -199,38 +235,40 @@
                 </div><!-- .featured-courses -->
 
                 <div class="row">
-                    <nav aria-label="Page navigation example">
-                      <ul class="pagination">
-                      
-                      <li class="page-item ${pager.before ? 'disabled' : ''}">
-                          <a class="page-link" href="#" aria-label="Previous" data-board-page="1">
-                            <span aria-hidden="true">&laquo;</span>
-                          </a>
-                        </li>
-                     
-                        <li class="page-item ${pager.before ? 'disabled' : ''}">
-                          <a class="page-link" href="#" aria-label="Previous" data-board-page="${pager.startNum-1}">
-                            <span aria-hidden="true">&lsaquo;</span>
-                          </a>
-                        </li>
+                    <div class="d-felx justify-content-center">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination d-felx justify-content-center">
+                                
+                                <li class="page-item ${pager.before ? 'disabled' : ''}">
+                                    <a class="page-link" href="#" aria-label="Previous" data-board-page="1">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                            </li>
                         
-                        <c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
-                            <li class="page-item"><a class="page-link" href="#" data-board-page="${i}">${i}</a></li>
-                        </c:forEach>
-                        
-                        <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
-                          <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.lastNum+1}">
-                            <span aria-hidden="true">&rsaquo;</span>
-                          </a>
-                        </li>
-                        
-                        <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
-                          <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.totalPage}">
-                            <span aria-hidden="true">&raquo;</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
+                            <li class="page-item ${pager.before ? 'disabled' : ''}">
+                            <a class="page-link" href="#" aria-label="Previous" data-board-page="${pager.startNum-1}">
+                                <span aria-hidden="true">&lsaquo;</span>
+                            </a>
+                            </li>
+                            
+                            <c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
+                                <li class="page-item"><a class="page-link" href="#" data-board-page="${i}">${i}</a></li>
+                            </c:forEach>
+                            
+                            <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
+                            <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.lastNum+1}">
+                                <span aria-hidden="true">&rsaquo;</span>
+                            </a>
+                            </li>
+                            
+                            <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
+                            <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.totalPage}">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                            </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div><!-- .col -->
 
