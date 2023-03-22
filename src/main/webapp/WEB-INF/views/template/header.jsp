@@ -60,13 +60,18 @@
 	
 	                            <div class="header-bar-menu">
 	                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
-	                                <c:if test="${empty member}">
+	                                 <c:if test="${empty member}">
 	                                    <li><a href="/member/memberAgree">회원가입</a></li>
 	                                    <li><a href="/member/memberLogin">로그인</a></li>
 	                                </c:if>
 	                                <c:if test="${not empty member}">
 	                                	<span id="login_log" style="border-bottom: 1px solid white;">${member.id} 님, 환영합니다.</span>
-	                                	<li><a href="/member/memberPage">마이페이지</a></li>
+	                                	<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
+	                                		<li><a id="adminPage" href="/member/adminPage">관리자페이지</a></li>
+	                                	</c:if>
+	                                	<c:if test="${member.roleDTO.roleName eq 'MEMBER'}">
+	                                		<li><a href="/member/memberPage">마이페이지</a></li>
+	                                	</c:if>
 	                                    <li><a href="/member/memberLogout">로그아웃</a></li>
 	                                </c:if>
 	                                </ul>
@@ -103,7 +108,7 @@
 	                                </div><!-- .hamburger-menu -->
 	
 	                                <div class="header-bar-cart">
-	                                    <a href="#" class="flex justify-content-center align-items-center"><span aria-hidden="true" class="icon_bag_alt"></span></a>
+	                                    <a href="/cart/cartList" class="flex justify-content-center align-items-center"><span aria-hidden="true" class="icon_bag_alt"></span></a>
 	                                </div><!-- .header-bar-search -->
 	                            </nav><!-- .site-navigation -->
 	                        </div><!-- .col -->

@@ -158,6 +158,7 @@ public class MemberController {
 		return mv;
 	}
 	
+	// 관리자 페이지 회원 관리
 	@GetMapping(value = "memberList")
 	public ModelAndView getMemberList() throws Exception {
 		ModelAndView mv = new ModelAndView();

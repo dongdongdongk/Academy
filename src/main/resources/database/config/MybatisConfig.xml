@@ -21,6 +21,9 @@
  		<typeAlias type="com.ac.home.product.ProductDTO" alias="ProductDTO"/>
  		<typeAlias type="com.ac.home.product.ProductImgDTO" alias="ProductImgDTO"/>
  		<typeAlias type="com.ac.home.util.Pager" alias="Pager"/>
+ 		
+ 		
+ 		<typeAlias type="com.ac.home.cart.CartDTO" alias="CartDTO"/>
 
  		<typeAlias type="java.lang.Long" alias="Long"/>
 

@@ -12,12 +12,16 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.home.product.ProductService;
 import com.ac.home.util.Naver;
 import com.ac.home.util.Pager;
+
+import oracle.sql.json.OracleJsonParser;
+
 import com.ac.home.product.ProductDTO;
 
 
@@ -29,10 +33,6 @@ public class ProductController {
 	   @Autowired
 	   private ProductService productService;
 	  
-	   @Autowired
-	   private Naver naver;
-	   
-	   
 	   //list
 	   @RequestMapping(value="list", method = RequestMethod.GET)
 		public ModelAndView getProductList(Pager pager)throws Exception{

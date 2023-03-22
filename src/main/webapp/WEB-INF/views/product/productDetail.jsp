@@ -42,7 +42,7 @@
               <button id="update" type="submit" class="btn btn-outline-primary">상품수정</button>
             </c:if>
           </c:if>
-          <button id="list" type="button" class="btn btn-outline-primary"><a href="./productList">장바구니</a></button>
+          <button id="btn-cart" type="button" class="btn btn-outline-primary">장바구니</button>
           <button id="list" type="button" class="btn btn-outline-primary"><a href="./productList">구매</a></button>
           <button id="list" type="button" class="btn btn-outline-secondary"><a href="./list">목록으로</a></button>
         </form>
@@ -74,8 +74,8 @@
 
 </main>
 
-
 <c:import url="../template/common_js.jsp"></c:import>
+<script src="/resources/js/productCart.js"></script>
 
 </body>
 </html>

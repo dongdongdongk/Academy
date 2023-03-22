@@ -181,8 +181,8 @@
 					</select>
 				</div>
 				<div class="col-auto">
-					<label for="search" class="visually-hidden">Search</label> <input
-						type="text" class="form-control" value="${pager.search}"
+					<label for="search" class="visually-hidden">Search</label> 
+					<input type="text" class="form-control" value="${pager.search}"
 						name="search" id="search" placeholder="검색어를 입력하세요">
 				</div>
 				<div class="col-auto">
@@ -202,6 +202,7 @@
 		</div>
 
 	</div>
+	
 
 
 

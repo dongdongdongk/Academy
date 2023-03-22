@@ -10,7 +10,8 @@ import java.util.Map;
 
 
 public class Naver {
-	 public static void main(String[] args) {
+		 public String search(String query) {
+		 
 	        String clientId = "l1mjLuAnmdvKvwFN5AB2"; //애플리케이션 클라이언트 아이디
 	        String clientSecret = "NtPRUWAwHA"; //애플리케이션 클라이언트 시크릿
 
@@ -34,7 +35,10 @@ public class Naver {
 
 
 	        System.out.println(responseBody);
-	    }
+	        
+	        return responseBody;
+		 }
+	    
 
 
 	    private static String get(String apiUrl, Map<String, String> requestHeaders){
