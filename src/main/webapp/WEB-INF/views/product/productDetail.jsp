@@ -14,6 +14,7 @@
 <body>
 <!-- Header -->
 <c:import url="../template/header.jsp"></c:import>
+<header style="margin-top: 200px;">
 
 <!-- Main content -->
 <main class="container my-5">
@@ -43,7 +44,7 @@
             </c:if>
           </c:if>
           <button id="list" type="button" class="btn btn-outline-primary"><a href="./productList">장바구니</a></button>
-          <button id="list" type="button" class="btn btn-outline-primary"><a href="./productList">구매</a></button>
+          <button id="list" type="button" class="btn btn-outline-primary"><a href="../orders/ordersList">구매</a></button>
           <button id="list" type="button" class="btn btn-outline-secondary"><a href="./list">목록으로</a></button>
         </form>
       </c:if>
@@ -70,10 +71,10 @@
       </div>
     </div>
   </div>
-</div>
+
 
 </main>
-
+</header>
 
 <c:import url="../template/common_js.jsp"></c:import>
 

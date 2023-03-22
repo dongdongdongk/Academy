@@ -49,16 +49,14 @@
 	width: 140px;
 }
 
-.th_column_6 {
-	
-}
+
 </style>
 <title></title>
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
 	<c:import url="../template/header.jsp"></c:import>
-	
+	<header style="margin-top: 200px;">
 	<div class="container- fluid my-5">
 
 		<div class="row mb-4 ">
@@ -77,12 +75,12 @@
 											<tr>
 											<tr> -->
 							<td class="th_column_1">상품 번호</td>
-							<td class="th_column_1">상품 이미지</td>
-							<td class="th_column_2">상품 이름</td>
+							<td class="th_column_4">상품 이미지</td>
+							<td class="th_column_1">상품 이름</td>
 							<td class="th_column_3">가격</td>
 							<td class="th_column_4">등록날짜</td>
-							<td class="th_column_5">재고</td>
-							<td class="th_column_6">카테고리</td>
+							<td class="th_column_5">조회수</td>
+							<td class="th_column_5">카테고리</td>
 						</tr>
 					</thead>
 
@@ -100,8 +98,8 @@
 								<td class="tbl_td">
 									<div class="row">
 										<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-											<div class="col-md-4 mb-4">
-												<img src="../resources/images/${fileDTO.save}" class="img-fluid">
+											<div class="col-md-10 mb-10">
+												<img src="../resources/images/${fileDTO.save}" class="img-fluid " >
 											</div>
 										</c:forEach>
 									</div>
@@ -109,6 +107,7 @@
 								<td class="tbl_td"><a href="./productDetail?num=${dto.num}">${dto.title}</a></td>
 								<td class="tbl_td">${dto.price}</td>
 								<td class="tbl_td">${dto.regDate}</td>
+								<td class="tbl_td">${dto.hit}</td>
 								<%-- 		<c:choose>
 						<c:when test="${dto.grade eq 1}">판매중</c:when>
 						<c:otherwise>판매중</c:otherwise>
@@ -201,7 +200,7 @@
 
 	</div>
 
-
+</header>
 
 <c:import url="../template/common_js.jsp"></c:import>
 <script src="/resources/css/goodsManage.css"></script>

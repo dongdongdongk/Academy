@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.ac.home.util.Pager;
 import com.ac.home.product.ProductDTO;
 import com.ac.home.product.ProductImgDTO;
+import com.ac.home.qna.QnaDTO;
 
 
 @Repository
@@ -51,6 +52,11 @@ public class ProductDAO {
 	public List<ProductImgDTO> getProductFileList(ProductDTO productDTO) throws Exception {
 		return sqlSession.selectList(NAMESPACE + "getProductFileList", productDTO);
 	}
+	
+	/*
+	 * public int setProductHit(ProductDTO productDTO) throws Exception { return
+	 * sqlSession.update(NAMESPACE + "setProductHit", productDTO); }
+	 */
 	
 }
 	

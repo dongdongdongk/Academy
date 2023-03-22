@@ -112,6 +112,11 @@
   		SELECT * FROM PRODUCTIMG WHERE NUM = #{num}
 	</select>
 	
+	<!-- <update id="setProductHit" parameterType="ProductDTO">
+  		UPDATE PRODUCT SET HIT = #{hit} + 1
+		WHERE NUM = #{num}
+  	</update>
+	 -->
 	
   	
   </mapper>

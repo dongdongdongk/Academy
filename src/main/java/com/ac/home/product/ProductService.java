@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.ac.home.util.Pager;
 import com.ac.home.product.ProductDTO;
 import com.ac.home.product.ProductImgDTO;
+import com.ac.home.qna.QnaDTO;
 import com.ac.home.util.FileManager;
 
 
@@ -25,7 +26,7 @@ public class ProductService {
 	private ServletContext servletContext;
 	@Autowired
 	private FileManager fileManager;
-	private final String NAMESPACE="com.ac.home.product.ProductDAO.";
+	
 	
 	public List<ProductDTO> getProductList(Pager pager)throws Exception{
 		
@@ -55,7 +56,7 @@ public class ProductService {
 		String realPath= servletContext.getRealPath("resources/images");
 		System.out.println(realPath);
 		String fileName = fileManager.fileSave(pic, realPath);
-		//.2 DB�뿉 ���옣
+		
 		ProductImgDTO productImgDTO = new ProductImgDTO();
 		productImgDTO.setSave(fileName);
 		productImgDTO.setUpLoad(pic.getOriginalFilename());
@@ -83,6 +84,10 @@ public class ProductService {
 		}
 		return result;
 	}
+	/*
+	 * public int setProductHit(ProductDTO productDTO) throws Exception { return
+	 * productDAO.setProductHit(productDTO); }
+	 */
 
 	
 

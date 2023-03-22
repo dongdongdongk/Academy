@@ -15,7 +15,14 @@ public class ProductDTO {
 	private Date regDate;
 	private Double grade;
 	private List<ProductImgDTO> productImgDTOs;
+	private Long hit;
 	
+	public Long getHit() {
+		return hit;
+	}
+	public void setHit(Long hit) {
+		this.hit = hit;
+	}
 	public List<ProductImgDTO> getProductImgDTOs() {
 		return productImgDTOs;
 	}

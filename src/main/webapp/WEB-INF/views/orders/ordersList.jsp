@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Qna 목록</title>
+<title>주문 목록</title>
 <c:import url="../template/common_css.jsp"></c:import>
 
 <!-- Bootstrap CSS -->
@@ -29,7 +29,7 @@
 <body>
 	
 	<c:import url="../template/header.jsp"></c:import>
-
+	<header style="margin-top: 200px;">
 	<hr>
 	
 	<div class="container-fluid">
@@ -49,10 +49,15 @@
 			  		<c:forEach items="${list}" var="dto">
 						<tr>
 							<td>${dto.num}</td>
-							<td>
-								<c:forEach begin="1" end="${dto.depth}">--</c:forEach>	
-								<a href="./ordersDetail?num=${dto.num}">${dto.title}</a>
-							</td>
+							<td class="tbl_td">
+									<div class="row">
+										<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
+											<div class="col-md-4 mb-4">
+												<img src="../resources/images/${fileDTO.save}" class="img-fluid">
+											</div>
+										</c:forEach>
+									</div>
+								</td>
 							<td>${dto.writer}</td>
 							<td>${dto.hit}</td>
 						</tr>
@@ -118,7 +123,7 @@
 			</div>
 			
 			<div class="row col-auto mx-auto">
-				<a class="btn btn-primary mb-3" href="./qnaAdd">글 등록</a>
+				<a class="btn btn-primary mb-3" href="./ordersAdd">글 등록</a>
 			</div>	
 				
 			<div class="row col-auto mx-auto">
@@ -126,7 +131,7 @@
 			</div>	
 		</div>
 	</div>
-	
+</header>	
 	<c:import url="../template/common_js.jsp"></c:import>
 	<script src="../resources/js/pageing.js"></script>
 </body>
