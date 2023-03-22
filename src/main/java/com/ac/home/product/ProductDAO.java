@@ -32,7 +32,7 @@ public class ProductDAO {
 	}
 	
 	public int setProductAdd(ProductDTO productDTO)throws Exception{
-		System.out.println("연결 테스트");
+		
 		return sqlSession.insert(NAMESPACE+"setProductAdd", productDTO);
 	}
 	

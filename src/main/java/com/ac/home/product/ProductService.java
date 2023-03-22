@@ -52,7 +52,7 @@ public class ProductService {
 		if(!pic.isEmpty()) { //pic.getSize() !=0
 			//1. File을 HDD에 저장 경로
 			// Project 경로가 아닌 OS가 이용하는 경로
-		String realPath= servletContext.getRealPath("resources/upload/product");
+		String realPath= servletContext.getRealPath("resources/images");
 		System.out.println(realPath);
 		String fileName = fileManager.fileSave(pic, realPath);
 		//.2 DB�뿉 ���옣

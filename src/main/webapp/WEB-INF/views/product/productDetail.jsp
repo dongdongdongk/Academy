@@ -29,7 +29,7 @@
         <div class="row">
           <c:forEach items="${dto.productImgDTOs}" var="fileDTO">
             <div class="col-md-4 mb-4">
-              <img src="../resources/upload/product/${fileDTO.save}" class="img-fluid">
+              <img src="../resources/images/${fileDTO.save}" class="img-fluid">
             </div>
           </c:forEach>
         </div>

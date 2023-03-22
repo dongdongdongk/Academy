@@ -12,7 +12,7 @@
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
-
+<header style="margin-top: 200px;">
 <div class="container-fluid">
 	<div class="row justify-content-center my-4">
 		<h1 class="col-md-7 text-center">상품등록 Product  Page</h1>
@@ -60,12 +60,12 @@
 				  </label>
 				</div>		
 			</div>
-	 -->		
+	 -->	<!-- 	
 			<div class=" mb-3 form-check form-switch">
 			   <label class="form-check-label" for="bookSale">판매여부</label>
 			   <input name="bookSale" class="form-check-input" value="1" type="checkbox" role="switch" id="bookSale">
 			</div>
-			
+			 -->
 			<div class="mb-3">
 				<button class="my btn btn-danger" type="submit">등록</button>
 			</div>
@@ -73,6 +73,7 @@
 		</form>
 	</div>
 </div>
+</header>
 <script src="../resources/js/fileManger.js"></script>
 <c:import url="../template/common_js.jsp"></c:import>
 <script>

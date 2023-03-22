@@ -58,13 +58,11 @@
 </head>
 <body>
 	<c:import url="../template/header.jsp"></c:import>
-
+	
 	<div class="container- fluid my-5">
 
 		<div class="row mb-4 ">
-			<h1
-				class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품
-				LIST</h1>
+			<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품LIST</h1>
 		</div>
 
 		<div class="goods_table_wrap">
@@ -103,7 +101,7 @@
 									<div class="row">
 										<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
 											<div class="col-md-4 mb-4">
-												<img src="../resources/upload/product/${fileDTO.save}" class="img-fluid">
+												<img src="../resources/images/${fileDTO.save}" class="img-fluid">
 											</div>
 										</c:forEach>
 									</div>
@@ -202,7 +200,6 @@
 		</div>
 
 	</div>
-
 
 
 
