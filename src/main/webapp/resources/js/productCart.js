@@ -1,26 +1,31 @@
-var productId = $("#productId").val();
-var userid = $("#login_userid").val();
-
-$("#btn-cart").click(function() {
-			
-    $.ajax({
-        
-        type : "post",
-        url : "/order/cart/" + productId,
-        data : {
-            productId : productId
+$(document).ready(function() {
+    $("#addToCartBtn").on("click", function() {
+      var productId = $(this).data("product-id");
+      $.ajax({
+        url: "/cart/cartAdd",
+        type: "POST",
+        data: {
+            productId: productId,
+            id : id
         },
-        dataType : "text",
-        success : function(result) {
-            
-            if (result.trim() == 'add_success') {
-                var check = confirm("카트에 등록되었습니다.");
-                if (check) {
-                    location.assign("/order/mycart/" + userid);
-                }
-            } else if (result.trim() == 'already_existed') {
-                alert("이미 카트에 등록된 상품입니다.");
-            }
+        success: function(data) {
+          alert("장바구니에 추가되었습니다")
         }
+      });
     });
-});
+  });
+
+//   function updateCart(cartItems) {
+//     var cartCount = $("#cartCount");
+//     var cartTableBody = $("#cartTableBody");
+//     cartCount.text(cartItems.length);
+//     cartTableBody.empty();
+//     $.each(cartItems, function(index, cartItem) {
+//       var row = $("<tr>");
+//       var nameCell = $("<td>").text(cartItem.product.name);
+//       var quantityCell = $("<td>").text(cartItem.quantity);
+//       row.append(nameCell);
+//       row.append(quantityCell);
+//       cartTableBody.append(row);
+//     });
+//   }

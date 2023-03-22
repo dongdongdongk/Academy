@@ -5,18 +5,17 @@
   
   <mapper namespace="com.ac.home.cart.CartDAO">
   
-  	<select id="findCartGoods" resultType="String" parameterType="CartDTO">
-		SELECT DECODE(COUNT(*), 0, 'false', 'true') FROM CART
-		WHERE NUM = #{num}
-		AND ID = #{id} 
-	</select>
-
-	<insert id="addGoodsInCart">
+  	<select id="getCartList" resultType="CartDTO">
+  		SELECT * FROM CART
+  	</select>
+  
+	<insert id="setCartAdd" parameterType="CartDTO">
 		INSERT INTO CART (CARTNUM, ID, NUM) 
-		VALUES (SELECT NVL2(MAX(CARTNUM), MAX(CARTNUM)+1, 1) FROM CART , #{id}, #{num})
-		<selectKey keyProperty="cartNum" resultType="Long" order="AFTER">
-			SELECT MAX(CARTNUM) FROM CARTNUM
-		</selectKey>
+		VALUES (CART_SEQ.NEXTVAL, #{id}, #{num})
 	</insert>
+	
+	<delete id="setCartDelete" parameterType="CartDTO">
+		DELETE CART WHERE CARTNUM = #{cartNum}
+	</delete>
   
   </mapper>

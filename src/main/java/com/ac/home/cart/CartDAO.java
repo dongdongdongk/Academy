@@ -1,5 +1,7 @@
 package com.ac.home.cart;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -12,12 +14,15 @@ public class CartDAO {
 	
 	private final String NAMESPACE = "com.ac.home.cart.";
 	
-	public boolean findCartGoods(CartDTO cartDTO) {
-		String result = sqlSession.selectOne(NAMESPACE +".findCartGoods", cartDTO);
-		return Boolean.parseBoolean(result);
+	public List<CartDTO> getCartList() throws Exception {
+		return sqlSession.selectList(NAMESPACE + "getCartList");
 	}
-
-	public void addGoodsInCart(CartDTO cartDTO) {
-		sqlSession.insert(NAMESPACE +".addGoodsInCart", cartDTO);
+	
+	public int setCartAdd(CartDTO cartDTO) throws Exception {
+		return sqlSession.insert(NAMESPACE + "setCartAdd", cartDTO);
+	}
+	
+	public int setCartDelete(CartDTO cartDTO) throws Exception {
+		return sqlSession.delete(NAMESPACE + "setCartDelete", cartDTO);
 	}
 }
