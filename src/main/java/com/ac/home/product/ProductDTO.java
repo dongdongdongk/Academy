@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.ac.home.product.ProductImgDTO;
+import com.ac.home.product.CategoryDTO;
 
 public class ProductDTO {
 	
@@ -16,16 +17,16 @@ public class ProductDTO {
 	private Double grade;
 	private List<ProductImgDTO> productImgDTOs;
 	private Long hit;
-	private CategoryDTO cartegoryDTO;
+	private CategoryDTO categoryDTO;
 	
 	
-	public CategoryDTO getCartegoryDTO() {
-		return cartegoryDTO;
+	
+	public CategoryDTO getCategoryDTO() {
+		return categoryDTO;
 	}
-	public void setCartegoryDTO(CategoryDTO cartegoryDTO) {
-		this.cartegoryDTO = cartegoryDTO;
+	public void setCategoryDTO(CategoryDTO categoryDTO) {
+		this.categoryDTO = categoryDTO;
 	}
-	
 	public Long getHit() {
 		return hit;
 	}

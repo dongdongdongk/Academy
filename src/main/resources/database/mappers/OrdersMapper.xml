@@ -32,7 +32,7 @@
   			(
 	  			SELECT ROWNUM R, N.* FROM
 		  			(
-			  			SELECT ORDERNUM, ID, ALLPRICE, FINALPRICE, PURCHASEDATE, STATE FROM ORDERS
+			  			SELECT ORDERNUM, ID, ALLPRICE, PURCHASEDATE, NUM FROM ORDERS
 			  			<include refid="ordersCondition"></include>
 			  			ORDER BY ORDERNUM DESC
 		  			) N
@@ -50,7 +50,7 @@
 			SELECT ORDERS_SEQ.NEXTVAL FROM DUAL
 		</selectKey>
   		INSERT INTO ORDERS
-  		VALUES (#{orderNum}, #{id}, #{allPrice}, #{finalPrice}, SYSDATE, #{state})
+  		VALUES (#{orderNum}, #{id}, #{allPrice}, SYSDATE ,#{num})
   	</insert>
   	
   	<update id="setOrdersUpdate" parameterType="OrdersDTO">

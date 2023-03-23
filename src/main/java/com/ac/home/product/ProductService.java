@@ -51,6 +51,7 @@ public class ProductService {
 		int result = productDAO.setProductAdd(productDTO);
 		System.out.println("연결 테스트");
 		result = productDAO.setCategoryAdd(productDTO); 
+		
 		if(!pic.isEmpty()) { //pic.getSize() !=0
 			//1. File을 HDD에 저장 경로
 			// Project 경로가 아닌 OS가 이용하는 경로

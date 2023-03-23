@@ -5,13 +5,14 @@ let count =0;
 btn.addEventListener("click",function(){
     
     if(count==1){
-        alert("카테고리는 최대 2개까지만 가능합니다");
+        alert("카테고리는 최대 3개까지만 가능합니다");
         return;
     }
 
     let ar ='<div><select class="form-select" name="categoryNum">'
 			+'<option value="2" >책</option>'
 			+'<option value="3">강의</option>'
+            +'<option value="4">전체</option>'
 			
 			
             +'</select><button type="button" class="btn btn-outline-danger del">카테고리 삭제</button></div>'

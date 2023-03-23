@@ -64,17 +64,18 @@
 		</div>
 		
 		<div id="catdiv">
-		<div class="row input-group mb-4">
-			<label for="id" class="visually-hidden">categoryName</label>
-			<select class="form-select" name="id" id="name">
-				<option value="2" >책</option>
-				<option value="3">강의</option>
-				
-			</select>
-			<button type="button" id="btn1" class="btn btn-outline-danger del ">카테고리 삭제</button>
-			</div>
-			<button type="button" id="btn">카테고리 추가</button>
-			</div>
+			<div class="row input-group mb-3">
+				<label for="categoryNum" class="visually-hidden">categoryName</label>
+				<select class="form-select" name="categoryNum" id="categoryName">
+					<option value="2" >책</option>
+					<option value="3">강의</option>
+					<option value="4">전체</option>
+					
+				</select>
+				<button type="button" id="btn1" class="btn btn-outline-danger del ">카테고리 삭제</button>
+		</div>
+		<button type="button" id="btn">카테고리 추가</button>
+		</div>
 	<%-- 	<c:choose>
 		<c:when test="${dto.carteGoryDTO.name eq '책'}">
 			   책
@@ -124,7 +125,13 @@
 								<td class="tbl_td"><a href="./productDetail?num=${dto.num}">${dto.title}</a></td>
 								<td class="tbl_td">${dto.price}</td>
 								<td class="tbl_td">${dto.regDate}</td>
-								<td class="tbl_td">${dto.hit}</td>
+								<td class="tbl_td">${dto.categoryDTO.name}</td>
+								<td class="tbl_td">${dto.categoryDTO.id}</td>
+								
+								
+								
+								
+								
 								<%-- 		<c:choose>
 						<c:when test="${dto.grade eq 1}">판매중</c:when>
 						<c:otherwise>판매중</c:otherwise>
@@ -220,6 +227,7 @@
 </header>
 
 <c:import url="../template/common_js.jsp"></c:import>
+<script src="../../../resources/js/productAjax.js"></script>
 <script src="../../../resources/js/category.js"></script>
 <script src="/resources/css/goodsManage.css"></script>
 <script src="../resources/js/pageing.js"></script>
