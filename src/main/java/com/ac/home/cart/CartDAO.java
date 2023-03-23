@@ -12,7 +12,7 @@ public class CartDAO {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	private final String NAMESPACE = "com.ac.home.cart.";
+	private final String NAMESPACE = "com.ac.home.cart.CartDAO.";
 	
 	public List<CartDTO> getCartList() throws Exception {
 		return sqlSession.selectList(NAMESPACE + "getCartList");

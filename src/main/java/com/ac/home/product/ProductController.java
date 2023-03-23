@@ -2,6 +2,7 @@ package com.ac.home.product;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,8 @@ import com.ac.home.util.Pager;
 
 import oracle.sql.json.OracleJsonParser;
 
+import com.ac.home.cart.CartDTO;
+import com.ac.home.cart.CartService;
 import com.ac.home.product.ProductDTO;
 
 
@@ -58,7 +61,7 @@ public class ProductController {
 			ModelAndView mv = new ModelAndView();
 			
 			productDTO = productService.getProductDetail(productDTO);
-			
+		
 			mv.setViewName("product/productDetail");
 			mv.addObject("dto", productDTO);
 			
@@ -67,9 +70,9 @@ public class ProductController {
 		//add form 이동
 		@RequestMapping(value = "productAdd", method = RequestMethod.GET)
 		public ModelAndView setProductAdd(ModelAndView mv)throws Exception{
-			System.out.println("안녕");
+			
 			mv.setViewName("product/productAdd");
-			System.out.println("안녕2");
+			
 			return mv;
 		}
 		//add DB Insert
@@ -117,6 +120,8 @@ public class ProductController {
 			return mv;
 			
 		}
+
+		
 	}
 	   
 	   

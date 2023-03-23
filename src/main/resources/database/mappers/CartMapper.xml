@@ -5,9 +5,29 @@
   
   <mapper namespace="com.ac.home.cart.CartDAO">
   
-  	<select id="getCartList" resultType="CartDTO">
-  		SELECT * FROM CART
+  	<select id="getCartList" resultMap="cartProductJoin">
+  		SELECT *
+		FROM CART
+		LEFT OUTER JOIN
+		PRODUCT
+		USING(NUM)
   	</select>
+  	
+  	<resultMap type="CartDTO" id="cartProductJoin">
+ 		<id column="CARTNUM" property="cartNum"/>
+ 		<result column="ID" property="id"/>
+ 		<result column="NUM" property="num"/>
+ 	
+ 		<collection property="productDTOs" javaType="List" ofType="ProductDTO">
+ 			<id column="NUM" property="num"/>
+ 			<result column="TITLE" property="title"/>
+ 			<result column="PRICE" property="price"/>
+ 			<result column="SALEQTY" property="saleQty"/>
+ 			<result column="INFO" property="info"/>
+ 			<result column="REGDATE" property="regDate"/>
+ 			<result column="GRADE" property="grade"/>
+ 		</collection>
+ 	</resultMap>
   
 	<insert id="setCartAdd" parameterType="CartDTO">
 		INSERT INTO CART (CARTNUM, ID, NUM) 

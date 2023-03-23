@@ -17,3 +17,22 @@ $(document).ready(function() {
   });
 });
 
+
+$(".deleteBtn").on("click", function() {
+  let cartNum = $(this).attr("data-cart-id");
+
+    $.ajax({
+      url: "/cart/cartDelete",
+      type: "POST",
+      data: {
+        cartNum: cartNum,
+      },
+      success: function() {
+        alert("장바구니에서 삭제 되었습니다");
+        window.location.reload();
+      }
+    });
+});  
+
+
+
