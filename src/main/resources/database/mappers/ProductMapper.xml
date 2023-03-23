@@ -112,6 +112,12 @@
   		SELECT * FROM PRODUCTIMG WHERE NUM = #{num}
 	</select>
 	
+	<insert id="setProductKindAdd" parameterType="MemberDTO">
+  		INSERT INTO PRODUCTKIND (NUM,ID)
+  		VALUES (#{num}, (SELECT ID FROM CATEGORY WHERE NAME='책') )
+  	</insert>
+	
+	
 	<!-- <update id="setProductHit" parameterType="ProductDTO">
   		UPDATE PRODUCT SET HIT = #{hit} + 1
 		WHERE NUM = #{num}

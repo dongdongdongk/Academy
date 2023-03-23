@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import com.ac.home.util.Pager;
+import com.ac.home.member.MemberDTO;
 import com.ac.home.product.ProductDTO;
 import com.ac.home.product.ProductImgDTO;
 import com.ac.home.qna.QnaDTO;
@@ -36,7 +37,13 @@ public class ProductDAO {
 		
 		return sqlSession.insert(NAMESPACE+"setProductAdd", productDTO);
 	}
+
 	
+	public int setCategoryAdd(ProductDTO productDTO)throws Exception{
+		  
+		  return sqlSession.insert(NAMESPACE+"setCategoryAdd", productDTO); 
+	}
+	 
 	public int setProductUpdate(ProductDTO productDTO)throws Exception{
 		return sqlSession.update(NAMESPACE+"setProductUpdate", productDTO);
 	}

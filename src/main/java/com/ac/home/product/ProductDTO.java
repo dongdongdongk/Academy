@@ -16,6 +16,15 @@ public class ProductDTO {
 	private Double grade;
 	private List<ProductImgDTO> productImgDTOs;
 	private Long hit;
+	private CategoryDTO cartegoryDTO;
+	
+	
+	public CategoryDTO getCartegoryDTO() {
+		return cartegoryDTO;
+	}
+	public void setCartegoryDTO(CategoryDTO cartegoryDTO) {
+		this.cartegoryDTO = cartegoryDTO;
+	}
 	
 	public Long getHit() {
 		return hit;

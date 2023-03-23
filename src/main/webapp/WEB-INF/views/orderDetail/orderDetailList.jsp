@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>주문 목록</title>
+<title>주문 디테일~~~~ 목록</title>
 <c:import url="../template/common_css.jsp"></c:import>
 
 <!-- Bootstrap CSS -->
@@ -34,18 +34,18 @@
 	
 	<div class="container-fluid">
 		<div class="row my-5 col-md-2 mx-auto">
-			<h1>주문 게시판 디비로보네요</h1>
+			<h1>주문 DETAIL</h1>
 		</div>
 		
 		<div class="row col-md-7 mx-auto">
 			<table class="table">
 			  	<thead class="table-dark">
 			 		<tr>
-						<th>주문번호</th><th>ID</th><th>구매상태</th><th>총금액</th>
+						<th>자세한번호</th><th>주문번호</th><th>번호</th><th>가격</th><th>마감날짜</th><th>상태</th>
 					</tr>
 			 	</thead>
 			 	
-			  	<%-- <tbody>
+			  <%-- 	<tbody>
 			  		<c:forEach items="${list}" var="dto">
 						<tr>
 							<td>${dto.num}</td>
@@ -123,7 +123,7 @@
 			</div>
 			
 			<div class="row col-auto mx-auto">
-				<a class="btn btn-primary mb-3" href="./ordersAdd">글 등록</a>
+				<a class="btn btn-primary mb-3" href="./ordersAdd">구매 디비로 값넘기기</a>
 			</div>	
 				
 			<div class="row col-auto mx-auto">

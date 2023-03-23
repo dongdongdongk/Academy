@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.ac.home.order.detail.OrderDetailDAO">
+  
+  	<sql id="ordersDetailCondition">
+	  			
+	  	<if test="kind == 'title'">
+	  		WHERE TITLE LIKE '%' || #{search} || '%'
+	  	</if>
+	  			
+	  	<if test="kind == 'contents'">
+	  		WHERE CONTENTS LIKE '%' || #{search} || '%'
+	  	</if>
+	  			
+	  	<if test="kind == 'writer'">
+	  		WHERE WRITER LIKE '%' || #{search} || '%'
+	  	</if>
+	  		
+  	</sql>
+  
+ 	<select id="getTotalCount" resultType="Long" parameterType="Pager">
+		SELECT COUNT(DETAILNUM) FROM ORDERDETAIL
+		
+		<include refid="ordersDetailCondition"></include>
+	</select>
+  	
+  	<select id="getOrderDetailList" parameterType="Pager" resultType="OrderDetailDTO">
+  		SELECT * FROM
+  			(
+	  			SELECT ROWNUM R, N.* FROM
+		  			(
+			  			SELECT DETAILNUM, ORDERNUM, NUM, PRICE, CLOSEDATE, CHECKS FROM ORDERDETAIL
+			  			<include refid="ordersDetailCondition"></include>
+			  			ORDER BY DETAILNUM DESC
+		  			) N
+  			)
+  			WHERE R BETWEEN #{startRow} AND #{lastRow}
+  	</select>
+  
+  
+  	
+  
+  	
+  
+  
+	
+  	
+  </mapper>

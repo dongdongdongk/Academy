@@ -62,7 +62,24 @@
 		<div class="row mb-4 ">
 			<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품LIST</h1>
 		</div>
-
+		
+		<div id="catdiv">
+		<div class="row input-group mb-4">
+			<label for="id" class="visually-hidden">categoryName</label>
+			<select class="form-select" name="id" id="name">
+				<option value="2" >책</option>
+				<option value="3">강의</option>
+				
+			</select>
+			<button type="button" id="btn1" class="btn btn-outline-danger del ">카테고리 삭제</button>
+			</div>
+			<button type="button" id="btn">카테고리 추가</button>
+			</div>
+	<%-- 	<c:choose>
+		<c:when test="${dto.carteGoryDTO.name eq '책'}">
+			   책
+		</c:when>
+		</c:choose> --%>
 		<div class="goods_table_wrap">
 			<!-- 상품 리스트 O -->
 			<c:if test="${listcheck != 'empty'}">
@@ -203,6 +220,7 @@
 </header>
 
 <c:import url="../template/common_js.jsp"></c:import>
+<script src="../../../resources/js/category.js"></script>
 <script src="/resources/css/goodsManage.css"></script>
 <script src="../resources/js/pageing.js"></script>
 <script src="../resources/js/fileManger.js"></script>
