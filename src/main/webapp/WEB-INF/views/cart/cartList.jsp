@@ -13,17 +13,13 @@
             <th>번호</th>
             <th>상품이름</th>
             <th>상품번호</th>
-           
         </tr>
         <tr>
             <td>${list.cartNum}</td>
-            <td>${list.product.name}</td>
-            <td>${list.product.price}</td>
-           
+            <td></td>
+            <td></td>
             <td>
-                
-                    <button type="submit">Remove</button>
-                
+               <button type="submit">Remove</button>
             </td>
         </tr>
     </table>
