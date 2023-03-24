@@ -22,6 +22,36 @@ public class EventController {
 	@Autowired
 	private EventService eventService;
 		
+
+	@GetMapping("continueEvent")
+	public ModelAndView getEventStateContinue(Pager pager) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		List<EventDTO> ar = eventService.getEventList(pager);
+		
+		mv.addObject("list",ar);
+		mv.setViewName("board/eventList_1");
+		return mv;
+	}
+	
+	@GetMapping("endEvent")
+	public ModelAndView getEventStateEnd(Pager pager) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		List<EventDTO> ar = eventService.getEventList(pager);
+		
+		mv.addObject("list",ar);
+		mv.setViewName("board/eventList_2");
+		
+		return mv;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	//list
@@ -105,7 +135,6 @@ public class EventController {
 			mv.setViewName("redirect:./list");
 			return mv;
 		}
-		
 		
 	
 	

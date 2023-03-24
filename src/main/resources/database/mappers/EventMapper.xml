@@ -61,6 +61,8 @@
   		<result column="contents" property="contents"/>
   		<result column="regDate" property="regDate"/>
   		<result column="hit" property="hit"/>
+  		<result column="startDate" property="startDate"/>
+  		<result column="endDate" property="endDate"/>
   		
   		<collection property="eventFileDTOs" javaType="List" ofType="EventFileDTO">
   			<id column="fileNum" property="fileNum"/>
