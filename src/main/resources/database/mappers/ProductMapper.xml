@@ -54,7 +54,7 @@
 						CATEGORY A
 						ON(C.ID = A.ID)
 						<include refid="searchCondition"></include>						
-						ORDER BY ROWNUM DESC
+						ORDER BY REGDATE DESC
 					) B 
 			)
 		WHERE R BETWEEN #{startRow}  AND #{lastRow} 
@@ -87,7 +87,10 @@
  		</collection>
  		<!-- 1:N -->
  		<!-- <collection property=""></collection> -->
- 		
+ 		<collection property="categoryDTOs" javaType="List" ofType="categoryDTO">
+ 			<id column="ID" property="id"/>
+ 			<result column="NAME" property="name"/>
+ 		</collection>	
  	</resultMap>
 
  	<insert id="setProductAdd" parameterType="ProductDTO">
@@ -105,7 +108,7 @@
 	
 
  	<delete id="setProductDelete" parameterType="ProductDTO">
- 		DELETE PRODUCT WHERE NUM=#{num}
+ 		DELETE PRODUCT WHERE NUM=#{num, jdbcType=BIGINT}
  		
  	</delete> 
  	
@@ -123,6 +126,9 @@
   		SELECT * FROM PRODUCTIMG WHERE NUM = #{num}
 	</select>
 	
+	<delete id="getProductFileDelete" parameterType="ProductImgDTO">
+		DELETE PRODUCTIMG WHERE FILENUM=#{fileNum}
+	</delete>
 	
 	
 	<!-- <update id="setProductHit" parameterType="ProductDTO">

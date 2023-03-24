@@ -17,15 +17,20 @@ public class ProductDTO {
 	private Double grade;
 	private List<ProductImgDTO> productImgDTOs;
 	private Long hit;
-	private CategoryDTO categoryDTO;
+	private List<CategoryDTO> categoryDTOs;
+	private List<BoardFileDTO> boardFileDTOs; 
 	
-	
-	
-	public CategoryDTO getCategoryDTO() {
-		return categoryDTO;
+	public List<BoardFileDTO> getBoardFileDTOs() {
+		return boardFileDTOs;
 	}
-	public void setCategoryDTO(CategoryDTO categoryDTO) {
-		this.categoryDTO = categoryDTO;
+	public void setBoardFileDTOs(List<BoardFileDTO> boardFileDTOs) {
+		this.boardFileDTOs = boardFileDTOs;
+	}
+	public List<CategoryDTO> getCategoryDTOs() {
+		return categoryDTOs;
+	}
+	public void setCategoryDTOs(List<CategoryDTO> categoryDTOs) {
+		this.categoryDTOs = categoryDTOs;
 	}
 	public Long getHit() {
 		return hit;

@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 <!-- Common CSS -->
 <c:import url="../template/common_css.jsp"></c:import>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body>
 <!-- Header -->
@@ -71,7 +73,7 @@
       </div>
     </div>
   </div>
-
+	
 	  
    
 
@@ -79,6 +81,8 @@
 </header>
 
 <c:import url="../template/common_js.jsp"></c:import>
-
+<script>
+		$("#info2").summernote();
+</script>
 </body>
 </html>

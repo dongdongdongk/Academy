@@ -53,6 +53,7 @@
 </style>
 <title></title>
 <c:import url="../template/common_css.jsp"></c:import>
+
 </head>
 <body>
 	<c:import url="../template/header.jsp"></c:import>
@@ -125,8 +126,10 @@
 								<td class="tbl_td"><a href="./productDetail?num=${dto.num}">${dto.title}</a></td>
 								<td class="tbl_td">${dto.price}</td>
 								<td class="tbl_td">${dto.regDate}</td>
-								<td class="tbl_td">${dto.categoryDTO.name}</td>
-								<td class="tbl_td">${dto.categoryDTO.id}</td>
+								
+								<c:forEach items="${dto.categoryDTOs}" var="category">
+									<td class="tbl_td">${category.name}</td>
+								</c:forEach>
 								
 								
 								
