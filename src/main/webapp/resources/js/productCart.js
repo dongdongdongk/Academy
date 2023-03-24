@@ -34,5 +34,20 @@ $(".deleteBtn").on("click", function() {
     });
 });  
 
+$(document).ready(function() {
+  $("#addToCartBtn").on("click", function() {
+    let id = $(this).attr("data-member-id");
 
+    $.ajax({
+      url: "/cart/cartList",
+      type: "GET",
+      data: {
+          id : id
+      },
+      success: function() {
+        console.log("memberId")
+      }
+    });
+  });
+});
 

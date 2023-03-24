@@ -46,7 +46,7 @@
 			  			<h3>로그인 해주세요</h3>
 			  		</c:if>
 			  		
-			  		<h3>${sumPrice}</h3>
+			  		<h3>총 금액 : ${sumPrice}</h3>
 			  		<button class="btn btn-primary">결제하기</button>
 			  	</tbody>
                 

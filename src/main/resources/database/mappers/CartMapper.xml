@@ -54,5 +54,5 @@
 		USING(NUM)
 		WHERE ID = #{id}
 	</select>
-  
+ 
   </mapper>

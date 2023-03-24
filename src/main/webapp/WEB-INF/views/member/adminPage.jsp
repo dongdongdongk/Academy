@@ -14,6 +14,8 @@
 	
 	<c:import url="../template/adminSideBar.jsp"></c:import>
 	
+	<h3>관리자 홈 페이지</h3>
+	
 	<c:import url="../template/common_js.jsp"></c:import>
 	<script src="/resources/js/adminPage.js"></script>
 </body>

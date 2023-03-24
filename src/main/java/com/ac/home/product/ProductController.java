@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.home.product.ProductService;
-import com.ac.home.util.Naver;
+
 import com.ac.home.util.Pager;
 
 import oracle.sql.json.OracleJsonParser;
@@ -120,8 +120,6 @@ public class ProductController {
 			return mv;
 			
 		}
-
-		
 	}
 	   
 	   

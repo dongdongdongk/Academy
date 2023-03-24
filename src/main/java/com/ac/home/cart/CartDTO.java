@@ -36,4 +36,10 @@ public class CartDTO {
 	public void setProductDTOs(List<ProductDTO> productDTOs) {
 		this.productDTOs = productDTOs;
 	}
+	public List<ProductImgDTO> getProductImgDTOs() {
+		return productImgDTOs;
+	}
+	public void setProductImgDTOs(List<ProductImgDTO> productImgDTOs) {
+		this.productImgDTOs = productImgDTOs;
+	}
 }

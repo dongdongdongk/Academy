@@ -24,19 +24,27 @@ public class CartController {
 	@Autowired
 	private CartService cartService;
 	
-	@Autowired
-	private ProductService productService;
-	
 	@GetMapping(value = "cartList")
 	public ModelAndView getCartList(CartDTO cartDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		
 		List<CartDTO> ar = cartService.getCartList();
 		
-		Long sumPrice = cartService.getSumPrice(cartDTO);
+		Long sumPrice = 0L;
+		if(cartDTO.getId() != null) {
+			sumPrice = cartService.getSumPrice(cartDTO);				
+		}
 		
-		mv.addObject("list", ar);
 		mv.addObject("sumPrice", sumPrice);
+		mv.addObject("list", ar);
+		mv.setViewName("cart/cartList");
+		
+		return mv;
+	}
+	
+	@GetMapping(value = "cartAdd")
+	public ModelAndView setCartAdd(CartDTO cartDTO, ModelAndView mv) throws Exception {
+				
 		mv.setViewName("cart/cartList");
 		
 		return mv;
@@ -64,6 +72,5 @@ public class CartController {
 		
 		return mv;
 	}
-	
 	
 }
