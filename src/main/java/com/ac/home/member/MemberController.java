@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.ac.home.member.MemberDTO;
 import com.ac.home.member.find.FindMemberService;
 import com.ac.home.member.mail.*;
+import com.ac.home.member.paymentmethod.*;
 
 
 @Controller
@@ -33,6 +34,9 @@ public class MemberController {
 	
     @Autowired
     private FindMemberService findMemberService;
+    
+    @Autowired
+    private PaymentMethodController paymentController;
     
 	@PostMapping("memberIdCheck")
 	public ModelAndView getMemberIdCheck(MemberDTO memberDTO)throws Exception{
