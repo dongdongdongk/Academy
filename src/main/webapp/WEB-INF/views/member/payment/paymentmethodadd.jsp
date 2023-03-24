@@ -7,23 +7,84 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Add Member's Payment Method</title>
+<title>결제수단 추가</title>
+<c:import url="../../template/common_css.jsp"></c:import>
+<style>
+    .card {
+        margin-top: 2rem;
+        padding: 2rem;
+    }
+</style>
 </head>
 <body>
-    <h1>Add Member's Payment Method</h1>
-	<form:form action="./paymentmethodadd" method="post" modelAttribute="paymentMethods">
-    	<input type="hidden" name="memberId" value="${member.id}" />
-	        <table>
-	            <tr>
-	                <td>Payment Method:</td>
-	                <td><form:input path="paymentMethod" /></td>
-	            </tr>
-	            <tr>
-	                <td>Info:</td>
-	                <td><form:textarea path="info" /></td>
-	            </tr>
-	        </table>
-        <input type="submit" value="Add Payment Method" />
-    </form:form>
+    <c:import url="../../template/header.jsp"></c:import>
+    <div class="container-fluid page-content">
+        <div class="row justify-content-center">
+            <div class="col-md-7 my-5">
+                <h1 class="text-center">결제수단 추가</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+                <div class="card">
+                    <div class="card-body">
+		                <form:form action="./paymentmethodadd" method="post" modelAttribute="paymentMethods" onsubmit="event.preventDefault(); submitForm(this);">
+		                    <input type="hidden" name="memberId" value="${member.id}" />
+		                    <div class="form-group">
+		                        <label for="paymentMethod">결제수단</label>
+		                        <form:select path="paymentMethod" id="paymentMethod" class="form-control">
+		                            <form:option value="PAYPAL">페이팔</form:option>
+		                            <form:option value="CARD">카드</form:option>
+		                            <form:option value="BANK" id="bankOption">은행</form:option>
+		                        </form:select>
+		                    </div>
+		                    <div id="cardFields" class="form-group">
+		                        <label for="cardNumber">카드 번호</label>
+		                        <div class="card-number-input d-flex">
+		                            <input type="text" class="cardNumber form-control" onKeyup="inputcardNumber(this);" maxlength="4"/>
+		                            <span> - </span>
+		                            <input type="text" class="cardNumber form-control" onKeyup="inputcardNumber(this);" maxlength="4"/>
+		                            <span> - </span>
+		                            <input type="text" class="cardNumber form-control" onKeyup="inputcardNumber(this);" maxlength="4"/>
+		                            <span> - </span>
+		                            <input type="text" class="cardNumber form-control" maxlength="4"/>
+		                        </div>
+		                    </div>
+		                    <div id="paypalFields" class="form-group">
+		                        <label for="email">이메일</label>
+								<div class="input-group" style="display: flex;">
+								    <input type="text" id="emailPrefix" class="form-control" style="width: 50%; flex-grow: 1;" />
+								    <div class="input-group-append" style="width: 50%; flex-grow: 1;">
+								        <select id="emailDomain" class="form-control" style="width: 100%;">
+								            <option value="@google.com">@google.com</option>
+								            <option value="@naver.com">@naver.com</option>
+								        </select>
+								    </div>
+								</div>
+		                    </div>
+		                    <div id="bankFields" class="form-group">
+		                        <label for="bankName">은행명</label>
+		                        <select id="bankName" class="form-control">
+		                            <option value="국민">국민</option>
+		                            <option value="신한">신한</option>
+		                            <option value="농협">농협</option>
+		                        </select>
+		                        <label for="accountNumber">계좌 번호</label>
+		                        <input type="text" id="accountNumber" class="form-control" />
+		                    </div>
+		                    <form:hidden path="info" id="info" />
+						    <div class="row">
+						        <div class="col-md-4 d-flex justify-content-between">
+						            <input type="submit" value="결제수단 추가" class="btn btn-outline-secondary" />
+						            <a href="../memberPage" class="btn btn-outline-secondary">돌아가기</a>
+						        </div>
+						    </div> 	
+		                </form:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<c:import url="../../template/common_js.jsp"></c:import>
+<script type="text/javascript" src="../../resources/js/paymentmethodadd.js"></script>
 </body>
-</html>
