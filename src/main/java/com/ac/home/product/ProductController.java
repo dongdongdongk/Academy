@@ -31,8 +31,7 @@ import com.ac.home.product.ProductDTO;
 @Controller
 @RequestMapping("/product/*")
 public class ProductController {
-	
-	
+		
 	   @Autowired
 	   private ProductService productService;
 	  
@@ -43,13 +42,10 @@ public class ProductController {
 		
 			List<ProductDTO> ar = productService.getProductList(pager);
 			
-			
 		      mv.addObject("list",ar);
 		      
-		     
-		       
 		      mv.setViewName("product/productList");
-		       
+		      
 			return mv;
 		}
 	   

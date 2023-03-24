@@ -42,14 +42,6 @@ public class CartController {
 		return mv;
 	}
 	
-	@GetMapping(value = "cartAdd")
-	public ModelAndView setCartAdd(CartDTO cartDTO, ModelAndView mv) throws Exception {
-				
-		mv.setViewName("cart/cartList");
-		
-		return mv;
-	}
-	
 	@PostMapping(value = "cartAdd")
 	public ModelAndView setCartAdd(CartDTO cartDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();

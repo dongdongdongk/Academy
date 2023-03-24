@@ -17,4 +17,28 @@ function openCity(evt, cityName) {
     // Show the current tab, and add an "active" class to the link that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
-    }
+}
+
+$("#memberList").on("click", function(){
+
+    $.ajax({
+        url: "/member/memberList",
+        type: "GET",
+        success: function(result) {
+            // $(".lists").append(result);
+            $(".lists").html(result);
+          }
+    })
+})
+
+$("#productList").on("click", function(){
+
+    $.ajax({
+        url: "/member/productList",
+        type: "GET",
+        success: function(result) {
+            // $(".lists").append(result);
+            $(".lists").html(result);
+          }
+    })
+})

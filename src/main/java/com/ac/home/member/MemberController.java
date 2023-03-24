@@ -19,6 +19,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.ac.home.member.MemberDTO;
 import com.ac.home.member.find.FindMemberService;
 import com.ac.home.member.mail.*;
+import com.ac.home.product.ProductDTO;
+import com.ac.home.product.ProductService;
+import com.ac.home.util.Pager;
 
 
 @Controller
@@ -36,6 +39,9 @@ public class MemberController {
 	
     @Autowired
     private FindMemberService findMemberService;
+    
+    @Autowired
+    private ProductService productService;
     
 	@PostMapping("memberIdCheck")
 	public ModelAndView getMemberIdCheck(MemberDTO memberDTO)throws Exception{
@@ -153,7 +159,7 @@ public class MemberController {
 	public ModelAndView getAdminPage() throws Exception {
 		ModelAndView mv = new ModelAndView();
 		
-		mv.setViewName("member/adminPage");
+		mv.setViewName("admin/adminPage");
 		
 		return mv;
 	}
@@ -166,8 +172,22 @@ public class MemberController {
 		List<MemberDTO> ar = memberService.getMemberList();
 		
 		mv.addObject("list", ar);
-		mv.setViewName("member/memberList");
+		mv.setViewName("admin/adminMemberList");
 		
 		return mv;
+	}
+	
+	// 관리자 페이지 상품 관리
+	@GetMapping(value = "productList")
+	public ModelAndView getProductList(Pager pager)throws Exception{
+		ModelAndView mv = new ModelAndView();
+		
+		List<ProductDTO> ar = productService.getProductList(pager);
+		
+	    mv.addObject("list", ar);
+	      
+	    mv.setViewName("admin/adminProductList");
+	      
+	    return mv;
 	}
 }

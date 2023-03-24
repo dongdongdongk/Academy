@@ -1,3 +1,7 @@
+.sideBar {
+  display: inline;
+}
+
 .vertical-menu {
     width: 200px; /* Set a width if you like */
     margin-top: 200px;
