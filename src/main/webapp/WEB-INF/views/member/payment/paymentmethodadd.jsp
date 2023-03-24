@@ -56,8 +56,11 @@
 								    <input type="text" id="emailPrefix" class="form-control" style="width: 50%; flex-grow: 1;" />
 								    <div class="input-group-append" style="width: 50%; flex-grow: 1;">
 								        <select id="emailDomain" class="form-control" style="width: 100%;">
-								            <option value="@google.com">@google.com</option>
 								            <option value="@naver.com">@naver.com</option>
+								            <option value="@daum.net">@daum.net</option>
+								            <option value="@gmail.com">@gmail.com</option>
+								            <option value="@hanmail.com">@hanmail.com</option>
+								            <option value="@yahoo.co.kr">@yahoo.co.kr</option>
 								        </select>
 								    </div>
 								</div>
@@ -68,17 +71,30 @@
 		                            <option value="국민">국민</option>
 		                            <option value="신한">신한</option>
 		                            <option value="농협">농협</option>
+		                            <option value="카카오">카카오</option>
+		                            <option value="토스">토스</option>
+		                            <option value="기업">기업</option>
+		                            <option value="새마을금고">새마을금고</option>
+		                            <option value="수협">수협</option>
+		                            <option value="우체국">우체국</option>
+		                            <option value="하나">하나</option>
+		                            <option value="산업">산업</option>
+		                            <option value="제일">제일</option>
+		                            <option value="대구">대구</option>
+		                            <option value="경남">경남</option>
+		                            <option value="부산">부산</option>
+		                            <option value="광주">광주</option>
 		                        </select>
 		                        <label for="accountNumber">계좌 번호</label>
 		                        <input type="text" id="accountNumber" class="form-control" />
 		                    </div>
 		                    <form:hidden path="info" id="info" />
-						    <div class="row">
-						        <div class="col-md-4 d-flex justify-content-between">
-						            <input type="submit" value="결제수단 추가" class="btn btn-outline-secondary" />
-						            <a href="../memberPage" class="btn btn-outline-secondary">돌아가기</a>
-						        </div>
-						    </div> 	
+							<div class="row justify-content-center my-5">
+								<div class="col-md-4 d-flex justify-content-between">
+									<input type="submit" value="결제수단 추가" class="btn btn-outline-secondary" />
+									<a href="../memberPage" class="btn btn-outline-secondary">돌아가기</a>
+								</div>
+							</div>
 		                </form:form>
                     </div>
                 </div>
