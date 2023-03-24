@@ -3,12 +3,14 @@ package com.ac.home.cart;
 import java.util.List;
 
 import com.ac.home.product.ProductDTO;
+import com.ac.home.product.ProductImgDTO;
 
 public class CartDTO {
 	private Long cartNum;
 	private String id;
 	private Long num;
 	private List<ProductDTO> productDTOs;
+	private List<ProductImgDTO> productImgDTOs;
 	
 	public Long getCartNum() {
 		return cartNum;

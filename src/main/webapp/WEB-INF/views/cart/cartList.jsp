@@ -27,20 +27,27 @@
 			 	</thead>
 			 	
 			  	<tbody>
-			  		<c:forEach items="${list}" var="dto">
-						<tr>
-							<td>${dto.num}</td>
-							
-							<c:forEach items="${dto.productDTOs}" var="product">
-								<td>이미지</td>
-								<td>${product.title}</td>
-								<td>${product.price}</td>
-							</c:forEach>
-							
-                            <td><button data-cart-id="${dto.cartNum}" class="deleteBtn btn btn-danger">X</button></td>
-						</tr>
-					</c:forEach>
-					<h1>${totalPrice}</h1>
+			  		<c:if test="${not empty member}">
+				  		<c:forEach items="${list}" var="dto">
+				  			<c:if test="${member.id eq dto.id}">
+								<tr>
+									<td>${dto.num}</td>
+									<c:forEach items="${dto.productDTOs}" var="product">
+										<td><img src="../resources/upload/product/${product.productImgDTOs.save}" class="img-fluid"></td>
+										<td>${product.title}</td>
+										<td>${product.price}</td>
+									</c:forEach>
+			                    	<td><button data-cart-id="${dto.cartNum}" class="deleteBtn btn btn-danger">X</button></td>
+								</tr>
+							</c:if>
+						</c:forEach>
+			  		</c:if>
+			  		<c:if test="${empty member}">
+			  			<h3>로그인 해주세요</h3>
+			  		</c:if>
+			  		
+			  		<h3>${sumPrice}</h3>
+			  		<button class="btn btn-primary">결제하기</button>
 			  	</tbody>
                 
 			</table>	

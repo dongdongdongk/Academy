@@ -11,6 +11,9 @@
 		LEFT OUTER JOIN
 		PRODUCT
 		USING(NUM)
+		LEFT OUTER JOIN
+		PRODUCTIMG
+		USING(NUM)
   	</select>
   	
   	<resultMap type="CartDTO" id="cartProductJoin">
@@ -27,6 +30,12 @@
  			<result column="REGDATE" property="regDate"/>
  			<result column="GRADE" property="grade"/>
  		</collection>
+ 		
+ 		<collection property="productImgDTOs" javaType="List" ofType="ProductImgDTO">
+ 			<id column="FILENUM" property="fileNum"/>
+ 			<result column="SAVE" property="save"/>
+ 			<result column="UPLOAD" property="upLoad"/>
+ 		</collection>
  	</resultMap>
   
 	<insert id="setCartAdd" parameterType="CartDTO">
@@ -37,5 +46,13 @@
 	<delete id="setCartDelete" parameterType="CartDTO">
 		DELETE CART WHERE CARTNUM = #{cartNum}
 	</delete>
+	
+	<select id="getSumPrice" resultType="Long" parameterType="CartDTO">
+		SELECT SUM(PRICE)
+		FROM CART
+		JOIN PRODUCT
+		USING(NUM)
+		WHERE ID = #{id}
+	</select>
   
   </mapper>

@@ -22,4 +22,8 @@ public class CartService{
 	public int setCartDelete(CartDTO cartDTO) throws Exception {
 		return cartDAO.setCartDelete(cartDTO);
 	}
+	
+	public Long getSumPrice(CartDTO cartDTO) throws Exception {
+		return cartDAO.getSumPrice(cartDTO);
+	}
 }

@@ -1,5 +1,6 @@
 package com.ac.home.cart;
 
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -27,25 +28,15 @@ public class CartController {
 	private ProductService productService;
 	
 	@GetMapping(value = "cartList")
-	public ModelAndView getCartList(Pager pager) throws Exception {
+	public ModelAndView getCartList(CartDTO cartDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		
 		List<CartDTO> ar = cartService.getCartList();
 		
-		// --------------------------------
-		List<ProductDTO> items = productService.getProductList(pager);
+		Long sumPrice = cartService.getSumPrice(cartDTO);
 		
-		Long totalPrice = 0L;
-        for (ProductDTO productDTO : items) {
-            Long price = productDTO.getPrice();
-            totalPrice += price;
-        }
-		
-        mv.addObject("totalPrice", totalPrice);
-        
-        // --------------------------------
-        
 		mv.addObject("list", ar);
+		mv.addObject("sumPrice", sumPrice);
 		mv.setViewName("cart/cartList");
 		
 		return mv;

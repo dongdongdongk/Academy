@@ -25,4 +25,8 @@ public class CartDAO {
 	public int setCartDelete(CartDTO cartDTO) throws Exception {
 		return sqlSession.delete(NAMESPACE + "setCartDelete", cartDTO);
 	}
+	
+	public Long getSumPrice(CartDTO cartDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + "getSumPrice", cartDTO);
+	}
 }
