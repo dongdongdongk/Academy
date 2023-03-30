@@ -10,6 +10,7 @@
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
+<c:import url="../template/header.jsp"></c:import>
 	<div class="container-fluid">
 		<div class="row my-5 col-md-2 mx-auto">
 			<h1>NoticeList</h1>
@@ -106,6 +107,8 @@
 		</div>
 	</div>
 	
+	</header>
+	<c:import url="../template/bottom.jsp"></c:import>
 	<c:import url="../template/common_js.jsp"></c:import>		
 	<script src="../resources/js/pageing.js"></script>
 </body>

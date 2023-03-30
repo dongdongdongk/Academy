@@ -52,14 +52,15 @@ public class ProductController {
 		//detail
 		@RequestMapping(value = "productDetail", method = RequestMethod.GET)
 		public ModelAndView getProductDetail(ProductDTO productDTO)throws Exception{
-//			System.out.println(bankBookDTO.getBookNumber());
-//			System.out.println(bankBookDTO.getBookDetail());
+			
 			ModelAndView mv = new ModelAndView();
 			
 			productDTO = productService.getProductDetail(productDTO);
 		
 			mv.setViewName("product/productDetail");
 			mv.addObject("dto", productDTO);
+			mv.setViewName("product/productDetail");
+			
 			
 			return mv;
 		}
@@ -73,7 +74,7 @@ public class ProductController {
 		}
 		//add DB Insert
 		@RequestMapping(value = "productAdd", method = RequestMethod.POST)
-		public ModelAndView setProductAdd(ProductDTO productDTO, MultipartFile pic) throws Exception{
+		public ModelAndView setProductAdd(ProductDTO productDTO, MultipartFile  pic) throws Exception{
 			
 			ModelAndView mv = new ModelAndView();
 
@@ -103,19 +104,37 @@ public class ProductController {
 		public ModelAndView setProductUpdate(ProductDTO productDTO) throws Exception{
 			ModelAndView mv = new ModelAndView();
 			productDTO = productService.getProductDetail(productDTO);
+			
 			mv.setViewName("product/productUpdate");
 			mv.addObject("dto", productDTO);
 			return mv;
 		}
 		@RequestMapping(value="update", method = RequestMethod.POST)
-		public ModelAndView setProductUpdate(ProductDTO productDTO, ModelAndView mv) throws Exception{
-			
-			int result= productService.setProductUpdate(productDTO);
+		public ModelAndView setProductUpdate(ProductDTO productDTO,MultipartFile pic) throws Exception{
+			ModelAndView mv = new ModelAndView();
+		
+			int result = productService.setProductUpdate(productDTO,pic);
 			
 			mv.setViewName("redirect:./list");
+			
 			return mv;
 			
 		}
+		@PostMapping("productDelete")
+		public ModelAndView setProductFileDelete(ProductImgDTO productImgDTO) throws Exception{
+			ModelAndView mv = new ModelAndView();
+			int result = productService.getProductFileDelete(productImgDTO);
+			
+			mv.addObject("dto", result);
+			mv.setViewName("./common/ajaxResult");
+			
+			return mv;
+		}
+	 
+		
+		
+		
+
 	}
 	   
 	   

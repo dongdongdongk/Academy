@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.ac.home.util.Pager;
 import com.ac.home.product.ProductDTO;
 import com.ac.home.product.ProductImgDTO;
+import com.ac.home.qna.QnaDTO;
 import com.ac.home.util.FileManager;
 
 
@@ -25,7 +26,7 @@ public class ProductService {
 	private ServletContext servletContext;
 	@Autowired
 	private FileManager fileManager;
-	private final String NAMESPACE="com.ac.home.product.ProductDAO.";
+	
 	
 	public List<ProductDTO> getProductList(Pager pager)throws Exception{
 		
@@ -46,28 +47,50 @@ public class ProductService {
 	}
 	
 	public int setProductAdd(ProductDTO productDTO,MultipartFile pic)throws Exception{
-		System.out.println("연결 테스트");
+		
 		int result = productDAO.setProductAdd(productDTO);
-		System.out.println("연결 테스트");
+		
+		result = productDAO.setCategoryAdd(productDTO); 
+	
 		if(!pic.isEmpty()) { //pic.getSize() !=0
+			System.out.println("서비스 프로덕트 에드 PIC 에드");
 			//1. File을 HDD에 저장 경로
 			// Project 경로가 아닌 OS가 이용하는 경로
-		//String realPath= servletContext.getRealPath("/resources/images");	
-		String realPath= servletContext.getRealPath("resources/upload/product");
+		String realPath= servletContext.getRealPath("resources/images");
 		System.out.println(realPath);
 		String fileName = fileManager.fileSave(pic, realPath);
-		//.2 DB�뿉 ���옣
+		
 		ProductImgDTO productImgDTO = new ProductImgDTO();
 		productImgDTO.setSave(fileName);
 		productImgDTO.setUpLoad(pic.getOriginalFilename());
 		productImgDTO.setNum(productDTO.getNum());
-		
+	
 		result = productDAO.setProductImgAdd(productImgDTO);
 		}
 		return result;
 	}
-	public int setProductUpdate(ProductDTO productDTO)throws Exception{
-		return productDAO.setProductUpdate(productDTO);
+	public int setProductUpdate(ProductDTO productDTO,MultipartFile pic)throws Exception{
+		
+		int result = productDAO.setProductUpdate(productDTO);
+	
+		if(!pic.isEmpty()) { //pic.getSize() !=0
+			
+			//1. File을 HDD에 저장 경로
+			// Project 경로가 아닌 OS가 이용하는 경로
+		String realPath= servletContext.getRealPath("resources/images");
+		System.out.println(realPath);
+		String fileName = fileManager.fileSave(pic, realPath);
+		
+		ProductImgDTO productImgDTO = new ProductImgDTO();
+		productImgDTO.setNum(productDTO.getNum());
+		productImgDTO.setSave(fileName);
+		productImgDTO.setUpLoad(pic.getOriginalFilename());
+		
+		
+		result = productDAO.setProductImgAdd(productImgDTO);
+		
+		}
+		return result;
 	}
 	
 	public int setProductDelete(ProductDTO productDTO, HttpSession session)throws Exception{
@@ -85,8 +108,15 @@ public class ProductService {
 		}
 		return result;
 	}
+	/*
+	 * public int setProductHit(ProductDTO productDTO) throws Exception { return
+	 * productDAO.setProductHit(productDTO); }
+	 */
 
-	
+	public int getProductFileDelete(ProductImgDTO productImgDTO) throws Exception{
+		System.out.println("ProductFileDelete");
+		return productDAO.getProductFileDelete(productImgDTO);
+	}
 
 	
 	

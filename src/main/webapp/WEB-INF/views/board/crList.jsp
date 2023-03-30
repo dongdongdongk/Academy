@@ -15,9 +15,8 @@
 
 </head>
 <body>
-
-	<c:import url="../template/header.jsp"></c:import>
-
+<c:import url="../template/header.jsp"></c:import>
+	<header style="margin-top: 200px;">
 		<div class="container-fluid">
 			<div id="sub_banner" class="bgColor">
 				<h2 class="page_title">
@@ -118,9 +117,10 @@
 			</c:forEach>
 		</div>
 
-	
+</header>	
 
 	<c:import url="../template/common_js.jsp"></c:import>
+	<c:import url="../template/bottom.jsp"></c:import>
 	<script src="/resources/js/crList.js"></script>
 </body>
 </html>

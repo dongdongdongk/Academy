@@ -31,12 +31,12 @@
 <body>
 	
 	<c:import url="../template/header.jsp"></c:import>
-
+	<header style="margin-top: 200px;">
 	<hr>
 	
 	<div class="container-fluid">
-		<div class="row my-5 col-md-1 mx-auto title">
-			<h1>QNA</h1>
+		<div class="row mb-4 ">
+			<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">QNA LIST</h1>
 		</div>
 		
 		<div class="row col-md-7 mx-auto">
@@ -125,8 +125,9 @@
 				
 		</div>
 	</div>
-	
+	</header>
 	<c:import url="../template/common_js.jsp"></c:import>
+	<c:import url="../template/bottom.jsp"></c:import>
 	<script src="../resources/js/pageing.js"></script>
 </body>
 </html>

@@ -28,8 +28,14 @@
 		<a href="./fileDown?fileNum=${fileDTO.fileNum}">${fileDTO.oriName}</a>
 	</c:forEach>
  --%>
+	<c:if test="${not empty member}">
+            <c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
 	<a href= "./delete?num=${dto.num}">삭제</a>
 	<a href= "./update?num=${dto.num}">수정</a>
+	</c:if>
+	</c:if>
+	
+	
 	<a href= "./list">목록</a>
 </body>
 </html>

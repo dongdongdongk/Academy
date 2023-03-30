@@ -25,28 +25,33 @@ $(".deleteCheck").click(function(){
     let result=confirm('파일이 영구 삭제 됩니다');
     let ch = $(this);
     if(result){
+        console.log($(this).val())
         let fileNum = $(this).val();
         $.ajax({
             type:'POST',
-            url:'./boardFileDelete',
+            url:'./productDelete',
             data:{
                 fileNum:fileNum
             },
             success:function(response){
                 if(response.trim() > 0){
                     alert("삭제 되었습니다");
+                    
                     //this : ajax객체 자기 자신
                     console.log(ch)
                     ch.parent().parent().remove();
                     count--;
                 }else {
                     alert("삭제 실패<br> 관리자에게 문의 하세요");
+            
                 }
             },
             error:function(){
 
             }
         })
+
+        
 
         //ajax DB에서 삭제
         //fetch
@@ -72,10 +77,6 @@ $(".deleteCheck").click(function(){
         
         // })
         //$.post("URL",{p:1}, function(res){})
-
-
-
-
     }else {
         $(this).prop('checked', false);
     }

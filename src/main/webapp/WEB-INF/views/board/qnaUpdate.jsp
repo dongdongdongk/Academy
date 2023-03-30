@@ -11,7 +11,8 @@
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body>
-	
+	<c:import url="../template/header.jsp"></c:import>
+	<header style="margin-top: 200px;">
 	<div class="container-fluid my-5">
 		<div class="row mb-4">
 			<h3 class="col-md-7 mx-auto text-center border-bottom border-dark pb-4">수정 페이지</h3>
@@ -41,8 +42,9 @@
 			</form>
 		</div>
 	</div>
-	
+</header>	
 	<c:import url="../template/common_js.jsp"></c:import>
+	<c:import url="../template/bottom.jsp"></c:import>
 	<script>
 		$("#contents").summernote();
 	</script>

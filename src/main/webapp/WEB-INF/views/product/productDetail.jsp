@@ -10,10 +10,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 <!-- Common CSS -->
 <c:import url="../template/common_css.jsp"></c:import>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body>
 <!-- Header -->
 <c:import url="../template/header.jsp"></c:import>
+<header style="margin-top: 200px;">
 
 <!-- Main content -->
 <main class="container my-5">
@@ -29,7 +32,7 @@
         <div class="row">
           <c:forEach items="${dto.productImgDTOs}" var="fileDTO">
             <div class="col-md-4 mb-4">
-              <img src="../resources/upload/product/${fileDTO.save}" class="img-fluid">
+              <img src="../resources/images/${fileDTO.save}" class="img-fluid">
             </div>
           </c:forEach>
         </div>
@@ -74,12 +77,16 @@
       </div>
     </div>
   </div>
-</div>
+	
+	  
+   
 
 </main>
+</header>
 
 <c:import url="../template/common_js.jsp"></c:import>
 <script src="/resources/js/productCart.js"></script>
 
+<c:import url="../template/bottom.jsp"></c:import>
 </body>
 </html>

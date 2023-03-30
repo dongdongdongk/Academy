@@ -13,7 +13,6 @@ public class QnaDAO {
 	
 	@Autowired
 	private SqlSession sqlSession;
-	
 	private final String NAMESPACE = "com.ac.home.qna.QnaDAO.";
 	
 	public List<QnaDTO> getQnaList(Pager pager) throws Exception {

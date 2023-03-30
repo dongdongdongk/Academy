@@ -1,3 +1,4 @@
+<%@page import="com.ac.home.notice.NoticeDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -78,11 +79,27 @@
 			<label for="contents" class="form-label">내용</label>
 			<textarea name="contents" id="contents" ></textarea>
 		</div>
-		 -->
+		
+		 <div id="fileList" class="my-5">
+ 				<div class="input-group mb-3">
+					<input type="file" class="form-control" id="files" name="files">
+					<button type="button" class="btn btn-outline-danger">X</button>
+				</div>  
+				<button type="button" class="btn btn-primary" id="fileAdd">ADD</button>
 
-	<!-- <div class="mb-3">
-		<button type="submit">등록</button>
-	</div>
-	</form> -->
+		</div>
+		
+		
+		<div class="mb-3">
+			<button type="submit">등록</button>
+		</div>
+	</form>
+	
+	<a href="./list">취소</a>
+	
+</header>
+
+<c:import url="../template/common_js.jsp"></c:import>
+<c:import url="../template/bottom.jsp"></c:import>
 </body>
 </html>

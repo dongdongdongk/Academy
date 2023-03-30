@@ -6,85 +6,51 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<style>
-.goods_table_wrap {
-	padding: 20px 35px
-}
 
-.goods_table {
-	width: 100%;
-	border: 1px solid #d3d8e1;
-	text-align: center;
-	border-collapse: collapse;
-}
-
-.goods_table td {
-	padding: 10px 5px;
-	border: 1px solid #e9ebf0;
-}
-
-.goods_table thead {
-	background-color: #f8f9fd;
-	font-weight: 600;
-}
-
-.goods_table a {
-	color: #1088ed;
-	font-weight: 500;
-}
-
-.th_column_1 {
-	width: 120px;
-}
-
-.th_column_3 {
-	width: 110px;
-}
-
-.th_column_4 {
-	width: 140px;
-}
-
-.th_column_5 {
-	width: 140px;
-}
-
-.th_column_6 {
-	
-}
-</style>
 <title></title>
 <c:import url="../template/common_css.jsp"></c:import>
+<link rel="stylesheet" href="/resources/css/productList.css">
 </head>
+
+
 <body>
 	<c:import url="../template/header.jsp"></c:import>
-
+	<header style="margin-top: 200px;">
 	<div class="container- fluid my-5">
 
 		<div class="row mb-4 ">
-			<h1
-				class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품
-				LIST</h1>
+			<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품LIST</h1>
 		</div>
-
+		
+		<div id="catdiv">
+			<div class="row input-group mb-3">
+				<label for="categoryNum" class="visually-hidden">categoryName</label>
+				<select class="form-select" name="categoryNum" id="categoryName">
+					<option value="2">전체</option>
+					<option value="3" >책</option>
+					<option value="4">강의</option>
+				
+					
+				</select>
+				
+		</div>
+		
+		</div>
+		
 		<div class="goods_table_wrap">
 			<!-- 상품 리스트 O -->
 			<c:if test="${listcheck != 'empty'}">
 				<table class="goods_table">
 					<thead>
 						<tr>
-							<!-- 	<div class="row col-md-7 mx-auto">
-									<table class="table table-hover">
-										<thead>
-											<tr>
-											<tr> -->
+						
 							<td class="th_column_1">상품 번호</td>
-							<td class="th_column_1">상품 이미지</td>
-							<td class="th_column_2">상품 이름</td>
+							<td class="th_column_4">상품 이미지</td>
+							<td class="th_column_1">상품 이름</td>
 							<td class="th_column_3">가격</td>
 							<td class="th_column_4">등록날짜</td>
-							<td class="th_column_5">재고</td>
-							<td class="th_column_6">카테고리</td>
+							<td class="th_column_5">조회수</td>
+							<td class="th_column_5">카테고리</td>
 						</tr>
 					</thead>
 
@@ -102,8 +68,8 @@
 								<td class="tbl_td">
 									<div class="row">
 										<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-											<div class="col-md-4 mb-4">
-												<img src="../resources/upload/product/${fileDTO.save}" class="img-fluid">
+											<div class="col-md-10 mb-10">
+												<img src="../resources/images/${fileDTO.save}" class="img-fluid " >
 											</div>
 										</c:forEach>
 									</div>
@@ -111,6 +77,15 @@
 								<td class="tbl_td"><a href="./productDetail?num=${dto.num}">${dto.title}</a></td>
 								<td class="tbl_td">${dto.price}</td>
 								<td class="tbl_td">${dto.regDate}</td>
+								<td class="tbl_td">${dto.hit}</td>
+								<c:forEach items="${dto.categoryDTOs}" var="category">
+									<td class="tbl_td">${category.name}</td>
+								</c:forEach>
+								
+								
+								
+								
+								
 								<%-- 		<c:choose>
 						<c:when test="${dto.grade eq 1}">판매중</c:when>
 						<c:otherwise>판매중</c:otherwise>
@@ -204,10 +179,12 @@
 	</div>
 	
 
-
-
+</header>
 
 <c:import url="../template/common_js.jsp"></c:import>
+<c:import url="../template/bottom.jsp"></c:import>
+<script src="../../../resources/js/productAjax.js"></script>
+<script src="../../../resources/js/category.js"></script>
 <script src="/resources/css/goodsManage.css"></script>
 <script src="../resources/js/pageing.js"></script>
 <script src="../resources/js/fileManger.js"></script>
