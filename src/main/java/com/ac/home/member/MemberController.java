@@ -21,6 +21,7 @@ import com.ac.home.cr.CrService;
 import com.ac.home.member.MemberDTO;
 import com.ac.home.member.find.FindMemberService;
 import com.ac.home.member.mail.*;
+import com.ac.home.member.paymentmethod.*;
 import com.ac.home.product.ProductDTO;
 import com.ac.home.product.ProductService;
 import com.ac.home.util.Pager;
@@ -41,6 +42,9 @@ public class MemberController {
 	
     @Autowired
     private FindMemberService findMemberService;
+    
+    @Autowired
+    private PaymentMethodController paymentController;
     
     @Autowired
     private ProductService productService;

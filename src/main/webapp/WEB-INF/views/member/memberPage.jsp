@@ -55,6 +55,18 @@
                             <div class="col-md-3 info-label">이메일</div>
                             <div class="col-md-9 info-text">${dto.email}${dto.emaildomain}</div>
                         </div>
+			            <div class="info-divider"></div>
+			            <div class="row">
+			                <div class="col-md-3 info-label">결제수단</div>
+			                <div class="col-md-9 info-text">
+			                    <a href="./payment/paymentmethod">
+			                    	<button class="btn btn-success">결제수단 조회</button>
+			                    </a>
+			                    <a href="./payment/paymentmethodadd">
+			                    	<button class="btn btn-success">결제수단 추가</button>
+			                    </a>
+			                </div>
+			            </div>
                         <div class="info-divider"></div>
 						<div class="row">
 						    <div class="col-md-3 info-label">등급</div>

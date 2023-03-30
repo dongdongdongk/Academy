@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.ac.home.member.paymentmethod.PaymentMethodDAO">
+
+		<select id="getNextPaymentId" resultType="int">
+		    SELECT COALESCE(MAX(ID), 0) + 1 FROM PAYMENTMETHOD
+		</select>
+
+		<select id="getPaymentMethods" resultType="com.ac.home.member.paymentmethod.PaymentMethodDTO" parameterType="com.ac.home.member.paymentmethod.PaymentMethodDTO">
+			SELECT PM.PAYMENTMETHOD, PM.INFO
+			FROM PAYMENTMETHOD PM
+			JOIN MEMBER M ON M.ID = PM.MEMBER_ID
+			WHERE M.ID = #{memberId, jdbcType=VARCHAR}
+		</select>
+
+		<insert id="addPaymentMethods" parameterType="com.ac.home.member.paymentmethod.PaymentMethodDTO" useGeneratedKeys="true" keyProperty="id">
+		    INSERT INTO PAYMENTMETHOD (PAYMENTMETHOD, INFO, MEMBER_ID)
+		    VALUES (#{paymentMethod}, #{info}, #{memberId})
+		</insert>
+
+	    <select id="getPaymentMethodCount" resultType="int">
+	        SELECT COUNT(*)
+	        FROM PAYMENTMETHOD
+	        WHERE MEMBER_ID = #{memberId, jdbcType=VARCHAR}
+	    </select>
+
+</mapper>
