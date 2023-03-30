@@ -44,6 +44,5 @@ function submitForm(form) {
         infoField.value = bankName + " " + accountNumber;
     }
     
-	alert('결제수단이 추가되었습니다.');
     form.submit();
 }

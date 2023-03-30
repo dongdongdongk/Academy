@@ -28,6 +28,12 @@
             <div class="col-md-7">
                 <div class="card">
                     <div class="card-body">
+						<c:if test="${not empty successMessage}">
+						    <div class="alert alert-success" role="alert">${successMessage}</div>
+						</c:if>
+						<c:if test="${not empty errorMessage}">
+							<div class="alert alert-danger" role="alert">${errorMessage}</div>
+						</c:if>
 		                <form:form action="./paymentmethodadd" method="post" modelAttribute="paymentMethods" onsubmit="event.preventDefault(); submitForm(this);">
 		                    <input type="hidden" name="memberId" value="${member.id}" />
 		                    <div class="form-group">

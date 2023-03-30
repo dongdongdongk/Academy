@@ -25,4 +25,17 @@ public class PaymentMethodService {
     public int getNextPaymentId() throws Exception {
         return paymentDAO.getNextPaymentId();
     }
+    
+    public boolean isDuplicate(PaymentMethodDTO paymentDTO, String memberId) throws Exception{
+        List<PaymentMethodDTO> existingPaymentMethods = getPaymentMethods(memberId);
+
+        for (PaymentMethodDTO existingPaymentMethod : existingPaymentMethods) {
+            if (existingPaymentMethod.getPaymentMethod().equals(paymentDTO.getPaymentMethod())
+                    && existingPaymentMethod.getInfo().equals(paymentDTO.getInfo())) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

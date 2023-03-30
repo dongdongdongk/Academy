@@ -41,11 +41,20 @@ public class PaymentMethodController {
         MemberDTO memberDTO = (MemberDTO) session.getAttribute("member");
         String memberId = memberDTO.getId();
 
+        // Check for duplicates
+        if (paymentService.isDuplicate(paymentDTO, memberId)) {
+            modelAndView.addObject("errorMessage", "중복된 결제수단입니다.");
+            modelAndView.addObject("paymentMethods", paymentDTO);
+            modelAndView.setViewName("member/payment/paymentmethodadd");
+            return modelAndView;
+        }
+
         // Call the PaymentMethodService to add the payment method with the member's ID
         paymentService.addPaymentMethods(paymentDTO, memberId);
 
         // Redirect to the paymentmethodadd.jsp page under member/payment directory
-        modelAndView.setViewName("redirect:/member/payment/paymentmethodadd");
+        modelAndView.addObject("successMessage", "결제수단이 성공적으로 추가되었습니다.");
+        modelAndView.setViewName("member/payment/paymentmethodadd");
         return modelAndView;
     }
     
