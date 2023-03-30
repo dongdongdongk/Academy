@@ -1,0 +1,1 @@
+const ext = fileName.substring(fileName.las)
