@@ -6,55 +6,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<style>
-.goods_table_wrap {
-	padding: 20px 35px
-}
 
-.goods_table {
-	width: 100%;
-	border: 1px solid #d3d8e1;
-	text-align: center;
-	border-collapse: collapse;
-}
-
-.goods_table td {
-	padding: 10px 5px;
-	border: 1px solid #e9ebf0;
-}
-
-.goods_table thead {
-	background-color: #f8f9fd;
-	font-weight: 600;
-}
-
-.goods_table a {
-	color: #1088ed;
-	font-weight: 500;
-}
-
-.th_column_1 {
-	width: 120px;
-}
-
-.th_column_3 {
-	width: 110px;
-}
-
-.th_column_4 {
-	width: 140px;
-}
-
-.th_column_5 {
-	width: 140px;
-}
-
-
-</style>
 <title></title>
 <c:import url="../template/common_css.jsp"></c:import>
-
+<link rel="stylesheet" href="/resources/css/productList.css">
 </head>
+
+
 <body>
 	<c:import url="../template/header.jsp"></c:import>
 	<header style="margin-top: 200px;">
@@ -68,31 +26,24 @@
 			<div class="row input-group mb-3">
 				<label for="categoryNum" class="visually-hidden">categoryName</label>
 				<select class="form-select" name="categoryNum" id="categoryName">
-					<option value="2" >책</option>
-					<option value="3">강의</option>
-					<option value="4">전체</option>
+					<option value="2">전체</option>
+					<option value="3" >책</option>
+					<option value="4">강의</option>
+				
 					
 				</select>
-				<button type="button" id="btn1" class="btn btn-outline-danger del ">카테고리 삭제</button>
+				
 		</div>
-		<button type="button" id="btn">카테고리 추가</button>
+		
 		</div>
-	<%-- 	<c:choose>
-		<c:when test="${dto.carteGoryDTO.name eq '책'}">
-			   책
-		</c:when>
-		</c:choose> --%>
+		
 		<div class="goods_table_wrap">
 			<!-- 상품 리스트 O -->
 			<c:if test="${listcheck != 'empty'}">
 				<table class="goods_table">
 					<thead>
 						<tr>
-							<!-- 	<div class="row col-md-7 mx-auto">
-									<table class="table table-hover">
-										<thead>
-											<tr>
-											<tr> -->
+						
 							<td class="th_column_1">상품 번호</td>
 							<td class="th_column_4">상품 이미지</td>
 							<td class="th_column_1">상품 이름</td>
@@ -126,7 +77,7 @@
 								<td class="tbl_td"><a href="./productDetail?num=${dto.num}">${dto.title}</a></td>
 								<td class="tbl_td">${dto.price}</td>
 								<td class="tbl_td">${dto.regDate}</td>
-								
+								<td class="tbl_td">${dto.hit}</td>
 								<c:forEach items="${dto.categoryDTOs}" var="category">
 									<td class="tbl_td">${category.name}</td>
 								</c:forEach>
@@ -230,6 +181,7 @@
 </header>
 
 <c:import url="../template/common_js.jsp"></c:import>
+
 <script src="../../../resources/js/productAjax.js"></script>
 <script src="../../../resources/js/category.js"></script>
 <script src="/resources/css/goodsManage.css"></script>

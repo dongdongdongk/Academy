@@ -64,7 +64,9 @@
 	                                    <li><a href="/member/memberAgree">회원가입</a></li>
 	                                    <li><a href="/member/memberLogin">로그인</a></li>
 	                                </c:if>
-	                                <c:if test="${not empty member}">
+	                               
+	                                	
+	                           			 <c:if test="${not empty member}">
 	                                	<li><a href="/member/memberPage">회원정보</a></li>
 	                                    <li><a href="/member/memberLogout">로그아웃</a></li>
 	                                </c:if>

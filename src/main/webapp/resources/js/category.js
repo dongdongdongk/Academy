@@ -10,9 +10,10 @@ btn.addEventListener("click",function(){
     }
 
     let ar ='<div><select class="form-select" name="categoryNum">'
-			+'<option value="2" >책</option>'
-			+'<option value="3">강의</option>'
-            +'<option value="4">전체</option>'
+            +'<option value="2">전체</option>'  
+            +'<option value="3" >책</option>'
+			+'<option value="4">강의</option>'
+           
 			
 			
             +'</select><button type="button" class="btn btn-outline-danger del">카테고리 삭제</button></div>'
