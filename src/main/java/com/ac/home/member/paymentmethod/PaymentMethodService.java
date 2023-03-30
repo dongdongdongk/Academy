@@ -16,6 +16,10 @@ public class PaymentMethodService {
         return paymentDAO.getPaymentMethods(memberId);
     }
     
+    public int getPaymentMethodCount(String memberId) throws Exception {
+        return paymentDAO.getPaymentMethodCount(memberId);
+    }
+    
     public void addPaymentMethods(PaymentMethodDTO paymentDTO, String memberId) throws Exception {
         int paymentId = getNextPaymentId();
         paymentDTO.setId(paymentId);

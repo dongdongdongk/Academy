@@ -19,6 +19,10 @@ public class PaymentMethodDAO {
 	public List<PaymentMethodDTO> getPaymentMethods(String memberId) throws Exception {
 	    return sqlSession.selectList(NAMESPACE + ".getPaymentMethods", memberId);
 	}
+	
+    public int getPaymentMethodCount(String memberId) throws Exception {
+        return sqlSession.selectOne(NAMESPACE + ".getPaymentMethodCount", memberId);
+    }
 
 	public void addPaymentMethods(PaymentMethodDTO paymentDTO, String memberId) throws Exception {
 	    int paymentId = getNextPaymentId();

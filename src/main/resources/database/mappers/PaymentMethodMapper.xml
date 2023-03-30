@@ -21,5 +21,10 @@
 		    VALUES (#{paymentMethod}, #{info}, #{memberId})
 		</insert>
 
+	    <select id="getPaymentMethodCount" resultType="int">
+	        SELECT COUNT(*)
+	        FROM PAYMENTMETHOD
+	        WHERE MEMBER_ID = #{memberId, jdbcType=VARCHAR}
+	    </select>
 
 </mapper>

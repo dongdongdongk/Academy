@@ -41,6 +41,17 @@ public class PaymentMethodController {
         MemberDTO memberDTO = (MemberDTO) session.getAttribute("member");
         String memberId = memberDTO.getId();
 
+        // Get the count of payment methods for the member
+        int paymentMethodCount = paymentService.getPaymentMethodCount(memberId);
+
+        // Check if the payment method count is 5 or more
+        if (paymentMethodCount >= 5) {
+            modelAndView.addObject("errorMessage", "최대 5개의 결제수단만 추가할 수 있습니다.");
+            modelAndView.addObject("paymentMethods", paymentDTO);
+            modelAndView.setViewName("member/payment/paymentmethodadd");
+            return modelAndView;
+        }
+
         // Check for duplicates
         if (paymentService.isDuplicate(paymentDTO, memberId)) {
             modelAndView.addObject("errorMessage", "중복된 결제수단입니다.");
