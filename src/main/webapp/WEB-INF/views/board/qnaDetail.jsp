@@ -9,7 +9,8 @@
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
-	
+<c:import url="../template/header.jsp"></c:import>
+<header style="margin-top: 200px;">	
 		<div class="container-fluid my-5">
 			<div class="row mb-4">
 				<h3 class="col-md-7 mx-auto text-center border-bottom border-dark pb-4">상세정보</h3>
@@ -67,18 +68,19 @@
 					</div>
 					
 					<div class="row col-md-2 mx-auto mt-5">
-						<a class="btn btn-primary" href="./qnaList">글 목록</a>
+						<a class="btn" href="./qnaList">글 목록</a>
 					</div>
 					
 					<div class="row col-md-2 mx-auto mt-5">
-						<a class="btn btn-primary" href="./qnaReply?num=${detail.num}">답글 작성</a>
+						<a class="btn" href="./qnaReply?num=${detail.num}">답글 작성</a>
 					</div>
 					
 				</div>
 			</div>
 		</div>
-		
+</header>		
 		<script src="../resources/js/boardForm.js"></script>
 		<c:import url="../template/common_js.jsp"></c:import>
+		<c:import url="../template/bottom.jsp"></c:import>
 </body>
 </html>

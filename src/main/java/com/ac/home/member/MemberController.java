@@ -1,5 +1,7 @@
 package com.ac.home.member;
 
+import java.util.List;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,15 +10,21 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ac.home.cr.CrDTO;
+import com.ac.home.cr.CrService;
 import com.ac.home.member.MemberDTO;
 import com.ac.home.member.find.FindMemberService;
 import com.ac.home.member.mail.*;
 import com.ac.home.member.paymentmethod.*;
+import com.ac.home.product.ProductDTO;
+import com.ac.home.product.ProductService;
+import com.ac.home.util.Pager;
 
 
 @Controller
@@ -37,6 +45,12 @@ public class MemberController {
     
     @Autowired
     private PaymentMethodController paymentController;
+    
+    @Autowired
+    private ProductService productService;
+    
+    @Autowired
+    private CrService crService;
     
 	@PostMapping("memberIdCheck")
 	public ModelAndView getMemberIdCheck(MemberDTO memberDTO)throws Exception{
@@ -149,4 +163,65 @@ public class MemberController {
 		return mv;
 	}
 	
+	// 관리자 페이지
+	@GetMapping(value = "adminPage")
+	public ModelAndView getAdminPage() throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("admin/adminPage");
+		
+		return mv;
+	}
+	
+	// 관리자 페이지 회원 관리
+	@GetMapping(value = "memberList")
+	public ModelAndView getMemberList() throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		List<MemberDTO> ar = memberService.getMemberList();
+		
+		mv.addObject("list", ar);
+		mv.setViewName("admin/adminMemberList");
+		
+		return mv;
+	}
+	
+	// 관리자 페이지 상품 관리
+	@GetMapping(value = "productList")
+	public ModelAndView getProductList(Pager pager)throws Exception{
+		ModelAndView mv = new ModelAndView();
+		
+		List<ProductDTO> ar = productService.getProductList(pager);
+		
+	    mv.addObject("list", ar);
+	      
+	    mv.setViewName("admin/adminProductList");
+	      
+	    return mv;
+	}
+	
+	// 관리자 수강후기 관리
+	@GetMapping(value = "crList")
+	public ModelAndView getCrList()throws Exception{
+		ModelAndView mv = new ModelAndView();
+		
+	    List<CrDTO> ar = crService.getCrList();  
+		
+	    mv.addObject("list", ar);
+	    mv.setViewName("admin/adminCrList");
+	    
+	    return mv;
+	}
+	
+	// 관리자 수강후기 삭제
+	@PostMapping(value = "crDelete")
+	public ModelAndView setCrDelete(CrDTO crDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		int result = crService.setCrDelete(crDTO);
+		
+		mv.setViewName("admin/adminCrList");
+		
+		return mv;
+	}
 }

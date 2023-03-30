@@ -114,5 +114,6 @@
 
 <script type="text/javascript" src="../resources/js/memberAgree.js"></script>
 <c:import url="../template/common_js.jsp"></c:import>
+<c:import url="../template/bottom.jsp"></c:import>
 </body>
 </html>

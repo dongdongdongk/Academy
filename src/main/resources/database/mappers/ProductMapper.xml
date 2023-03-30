@@ -36,7 +36,7 @@
  		SELECT COUNT(NUM) FROM PRODUCT
  	 	<include refid="searchCondition"></include>	
  	</select>
- 
+ 	
  
  	<select id="getProductList" parameterType="Pager" resultMap="productDetailResult">
  		SELECT * FROM
@@ -47,8 +47,14 @@
 						LEFT OUTER JOIN
 						PRODUCTIMG B
 						ON(R.NUM = B.NUM)
+						LEFT OUTER JOIN
+					 	PRODUCTKIND C
+					 	ON(B.NUM = C.NUM)
+						LEFT OUTER JOIN
+						CATEGORY A
+						ON(C.ID = A.ID)
 						<include refid="searchCondition"></include>						
-						ORDER BY ROWNUM DESC
+						ORDER BY REGDATE DESC
 					) B 
 			)
 		WHERE R BETWEEN #{startRow}  AND #{lastRow} 
@@ -81,7 +87,10 @@
  		</collection>
  		<!-- 1:N -->
  		<!-- <collection property=""></collection> -->
- 		
+ 		<collection property="categoryDTOs" javaType="List" ofType="categoryDTO">
+ 			<id column="ID" property="id"/>
+ 			<result column="NAME" property="name"/>
+ 		</collection>	
  	</resultMap>
 
  	<insert id="setProductAdd" parameterType="ProductDTO">
@@ -89,12 +98,17 @@
  			SELECT PRODUCT_SEQ.NEXTVAL FROM DUAL
  		</selectKey>
  		INSERT INTO PRODUCT 
- 		VALUES (#{num} ,#{title}, #{price}, 0, #{info},SYSDATE, 0.0)
+ 		VALUES (#{num} ,#{title}, #{price}, 0, #{info},SYSDATE, 0.0, 0)
  	</insert>
  	
+ 	<insert id="setCategoryAdd" parameterType="MemberDTO">
+  		INSERT INTO PRODUCTKIND (NUM,ID)
+  		VALUES (#{num}, (SELECT ID FROM CATEGORY WHERE ID = 1))
+  	</insert>
+	
 
  	<delete id="setProductDelete" parameterType="ProductDTO">
- 		DELETE PRODUCT WHERE NUM=#{num}
+ 		DELETE PRODUCT WHERE NUM=#{num, jdbcType=BIGINT}
  		
  	</delete> 
  	
@@ -112,6 +126,16 @@
   		SELECT * FROM PRODUCTIMG WHERE NUM = #{num}
 	</select>
 	
+	<delete id="getProductFileDelete" parameterType="ProductImgDTO">
+		DELETE PRODUCTIMG WHERE FILENUM=#{fileNum}
+	</delete>
+	
+	
+	<!-- <update id="setProductHit" parameterType="ProductDTO">
+  		UPDATE PRODUCT SET HIT = #{hit} + 1
+		WHERE NUM = #{num}
+  	</update>
+	 -->
 	
   	
   </mapper>

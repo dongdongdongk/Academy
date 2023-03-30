@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.ac.home.product.ProductImgDTO;
+import com.ac.home.product.CategoryDTO;
 
 public class ProductDTO {
 	
@@ -15,7 +16,28 @@ public class ProductDTO {
 	private Date regDate;
 	private Double grade;
 	private List<ProductImgDTO> productImgDTOs;
+	private Long hit;
+	private List<CategoryDTO> categoryDTOs;
+	private List<BoardFileDTO> boardFileDTOs; 
 	
+	public List<BoardFileDTO> getBoardFileDTOs() {
+		return boardFileDTOs;
+	}
+	public void setBoardFileDTOs(List<BoardFileDTO> boardFileDTOs) {
+		this.boardFileDTOs = boardFileDTOs;
+	}
+	public List<CategoryDTO> getCategoryDTOs() {
+		return categoryDTOs;
+	}
+	public void setCategoryDTOs(List<CategoryDTO> categoryDTOs) {
+		this.categoryDTOs = categoryDTOs;
+	}
+	public Long getHit() {
+		return hit;
+	}
+	public void setHit(Long hit) {
+		this.hit = hit;
+	}
 	public List<ProductImgDTO> getProductImgDTOs() {
 		return productImgDTOs;
 	}

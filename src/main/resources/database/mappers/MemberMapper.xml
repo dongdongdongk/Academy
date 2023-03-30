@@ -59,4 +59,14 @@
 	        EMAILDOMAIN=#{emaildomain}
 	    WHERE ID=#{id}
 	</update>
+	
+	<select id="getMemberList" resultType="MemberDTO" resultMap="getMemberLoginResult">
+		SELECT * FROM 
+		MEMBER
+		LEFT OUTER JOIN
+		MEMBERROLE
+		USING(ID)
+		WHERE ROLENUM != 1
+	</select>
+	
   </mapper>

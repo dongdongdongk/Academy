@@ -6,37 +6,45 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="/resources/css/menu/eventIcon.css">
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
-	<h1>noticeList</h1>
-		<div class="row">
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>NUM</th><th>TITLE</th><th>WRITER</th><th>DATE</th><th>HIT</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach items="${list}" var="dto">
-							<tr>
-								<td>${dto.num}</td>
-								<td>
-								<a href="./detail?num=${dto.num}">${dto.title}</a></td>
-								<td>
-								<td>${dto.writer}</td>
-								<td>${dto.regDate}</td>
-								<td>${dto.hit}</td>
-							</tr>
-						</c:forEach>
-					</tbody>
-				
-				</table>
-			</div>
-			<a href="./add">글쓰기</a>
+<c:import url="../template/header.jsp"></c:import>
+	<div class="container-fluid">
+		<div class="row my-5 col-md-2 mx-auto">
+			<h1>NoticeList</h1>
+		</div>
+		
+		<div class="row col-md-7 mx-auto">
+			<table class="table">
+			  	<thead class="table-dark">
+			 		<tr>
+						<th>NUM</th>
+						<th>TITLE</th>
+						<th>WRITER</th>
+						<th>Date</th>
+						<th>HIT</th>
+					</tr>
+			 	</thead>
+			 	
+			  	<tbody>
+			  			<c:forEach items="${list}" var="dto">
+					<tr>
+						<td>${dto.num}</td>
+						<td><a href="./detail?num=${dto.num}">${dto.title}</a>
+						<c:forEach items="${dto.noticeFileDTOs}" var="fileDTO">
+							<c:if test="${fileDTO.oriName ne null}"><img class="material-symbols-outlined" src="/resources/images/file1.png"></c:if>
+						</c:forEach></td>
+						<td>${dto.writer}</td>
+						<td>${dto.regDate}</td>
+						<td>${dto.hit}</td>
+					</tr>
+				</c:forEach>
+			  	</tbody>
+			</table>
 			
-			
-		<div class="row">
+			<div class="row">
 				<nav aria-label="Page navigation example">
 				  <ul class="pagination">
 				  
@@ -89,10 +97,18 @@
 				  </div>
 				  <div class="col-auto">
 				    <button type="submit" class="btn btn-primary mb-3">검색</button>
+					<a class="btn btn-primary mb-3" href="./add">글 등록</a>
+					<a class="btn btn-primary mb-3" href="/">홈</a>
 				  </div>
 				</form>
 			</div>
+			
+			
+		</div>
+	</div>
 	
+	</header>
+	<c:import url="../template/bottom.jsp"></c:import>
 	<c:import url="../template/common_js.jsp"></c:import>		
 	<script src="../resources/js/pageing.js"></script>
 </body>

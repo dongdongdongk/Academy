@@ -1,5 +1,7 @@
 package com.ac.home.member;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -60,5 +62,8 @@ public class MemberService {
 	public int setMemberUpdate(MemberDTO memberDTO)throws Exception{
 		return memberDAO.setMemberUpdate(memberDTO);
 	}
-
+	
+	public List<MemberDTO> getMemberList() throws Exception {
+		return memberDAO.getMemberList();
+	}
 }

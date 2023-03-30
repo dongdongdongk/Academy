@@ -21,16 +21,68 @@ public class EventController {
 
 	@Autowired
 	private EventService eventService;
+	
+	
+	@GetMapping("allEvent")
+	public ModelAndView getEventStateAll(Pager pager) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		List<EventDTO> ar = eventService.getEventList(pager);
 		
+		mv.addObject("list",ar);
+		mv.setViewName("board/eventDate/allEvent");
+		return mv;
+	}
+	
+
+	@GetMapping("continueEvent")
+	public ModelAndView getEventStateContinue(Pager pager) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		List<EventDTO> ar = eventService.getEventList(pager);
+		
+		mv.addObject("list",ar);
+		mv.setViewName("board/eventDate/continueEvent");
+		return mv;
+	}
+	
+	@GetMapping("endEvent")
+	public ModelAndView getEventStateEnd(Pager pager) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		List<EventDTO> ar = eventService.getEventList(pager);
+		
+		mv.addObject("list",ar);
+		mv.setViewName("board/eventDate/endEvent");
+		
+		return mv;
+	}
+	
+	@GetMapping("test")
+	public ModelAndView Test() throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("board/menu");
+		
+		return mv;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	//list
 	@GetMapping("list")
-	public ModelAndView getEventList(Pager pager) throws Exception {
+	public ModelAndView getEventList(Pager pager, EventDTO eventDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		List<EventDTO> ar = eventService.getEventList(pager); 
+		
 		mv.addObject("list", ar);
 		
+		
+		
+		mv.addObject("list", ar);
 		mv.setViewName("board/eventList");
 		return mv;
 		
@@ -104,7 +156,6 @@ public class EventController {
 			mv.setViewName("redirect:./list");
 			return mv;
 		}
-		
 		
 	
 	

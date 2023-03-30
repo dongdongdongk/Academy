@@ -14,12 +14,12 @@ public class QnaDAOTest extends MyTestCase {
 	@Autowired
 	private QnaDAO qnaDAO;
 	
-//	@Test
-//	public void getQnaList() throws Exception {
-//		List<QnaDTO> ar = qnaDAO.getQnaList();
-//		
-//		assertNotEquals(0, ar.size());
-//	}
+	@Test
+	public void getQnaList() throws Exception {
+		List<QnaDTO> ar = qnaDAO.getQnaList(null);
+		
+		assertNotEquals(0, ar.size());
+	}
 //	
 //	@Test
 //	public void getQnaDetail() throws Exception {
