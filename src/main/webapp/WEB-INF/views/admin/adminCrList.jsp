@@ -10,6 +10,7 @@
 						<th>제목</th>
 						<th>작성자</th>
 						<th>등록일</th>
+						<th>삭제여부</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -19,7 +20,31 @@
 							<td>${dto.title}</td>
 							<td>${dto.writer}</td>
 							<td>${dto.regDate}</td>
+							<td><button data-cr-num="${dto.num}" class="delBtn btn btn-danger">X</button></td>
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
+
+			<script>
+				$(".delBtn").on("click", function(){
+
+					let check = window.confirm("정말 삭제 하시겠습니까?");	
+
+					if(check){
+						let num = $(this).attr("data-cr-num");
+
+						$.ajax({
+							url: "/member/crDelete",
+							type: "POST",
+							data: {
+								num: num
+							},
+							success: function() {
+								alert("삭제 성공했습니다.")
+								window.location.reload();
+							}
+						})
+					}	
+				})
+			</script>

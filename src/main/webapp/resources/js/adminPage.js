@@ -1,3 +1,4 @@
+// admin sideBar
 function openCity(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -19,6 +20,7 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
+// 관리자 회원 리스트 불러오기
 $("#memberList").on("click", function(){
 
     $.ajax({
@@ -31,6 +33,7 @@ $("#memberList").on("click", function(){
     })
 })
 
+// 관리자 상품 리스트 불러오기
 $("#productList").on("click", function(){
 
     $.ajax({
@@ -43,6 +46,7 @@ $("#productList").on("click", function(){
     })
 })
 
+// 관리자 수강후기 불러오기
 $("#crList").on("click", function(){
 
     $.ajax({
@@ -54,3 +58,5 @@ $("#crList").on("click", function(){
           }
     })
 })
+
+

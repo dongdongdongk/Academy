@@ -3,14 +3,19 @@
 }
 
 .btns {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 80px 0;
 }
 
 .btns .btn_order {
-    
+    width: 150px;
+    height: 50px;
 }
 
 .btns .btn_list {
-    
+    margin-left: 10px;
+    width: 150px;
+    height: 50px;
 }

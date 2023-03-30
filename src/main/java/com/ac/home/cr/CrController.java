@@ -48,7 +48,7 @@ public class CrController {
 		return mv;
 	}
 	
-	@GetMapping(value = "crDelete")
+	@PostMapping(value = "crDelete")
 	public ModelAndView setCrDelete(CrDTO crDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		

@@ -51,7 +51,14 @@
 				  		</c:otherwise>
 			  		</c:choose>
 			  		
-			  		<h3>총 금액 : ${sumPrice}</h3>
+					<c:if test="${not empty sumPrice}">
+						<h3>총 금액 : ${sumPrice}원</h3>
+					</c:if>
+					
+					<c:if test="${empty sumPrice}">
+						<h3>총 금액 : 0원</h3>
+					</c:if>
+			  		
 				</tbody>
 			</table>
 		</div>

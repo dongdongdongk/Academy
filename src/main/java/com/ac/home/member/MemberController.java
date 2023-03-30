@@ -208,4 +208,16 @@ public class MemberController {
 	    
 	    return mv;
 	}
+	
+	// 관리자 수강후기 삭제
+	@PostMapping(value = "crDelete")
+	public ModelAndView setCrDelete(CrDTO crDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		int result = crService.setCrDelete(crDTO);
+		
+		mv.setViewName("admin/adminCrList");
+		
+		return mv;
+	}
 }
