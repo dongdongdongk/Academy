@@ -2722,6 +2722,10 @@ p.footer-copyright {
 border-radius: 30px;
 }
 
+.grayscale {
+    filter: grayscale(100%);  
+}
+
 
 
 

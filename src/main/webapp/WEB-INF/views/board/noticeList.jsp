@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/resources/css/eventIcon.css">
+<link rel="stylesheet" href="/resources/css/menu/eventIcon.css">
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>

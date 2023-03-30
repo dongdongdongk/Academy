@@ -21,7 +21,18 @@ public class EventController {
 
 	@Autowired
 	private EventService eventService;
+	
+	
+	@GetMapping("allEvent")
+	public ModelAndView getEventStateAll(Pager pager) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		List<EventDTO> ar = eventService.getEventList(pager);
 		
+		mv.addObject("list",ar);
+		mv.setViewName("board/eventDate/allEvent");
+		return mv;
+	}
+	
 
 	@GetMapping("continueEvent")
 	public ModelAndView getEventStateContinue(Pager pager) throws Exception {
@@ -29,7 +40,7 @@ public class EventController {
 		List<EventDTO> ar = eventService.getEventList(pager);
 		
 		mv.addObject("list",ar);
-		mv.setViewName("board/eventList_1");
+		mv.setViewName("board/eventDate/continueEvent");
 		return mv;
 	}
 	
@@ -39,12 +50,19 @@ public class EventController {
 		List<EventDTO> ar = eventService.getEventList(pager);
 		
 		mv.addObject("list",ar);
-		mv.setViewName("board/eventList_2");
+		mv.setViewName("board/eventDate/endEvent");
 		
 		return mv;
 	}
 	
-	
+	@GetMapping("test")
+	public ModelAndView Test() throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("board/menu");
+		
+		return mv;
+	}
 	
 	
 	

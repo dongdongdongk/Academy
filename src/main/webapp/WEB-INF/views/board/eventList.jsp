@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<jsp:useBean id="now" class="java.util.Date" />
+
         <!DOCTYPE html>
         <html>
 
@@ -29,6 +32,8 @@
             <link rel="stylesheet" href="/resources/css/style.css">
             <c:import url="../template/common_css.jsp"></c:import>
         </head>
+
+        
 
         <body class="courses-page">
             <div class="page-header">
@@ -138,17 +143,23 @@
 
             <ul class="nav justify-content-center grey lighten-4 py-4">
                 <li class="nav-item">
-                    <a class="nav-link active" id="allEvent" href="/event/list">전체</a>
+                    <a class="nav-link active" id="allEvent">전체</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="continueEvent" href="/event/continueEvent">진행중</a>
+                    <a class="nav-link" id="continueEvent">진행중</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="endEvent" href="/event/endEvent">종료</a>
+                    <a class="nav-link" id="endEvent">종료</a>
                 </li>
             </ul>
 
 
+
+            <!-- 현재날짜 -->
+            <c:set var="now" value="<%=new java.util.Date()%>" />
+            <c:set var="today"><fmt:formatDate value="${now}" pattern="yyyy-MM-dd" /></c:set> 
+
+            <c:out value="${today}" />
 
 
 
@@ -167,79 +178,75 @@
 
                 <div class="row">
                     <div class="col-7col-lg-8">
-                        <div class="featured-courses courses-wrap" id="eventList">
-                            <div class="row mx-m-25">
-
-
-                                <c:forEach items="${list}" var="dto">
-                                    <div class="col-3 col-md-3 px-25">
-                                        <div class="course-content">
-                                            <figure class="course-thumbnail">
-
-                                                <c:set var="loop_flag" value="false" />
-                                                <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
-                                                    <c:if test="${not loop_flag }">
-                                                        <c:if test="${not empty dto.eventFileDTOs}">
-                                                            <img class="radius"
-                                                                src="../resources/upload/event/${fileDTO.fileName}">
-                                                            <c:set var="loop_flag" value="true" />
-                                                        </c:if>
-                                                    </c:if>
-                                                </c:forEach>
-
-                                            </figure><!-- .course-thumbnail -->
-
-                                            <div class="course-content-wrap">
-                                                <header class="entry-header">
-                                                    <h2 class="entry-title"><a
-                                                            href="./detail?num=${dto.num}">${dto.title}</a>
-
-                                                        <c:set var="loop_flag" value="false" />
-                                                        <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
+                       <div id="eventResult">
+                            <div class="featured-courses courses-wrap">
+                                <div class="row mx-m-25">
+                                
+                                    <c:forEach items="${list}" var="dto">
+                                        <div class="col-3 col-md-3 px-25">
+                                            <div class="course-content">
+                                                <figure class="course-thumbnail">
+                                                    <c:set var="loop_flag" value="false" />
+                                                    <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
+                                                        <c:if test="${today > dto.endDate}">
                                                             <c:if test="${not loop_flag }">
-                                                                <c:if test="${fileDTO.oriName ne null}"><img
-                                                                        class="material-symbols-outlined"
-                                                                        src="/resources/images/file_icon.gif">
+                                                                <c:if test="${not empty dto.eventFileDTOs}">
+                                                                    <img class="radius grayscale" src="../resources/upload/event/${fileDTO.fileName}">
                                                                     <c:set var="loop_flag" value="true" />
                                                                 </c:if>
                                                             </c:if>
-                                                        </c:forEach>
-                                                        </td>
-                                                    </h2>
-
-
-
-                                                    <div class="entry-meta flex flex-wrap align-items-center">
-                                                        <div class="course-author"><a href="#">${dto.writer} </a>
+                                                        </c:if>                
+                                                        
+                                                        
+                                                            <c:if test="${not loop_flag }">
+                                                                <c:if test="${not empty dto.eventFileDTOs}">
+                                                                    <img class="radius" src="../resources/upload/event/${fileDTO.fileName}">
+                                                                    <c:set var="loop_flag" value="true" />
+                                                                </c:if>
+                                                            </c:if>
+                                                        
+                                                   
+                                                   
+                                                    </c:forEach>
+                            
+                                                </figure>
+                            
+                                                <div class="course-content-wrap">
+                                                    <header class="entry-header">
+                                                        <h2 class="entry-title"><a
+                                                                href="./detail?num=${dto.num}">${dto.title}</a>
+                            
+                                                            <c:set var="loop_flag" value="false" />
+                                                            <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
+                                                                <c:if test="${not loop_flag }">
+                                                                    <c:if test="${fileDTO.oriName ne null}"><img
+                                                                            class="material-symbols-outlined"
+                                                                            src="/resources/images/file_icon.gif">
+                                                                        <c:set var="loop_flag" value="true" />
+                                                                    </c:if>
+                                                                </c:if>
+                                                            </c:forEach>
+                                                            </td>
+                                                        </h2>
+                            
+                            
+                            
+                                                        <div class="entry-meta flex flex-wrap align-items-center">
+                                                            <div class="course-author"><a href="#">${dto.writer} </a>
+                                                            </div>
+                                                            <div id="startDate" data-start-event="${dto.startDate}" class="course-date">시작일${dto.startDate}</div>
+                                                            <div id="endDate" data-end-event="${dto.endDate}" class="course-date">종료일${dto.endDate}</div>
+                                                            <div class="course-date">조회수${dto.hit}</div>
                                                         </div>
-                                                        <div id="startDate" data-start-event="${dto.startDate}" class="course-date">시작일${dto.startDate}</div>
-                                                        <div id="endDate" data-end-event="${dto.endDate}" class="course-date">종료일${dto.endDate}</div>
-                                                        <div class="course-date">조회수${dto.hit}</div>
-                                                    </div><!-- .course-date -->
-                                                </header><!-- .entry-header -->
-
-
-                                                <!-- <footer class="entry-footer flex flex-wrap justify-content-between align-items-center">
-                                        <div class="course-cost">
-                                            $45 <span class="">${dto.hit}</span>
+                                                    </header>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </c:forEach>
+                                </div>
+                            </div>
+                        </div> 
 
-                                        <div class="course-ratings flex justify-content-end align-items-center">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star-o"></span>
-
-                                            <span class="course-ratings-count">${dto.hit}</span>
-                                        </div>
-                                    </footer> -->
-                                            </div><!-- .course-content-wrap -->
-                                        </div><!-- .course-content -->
-                                    </div><!-- .col -->
-                                </c:forEach>
-                            </div><!-- .row -->
-                        </div><!-- .featured-courses -->
 
                         <div class="row">
                             <div class="d-felx justify-content-center">
