@@ -9,6 +9,7 @@
 <c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
+<c:import url="../template/header.jsp"></c:import>
 	<h1>noticeList</h1>
 		<div class="row">
 				<table class="table table-hover">

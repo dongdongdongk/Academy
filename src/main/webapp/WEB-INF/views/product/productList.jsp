@@ -181,7 +181,7 @@
 </header>
 
 <c:import url="../template/common_js.jsp"></c:import>
-
+<c:import url="../template/bottom.jsp"></c:import>
 <script src="../../../resources/js/productAjax.js"></script>
 <script src="../../../resources/js/category.js"></script>
 <script src="/resources/css/goodsManage.css"></script>

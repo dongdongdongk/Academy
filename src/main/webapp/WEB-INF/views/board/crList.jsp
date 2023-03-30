@@ -13,6 +13,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
+<c:import url="../template/header.jsp"></c:import>
 
 		<div class="container-fluid">
 			<div id="sub_banner" class="bgColor">
