@@ -1,13 +1,20 @@
+<%@page import="com.ac.home.notice.NoticeDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>noticeAdd</title>
+<c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
-	
+<c:import url="../template/header.jsp"></c:import>
+	<header style="margin-top: 200px;">
+	<div class="row mb-4 ">
+			<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">공지사항 추가</h1>
+		</div>
 	<form action="./add" method="post" enctype="multipart/form-data">
 		<div class="mb-3">
 			<label for="title" class="form-label">제목</label>
@@ -41,8 +48,9 @@
 	
 	<a href="./list">취소</a>
 	
+</header>
 
-
-
+<c:import url="../template/common_js.jsp"></c:import>
+<c:import url="../template/bottom.jsp"></c:import>
 </body>
 </html>

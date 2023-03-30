@@ -47,11 +47,11 @@ public class ProductService {
 	}
 	
 	public int setProductAdd(ProductDTO productDTO,MultipartFile pic)throws Exception{
-		System.out.println("프로덕트 에드 서비스1");
+		
 		int result = productDAO.setProductAdd(productDTO);
 		
 		result = productDAO.setCategoryAdd(productDTO); 
-		System.out.println("서비스 프로덕트 에드 서비스2");
+	
 		if(!pic.isEmpty()) { //pic.getSize() !=0
 			System.out.println("서비스 프로덕트 에드 PIC 에드");
 			//1. File을 HDD에 저장 경로
@@ -64,7 +64,7 @@ public class ProductService {
 		productImgDTO.setSave(fileName);
 		productImgDTO.setUpLoad(pic.getOriginalFilename());
 		productImgDTO.setNum(productDTO.getNum());
-		System.out.println("서비스 에드 PIC 에드2");
+	
 		result = productDAO.setProductImgAdd(productImgDTO);
 		}
 		return result;
@@ -72,9 +72,9 @@ public class ProductService {
 	public int setProductUpdate(ProductDTO productDTO,MultipartFile pic)throws Exception{
 		
 		int result = productDAO.setProductUpdate(productDTO);
-		System.out.println("연결 테스트 업데이트 서비스");
+	
 		if(!pic.isEmpty()) { //pic.getSize() !=0
-			System.out.println("연결 테스트 업데이트2 서비스");
+			
 			//1. File을 HDD에 저장 경로
 			// Project 경로가 아닌 OS가 이용하는 경로
 		String realPath= servletContext.getRealPath("resources/images");
@@ -85,10 +85,10 @@ public class ProductService {
 		productImgDTO.setNum(productDTO.getNum());
 		productImgDTO.setSave(fileName);
 		productImgDTO.setUpLoad(pic.getOriginalFilename());
-		System.out.println("연결 테스트 업데이트2 사진 업데이트 서비스");
+		
 		
 		result = productDAO.setProductImgAdd(productImgDTO);
-		System.out.println("연결 테스트 서비스");
+		
 		}
 		return result;
 	}

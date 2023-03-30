@@ -82,5 +82,6 @@
     </div>
 
 <c:import url="../template/common_js.jsp"></c:import>
+<c:import url="../template/bottom.jsp"></c:import>
 </body>
 </html>

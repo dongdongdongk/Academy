@@ -64,9 +64,9 @@ public class ProductController {
 		//add form 이동
 		@RequestMapping(value = "productAdd", method = RequestMethod.GET)
 		public ModelAndView setProductAdd(ModelAndView mv)throws Exception{
-			System.out.println("안녕");
+		
 			mv.setViewName("product/productAdd");
-			System.out.println("안녕2");
+			
 			return mv;
 		}
 		//add DB Insert
@@ -78,7 +78,7 @@ public class ProductController {
 			int result = productService.setProductAdd(productDTO, pic);
 			
 			mv.setViewName("redirect:./list");
-			System.out.println("연결 테스트 업데이트 10 완료");
+			
 			return mv;
 			
 		}
@@ -89,7 +89,7 @@ public class ProductController {
 			ModelAndView mv = new ModelAndView();
 			
 			int result = productService.setProductDelete(productDTO, session);
-			System.out.println("ProductFileDelete 그냥 디테일3");
+			
 			mv.setViewName("redirect:./list");
 			
 			return mv;
@@ -113,7 +113,7 @@ public class ProductController {
 			int result = productService.setProductUpdate(productDTO,pic);
 			
 			mv.setViewName("redirect:./list");
-			System.out.println("연결 테스트 업데이트3");
+			
 			return mv;
 			
 		}
@@ -121,10 +121,10 @@ public class ProductController {
 		public ModelAndView setProductFileDelete(ProductImgDTO productImgDTO) throws Exception{
 			ModelAndView mv = new ModelAndView();
 			int result = productService.getProductFileDelete(productImgDTO);
-			System.out.println("ProductFileDelete 그냥 디테일5");
+			
 			mv.addObject("dto", result);
 			mv.setViewName("./common/ajaxResult");
-			System.out.println("ProductFileDelete 그냥 디테일6");
+			
 			return mv;
 		}
 	 

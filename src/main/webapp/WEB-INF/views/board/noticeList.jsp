@@ -10,7 +10,10 @@
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
-	<h1>noticeList</h1>
+<header style="margin-top: 200px;">
+	<div class="row mb-4 ">
+			<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">NOTICE LIST</h1>
+		</div>
 		<div class="row">
 				<table class="table table-hover">
 					<thead>
@@ -97,7 +100,8 @@
 				  </div>
 				</form>
 			</div>
-	
+	</header>
+	<c:import url="../template/bottom.jsp"></c:import>
 	<c:import url="../template/common_js.jsp"></c:import>		
 	<script src="../resources/js/pageing.js"></script>
 </body>
