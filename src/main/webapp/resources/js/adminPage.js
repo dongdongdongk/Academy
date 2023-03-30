@@ -42,3 +42,15 @@ $("#productList").on("click", function(){
           }
     })
 })
+
+$("#crList").on("click", function(){
+
+    $.ajax({
+        url: "/member/crList",
+        type: "GET",
+        success: function(result) {
+            // $(".lists").append(result);
+            $(".lists").html(result);
+          }
+    })
+})

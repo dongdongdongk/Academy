@@ -1,5 +1,6 @@
 .sideBar {
-  display: inline;
+  /* display: inline; */
+  display: flex;
 }
 
 .vertical-menu {
@@ -8,7 +9,7 @@
   }
   
   .vertical-menu a {
-    background-color: #eee; /* Grey background color */
+    /* background-color: #eee; Grey background color */
     color: black; /* Black text color */
     display: block; /* Make the links appear below each other */
     padding: 12px; /* Add some padding */
@@ -23,3 +24,8 @@
     background-color: #04AA6D; /* Add a green color to the "active/current" link */
     color: white;
   }
+
+.sideBar .admin_container {
+  margin-left: 300px;
+  margin-top: 130px;
+}

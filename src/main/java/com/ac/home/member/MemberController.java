@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ac.home.cr.CrDTO;
+import com.ac.home.cr.CrService;
 import com.ac.home.member.MemberDTO;
 import com.ac.home.member.find.FindMemberService;
 import com.ac.home.member.mail.*;
@@ -42,6 +44,9 @@ public class MemberController {
     
     @Autowired
     private ProductService productService;
+    
+    @Autowired
+    private CrService crService;
     
 	@PostMapping("memberIdCheck")
 	public ModelAndView getMemberIdCheck(MemberDTO memberDTO)throws Exception{
@@ -188,6 +193,19 @@ public class MemberController {
 	      
 	    mv.setViewName("admin/adminProductList");
 	      
+	    return mv;
+	}
+	
+	// 관리자 수강후기 관리
+	@GetMapping(value = "crList")
+	public ModelAndView getCrList()throws Exception{
+		ModelAndView mv = new ModelAndView();
+		
+	    List<CrDTO> ar = crService.getCrList();  
+		
+	    mv.addObject("list", ar);
+	    mv.setViewName("admin/adminCrList");
+	    
 	    return mv;
 	}
 }

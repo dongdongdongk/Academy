@@ -14,13 +14,15 @@
 	
 	<div class="sideBar">
 		<c:import url="../template/adminSideBar.jsp"></c:import>
-	</div>
-
-	<div class="container admin_container">
-		<div class="row lists">
-			<!-- 리스트 들어갈 태그 -->
+		
+		<div class="container admin_container">
+			<div class="row lists">
+				<!-- 리스트 들어갈 태그 -->
+			</div>
 		</div>
 	</div>
+
+	
 	
 	<c:import url="../template/common_js.jsp"></c:import>
 	<script src="/resources/js/adminPage.js"></script>
