@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
+
 <!doctype html>
 <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
@@ -237,7 +241,7 @@
                                 <img src="upload/01_team.png" alt="" class="img-responsive">
                                 <div class="magnifier">
                                     <div class="visible-buttons1 teambuttons">
-                                        <p>We’re committed to work and play our client meeting room transforms  into a table tennis</p>
+                                        <p>Weâre committed to work and play our client meeting room transforms  into a table tennis</p>
                                         <div class="social-links">
                                             <a href="#"><i class="fa fa-facebook"></i></a>
                                             <a href="#"><i class="fa fa-dribbble"></i></a>
@@ -260,7 +264,7 @@
                                 <img src="upload/02_team.png" alt="" class="img-responsive">
                                 <div class="magnifier">
                                     <div class="visible-buttons1 teambuttons">
-                                        <p>We’re committed to work and play our client meeting room transforms  into a table tennis</p>
+                                        <p>Weâre committed to work and play our client meeting room transforms  into a table tennis</p>
                                         <div class="social-links">
                                             <a href="#"><i class="fa fa-facebook"></i></a>
                                             <a href="#"><i class="fa fa-dribbble"></i></a>
@@ -283,7 +287,7 @@
                                 <img src="upload/03_team.png" alt="" class="img-responsive">
                                 <div class="magnifier">
                                     <div class="visible-buttons1 teambuttons">
-                                        <p>We’re committed to work and play our client meeting room transforms  into a table tennis</p>
+                                        <p>Weâre committed to work and play our client meeting room transforms  into a table tennis</p>
                                         <div class="social-links">
                                             <a href="#"><i class="fa fa-facebook"></i></a>
                                             <a href="#"><i class="fa fa-dribbble"></i></a>
@@ -535,7 +539,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <header class="entry-header">
-                                    <h1>이벤트</h1>
+                                    <h1>ì´ë²¤í¸</h1>
                                 </header><!-- .entry-header -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -552,19 +556,19 @@
 
             <ul class="nav justify-content-center grey lighten-4 py-4">
                 <li class="nav-item">
-                    <a class="nav-link active" id="allEvent">전체</a>
+                    <a class="nav-link active" id="allEvent">ì ì²´</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="continueEvent">진행중</a>
+                    <a class="nav-link" id="continueEvent">ì§íì¤</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="endEvent">종료</a>
+                    <a class="nav-link" id="endEvent">ì¢ë£</a>
                 </li>
             </ul>
 
 
 
-            <!-- 현재날짜 -->
+            <!-- íì¬ë ì§ -->
             <c:set var="now" value="<%=new java.util.Date()%>" />
             <c:set var="today"><fmt:formatDate value="${now}" pattern="yyyy-MM-dd" /></c:set> 
 
@@ -578,8 +582,8 @@
                     <div class="col-12">
                         <div class="breadcrumbs">
                             <ul class="flex flex-wrap align-items-center p-0 m-0">
-                                <li><a href="/"><i class="fa fa-home"></i> 홈</a></li>
-                                <li>이벤트</li>
+                                <li><a href="/"><i class="fa fa-home"></i> í</a></li>
+                                <li>ì´ë²¤í¸</li>
                             </ul>
                         </div>
                     </div>
@@ -643,9 +647,9 @@
                                                         <div class="entry-meta flex flex-wrap align-items-center">
                                                             <div class="course-author"><a href="#">${dto.writer} </a>
                                                             </div>
-                                                            <div id="startDate" data-start-event="${dto.startDate}" class="course-date">시작일${dto.startDate}</div>
-                                                            <div id="endDate" data-end-event="${dto.endDate}" class="course-date">종료일${dto.endDate}</div>
-                                                            <div class="course-date">조회수${dto.hit}</div>
+                                                            <div id="startDate" data-start-event="${dto.startDate}" class="course-date">ììì¼${dto.startDate}</div>
+                                                            <div id="endDate" data-end-event="${dto.endDate}" class="course-date">ì¢ë£ì¼${dto.endDate}</div>
+                                                            <div class="course-date">ì¡°íì${dto.hit}</div>
                                                         </div>
                                                     </header>
                                                 </div>
@@ -702,7 +706,7 @@
 
                 </div><!-- .row -->
             </div><!-- .container -->
-            <a href="./add">글쓰기</a>
+            <a href="./add">ê¸ì°ê¸°</a>
 
             <div class="clients-logo">
                 <div class="container">
