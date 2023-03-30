@@ -87,6 +87,7 @@
                                     <li><a href="/product/list">Courses</a></li>
                                     <li><a href="/notice/list">Notice</a></li>
                                     <li><a href="/qna/qnaList">QNA</a></li>
+                                    <li><a href="/event/list">EVENT</a></li>
                                     <li><a href="/orders/ordersList">ORDER</a></li>
                                     
                                   
