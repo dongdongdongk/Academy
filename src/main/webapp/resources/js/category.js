@@ -28,11 +28,23 @@ btn.addEventListener("click",function(){
     count++;
     
 })
-$("#catdiv").on("click",".del",function(e){
-    if(count==0){
-        alert("카테고리는 최소 하나이상 포함되어야 합니다");
+$("#catdiv").on("click",function(e){
+    if(count==3){
+        alert("책입니다");
     }else{
     $(this).parent().remove();
     count--;
 }
+})
+
+$("#productList").on("click", function(){
+
+    $.ajax({
+        url: "/product/productList",
+        type: "GET",
+        success: function(result) {
+            // $(".lists").append(result);
+            $(".lists").html(result);
+          }
+    })
 })

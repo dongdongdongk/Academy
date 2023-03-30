@@ -70,10 +70,7 @@ public class ProductDAO {
 		return sqlSession.delete(NAMESPACE+"getProductFileDelete", productImgDTO);
 	}
 	
-	/*
-	 * public int setProductHit(ProductDTO productDTO) throws Exception { return
-	 * sqlSession.update(NAMESPACE + "setProductHit", productDTO); }
-	 */
+
 	
 }
 	

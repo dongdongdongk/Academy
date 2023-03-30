@@ -49,8 +49,6 @@
           <c:if test="${not empty member}">
 	          <button id="addToCartBtn" data-member-id="${member.id}" data-product-id="${dto.num}" type="button" class="btn btn-outline-primary">장바구니</button>          
           </c:if>
-
-          <button id="list" type="button" class="btn btn-outline-primary"><a href="./productList">구매</a></button>
           <button id="list" type="button" class="btn btn-outline-secondary"><a href="./list">목록으로</a></button>
         </form>
       </c:if>

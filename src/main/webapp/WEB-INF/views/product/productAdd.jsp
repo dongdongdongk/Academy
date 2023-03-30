@@ -19,11 +19,12 @@
 	</div>
 	
 	<div class="row justify-content-center my-4">
-		<form class="col-md-7" action="./productAdd" method="post" enctype="multipart/form-data">
+		<form class="col-md-7" id="frm" action="./productAdd" method="post" enctype="multipart/form-data">
 			
 			<div class="mb-3">
 			  <label for="title" class="form-label">제품명</label>
-			  <input type="text" name="title" class="form-control" id="title" placeholder="제품명 입력">
+			  <input type="text" name="title" class="form-control" id="title" placeholder="제품명 입력" required>
+			  <div id="titleResult"></div>
 			</div>
 			
 			<div class="mb-3">
@@ -51,6 +52,7 @@
 </div>
 </header>
 <script src="../resources/js/fileManger.js"></script>
+<script src="../../../resources/js/productAdd.js"></script>
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
 <script>

@@ -108,10 +108,7 @@ public class ProductService {
 		}
 		return result;
 	}
-	/*
-	 * public int setProductHit(ProductDTO productDTO) throws Exception { return
-	 * productDAO.setProductHit(productDTO); }
-	 */
+	
 
 	public int getProductFileDelete(ProductImgDTO productImgDTO) throws Exception{
 		System.out.println("ProductFileDelete");

@@ -75,10 +75,9 @@
  		<!-- 그외 나머지 -->
  		<result column="TITLE" property="title"/>
  		<result column="PRICE" property="price"/>
- 		<result column="SALEQTY" property="saleQty"/>
  		<result column="INFO" property="info"/>
  		<result column="REGDATE" property="regDate"/>
- 		<result column="GRADE" property="grade"/>
+ 		
  		<!-- 1:1 -->
  		<collection property="productImgDTOs" javaType="List" ofType="ProductImgDTO">
  			<id column="FILENUM" property="fileNum"/>
@@ -98,10 +97,10 @@
  			SELECT PRODUCT_SEQ.NEXTVAL FROM DUAL
  		</selectKey>
  		INSERT INTO PRODUCT 
- 		VALUES (#{num} ,#{title}, #{price}, 0, #{info},SYSDATE, 0.0, 0)
+ 		VALUES (#{num} ,#{title}, #{price}, #{info},SYSDATE)
  	</insert>
  	
- 	<insert id="setCategoryAdd" parameterType="MemberDTO">
+ 	<insert id="setCategoryAdd" parameterType="ProductDTO">
   		INSERT INTO PRODUCTKIND (NUM,ID)
   		VALUES (#{num}, (SELECT ID FROM CATEGORY WHERE ID = 1))
   	</insert>
@@ -131,11 +130,7 @@
 	</delete>
 	
 	
-	<!-- <update id="setProductHit" parameterType="ProductDTO">
-  		UPDATE PRODUCT SET HIT = #{hit} + 1
-		WHERE NUM = #{num}
-  	</update>
-	 -->
+	
 	
   	
   </mapper>

@@ -99,7 +99,7 @@ public class ProductController {
 			
 		}
 		
-		//�닔�젙 �뤌 �씠�룞
+		
 		@RequestMapping(value="update", method = RequestMethod.GET)
 		public ModelAndView setProductUpdate(ProductDTO productDTO) throws Exception{
 			ModelAndView mv = new ModelAndView();
