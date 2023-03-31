@@ -139,21 +139,22 @@
                             
                                                 <div class="course-content-wrap">
                                                     <header class="entry-header">
-                                                        <h2 class="entry-title"><a
-                                                                href="./detail?num=${dto.num}">${dto.title}</a>
-                            
+                                                        
+                                                        <h2 class="entry-title ellipsis">
+                                                            
                                                             <c:set var="loop_flag" value="false" />
-                                                            <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
-                                                                <c:if test="${not loop_flag }">
-                                                                    <c:if test="${fileDTO.oriName ne null}"><img
-                                                                            class="material-symbols-outlined"
-                                                                            src="/resources/images/file_icon.gif">
-                                                                        <c:set var="loop_flag" value="true" />
+                                                                <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
+                                                                    <c:if test="${not loop_flag }">
+                                                                        <c:if test="${fileDTO.oriName ne null}">
+                                                                            <img class="material-symbols-outlined"src="/resources/images/file_icon.gif">
+                                                                            <c:set var="loop_flag" value="true" />
+                                                                        </c:if>
                                                                     </c:if>
-                                                                </c:if>
-                                                            </c:forEach>
-                                                            </td>
+                                                                </c:forEach>
+                                                            <a href="./detail?num=${dto.num}">${dto.title}</a>
+                                                            
                                                         </h2>
+                                                        
                             
                             
                             

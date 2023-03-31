@@ -2716,3 +2716,33 @@ p.footer-copyright {
 .footer-bar-nav ul li a:hover {
     color: #34d986;
 }
+
+
+.radius {
+    border-radius: 30px;
+ }
+    
+ .grayscale {
+     filter: grayscale(100%); 
+     filter: opacity(45%); 
+ }
+
+ .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+
+ .floatLeft {
+    float: left;
+    
+ }
+    
+
+
+
+.material-symbols-outlined {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+}
