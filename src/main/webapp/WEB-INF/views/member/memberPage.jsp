@@ -86,9 +86,10 @@
 						</div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center mt-3">
-                    <a href="./memberUpdate" class="btn btn-outline-secondary">회원정보 수정</a>
-                </div>
+				<div class="d-flex justify-content-between mt-3">
+					<a href="../cart/cartList?id=${member.id}" class="btn btn-outline-secondary mr-3">장바구니</a>
+					<a href="./memberUpdate" class="btn btn-outline-secondary">회원정보 수정</a>
+				</div>
             </div>
         </div>
     </div>
