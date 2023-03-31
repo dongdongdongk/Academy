@@ -38,26 +38,30 @@
 			</div>
 			
 			<div id="fileList">
-					<button type="button" id="fileAdd">ADD</button><td>사진등록</td>
-					
+				<button type="button" id="fileAdd">ADD</button><td>사진등록</td>
 			</div>	
+		
+			<select class="form-select" name="kind" id="kind" aria-label="Default select example">
+				<option value="1">책</option>
+				<option value="2">강의</option>
+			</select>
 			
-
 			<div class="mb-3">
 				<button class="my btn btn-danger" type="submit">등록</button>
 			</div>
-		
 		</form>
 	</div>
 </div>
 </header>
 <script src="../resources/js/fileManger.js"></script>
 <script src="../../../resources/js/productAdd.js"></script>
+
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
+
 <script>
 	setMax(1);
-	$("#info2").summernote();
+	$("#info").summernote();
 	// setParam('f');
 </script>
 </body>

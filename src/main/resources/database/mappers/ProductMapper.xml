@@ -37,6 +37,12 @@
  	 	<include refid="searchCondition"></include>	
  	</select>
  	
+ 	<select id="getProductLogin" parameterType="ProductDTO" resultType="ProductDTO">
+  		SELECT *
+		FROM 
+		PRODUCT 
+		WHERE TITLE = #{title}
+  	</select>
  
  	<select id="getProductList" parameterType="Pager" resultMap="productDetailResult">
  		SELECT * FROM
@@ -102,7 +108,7 @@
  	
  	<insert id="setCategoryAdd" parameterType="ProductDTO">
   		INSERT INTO PRODUCTKIND (NUM,ID)
-  		VALUES (#{num}, (SELECT ID FROM CATEGORY WHERE ID = 1))
+  		VALUES (#{num}, (SELECT * FROM CATEGORY WHERE ID = ID))
   	</insert>
 	
 

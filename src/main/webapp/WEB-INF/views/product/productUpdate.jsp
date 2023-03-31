@@ -7,6 +7,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <c:import url="../template/common_css.jsp"></c:import>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
@@ -49,24 +51,27 @@
 				<div class="mb-3">
 					<button type="button" id="fileAdd">ADD</button><td>사진등록</td>
 					</div>
-				</div>	
-				<fieldset>
+				</div>
+					
+				<div class="mb-5">
 				
 					<input class="btn btn-info" type="submit" value="수정">
 					
-				</fieldset>
+				</div>
+				</form>
 			<!-- 	<div class="mb-3">
 					<button class="my btn btn-danger" type="submit">등록</button>
 				</div> -->
-		</form>
+	
 		</div>
-</div>
+
 </header>	
 <script src="../resources/js/fileManger.js"></script>
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
 <script>
 	setMax(1);
+	$("#info").summernote();
 </script>			
 </body>
 </html>

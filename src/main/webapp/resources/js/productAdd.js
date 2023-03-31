@@ -42,12 +42,12 @@ title.addEventListener("blur", function(){
         if(this.readyState==4 && this.status==200){
             if(this.responseText.trim()=='true'){
                 checks[0]=true;
-                titleResult.innerHTML="사용가능한 ID";
+                titleResult.innerHTML="사용가능한 제목";
                 titleResult.classList.add("blueResult");
                 titleResult.classList.remove("redResult");
             }else {
                 checks[0]=false;
-                titleResult.innerHTML="중복된 ID";
+                titleResult.innerHTML="중복된 제목";
                 titleResult.classList.add("redResult");
                 titleResult.classList.remove("blueResult");
             }

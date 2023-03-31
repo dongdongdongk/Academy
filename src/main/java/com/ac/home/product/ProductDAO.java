@@ -34,6 +34,9 @@ public class ProductDAO {
 		
 		return sqlSession.selectOne(NAMESPACE+"getProductDetail", productDTO);
 	}
+	public ProductDTO getProductLogin(ProductDTO productDTO)throws Exception{
+		return sqlSession.selectOne(NAMESPACE+"getProductLogin", productDTO);
+	}
 	
 	public int setProductAdd(ProductDTO productDTO)throws Exception{
 		

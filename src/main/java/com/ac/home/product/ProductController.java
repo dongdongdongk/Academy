@@ -25,6 +25,7 @@ import oracle.sql.json.OracleJsonParser;
 
 import com.ac.home.cart.CartDTO;
 import com.ac.home.cart.CartService;
+import com.ac.home.member.MemberDTO;
 import com.ac.home.product.ProductDTO;
 
 
@@ -35,6 +36,18 @@ public class ProductController {
 	   @Autowired
 	   private ProductService productService;
 	  
+	   
+	   @PostMapping("productIdCheck")
+		public ModelAndView getProductIdCheck(ProductDTO productDTO)throws Exception{
+			boolean check = productService.getProductIdCheck(productDTO);
+			ModelAndView mv = new ModelAndView();
+			
+			mv.addObject("result", check);
+			mv.setViewName("common/ajaxResult");
+			return mv;
+		}
+	   
+	   
 	   //list
 	   @RequestMapping(value="list", method = RequestMethod.GET)
 		public ModelAndView getProductList(Pager pager)throws Exception{
