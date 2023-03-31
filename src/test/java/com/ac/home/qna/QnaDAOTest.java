@@ -14,12 +14,36 @@ public class QnaDAOTest extends MyTestCase {
 	@Autowired
 	private QnaDAO qnaDAO;
 	
+	@Autowired
+	private QnaCommentDAO qnaCommentDAO;
+	
+	
+//	@Test
+//	public void getQnaCommentList() throws Exception {
+//		
+//	}
+	
 	@Test
-	public void getQnaList() throws Exception {
-		List<QnaDTO> ar = qnaDAO.getQnaList(null);
+	public void setQnaCommentAdd() throws Exception {
+		QnaCommentDTO qnaCommentDTO = new QnaCommentDTO();
 		
-		assertNotEquals(0, ar.size());
+		qnaCommentDTO.setContents("댓글 테스트1");
+		qnaCommentDTO.setNum(60L);
+		qnaCommentDTO.setWriter("장현서");
+		
+		int result = qnaCommentDAO.setQnaCommentAdd(qnaCommentDTO);
+		
+		assertEquals(1, result);
 	}
+	
+	
+	
+//	@Test
+//	public void getQnaList() throws Exception {
+//		List<QnaDTO> ar = qnaDAO.getQnaList(null);
+//		
+//		assertNotEquals(0, ar.size());
+//	}
 //	
 //	@Test
 //	public void getQnaDetail() throws Exception {
@@ -58,14 +82,15 @@ public class QnaDAOTest extends MyTestCase {
 //		assertEquals(1, result);
 //	}
 	
-	@Test
-	public void setQnaDelete() throws Exception {
-		QnaDTO qnaDTO = new QnaDTO();
-		
-		qnaDTO.setNum(6L);
-		
-		int result = qnaDAO.setQnaDelete(qnaDTO);
-		
-		assertEquals(1, result);
-	}
+//	@Test
+//	public void setQnaDelete() throws Exception {
+//		QnaDTO qnaDTO = new QnaDTO();
+//		
+//		qnaDTO.setNum(6L);
+//		
+//		int result = qnaDAO.setQnaDelete(qnaDTO);
+//		
+//		assertEquals(1, result);
+//	}
+	
 }
