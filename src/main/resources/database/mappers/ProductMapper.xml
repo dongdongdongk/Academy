@@ -108,7 +108,7 @@
  	
  	<insert id="setCategoryAdd" parameterType="ProductDTO">
   		INSERT INTO PRODUCTKIND (NUM,ID)
-  		VALUES (#{num}, (SELECT * FROM CATEGORY WHERE ID = ID))
+  		VALUES (#{num}, (SELECT * FROM CATEGORY WHERE ID BETWEEN 1  AND 2))
   	</insert>
 	
 
