@@ -54,15 +54,21 @@ public class CartController {
 	}
 	
 	@PostMapping(value = "cartDelete")
-	public ModelAndView setCartDelete(CartDTO cartDTO) throws Exception {
-		ModelAndView mv = new ModelAndView();
-		
-		int result = cartService.setCartDelete(cartDTO);
-		
-		mv.addObject("result", result);
-		mv.setViewName("common/ajaxResult");
-		
-		return mv;
+	public ModelAndView setCartDelete(CartDTO cartDTO, HttpSession session) throws Exception {
+	    ModelAndView mv = new ModelAndView();
+
+	    MemberDTO member = (MemberDTO) session.getAttribute("member");
+
+	    if (member != null) {
+	        int result = cartService.setCartDelete(cartDTO);
+	        if (result > 0) {
+	        	mv.addObject("successMessage", "삭제에 성공했습니다.");
+	        } else {
+	        	mv.addObject("errorMessage", "삭제에 실패했습니다.");
+	        }
+	    }
+
+	    mv.setViewName("redirect:./cartList");
+	    return mv;
 	}
-	
 }

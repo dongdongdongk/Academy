@@ -16,26 +16,3 @@ $(document).ready(function() {
     });
   });
 });
-
-$(".deleteBtn").on("click", function() {
-
-  let check = window.confirm("정말 삭제 하시겠습니까?");
-
-  if(check){
-    let cartNum = $(this).attr("data-cart-id");
-
-    $.ajax({
-      url: "/cart/cartDelete",
-      type: "POST",
-      data: {
-        cartNum: cartNum
-      },
-      success: function() {
-        alert("삭제 성공했습니다.")
-        window.location.reload();
-      }
-    });
-  } 
-});  
-
-

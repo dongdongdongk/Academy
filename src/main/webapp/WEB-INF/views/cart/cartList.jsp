@@ -15,7 +15,21 @@
 		<div class="row justify-content-center">
 			<h1 class="col-md-7 my-5">장바구니</h1>
 		</div>
-	      	
+		
+	    <!-- 성공 메시지 출력 -->
+	    <c:if test="${not empty successMessage}">
+	        <div class="alert alert-success" role="alert">
+	            ${successMessage}
+	        </div>
+	    </c:if>
+	
+	    <!-- 에러 메시지 출력 -->
+	    <c:if test="${not empty errorMessage}">
+	        <div class="alert alert-danger" role="alert">
+	            ${errorMessage}
+	        </div>
+	    </c:if>
+		
 		<div class="container-fluid">
 			<div class="row carts" style="text-align: center;">
 				<table class="table table-hover" style="width: 70%; margin: auto; border-bottom: 1px solid #D5D5D5;">
