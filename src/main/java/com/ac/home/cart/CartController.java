@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.home.member.MemberDTO;
+import com.ac.home.member.paymentmethod.PaymentMethodDTO;
 import com.ac.home.product.ProductDTO;
 import com.ac.home.product.ProductService;
 import com.ac.home.util.Pager;
@@ -24,23 +25,35 @@ public class CartController {
 	@Autowired
 	private CartService cartService;
 	
-	@GetMapping(value = "cartList")
-	public ModelAndView getCartList(CartDTO cartDTO) throws Exception {
-		ModelAndView mv = new ModelAndView();
-		
-		List<CartDTO> ar = cartService.getCartList();
-		
-		Long sumPrice = 0L;
-		if(cartDTO.getId() != null) {
-			sumPrice = cartService.getSumPrice(cartDTO);				
-		}
-		
-		mv.addObject("sumPrice", sumPrice);
-		mv.addObject("list", ar);
-		mv.setViewName("cart/cartList");
-		
-		return mv;
-	}
+    @GetMapping(value = "cartList")
+    public ModelAndView getCartList(CartDTO cartDTO, HttpSession session) throws Exception {
+        ModelAndView mv = new ModelAndView();
+        
+        List<CartDTO> ar = cartService.getCartList();
+        
+        Long sumPrice = 0L;
+        if(cartDTO.getId() != null) {
+            sumPrice = cartService.getSumPrice(cartDTO);                
+        }
+
+        mv.addObject("sumPrice", sumPrice);
+        mv.addObject("list", ar);
+
+        MemberDTO member = (MemberDTO) session.getAttribute("member");
+
+        if (member != null) {
+            MemberDTO memberCart = cartService.getMemberCart(member.getId());
+            List<PaymentMethodDTO> paymentMethods = cartService.getPaymentMethods(member.getId());
+
+            mv.addObject("address", memberCart.getAddress());
+            mv.addObject("addressDetail", memberCart.getAddressDetail());
+            mv.addObject("paymentMethods", paymentMethods);
+        }
+
+        mv.setViewName("cart/cartList");
+        
+        return mv;
+    }
 	
 	@PostMapping(value = "cartAdd")
 	public ModelAndView setCartAdd(CartDTO cartDTO) throws Exception {

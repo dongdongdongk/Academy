@@ -54,5 +54,30 @@
 		USING(NUM)
 		WHERE ID = #{id}
 	</select>
+	
+	<!-- Add getMemberCart query -->
+    <select id="getMemberCart" resultMap="memberCart" parameterType="String">
+        SELECT *
+        FROM MEMBER
+        WHERE ID = #{memberId, jdbcType=VARCHAR}
+    </select>
+
+    <!-- Add getPaymentMethods query -->
+    <select id="getPaymentMethods" resultType="com.ac.home.member.paymentmethod.PaymentMethodDTO" parameterType="String">
+        SELECT *
+        FROM PAYMENTMETHOD
+        WHERE MEMBER_ID = #{memberId, jdbcType=VARCHAR}
+    </select>
+    
+    <!-- Add resultMap for getMemberCart -->
+    <resultMap type="com.ac.home.member.MemberDTO" id="memberCart">
+        <id column="ID" property="id"/>
+        <result column="NAME" property="name"/>
+        <result column="EMAIL" property="email"/>
+        <result column="EMAILDOMAIN" property="emaildomain"/>
+        <result column="ADDRESS" property="address"/>
+        <result column="ADDRESSDETAIL" property="addressDetail"/>
+        <!-- Add other columns as needed -->
+    </resultMap>
  
   </mapper>

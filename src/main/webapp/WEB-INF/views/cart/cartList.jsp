@@ -74,7 +74,45 @@
 	                </tfoot>
 				</table>
 			</div>
-			
+			<div class="container-fluid">
+			    <div class="row justify-content-center">
+			        <div class="col-md-9">
+			            <div class="row carts">
+			            </div>
+			            <div class="row mt-4">
+			                <c:if test="${not empty member}">
+			                    <div class="col-md-6 mb-4">
+			                        <div class="card">
+			                            <div class="card-header d-flex justify-content-between">
+			                                <h4>배송 주소</h4>
+			                            </div>
+			                            <div class="card-body text-center">
+			                                <p class="border border-primary">${address}, ${addressDetail}</p>
+			                                <a href="../member/memberUpdate" class="btn">정보 수정하기</a>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="col-md-6">
+			                        <div class="card">
+			                            <div class="card-header d-flex justify-content-between">
+			                                <h4>결제수단 선택</h4>
+			                            </div>
+			                            <div class="card-body text-center">
+			                                <select class="form-select border border-primary" id="paymentMethod">
+			                                    <c:forEach items="${paymentMethods}" var="paymentMethod">
+			                                        <option value="${paymentMethod.info}">${paymentMethod.info}</option>
+			                                    </c:forEach>
+			                                </select>
+			                                <a href="../member/payment/paymentmethodadd" class="btn mt-2">결제수단 추가</a>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </c:if>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+
 			<div class="row btns">
 				<a href="#" class="btn btn_order">주문하기</a>
 				<a href="/product/list" class="btn btn_list">상품보기</a>
