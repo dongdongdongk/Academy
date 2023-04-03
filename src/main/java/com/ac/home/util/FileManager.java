@@ -55,7 +55,9 @@ public class FileManager {
 		FileCopyUtils.copy(multipartFile.getBytes(), file);
 		//임시 폴더에서 spring 정식 폴더로 이동
 		
-		 String springpath = "D:/pooh/workspace/Academy/src/main/webapp/resources/images"; 
+		// D:/pooh/workspace/Academy/src/main/webapp/resources/images
+		// D:/GDJ60_12/workspace_Legacy/Academy/src/main/webapp/resources/images
+		 String springpath = "D:/GDJ60_12/workspace_Legacy/Academy/src/main/webapp/resources/images"; 
 		 file = new File(springpath,multipartFile.getOriginalFilename()); 
 		 FileCopyUtils.copy(multipartFile.getBytes(), file); 
 		 

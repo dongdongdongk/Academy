@@ -27,7 +27,6 @@ import com.ac.home.cart.CartDTO;
 import com.ac.home.cart.CartService;
 import com.ac.home.product.ProductDTO;
 
-
 @Controller
 @RequestMapping("/product/*")
 public class ProductController {
@@ -48,6 +47,45 @@ public class ProductController {
 		      
 			return mv;
 		}
+	   
+	   // all list
+	   @GetMapping(value = "allList")
+	 	public ModelAndView getAllList(Pager pager)throws Exception{
+	 		ModelAndView mv = new ModelAndView();
+	 		
+	 		List<ProductDTO> ar = productService.getProductList(pager);
+	 		
+	 		mv.addObject("list",ar);  
+	 		mv.setViewName("product/productAll");
+	 		      
+	 		return mv;
+	 	}
+	   
+	   // book list
+	   @GetMapping(value = "bookList")
+	 	public ModelAndView getBookList(Pager pager)throws Exception{
+	 		ModelAndView mv = new ModelAndView();
+	 		
+	 		List<ProductDTO> ar = productService.getProductList(pager);
+	 		
+	 		mv.addObject("list",ar);  
+	 		mv.setViewName("product/productBook");
+	 		      
+	 		return mv;
+	 	}
+	   
+	   // cr list
+	   @GetMapping(value = "crList")
+	 	public ModelAndView getCrList(Pager pager)throws Exception{
+	 		ModelAndView mv = new ModelAndView();
+	 		
+	 		List<ProductDTO> ar = productService.getProductList(pager);
+	 		
+	 		mv.addObject("list",ar);  
+	 		mv.setViewName("product/productCr");
+	 		      
+	 		return mv;
+	 	}
 	   
 		//detail
 		@RequestMapping(value = "productDetail", method = RequestMethod.GET)
@@ -130,6 +168,7 @@ public class ProductController {
 			
 			return mv;
 		}
+	
 	 
 		
 		

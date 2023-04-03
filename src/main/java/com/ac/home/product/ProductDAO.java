@@ -41,10 +41,10 @@ public class ProductDAO {
 	}
 
 	
-	public int setCategoryAdd(ProductDTO productDTO)throws Exception{
-		
-		  return sqlSession.insert(NAMESPACE+"setCategoryAdd", productDTO); 
-	}
+//	public int setCategoryAdd(ProductDTO productDTO)throws Exception{
+//		
+//		  return sqlSession.insert(NAMESPACE+"setCategoryAdd", productDTO); 
+//	}
 	 
 	public int setProductUpdate(ProductDTO productDTO)throws Exception{
 		

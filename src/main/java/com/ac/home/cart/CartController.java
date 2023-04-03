@@ -1,8 +1,9 @@
 package com.ac.home.cart;
 
-import java.util.Iterator;
+
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.home.member.MemberDTO;
@@ -43,11 +45,11 @@ public class CartController {
 	}
 	
 	@PostMapping(value = "cartAdd")
-	public ModelAndView setCartAdd(CartDTO cartDTO) throws Exception {
+	public ModelAndView setCartAdd(CartDTO cartDTO, Pager pager) throws Exception {
 		ModelAndView mv = new ModelAndView();
-		
+	
 		int result = cartService.setCartAdd(cartDTO);
-		
+
 		mv.setViewName("redirect:./cartList");
 		
 		return mv;
@@ -64,5 +66,4 @@ public class CartController {
 		
 		return mv;
 	}
-	
 }

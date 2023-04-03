@@ -28,6 +28,8 @@
         <h3>상품 이름 : ${dto.title}</h3>
         <h3>상품 내용 : ${dto.info}</h3>
         <h3>상품 가격 : ${dto.price}</h3>
+        <h3>카테고리 : ${dto.categoryNum}</h3>
+        
 
         <div class="row">
           <c:forEach items="${dto.productImgDTOs}" var="fileDTO">

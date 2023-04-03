@@ -15,7 +15,7 @@
 <header style="margin-top: 200px;">
 <div class="container-fluid">
 	<div class="row justify-content-center my-4">
-		<h1 class="col-md-7 text-center">상품등록 Product  Page</h1>
+		<h1 class="col-md-7 text-center">상품등록 Product Page</h1>
 	</div>
 	
 	<div class="row justify-content-center my-4">
@@ -37,15 +37,17 @@
 			</div>
 			
 			<div id="fileList">
-					<button type="button" id="fileAdd">ADD</button><td>사진등록</td>
-					
+				<button type="button" id="fileAdd">ADD</button><td>사진등록</td>
 			</div>	
 			
+			<select class="form-select" name="categoryNum" id="categoryNum">
+				<option value="1">책</option>
+				<option value="2">강의</option>
+			</select>
 
 			<div class="mb-3">
 				<button class="my btn btn-danger" type="submit">등록</button>
 			</div>
-		
 		</form>
 	</div>
 </div>

@@ -6,13 +6,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
 <title></title>
 <c:import url="../template/common_css.jsp"></c:import>
 <link rel="stylesheet" href="/resources/css/productList.css">
 </head>
-
-
 <body>
 	<c:import url="../template/header.jsp"></c:import>
 	<header style="margin-top: 200px;">
@@ -25,46 +22,31 @@
 		<div id="catdiv">
 			<div class="row input-group mb-3">
 				<label for="categoryNum" class="visually-hidden">categoryName</label>
-				<select class="form-select" name="categoryNum" id="categoryName">
-					<option value="2">전체</option>
-					<option value="3" >책</option>
-					<option value="4">강의</option>
-				
-					
+				<select class="form-select" name="categoryNum" id="categoryNum">
+					<option id="productAll" value="3">전체</option>
+					<option id="productBook" value="1" >책</option>
+					<option id="productCr" value="2">강의</option>
 				</select>
-				
-		</div>
-		
+			</div>
 		</div>
 		
 		<div class="goods_table_wrap">
-			<!-- 상품 리스트 O -->
 			<c:if test="${listcheck != 'empty'}">
 				<table class="goods_table">
 					<thead>
 						<tr>
-						
 							<td class="th_column_1">상품 번호</td>
 							<td class="th_column_4">상품 이미지</td>
 							<td class="th_column_1">상품 이름</td>
 							<td class="th_column_3">가격</td>
 							<td class="th_column_4">등록날짜</td>
-							<td class="th_column_5">조회수</td>
 							<td class="th_column_5">카테고리</td>
 						</tr>
 					</thead>
-
-					<%-- 		<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-					<td class="tbl_td">${fileDTO.save}</td>
-				</c:forEach> --%>
-					<tbody class="table-group-divider">
-
+					<tbody id="productContent" class="table-group-divider">
 						<c:forEach items="${list}" var="dto">
-
-
 							<tr>
 								<td>${dto.num}</td>
-
 								<td class="tbl_td">
 									<div class="row">
 										<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
@@ -77,30 +59,13 @@
 								<td class="tbl_td"><a href="./productDetail?num=${dto.num}">${dto.title}</a></td>
 								<td class="tbl_td">${dto.price}</td>
 								<td class="tbl_td">${dto.regDate}</td>
-								<td class="tbl_td">${dto.hit}</td>
-								<c:forEach items="${dto.categoryDTOs}" var="category">
-									<td class="tbl_td">${category.name}</td>
-								</c:forEach>
-								
-								
-								
-								
-								
-								<%-- 		<c:choose>
-						<c:when test="${dto.grade eq 1}">판매중</c:when>
-						<c:otherwise>판매중</c:otherwise>
-					</c:choose>
-						<c:if test="${dto.grade eq 1}">판매중</c:if>
-						<c:if test="${dto.grade eq 0}">판매중단</c:if>
-				 --%>
-
+								<td class="tbl_td">${dto.categoryNum eq 1 ? '책' : '강의'}</td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
 			</c:if>
 		</div>
-
 
 		<!-- paging -->
 		<div class="row col-md-7 mx-auto">
@@ -183,8 +148,7 @@
 
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
-<script src="../../../resources/js/productAjax.js"></script>
-<script src="../../../resources/js/category.js"></script>
+<script src="/resources/js/category.js"></script>
 <script src="/resources/css/goodsManage.css"></script>
 <script src="../resources/js/pageing.js"></script>
 <script src="../resources/js/fileManger.js"></script>

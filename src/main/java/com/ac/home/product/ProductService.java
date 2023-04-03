@@ -50,7 +50,7 @@ public class ProductService {
 		
 		int result = productDAO.setProductAdd(productDTO);
 		
-		result = productDAO.setCategoryAdd(productDTO); 
+//		result = productDAO.setCategoryAdd(productDTO); 
 	
 		if(!pic.isEmpty()) { //pic.getSize() !=0
 			System.out.println("서비스 프로덕트 에드 PIC 에드");
