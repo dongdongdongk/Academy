@@ -30,6 +30,8 @@
 
             <!-- Styles -->
             <link rel="stylesheet" href="/resources/css/style.css">
+
+            
             <c:import url="../template/common_css.jsp"></c:import>
         </head>
 

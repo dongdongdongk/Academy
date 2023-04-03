@@ -2746,3 +2746,19 @@ p.footer-copyright {
     height: 169.469px;
     object-fit: cover;
 }
+
+.iconSize {
+    
+    
+    width : 25px;
+    height : 25px;
+   
+}
+
+.checkcolor {
+    border: #f03b3b;
+    color: red;
+    
+    
+
+}

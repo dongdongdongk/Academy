@@ -8,6 +8,12 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="/resources/css/menu/eventIcon.css">
 <c:import url="../template/common_css.jsp"></c:import>
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
+  integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+<script>
+  Kakao.init('41d534ae5dc3fb8670ff2f84bd5cf770'); // 사용하려는 앱의 JavaScript 키 입력
+</script>
+
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
@@ -15,7 +21,9 @@
 		<div class="row my-5 col-md-2 mx-auto">
 			<h1>NoticeList</h1>
 		</div>
-		
+
+
+		  
 		<div class="row col-md-7 mx-auto">
 			<table class="table">
 			  	<thead class="table-dark">
@@ -30,12 +38,14 @@
 			 	
 			  	<tbody>
 			  			<c:forEach items="${list}" var="dto">
-					<tr>
+					<tr class="${dto.checked ? 'checked' : ''}">
+						<td><input type="checkbox" class="check-item"></td>
 						<td>${dto.num}</td>
-						<td><a href="./detail?num=${dto.num}">${dto.title}</a>
+						<td class="d-flex align-items-center"><a href="./detail?num=${dto.num}">${dto.title}</a>
 						<c:forEach items="${dto.noticeFileDTOs}" var="fileDTO">
-							<c:if test="${fileDTO.oriName ne null}"><img class="material-symbols-outlined" src="/resources/images/file1.png"></c:if>
+							<c:if test="${fileDTO.oriName ne null}"><img class="iconSize" src="/resources/images/file1.png"></c:if>
 						</c:forEach></td>
+						
 						<td>${dto.writer}</td>
 						<td>${dto.regDate}</td>
 						<td>${dto.hit}</td>
@@ -44,6 +54,7 @@
 			  	</tbody>
 			</table>
 			
+
 			<div class="row">
 				<nav aria-label="Page navigation example">
 				  <ul class="pagination">
@@ -78,7 +89,26 @@
 				  </ul>
 				</nav>
 			</div>
-			
+		
+			<div class="d-flex align-items-center">
+				<div id="add-channel-button"></div>
+		
+				<div id="kakao-talk-channel-chat-button"></div>
+			</div>
+		
+		<script>
+			Kakao.Channel.createAddChannelButton({
+			  container: '#add-channel-button',
+			  channelPublicId: '_zRYLxj',
+			});
+
+			Kakao.Channel.createChatButton({
+  			container: '#kakao-talk-channel-chat-button',
+ 			channelPublicId: '_zRYLxj'
+			});
+		
+		</script>
+		
 			
 			<div class="row">
 				<form class="row g-3" action="./list" method="get" id="searchForm">
@@ -104,12 +134,15 @@
 			</div>
 			
 			
+			
 		</div>
 	</div>
 	
 	</header>
 	<c:import url="../template/bottom.jsp"></c:import>
-	<c:import url="../template/common_js.jsp"></c:import>		
+	<c:import url="../template/common_js.jsp"></c:import>
+	<script src="../resources/js/listTop.js"></script>		
 	<script src="../resources/js/pageing.js"></script>
+	<script src="../resources/css/style.css"></script>
 </body>
 </html>
