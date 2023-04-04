@@ -36,7 +36,8 @@
             </div>
           </c:forEach>
         </div>
-
+       
+		
         <form action="./update" id="frm">
           <input type="hidden" name="num" value="${dto.num}">
           <c:if test="${not empty member}">
@@ -87,5 +88,6 @@
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
 <script src="/resources/js/productCart.js"></script>
+<script src="../../../resources/js/productDetail.js"></script>
 </body>
 </html>

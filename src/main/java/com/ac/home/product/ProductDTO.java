@@ -15,8 +15,16 @@ public class ProductDTO {
 	private Date regDate;
 	private List<ProductImgDTO> productImgDTOs;
 	private List<CategoryDTO> categoryDTOs;
-	private List<BoardFileDTO> boardFileDTOs; 
+	private List<BoardFileDTO> boardFileDTOs;
 	
+	private Long quantity;
+	
+	public Long getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(Long quantity) {
+		this.quantity = quantity;
+	}
 	public List<BoardFileDTO> getBoardFileDTOs() {
 		return boardFileDTOs;
 	}

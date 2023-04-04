@@ -64,5 +64,30 @@ public class CartController {
 		
 		return mv;
 	}
+	@PostMapping("cartUpdate")
+	public ModelAndView getCartUpdate(CartDTO cartDTO)throws Exception{
+		ModelAndView mv = new ModelAndView();
+		
+		int result = cartService.getCartUpdate(cartDTO);
+		
+		/*
+		 * List<CartDTO> ar = cartService.getCartList();
+		 * 
+		 * Long getSubPrice = 0L; if(cartDTO.getId() != null) { getSubPrice =
+		 * cartService.getSumPrice(cartDTO); }
+		 * 
+		 * mv.addObject("subPrice", getSubPrice); mv.addObject("list", ar);
+		 * mv.setViewName("cart/cartList");
+		 */
+		
+		mv.addObject("result", result);
+		mv.addObject("dto", result);
+		mv.setViewName("/common/ajaxResult");
+
+		return mv;
+		
+	}
+
+	
 	
 }

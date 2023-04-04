@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.ac.home.util.Pager;
 import com.ac.home.member.MemberDTO;
+import com.ac.home.notice.NoticeDTO;
 import com.ac.home.product.ProductDTO;
 import com.ac.home.product.ProductImgDTO;
 import com.ac.home.qna.QnaDTO;
@@ -127,9 +128,8 @@ public class ProductService {
 		System.out.println("ProductFileDelete");
 		return productDAO.getProductFileDelete(productImgDTO);
 	}
+	
+	
 
-	
-	
-}
-	
+}	
 

@@ -83,6 +83,9 @@
  		<result column="PRICE" property="price"/>
  		<result column="INFO" property="info"/>
  		<result column="REGDATE" property="regDate"/>
+ 	<!-- 	<result column="CATEGORYNUM" property="categoryNum"/>
+ 		<result column="QUANTITY" property="quantity"/> -->
+ 		
  		
  		<!-- 1:1 -->
  		<collection property="productImgDTOs" javaType="List" ofType="ProductImgDTO">
@@ -103,17 +106,17 @@
  			SELECT PRODUCT_SEQ.NEXTVAL FROM DUAL
  		</selectKey>
  		INSERT INTO PRODUCT 
- 		VALUES (#{num} ,#{title}, #{price}, #{info},SYSDATE)
+ 		VALUES (#{num} ,#{title}, #{price}, #{info},SYSDATE,1)
  	</insert>
  	
  	<insert id="setCategoryAdd" parameterType="ProductDTO">
   		INSERT INTO PRODUCTKIND (NUM,ID)
-  		VALUES (#{num}, (SELECT * FROM CATEGORY WHERE ID BETWEEN 1  AND 2))
+  		VALUES (#{num},#{id})
   	</insert>
 	
 
  	<delete id="setProductDelete" parameterType="ProductDTO">
- 		DELETE PRODUCT WHERE NUM=#{num, jdbcType=BIGINT}
+ 		DELETE PRODUCT WHERE NUM=#{num}
  		
  	</delete> 
  	

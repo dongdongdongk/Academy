@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import com.ac.home.util.Pager;
 import com.ac.home.member.MemberDTO;
+import com.ac.home.notice.NoticeDTO;
 import com.ac.home.product.ProductDTO;
 import com.ac.home.product.ProductImgDTO;
 import com.ac.home.qna.QnaDTO;
@@ -42,7 +43,11 @@ public class ProductDAO {
 		
 		return sqlSession.insert(NAMESPACE+"setProductAdd", productDTO);
 	}
-
+	
+	public int getCategoryAdd(ProductDTO productDTO)throws Exception{
+		
+		  return sqlSession.insert(NAMESPACE+"setCategoryAdd", productDTO); 
+	}
 	
 	public int setCategoryAdd(ProductDTO productDTO)throws Exception{
 		
@@ -73,6 +78,7 @@ public class ProductDAO {
 		return sqlSession.delete(NAMESPACE+"getProductFileDelete", productImgDTO);
 	}
 	
+
 
 	
 }

@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.ac.home.product.ProductDTO;
+
 @Repository
 public class CartDAO {
 	
@@ -28,5 +30,12 @@ public class CartDAO {
 	
 	public Long getSumPrice(CartDTO cartDTO) throws Exception {
 		return sqlSession.selectOne(NAMESPACE + "getSumPrice", cartDTO);
+	}
+	public int getCartUpdate(CartDTO cartDTO)throws Exception{
+		
+		return sqlSession.update(NAMESPACE+"getCartUpdate", cartDTO);
+	}
+	public Long getSubPrice(CartDTO cartDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + "getSubPrice", cartDTO);
 	}
 }
