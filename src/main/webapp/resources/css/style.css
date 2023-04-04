@@ -2758,6 +2758,7 @@ p.footer-copyright {
 .checkcolor {
     color: red;
     font-weight: 900; 
+    background-color: antiquewhite;
 }
 
 .iconSize {

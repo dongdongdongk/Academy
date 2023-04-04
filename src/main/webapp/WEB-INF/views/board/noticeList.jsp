@@ -38,8 +38,18 @@
 			 	
 			  	<tbody>
 			  		<c:forEach items="${list}" var="dto">
-						<tr class="${dto.checked ? 'checked' : ''}">
-							<td><input type="checkbox" class="check-item"></td>
+						<tr>
+							<c:if test="${not empty member}">
+
+								<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
+									<td><input type="checkbox" class="check-item" data-num-check="${dto.checked}"></td>
+									
+								</c:if>
+							</c:if>
+
+
+
+							<td><input hidden type="checkbox" class="check-item" data-num-check="${dto.checked}"></td>
 							<td class="noticeNum" data-num-id="${dto.num}">${dto.num}</td>
 							<td class="d-flex align-items-center">
 								
@@ -55,6 +65,7 @@
 						</tr>
 					</c:forEach>
 			  	</tbody>
+				
 			</table>
 			
 
