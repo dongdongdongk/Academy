@@ -54,5 +54,9 @@
 		USING(NUM)
 		WHERE ID = #{id}
 	</select>
+	
+	<select id="cartCheck" resultType="Long" parameterType="CartDTO">
+		SELECT COUNT(*) FROM CART WHERE NUM = #{num} AND ID = #{id}
+	</select>
  
   </mapper>

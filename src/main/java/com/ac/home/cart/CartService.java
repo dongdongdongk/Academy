@@ -32,4 +32,8 @@ public class CartService{
 	public Long getSumPrice(CartDTO cartDTO) throws Exception {
 		return cartDAO.getSumPrice(cartDTO);
 	}
+	
+	public Long cartCheck(CartDTO cartDTO) throws Exception {
+		return cartDAO.cartCheck(cartDTO);
+	}
 }

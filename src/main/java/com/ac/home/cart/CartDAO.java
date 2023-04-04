@@ -29,4 +29,8 @@ public class CartDAO {
 	public Long getSumPrice(CartDTO cartDTO) throws Exception {
 		return sqlSession.selectOne(NAMESPACE + "getSumPrice", cartDTO);
 	}
+	
+	public Long cartCheck(CartDTO cartDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + "cartCheck", cartDTO);
+	}
 }
