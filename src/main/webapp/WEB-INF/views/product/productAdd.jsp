@@ -46,7 +46,7 @@
 			</select>
 
 			<div class="mb-3">
-				<button class="my btn btn-danger" type="submit">등록</button>
+				<button id="addProduct" class="my btn btn-danger" type="submit">등록</button>
 			</div>
 		</form>
 	</div>
