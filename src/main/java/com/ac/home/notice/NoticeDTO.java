@@ -12,12 +12,14 @@ public class NoticeDTO {
 	private Date regDate;
 	private Long hit;
 	private List<NoticeFileDTO> noticeFileDTOs;
-	private boolean checked;
+	private Long checked;
 	
-	public boolean isChecked() {
+
+	
+	public Long getChecked() {
 		return checked;
 	}
-	public void setChecked(boolean checked) {
+	public void setChecked(Long checked) {
 		this.checked = checked;
 	}
 	public Long getNum() {

@@ -37,20 +37,23 @@
 			 	</thead>
 			 	
 			  	<tbody>
-			  			<c:forEach items="${list}" var="dto">
-					<tr class="${dto.checked ? 'checked' : ''}">
-						<td><input type="checkbox" class="check-item"></td>
-						<td>${dto.num}</td>
-						<td class="d-flex align-items-center"><a href="./detail?num=${dto.num}">${dto.title}</a>
-						<c:forEach items="${dto.noticeFileDTOs}" var="fileDTO">
-							<c:if test="${fileDTO.oriName ne null}"><img class="iconSize" src="/resources/images/file1.png"></c:if>
-						</c:forEach></td>
-						
-						<td>${dto.writer}</td>
-						<td>${dto.regDate}</td>
-						<td>${dto.hit}</td>
-					</tr>
-				</c:forEach>
+			  		<c:forEach items="${list}" var="dto">
+						<tr class="${dto.checked ? 'checked' : ''}">
+							<td><input type="checkbox" class="check-item"></td>
+							<td class="noticeNum" data-num-id="${dto.num}">${dto.num}</td>
+							<td class="d-flex align-items-center">
+								
+								<a class="title" href="./detail?num=${dto.num}">${dto.title}</a>
+									
+								<c:forEach items="${dto.noticeFileDTOs}" var="fileDTO">
+								<c:if test="${fileDTO.oriName ne null}"><img class="iconSize" src="/resources/images/file1.png"></c:if>
+							</c:forEach></td>
+							
+							<td>${dto.writer}</td>
+							<td>${dto.regDate}</td>
+							<td>${dto.hit}</td>
+						</tr>
+					</c:forEach>
 			  	</tbody>
 			</table>
 			

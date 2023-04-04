@@ -2756,9 +2756,12 @@ p.footer-copyright {
 }
 
 .checkcolor {
-    border: #f03b3b;
     color: red;
-    
-    
+    font-weight: 900; 
+}
+
+.iconSize {
+    width : 20px;
+    height : 20px;
 
 }

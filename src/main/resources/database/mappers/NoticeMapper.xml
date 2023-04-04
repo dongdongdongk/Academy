@@ -108,6 +108,10 @@
 		WHERE NUM = #{num}
    </update>
   
-  
+  <update id="setNoticeChecked" parameterType="NoticeDTO">
+  	UPDATE NOTICE 
+	SET CHECKED = #{checked}
+	WHERE NUM = #{num}
+  </update>
   
   </mapper>

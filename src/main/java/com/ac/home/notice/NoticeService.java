@@ -80,4 +80,8 @@ public class NoticeService {
 	public int setNoticeHit (NoticeDTO noticeDTO) throws Exception {
 		return noticeDAO.setNoticeHit(noticeDTO);
 	}
+	
+	public int setNoticeChecked(NoticeDTO noticeDTO) throws Exception {
+		return noticeDAO.setNoticeChecked(noticeDTO);
+	}
 }
