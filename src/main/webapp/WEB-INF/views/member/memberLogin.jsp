@@ -29,7 +29,8 @@
 		        <input type="checkbox" name="remember" value="true" class="form-check-input" id="remember">
 		        <label class="form-check-label" for="remember">아이디 기억하기</label>
 		    </div>
-	  		<button type="submit" class="btn btn-outline-secondary">로그인</button>	
+	  		<button id="memberLogin" data-member-id="${member.id}"  type="submit" class="btn btn-outline-secondary">로그인</button>
+			<!-- <button id="addToCartBtn" data-member-id="${member.id}" data-product-id="${dto.num}" type="button" class="btn btn-outline-primary">장바구니</button> 	 -->
 		</form>
 	</div>
     <div class="row justify-content-center my-3">
@@ -39,8 +40,10 @@
         </div>
     </div>
 </div>
+<script src="../../../resources/js/memberLogin.js"></script>
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
+
 </body>
 </html>
 

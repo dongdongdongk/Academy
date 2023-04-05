@@ -14,19 +14,32 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 </head>
-<body>
+<body class="courses-page">
+            <div class="page-header">
+              <div class="page-header-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <header class="entry-header">
+                                    <h1>수강후기</h1>
+                                </header><!-- .entry-header -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .page-header-overlay -->
+            </div><!-- .page-header -->
 <c:import url="../template/header.jsp"></c:import>
-	<header style="margin-top: 200px;">
+	<header style="margin-top: 50px;">
 		<div class="container-fluid">
-			<div id="sub_banner" class="bgColor">
+			<!-- <div id="sub_banner" class="bgColor">
 				<h2 class="page_title">
 					수강후기
 				</h2>
-			</div>
+			</div> -->
 	
 			<div class="page-wrapper" style="position:relative;">
 				<div class="post-slider">
-				  <h1 class="silder-title">수강후기</h1>
+				  <!-- <h1 class="silder-title"></h1> -->
 				  <!-- <i class="fas fa-chevron-left prev material-symbols-outlined"></i>
 				  <i class="fas fa-chevron-right next material-symbols-outlined"></i> -->
 				  <div class="post-wrapper">

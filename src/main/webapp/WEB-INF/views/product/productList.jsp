@@ -10,24 +10,24 @@
 <c:import url="../template/common_css.jsp"></c:import>
 <link rel="stylesheet" href="/resources/css/productList.css">
 </head>
-<body>
+<body class="courses-page">
+            <div class="page-header">
+              <div class="page-header-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <header class="entry-header">
+                                    <h1>수강후기</h1>
+                                </header><!-- .entry-header -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .page-header-overlay -->
+            </div><!-- .page-header -->
 
 	<c:import url="../template/header.jsp"></c:import>
-	<div class="sideBar">
-		<c:import url="../template/adminSideBar.jsp"></c:import>
-
-		<div class="container admin_container">
-			<div class="row lists">
-				<!-- 리스트 들어갈 영역 -->
-			</div>
-		</div>
-	</div>
-	<header style="margin-top: 200px;">
+	<header style="margin-top: 50px;">
 	<div class="container- fluid my-5">
-
-		<div class="row mb-4 ">
-			<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품LIST</h1>
-		</div>
 		
 		<div id="catdiv">
 			<div class="row input-group mb-3">
