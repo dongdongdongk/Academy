@@ -7,6 +7,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <c:import url="../template/common_css.jsp"></c:import>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
@@ -16,9 +18,9 @@
 			<h1 class="col-md-7 text-center">상품 업데이트 Page</h1>
 		</div>
 		
-		<div class="row justify-content-center my-4">
-		<form class="col-md-7" action="./update" method="post" enctype="multipart/form-data">
-				
+		 <div class="row justify-content-center my-4">
+		
+				<form class="col-md-7" action="./update" method="post" enctype="multipart/form-data">
 		<%-- 		<input type="hidden" name="num" value="${dto.num}"> --%>
 				
 				<div class="mb-3">
@@ -44,29 +46,35 @@
 						</div>
 					</c:forEach>	
 				</div>
+	
 
-
-				<div class="mb-3">
+				<div class="mb-3" id="fileList">
 					<button type="button" id="fileAdd">ADD</button><td>사진등록</td>
-					</div>
-				</div>	
-				<fieldset>
+				</div>
+				
+					
+				 <div class="mb-3">
 				
 					<input class="btn btn-info" type="submit" value="수정">
 					
-				</fieldset>
+				  </div>
+				 </form>
+			 </div>
 			<!-- 	<div class="mb-3">
 					<button class="my btn btn-danger" type="submit">등록</button>
 				</div> -->
-		</form>
+				
 		</div>
-</div>
-</header>	
-<script src="../resources/js/fileManger.js"></script>
+
+</header>
+	
+<!-- <script src="../resources/js/fileManger.js"></script> -->
+<script src="../../../resources/js/fileManger.js"></script>
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
 <script>
 	setMax(1);
+	$("#info").summernote();
 </script>			
 </body>
 </html>

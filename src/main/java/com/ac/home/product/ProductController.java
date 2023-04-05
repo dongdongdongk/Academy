@@ -25,6 +25,7 @@ import oracle.sql.json.OracleJsonParser;
 
 import com.ac.home.cart.CartDTO;
 import com.ac.home.cart.CartService;
+import com.ac.home.member.MemberDTO;
 import com.ac.home.product.ProductDTO;
 
 @Controller
@@ -34,6 +35,18 @@ public class ProductController {
 	   @Autowired
 	   private ProductService productService;
 	  
+	   
+	   @PostMapping("productIdCheck")
+		public ModelAndView getProductIdCheck(ProductDTO productDTO)throws Exception{
+			boolean check = productService.getProductIdCheck(productDTO);
+			ModelAndView mv = new ModelAndView();
+			
+			mv.addObject("result", check);
+			mv.setViewName("common/ajaxResult");
+			return mv;
+		}
+	   
+	   
 	   //list
 	   @RequestMapping(value="list", method = RequestMethod.GET)
 		public ModelAndView getProductList(Pager pager)throws Exception{
@@ -95,7 +108,7 @@ public class ProductController {
 			
 			productDTO = productService.getProductDetail(productDTO);
 		
-			mv.setViewName("product/productDetail");
+			
 			mv.addObject("dto", productDTO);
 			mv.setViewName("product/productDetail");
 			
@@ -137,12 +150,13 @@ public class ProductController {
 			
 		}
 		
-		//�닔�젙 �뤌 �씠�룞
+		
 		@RequestMapping(value="update", method = RequestMethod.GET)
 		public ModelAndView setProductUpdate(ProductDTO productDTO) throws Exception{
 			ModelAndView mv = new ModelAndView();
-			productDTO = productService.getProductDetail(productDTO);
 			
+			productDTO = productService.getProductDetail(productDTO);
+			System.out.println("프로덕트 컨트롤러1");
 			mv.setViewName("product/productUpdate");
 			mv.addObject("dto", productDTO);
 			return mv;
@@ -152,7 +166,7 @@ public class ProductController {
 			ModelAndView mv = new ModelAndView();
 		
 			int result = productService.setProductUpdate(productDTO,pic);
-			
+			System.out.println("프로덕트 컨트롤러2");
 			mv.setViewName("redirect:./list");
 			
 			return mv;
@@ -170,12 +184,9 @@ public class ProductController {
 		}
 	
 	 
-		
-		
-		
-
+	
 	}
-	   
+
 	   
 	   
 	

@@ -11,7 +11,17 @@
 <link rel="stylesheet" href="/resources/css/productList.css">
 </head>
 <body>
+
 	<c:import url="../template/header.jsp"></c:import>
+	<div class="sideBar">
+		<c:import url="../template/adminSideBar.jsp"></c:import>
+
+		<div class="container admin_container">
+			<div class="row lists">
+				<!-- 리스트 들어갈 영역 -->
+			</div>
+		</div>
+	</div>
 	<header style="margin-top: 200px;">
 	<div class="container- fluid my-5">
 

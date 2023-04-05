@@ -38,7 +38,8 @@
             </div>
           </c:forEach>
         </div>
-
+       
+		
         <form action="./update" id="frm">
           <input type="hidden" name="num" value="${dto.num}">
           <c:if test="${not empty member}">
@@ -47,12 +48,10 @@
               <button id="update" type="submit" class="btn btn-outline-primary">상품수정</button>
             </c:if>
           </c:if>
-          
           <c:if test="${not empty member}">
 	          <button id="addToCartBtn" data-member-id="${member.id}" data-product-id="${dto.num}" type="button" class="btn btn-outline-primary">장바구니</button>          
           </c:if>
-
-          <button id="list" type="button" class="btn btn-outline-primary"><a href="./productList">구매</a></button>
+          
           <button id="list" type="button" class="btn btn-outline-secondary"><a href="./list">목록으로</a></button>
         </form>
       </c:if>
@@ -86,9 +85,11 @@
 </main>
 </header>
 
-<c:import url="../template/common_js.jsp"></c:import>
-<script src="/resources/js/productCart.js"></script>
 
+
+<c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
+<script src="/resources/js/productCart.js"></script>
+<script src="../../../resources/js/productDetail.js"></script>
 </body>
 </html>

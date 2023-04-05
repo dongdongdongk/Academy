@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.ac.home.util.Pager;
+import com.ac.home.member.MemberDTO;
+import com.ac.home.notice.NoticeDTO;
 import com.ac.home.product.ProductDTO;
 import com.ac.home.product.ProductImgDTO;
 import com.ac.home.qna.QnaDTO;
@@ -27,6 +29,18 @@ public class ProductService {
 	@Autowired
 	private FileManager fileManager;
 	
+	
+	public boolean getProductIdCheck(ProductDTO produtDTO)throws Exception{
+		produtDTO = productDAO.getProductLogin(produtDTO);
+		
+		boolean check = true;
+		
+		if(produtDTO != null) {
+			check = false;
+		}
+		return check;
+		
+	}
 	
 	public List<ProductDTO> getProductList(Pager pager)throws Exception{
 		
@@ -50,10 +64,10 @@ public class ProductService {
 		
 		int result = productDAO.setProductAdd(productDTO);
 		
-//		result = productDAO.setCategoryAdd(productDTO); 
+		 
 	
 		if(!pic.isEmpty()) { //pic.getSize() !=0
-			System.out.println("서비스 프로덕트 에드 PIC 에드");
+			System.out.println("서비스 프로덕트 Add PIC ");
 			//1. File을 HDD에 저장 경로
 			// Project 경로가 아닌 OS가 이용하는 경로
 		String realPath= servletContext.getRealPath("resources/images");
@@ -72,9 +86,10 @@ public class ProductService {
 	public int setProductUpdate(ProductDTO productDTO,MultipartFile pic)throws Exception{
 		
 		int result = productDAO.setProductUpdate(productDTO);
-	
+		System.out.println("업데이트 해줘 서비스 ");
+		
 		if(!pic.isEmpty()) { //pic.getSize() !=0
-			
+			System.out.println("서비스 프로덕트 업데이트 PIC ");
 			//1. File을 HDD에 저장 경로
 			// Project 경로가 아닌 OS가 이용하는 경로
 		String realPath= servletContext.getRealPath("resources/images");
@@ -82,13 +97,11 @@ public class ProductService {
 		String fileName = fileManager.fileSave(pic, realPath);
 		
 		ProductImgDTO productImgDTO = new ProductImgDTO();
-		productImgDTO.setNum(productDTO.getNum());
 		productImgDTO.setSave(fileName);
 		productImgDTO.setUpLoad(pic.getOriginalFilename());
-		
-		
+		productImgDTO.setNum(productDTO.getNum());
+	
 		result = productDAO.setProductImgAdd(productImgDTO);
-		
 		}
 		return result;
 	}
@@ -108,18 +121,14 @@ public class ProductService {
 		}
 		return result;
 	}
-	/*
-	 * public int setProductHit(ProductDTO productDTO) throws Exception { return
-	 * productDAO.setProductHit(productDTO); }
-	 */
+	
 
 	public int getProductFileDelete(ProductImgDTO productImgDTO) throws Exception{
 		System.out.println("ProductFileDelete");
 		return productDAO.getProductFileDelete(productImgDTO);
 	}
+	
+	
 
-	
-	
-}
-	
+}	
 

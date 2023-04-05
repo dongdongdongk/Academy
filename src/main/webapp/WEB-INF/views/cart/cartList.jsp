@@ -24,11 +24,14 @@
 						<th>상품명</th>
 						<th>이미지</th>
 						<th>가격</th>
+						<th>수량</th>
+						<th>총 가격</th>
 						<th>삭제여부</th>
 					</tr>
 				</thead>
 				<tbody>
-					
+					<input type="hidden" id="prdNum10">
+
 					<c:choose>
 						<c:when test="${not empty member}">
 					  		<c:forEach items="${list}" var="dto">
@@ -39,18 +42,43 @@
 											<td>${product.title}</td>
 											<td><img src="../resources/upload/product/${product.productImgDTOs.save}" class="img-fluid"></td>
 											<td>${product.price}</td>
-										</c:forEach>
-				                    	<td><button data-cart-id="${dto.cartNum}" class="deleteBtn btn btn-danger">X</button></td>
-									</tr>
+											<td> <div class="form_spinner_box size_sm">
+							        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all ui-spinner-right">
+							        <button id="btnP${dto.cartNum}" data-cart-id="${dto.cartNum}"  type="button" class="decrease ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget btnP">
+							        <span class="offscreen ui-icon ui-icon-triangle-1-s">+</span></button>
+							        
+									<input type="number" id="quantity${dto.cartNum}" value="${dto.quantity}" class="form_spinner ui-spinner-input" title="수량" autocomplete="off">
+							        <button id="btnN${dto.cartNum}" data-cart-id="${dto.cartNum}"  type="button" class="increase ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget btnN">
+							       <span class="offscreen ui-icon ui-icon-triangle-1-n">-</span></button></span>
+							        </div></td>
+											<td>${product.price*dto.quantity}</td>
+										
+                                        </c:forEach>
+				                    	
+									
+        
+        							<td><button data-cart-id="${dto.cartNum}" class="deleteBtn btn btn-danger">X</button></td>
+        							<td>
+									
+
+									</td>								
+										</tr>
+									
 								</c:if>
 							</c:forEach>
-			  			</c:when>
+							
+							</c:when>
 			  		
 				  		<c:otherwise>
 				  			<tr><td colspan="5"><h3>로그인을 해주세요.</h3></td></tr>
 				  		</c:otherwise>
 			  		</c:choose>
-			  		
+				
+					
+				
+					
+	
+
 					<c:if test="${not empty sumPrice}">
 						<h3>총 금액 : ${sumPrice}원</h3>
 					</c:if>

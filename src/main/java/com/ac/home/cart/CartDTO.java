@@ -12,6 +12,14 @@ public class CartDTO {
 	private List<ProductDTO> productDTOs;
 	private List<ProductImgDTO> productImgDTOs;
 	
+	private Long quantity;
+	
+	public Long getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(Long quantity) {
+		this.quantity = quantity;
+	}
 	public Long getCartNum() {
 		return cartNum;
 	}

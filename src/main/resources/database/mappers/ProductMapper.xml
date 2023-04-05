@@ -37,6 +37,12 @@
  	 	<include refid="searchCondition"></include>	
  	</select>
  	
+ 	<select id="getProductLogin" parameterType="ProductDTO" resultType="ProductDTO">
+  		SELECT *
+		FROM 
+		PRODUCT 
+		WHERE TITLE = #{title}
+  	</select>
  
  	<select id="getProductList" parameterType="Pager" resultMap="productDetailResult">
  		SELECT * FROM
@@ -78,6 +84,9 @@
  		<result column="INFO" property="info"/>
  		<result column="REGDATE" property="regDate"/>
  		<result column="CATEGORYNUM" property="categoryNum"/>
+ 		<result column="QUANTITY" property="quantity"/> -->
+ 		
+ 		
  		<!-- 1:1 -->
  		<collection property="productImgDTOs" javaType="List" ofType="ProductImgDTO">
  			<id column="FILENUM" property="fileNum"/>
@@ -107,13 +116,13 @@
 	
 
  	<delete id="setProductDelete" parameterType="ProductDTO">
- 		DELETE PRODUCT WHERE NUM=#{num, jdbcType=BIGINT}
+ 		DELETE PRODUCT WHERE NUM=#{num}
  		
  	</delete> 
  	
  	<update id="setProductUpdate" parameterType="ProductDTO">
  		UPDATE PRODUCT SET TITLE=#{title}, PRICE=#{price}, INFO=#{info}
- 		WHERE NUM=#{num}
+ 		WHERE NUM= #{num, jdbcType=BIGINT}
  	</update>
  	
  	<insert id="setProductImgAdd" parameterType="ProductImgDTO">
@@ -130,11 +139,7 @@
 	</delete>
 	
 	
-	<!-- <update id="setProductHit" parameterType="ProductDTO">
-  		UPDATE PRODUCT SET HIT = #{hit} + 1
-		WHERE NUM = #{num}
-  	</update>
-	 -->
+	
 	
   	
   </mapper>

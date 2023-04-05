@@ -16,8 +16,15 @@ public class ProductDTO {
 	private List<ProductImgDTO> productImgDTOs;
 	private Long categoryNum;
 	private List<CategoryDTO> categoryDTOs;
-	private List<BoardFileDTO> boardFileDTOs; 
+	private List<BoardFileDTO> boardFileDTOs;
 	
+	private Long quantity;
+	
+	public Long getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(Long quantity) {
+		this.quantity = quantity;
 	public Long getCategoryNum() {
 		return categoryNum;
 	}
@@ -36,6 +43,7 @@ public class ProductDTO {
 	public void setCategoryDTOs(List<CategoryDTO> categoryDTOs) {
 		this.categoryDTOs = categoryDTOs;
 	}
+	
 	public List<ProductImgDTO> getProductImgDTOs() {
 		return productImgDTOs;
 	}
@@ -60,6 +68,7 @@ public class ProductDTO {
 	public void setPrice(Long price) {
 		this.price = price;
 	}
+	
 	public String getInfo() {
 		return info;
 	}
@@ -71,6 +80,6 @@ public class ProductDTO {
 	}
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
-	}
-	
+	}	
+
 }

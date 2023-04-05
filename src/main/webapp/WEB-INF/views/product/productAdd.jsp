@@ -19,11 +19,12 @@
 	</div>
 	
 	<div class="row justify-content-center my-4">
-		<form class="col-md-7" action="./productAdd" method="post" enctype="multipart/form-data">
+		<form class="col-md-7" id="frm" action="./productAdd" method="post" enctype="multipart/form-data">
 			
 			<div class="mb-3">
 			  <label for="title" class="form-label">제품명</label>
-			  <input type="text" name="title" class="form-control" id="title" placeholder="제품명 입력">
+			  <input type="text" name="title" class="form-control" id="title" placeholder="제품명 입력" required>
+			  <div id="titleResult"></div>
 			</div>
 			
 			<div class="mb-3">
@@ -39,6 +40,11 @@
 			<div id="fileList">
 				<button type="button" id="fileAdd">ADD</button><td>사진등록</td>
 			</div>	
+		
+			<select class="form-select" name="kind" id="kind" aria-label="Default select example">
+				<option value="1">책</option>
+				<option value="2">강의</option>
+			</select>
 			
 			<select class="form-select" name="categoryNum" id="categoryNum">
 				<option value="1">책</option>
@@ -53,11 +59,14 @@
 </div>
 </header>
 <script src="../resources/js/fileManger.js"></script>
+<script src="../../../resources/js/productAdd.js"></script>
+
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
+
 <script>
 	setMax(1);
-	$("#info2").summernote();
+	$("#info").summernote();
 	// setParam('f');
 </script>
 </body>
