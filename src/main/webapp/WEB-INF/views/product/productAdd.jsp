@@ -41,10 +41,10 @@
 				<button type="button" id="fileAdd">ADD</button><td>사진등록</td>
 			</div>	
 		
-			<select class="form-select" name="kind" id="kind" aria-label="Default select example">
+			<!-- <select class="form-select" name="kind" id="kind" aria-label="Default select example">
 				<option value="1">책</option>
 				<option value="2">강의</option>
-			</select>
+			</select> -->
 			
 			<select class="form-select" name="categoryNum" id="categoryNum">
 				<option value="1">책</option>

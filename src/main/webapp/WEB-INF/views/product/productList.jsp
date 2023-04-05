@@ -122,7 +122,8 @@
 			<form class="row g-3" action="./list" method="get" id="searchForm">
 				<input type="hidden" name="page" value="1" id="page">
 				<div class="col-auto">
-					<label for="kind" class="visually-hidden">Kind</label> <select
+					<label for="kind" class="visually-hidden">Kind</label> 
+					<select
 						class="form-select" name="kind" id="kind"
 						aria-label="Default select example">
 						<option value="title" ${pager.kind eq 'title'? 'selected':''}>Title</option>
