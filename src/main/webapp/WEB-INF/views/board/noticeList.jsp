@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/resources/css/menu/eventIcon.css">
+<link rel="stylesheet" href="/resources/css/style.css">
 <c:import url="../template/common_css.jsp"></c:import>
 <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
   integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
@@ -156,8 +157,8 @@
 	</header>
 	<c:import url="../template/bottom.jsp"></c:import>
 	<c:import url="../template/common_js.jsp"></c:import>
-	<script src="../resources/js/listTop.js"></script>		
-	<script src="../resources/js/pageing.js"></script>
-	<script src="../resources/css/style.css"></script>
+	<script src="/resources/js/listTop.js"></script>		
+	<script src="/resources/js/pageing.js"></script>
+	
 </body>
 </html>

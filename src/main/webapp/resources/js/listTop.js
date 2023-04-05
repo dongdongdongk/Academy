@@ -9,7 +9,7 @@ $(document).ready(function() {
         row.find('.title').addClass("checkcolor");
         row.addClass("checked");
         // row.insertBefore($("tbody tr:first-child"));
-        let img = '<img class="iconSize" src="/resources/images/notice.png">';
+        let img = '<img class="iconSize2" src="/resources/images/notice.png">';
         row.find('.title').append(img);
         row.prependTo("tbody");
     }

@@ -82,7 +82,7 @@
  		<result column="INFO" property="info"/>
  		<result column="REGDATE" property="regDate"/>
  		<result column="CATEGORYNUM" property="categoryNum"/>
- 		<result column="QUANTITY" property="quantity"/> -->
+ 		<result column="QUANTITY" property="quantity"/>
  		
  		<collection property="productImgDTOs" javaType="List" ofType="ProductImgDTO">
  			<id column="FILENUM" property="fileNum"/>
