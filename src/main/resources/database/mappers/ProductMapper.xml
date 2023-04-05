@@ -118,7 +118,7 @@
  	
  	<update id="setProductUpdate" parameterType="ProductDTO">
  		UPDATE PRODUCT SET TITLE=#{title}, PRICE=#{price}, INFO=#{info}
- 		WHERE NUM=#{num}
+ 		WHERE NUM= #{num, jdbcType=BIGINT}
  	</update>
  	
  	<insert id="setProductImgAdd" parameterType="ProductImgDTO">

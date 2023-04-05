@@ -67,7 +67,7 @@ public class ProductService {
 		 
 	
 		if(!pic.isEmpty()) { //pic.getSize() !=0
-			System.out.println("서비스 프로덕트 에드 PIC 에드");
+			System.out.println("서비스 프로덕트 Add PIC ");
 			//1. File을 HDD에 저장 경로
 			// Project 경로가 아닌 OS가 이용하는 경로
 		String realPath= servletContext.getRealPath("resources/images");
@@ -86,9 +86,10 @@ public class ProductService {
 	public int setProductUpdate(ProductDTO productDTO,MultipartFile pic)throws Exception{
 		
 		int result = productDAO.setProductUpdate(productDTO);
-	
+		System.out.println("업데이트 해줘 서비스 ");
+		
 		if(!pic.isEmpty()) { //pic.getSize() !=0
-			
+			System.out.println("서비스 프로덕트 업데이트 PIC ");
 			//1. File을 HDD에 저장 경로
 			// Project 경로가 아닌 OS가 이용하는 경로
 		String realPath= servletContext.getRealPath("resources/images");
@@ -96,13 +97,11 @@ public class ProductService {
 		String fileName = fileManager.fileSave(pic, realPath);
 		
 		ProductImgDTO productImgDTO = new ProductImgDTO();
-		productImgDTO.setNum(productDTO.getNum());
 		productImgDTO.setSave(fileName);
 		productImgDTO.setUpLoad(pic.getOriginalFilename());
-		
-		
+		productImgDTO.setNum(productDTO.getNum());
+	
 		result = productDAO.setProductImgAdd(productImgDTO);
-		
 		}
 		return result;
 	}
