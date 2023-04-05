@@ -76,9 +76,7 @@
  	</select>
  	
  	<resultMap type="ProductDTO" id="productDetailResult">
- 		<!-- Primary key -->
  		<id column="NUM" property="num"/>
- 		<!-- 그외 나머지 -->
  		<result column="TITLE" property="title"/>
  		<result column="PRICE" property="price"/>
  		<result column="INFO" property="info"/>
@@ -86,15 +84,12 @@
  		<result column="CATEGORYNUM" property="categoryNum"/>
  		<result column="QUANTITY" property="quantity"/> -->
  		
- 		
- 		<!-- 1:1 -->
  		<collection property="productImgDTOs" javaType="List" ofType="ProductImgDTO">
  			<id column="FILENUM" property="fileNum"/>
  			<result column="SAVE" property="save"/>
  			<result column="UPLOAD" property="upLoad"/>
  		</collection>
- 		<!-- 1:N -->
- 		<!-- <collection property=""></collection> -->
+
  		<collection property="categoryDTOs" javaType="List" ofType="categoryDTO">
  			<id column="ID" property="id"/>
  			<result column="NAME" property="name"/>
@@ -137,11 +132,6 @@
 	<delete id="getProductFileDelete" parameterType="ProductImgDTO">
 		DELETE PRODUCTIMG WHERE FILENUM=#{fileNum}
 	</delete>
-	
-	
-	
-	
-  	
   </mapper>
 		
  	

@@ -25,6 +25,7 @@ public class ProductDTO {
 	}
 	public void setQuantity(Long quantity) {
 		this.quantity = quantity;
+	}
 	public Long getCategoryNum() {
 		return categoryNum;
 	}
