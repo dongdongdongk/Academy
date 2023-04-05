@@ -32,6 +32,7 @@ $(document).ready(function() {
            //     url: "/notice/checked", 
            //     data: {
            //         num: num, 
+           row.prependTo("tbody");
            //         checked: 1
            //     }, // ID와 체크된 값 서버로 전송
                
@@ -43,31 +44,30 @@ $(document).ready(function() {
 
 
 
-           row.prependTo("tbody");
            
-       } else if($(this).prop("!checked")) {
-           $(this).closest("tr").removeClass("checked");
-           $(this).closest("tr").find('.title').removeClass("checkcolor");
-           $(this).closest("tr").find('.iconSize').remove();
-
-           // let num = $(".noticeNum").attr("data-num-id");
-           // $.ajax({
-           //     type: "POST",
-           //     url: "/notice/checked", 
-           //     data: {
-           //         num: num, 
-           //         checked: 0
-           //     }, // ID와 체크된 값 서버로 전송
-           //     success: function() {
+        } else {
+            $(this).closest("tr").removeClass("checked");
+            $(this).closest("tr").find('.title').removeClass("checkcolor");
+            $(this).closest("tr").find('.iconSize').remove();
+            
+            // let num = $(".noticeNum").attr("data-num-id");
+            // $.ajax({
+                //     type: "POST",
+                //     url: "/notice/checked", 
+                //     data: {
+                    //         num: num, 
+                    //         checked: 0
+                    //     }, // ID와 체크된 값 서버로 전송
+                    //     success: function() {
            //         console.log("체크x")
            //         alert("공지고정 취소")
            //     }
            // });
-
-
+           
+           
        }
    });
-    
+   
     
     $(".check-item").change(function() {
         
@@ -88,7 +88,9 @@ $(document).ready(function() {
             });
             
         } else {
+            let num = $(".noticeNum").attr("data-num-id");
             $.ajax({
+                
                 type: "POST",
                 url: "/notice/checked", 
                 data: {
