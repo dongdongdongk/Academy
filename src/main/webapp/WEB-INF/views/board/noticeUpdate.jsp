@@ -27,6 +27,12 @@
 			  <label for="contents" class="form-label">내용</label>
 			  <textarea name="contents" class="form-control" id="contents" placeholder="내용 입력" rows="7">${dto.contents}</textarea>
 			</div>
+
+			<div class="mb-3">
+				<label for="check" class="form-label">상단고정</label>
+				<input type="checkbox" name="check" class="form-control" value="${dto.checked}" id="check" >
+			  </div>
+
 			
 		<div class="mb-3">
 			<button type="submit">수정</button>

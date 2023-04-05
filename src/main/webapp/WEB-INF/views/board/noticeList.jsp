@@ -25,6 +25,7 @@
 
 		  
 		<div class="row col-md-7 mx-auto">
+			
 			<table class="table">
 			  	<thead class="table-dark">
 			 		<tr>
@@ -39,11 +40,11 @@
 			  	<tbody>
 			  		<c:forEach items="${list}" var="dto">
 						<tr>
+
 							<c:if test="${not empty member}">
 
-								<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
+								<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">	
 									<td><input type="checkbox" class="check-item" data-num-check="${dto.checked}"></td>
-									
 								</c:if>
 							</c:if>
 
