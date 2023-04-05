@@ -78,6 +78,7 @@
   		<result column="contents" property="contents"/>
   		<result column="regDate" property="regDate"/>
   		<result column="hit" property="hit"/>
+  		<result column="checked" property="checked"/>
   		
   		<collection property="noticeFileDTOs" javaType="List" ofType="NoticeFileDTO">
   			<id column="fileNum" property="fileNum"/>
@@ -108,6 +109,10 @@
 		WHERE NUM = #{num}
    </update>
   
-  
+  <update id="setNoticeChecked" parameterType="NoticeDTO">
+  	UPDATE NOTICE 
+	SET CHECKED = #{checked}
+	WHERE NUM = #{num}
+  </update>
   
   </mapper>

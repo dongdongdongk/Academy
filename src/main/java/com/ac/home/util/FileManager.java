@@ -53,7 +53,6 @@ public class FileManager {
 		
 		//2) Spring API FileCopyUtis 객체의 copy메서드 사용
 		FileCopyUtils.copy(multipartFile.getBytes(), file);
-		//임시 폴더에서 spring 정식 폴더로 이동
 		
 		// D:/pooh/workspace/Academy/src/main/webapp/resources/images
 		// D:/GDJ60_12/workspace_Legacy/Academy/src/main/webapp/resources/images

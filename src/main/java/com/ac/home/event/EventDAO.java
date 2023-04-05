@@ -53,5 +53,9 @@ public class EventDAO {
 		return sqlSession.update(NAMESPACE + "setEventUpdate",eventDTO);
 	}
 	
+	public EventDTO getDateCheck(EventDTO eventDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + "getDateCheck", eventDTO);
+	}
+	
 	
 }
