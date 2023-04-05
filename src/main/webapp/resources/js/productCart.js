@@ -87,47 +87,26 @@ $(".btnN").on('click', function() {
   let cartNum = $(this).attr("data-cart-id") // 장바구니 상품 ID
   let quantity = Number($("#quantity" + cartNum).attr("value")) // 변경된 수량
   
+  if (quantity <= 1) {
+    quantityInput.val(1);
+  } else {
+    $.ajax({
+      type: 'POST', // 업데이트 요청이므로 PUT 메서드 사용
+      url: '/cart/cartUpdate', // 업데이트할 장바구니 상품 ID를 URL에 포함
+      data: { 
+        quantity: quantity - 1,
+        cartNum: cartNum
+      }, // 변경된 수량을 데이터로 전송
+      success: function() {
+        console.log('수량 업데이트 성공'); // 업데이트 성공 시 콘솔에 로그 출력
+        window.location.reload();
+      },
+      error: function() {
+        console.log('수량 업데이트 실패'); // 업데이트 실패 시 콘솔에 로그 출력
+      }
+    });
+  }
   // AJAX 요청
-  $.ajax({
-    type: 'POST', // 업데이트 요청이므로 PUT 메서드 사용
-    url: '/cart/cartUpdate', // 업데이트할 장바구니 상품 ID를 URL에 포함
-    data: { 
-      quantity: quantity - 1,
-      cartNum: cartNum
-    }, // 변경된 수량을 데이터로 전송
-    success: function() {
-      console.log('수량 업데이트 성공'); // 업데이트 성공 시 콘솔에 로그 출력
-      window.location.reload();
-    },
-    error: function() {
-      console.log('수량 업데이트 실패'); // 업데이트 실패 시 콘솔에 로그 출력
-    }
-  });
 });
 
 
-
-
-
-
-
-
-
-
-
-const prdNum10 = document.getElementById("prdNum10");
-
-prdNum10.addEventListener("change", function() {
-  if (prdNum10.value < 1) {
-    prdNum10.value = 1;
-  }
-});
-
-prdNum10.addEventListener("keydown", function(e) {
-  if (e.key === "ArrowDown" && prdNum10.value <= 1) {
-    e.preventDefault();
-    prdNum10.value = 1;
-  }
-});
-  
-  

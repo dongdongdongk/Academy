@@ -109,11 +109,7 @@
  		VALUES (#{num} ,#{title}, #{price}, #{info},SYSDATE,1)
  	</insert>
  	
- 	<insert id="setCategoryAdd" parameterType="ProductDTO">
-  		INSERT INTO PRODUCTKIND (NUM,ID)
-  		VALUES (#{num},#{id})
-  	</insert>
-	
+
 
  	<delete id="setProductDelete" parameterType="ProductDTO">
  		DELETE PRODUCT WHERE NUM=#{num}

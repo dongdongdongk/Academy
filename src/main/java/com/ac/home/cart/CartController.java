@@ -70,15 +70,6 @@ public class CartController {
 		
 		int result = cartService.getCartUpdate(cartDTO);
 		
-		/*
-		 * List<CartDTO> ar = cartService.getCartList();
-		 * 
-		 * Long getSubPrice = 0L; if(cartDTO.getId() != null) { getSubPrice =
-		 * cartService.getSumPrice(cartDTO); }
-		 * 
-		 * mv.addObject("subPrice", getSubPrice); mv.addObject("list", ar);
-		 * mv.setViewName("cart/cartList");
-		 */
 		
 		mv.addObject("result", result);
 		mv.addObject("dto", result);

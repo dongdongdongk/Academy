@@ -64,13 +64,4 @@
  	UPDATE CART SET QUANTITY =#{quantity} WHERE CARTNUM =#{cartNum}
  	</update>
  	
- 	<!-- <select id="getSubPrice" resultType="Long" parameterType="CartDTO">
-		SELECT SUM(PRICE)
-		FROM CART
-		JOIN PRODUCT
-		USING(NUM)
-		
-		
-		WHERE ID = #{id}
-	</select> -->
   </mapper>

@@ -70,7 +70,7 @@ public class ProductController {
 			
 			productDTO = productService.getProductDetail(productDTO);
 		
-			mv.setViewName("product/productDetail");
+			
 			mv.addObject("dto", productDTO);
 			mv.setViewName("product/productDetail");
 			

@@ -33,9 +33,7 @@ public class CartService{
 		
 		return cartDAO.getCartUpdate(cartDTO);
 	}
-	public Long getSubPrice(CartDTO cartDTO) throws Exception {
-		return cartDAO.getSubPrice(cartDTO);
-	}
+	
 	
 }
 	

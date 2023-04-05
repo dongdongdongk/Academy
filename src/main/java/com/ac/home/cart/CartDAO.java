@@ -35,7 +35,5 @@ public class CartDAO {
 		
 		return sqlSession.update(NAMESPACE+"getCartUpdate", cartDTO);
 	}
-	public Long getSubPrice(CartDTO cartDTO) throws Exception {
-		return sqlSession.selectOne(NAMESPACE + "getSubPrice", cartDTO);
-	}
+	
 }
