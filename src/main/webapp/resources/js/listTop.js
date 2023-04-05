@@ -16,107 +16,97 @@ $(document).ready(function() {
 
     
 
-    $(".check-item").on("click", function() {
+//     $(".check-item").on("click", function() {
        
-       if ($(this).prop("checked")) {
-           let row = $(this).closest("tr");
+//        if ($(this).prop("checked")) {
+//            let row = $(this).closest("tr");
            
-           row.find('.title').addClass("checkcolor");
-           row.addClass("checked");
-           // row.insertBefore($("tbody tr:first-child"));
-           let img = '<img class="iconSize" src="/resources/images/notice.png">';
-           row.find('.title').append(img);
-           // let num = $(".noticeNum").attr("data-num-id"); 
-           // $.ajax({
-           //     type: "POST",
-           //     url: "/notice/checked", 
-           //     data: {
-           //         num: num, 
-           row.prependTo("tbody");
-           //         checked: 1
-           //     }, // ID와 체크된 값 서버로 전송
-               
-           //     success: function() {
-           //         console.log("체크o")
-           //         alert("공지고정")
-           //     }
-           // });
-
-
-
-           
-        } else {
-            $(this).closest("tr").removeClass("checked");
-            $(this).closest("tr").find('.title').removeClass("checkcolor");
-            $(this).closest("tr").find('.iconSize').remove();
+//            row.find('.title').addClass("checkcolor");
+//            row.addClass("checked");
+//            // row.insertBefore($("tbody tr:first-child"));
+//            let img = '<img class="iconSize" src="/resources/images/notice.png">';
+//            row.find('.title').append(img);
+//            let num = $(".noticeNum").attr("data-num-id"); 
+          
+//            $.ajax({
+//                type: "POST",
+//                url: "/notice/checked", 
+//                data: {
+//                    num: num, 
+//                    checked: 1
+//                 }, // ID와 체크된 값 서버로 전송
+                
+//                 success: function() {
+//                     console.log("체크o")
+//                     alert("공지고정")
+//                 }
+//             });
             
-            // let num = $(".noticeNum").attr("data-num-id");
-            // $.ajax({
-                //     type: "POST",
-                //     url: "/notice/checked", 
-                //     data: {
-                    //         num: num, 
-                    //         checked: 0
-                    //     }, // ID와 체크된 값 서버로 전송
-                    //     success: function() {
-           //         console.log("체크x")
-           //         alert("공지고정 취소")
-           //     }
-           // });
+//             row.prependTo("tbody");
+
+
+           
+//         } else {
+//             $(this).closest("tr").removeClass("checked");
+//             $(this).closest("tr").find('.title').removeClass("checkcolor");
+//             $(this).closest("tr").find('.iconSize').remove();
+            
+//             let num = $(".noticeNum").attr("data-num-id");
+//             $.ajax({
+//                     type: "POST",
+//                     url: "/notice/checked", 
+//                     data: {
+//                             num: num, 
+//                             checked: 0
+//                         }, // ID와 체크된 값 서버로 전송
+//                         success: function() {
+//                    console.log("체크x")
+//                    alert("공지고정 취소")
+//                }
+//            });
            
            
-       }
-   });
+//        }
+//    });
    
     
-    $(".check-item").change(function() {
+    // $(".check-item").change(function() {
         
-        let num = $(".noticeNum").attr("data-num-id"); 
-        if ($(this).prop("checked")) {
-            $.ajax({
-                type: "POST",
-                url: "/notice/checked", 
-                data: {
-                    num: num, 
-                    checked: 1
-                }, // ID와 체크된 값 서버로 전송
+    //     let num = $(".noticeNum").attr("data-num-id"); 
+    //     if ($(this).prop("checked")) {
+    //         $.ajax({
+    //             type: "POST",
+    //             url: "/notice/checked", 
+    //             data: {
+    //                 num: num, 
+    //                 checked: 1
+    //             }, // ID와 체크된 값 서버로 전송
                 
-                success: function() {
-                    console.log("체크o")
-                    alert("공지고정")   
-                }
-            });
+    //             success: function() {
+    //                 console.log("체크o")
+    //                 alert("공지고정")   
+    //             }
+    //         });
             
-        } else {
-            let num = $(".noticeNum").attr("data-num-id");
-            $.ajax({
+    //     } else {
+    //         let num = $(".noticeNum").attr("data-num-id");
+    //         $.ajax({
                 
-                type: "POST",
-                url: "/notice/checked", 
-                data: {
-                    num: num, 
-                    checked: 0
-                }, // ID와 체크된 값 서버로 전송
-                success: function() {
-                    console.log("체크x")
-                    alert("공지고정 취소")
-                }
-            });
+    //             type: "POST",
+    //             url: "/notice/checked", 
+    //             data: {
+    //                 num: num, 
+    //                 checked: 0
+    //             }, // ID와 체크된 값 서버로 전송
+    //             success: function() {
+    //                 console.log("체크x")
+    //                 alert("공지고정 취소")
+    //             }
+    //         });
 
 
-        }
-    });
-   
-   
-
-
-
-
-
-
-
-
-
+    //     }
+    // });
 
 
 });

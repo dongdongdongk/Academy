@@ -89,7 +89,7 @@
   	</resultMap>
  	 
  	 <update id="setNoticeUpdate" parameterType="NoticeDTO">
-  		UPDATE NOTICE SET TITLE=#{title}, CONTENTS=#{contents} WHERE NUM=#{num}
+  		UPDATE NOTICE SET TITLE=#{title}, CONTENTS=#{contents}, CHECKED=#{checked} WHERE NUM=#{num}
   	</update>
   	
   	

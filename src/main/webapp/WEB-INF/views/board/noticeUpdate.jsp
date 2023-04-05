@@ -29,8 +29,9 @@
 			</div>
 
 			<div class="mb-3">
-				<label for="check" class="form-label">상단고정</label>
-				<input type="checkbox" name="check" class="form-control" value="${dto.checked}" id="check" >
+				<label for="checked" class="form-label">상단고정</label>
+				<input type="radio" name="checked" class="form-control" value="1" id="checked" >
+				<input type="radio" name="checked" class="form-control" value="0" id="checked" >
 			  </div>
 
 			
