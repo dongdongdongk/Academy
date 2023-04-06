@@ -105,12 +105,11 @@
 
  	<delete id="setProductDelete" parameterType="ProductDTO">
  		DELETE PRODUCT WHERE NUM=#{num}
- 		
  	</delete> 
  	
  	<update id="setProductUpdate" parameterType="ProductDTO">
  		UPDATE PRODUCT SET TITLE=#{title}, PRICE=#{price}, INFO=#{info}
- 		WHERE NUM= #{num, jdbcType=BIGINT}
+ 		WHERE NUM= #{num}
  	</update>
  	
  	<insert id="setProductImgAdd" parameterType="ProductImgDTO">
