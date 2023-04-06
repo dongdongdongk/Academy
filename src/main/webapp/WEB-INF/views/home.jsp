@@ -84,85 +84,15 @@
                                 <h1 class="site-title"><a href="/" rel="home">Acade<span>my</span></a></h1>
                             </div><!-- .site-branding -->
                         </div><!-- .col -->
-                        
-						<!-- <div id="gnb">
-			<ul>
-                
-				<li class="dep_tit">
-					<a href="/course/course_list.jsp?cid=" target="_self">수강신청</a>
-                    
-					<ul class="depth one_depth">
-                        
-                        <li>
-						<a href="/course/course_list.jsp?cid=11207" target="_self">정보처리</a>
-                        
-                        </li>
-                        
-                        <li>
-						<a href="/course/course_list.jsp?cid=11211" target="_self">빅데이터분석</a>
-                        
-                        </li>
-                        
-                        <li>
-						<a href="/course/course_list.jsp?cid=11212" target="_self">전자계산기</a>
-                        
-                        </li>
-                        
-                        <li>
-						<a href="/course/course_list.jsp?cid=11213" target="_self">데이터자격</a>
-                        
-                        </li>
-                        
-                        <li>
-						<a href="/course/course_list.jsp?cid=11214" target="_self">패키지</a>
-                        
-                        </li>
-                        
-					</ul>
-                    
-				</li>
-                
-				<li class="dep_tit">
-					<a href="/board/index.jsp?code=notice" target="_self" class="">고객센터</a>
-                    
-					<ul class="depth one_depth">
-                        
-                        <li class="">
-						<a href="/board/index.jsp?code=notice" target="_self">공지사항</a>
-                        
-                        </li>
-                        
-                        <li class="">
-						<a href="/board/index.jsp?code=qna" target="_self">서비스문의</a>
-                        
-                        </li>
-                        
-                        <li class="">
-						<a href="/board/index.jsp?code=faq" target="_self">자주하는질문</a>
-                        
-                        </li>
-                        
-                        <li class="">
-						<a href="https://www.wannaedu.com/course/review_list.jsp" target="_self">수강후기</a>
-                        
-                        </li>
-                        
-                        <li class="">
-						<a href="https://pf.kakao.com/_qbUxaK" target="_blank">카카오톡 문의</a>
-                        
-                        </li>
-                        
-                        <li class="">
-						<a href="/board/index.jsp?code=event" target="_self">이벤트</a>
-                        
-                        </li>
-                        
-					</ul>
-                    
-				</li>
-                
-			</ul>
-		</div> -->
+									                      	<details>
+									  <summary><a href="/notice/list">공지사항</a></summary>
+									  <ul>
+									    <li><a href="/qna/qnaList">1. 질문응답 1번입니다.</a></li>
+									    <li><a href="/event/list">2. 이벤트 2번입니다.</a></li>
+									    <li><a href="/product/list">3. 강의 3번입니다.</a></li>
+									  </ul>
+									</details>
+						
                         <div class="col-3 col-lg-9 flex justify-content-end align-content-center" id="gnb">
                             <nav class="site-navigation flex justify-content-end align-items-center">
                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">

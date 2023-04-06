@@ -21,7 +21,7 @@
 		 <div class="row justify-content-center my-4">
 		
 				<form class="col-md-7" action="./update" method="post" enctype="multipart/form-data">
-		<%-- 		<input type="hidden" name="num" value="${dto.num}"> --%>
+				<input type="hidden" name="num" value="${dto.num}">
 				
 				<div class="mb-3">
 					<label for="title" class="form-label">제품명</label>
