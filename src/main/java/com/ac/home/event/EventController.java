@@ -157,13 +157,15 @@ public class EventController {
 			return mv;
 		}
 		
-//		@PostMapping("dateCheck")
-//		public ModelAndView getDateCheck(EventDTO eventDTO) throws Exception {
-//			ModelAndView mv = new ModelAndView();
-//			eventDTO  = eventService.
-//			
-//			
-//		}
+		@GetMapping("eventHome")
+		public ModelAndView getEventHome(Pager pager, EventDTO eventDTO) throws Exception {
+			ModelAndView mv = new ModelAndView();
+			pager.setPerPage(5L);
+			List<EventDTO> ar = eventService.getEventList(pager);
+			mv.addObject("list",ar);
+			mv.setViewName("eventHome");
+			return mv;
+		}
 	
 	
 }

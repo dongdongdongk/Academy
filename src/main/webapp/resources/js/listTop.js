@@ -1,20 +1,17 @@
 
 $(document).ready(function() {
-
-    $(".check-item[data-num-check='1']").attr("checked", true);
+   $(".check-item").each(function() {
+       if($(this).attr('data-num-check') == '1') {
+           let $row = $(this).closest('tr');
+           $row.insertBefore($row.parent().find('tr:first'));
+           $row.find('.title').addClass("checkcolor");
+           let img = '<img class="iconSize" src="/resources/images/notice.png">';
+           $row.find('.title').append(img);
+        }
+    });
     
-    if ($(".check-item[data-num-check='1']").prop("checked")) {
-        let row = $(".check-item[data-num-check='1']").closest("tr");
-            
-        row.find('.title').addClass("checkcolor");
-        row.addClass("checked");
-        // row.insertBefore($("tbody tr:first-child"));
-        let img = '<img class="iconSize" src="/resources/images/notice.png">';
-        row.find('.title').append(img);
-        row.prependTo("tbody");
-    }
+});
 
-    
 
 //     $(".check-item").on("click", function() {
        
@@ -109,5 +106,4 @@ $(document).ready(function() {
     // });
 
 
-});
 
