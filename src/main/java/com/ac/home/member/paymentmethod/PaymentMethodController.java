@@ -31,7 +31,13 @@ public class PaymentMethodController {
         MemberDTO memberDTO = (MemberDTO) session.getAttribute("member");
         String loggedInMemberId = memberDTO.getId();
 
-        modelAndView.addObject("paymentMethods", paymentService.getPaymentMethods(loggedInMemberId));
+        List<PaymentMethodDTO> paymentMethods = paymentService.getPaymentMethods(loggedInMemberId);
+        modelAndView.addObject("paymentMethods", paymentMethods);
+
+        if (paymentMethods.isEmpty()) {
+            modelAndView.addObject("noPaymentMethodsMessage", "결제수단이 존재하지 않습니다. 결제수단을 추가해주세요.");
+        }
+
         modelAndView.setViewName("/member/payment/paymentmethod");
 
         return modelAndView;

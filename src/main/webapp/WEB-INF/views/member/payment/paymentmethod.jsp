@@ -36,11 +36,20 @@
 	        </div>
 	    </div>
 	    <div id="payment-methods-container" class="d-flex justify-content-center flex-wrap">
-	    <c:if test="${not empty successMessage}">
-	        <div class="p-3 mx-2 my-2" style="width: 60%;">
-	            <div class="alert alert-success" role="alert">${successMessage}</div>
-	        </div>
-	    </c:if>
+		<c:choose>
+		    <c:when test="${empty paymentMethods}">
+		        <div class="p-3 mx-2 my-2" style="width: 60%;">
+		            <div class="alert alert-warning" role="alert">${noPaymentMethodsMessage}</div>
+		        </div>
+		    </c:when>
+		    <c:otherwise>
+		        <c:if test="${not empty successMessage}">
+		            <div class="p-3 mx-2 my-2" style="width: 60%;">
+		                <div class="alert alert-success" role="alert">${successMessage}</div>
+		            </div>
+		        </c:if>
+		    </c:otherwise>
+		</c:choose>
 	        <c:forEach var="paymentMethod" items="${paymentMethods}">
 	            <form action="/member/payment/paymentmethodupdate" method="post" class="card p-3 mx-2 my-2" style="width: 60%;">
 	                <div class="payment-method-item row">
