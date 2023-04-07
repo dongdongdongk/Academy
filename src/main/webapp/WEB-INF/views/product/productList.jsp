@@ -9,58 +9,100 @@
 
 <title></title>
 <c:import url="../template/common_css.jsp"></c:import>
+<c:import url="../template/tempcss.jsp"></c:import>
 <link rel="stylesheet" href="/resources/css/productList.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/resources/css/cartthumbnail.css">
 </head>
 
 
 <body>
 	<c:import url="../template/header.jsp"></c:import>
+	
 	<header style="margin-top: 200px;">
-	<div class="container- fluid my-5">
-
-		<div class="row mb-4 ">
-			<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품LIST</h1>
-		</div>
-		
-		<div id="catdiv">
-			<div class="row input-group mb-3">
-				<label for="categoryNum" class="visually-hidden">categoryName</label>
-				<select class="form-select" name="categoryNum" id="categoryName">
-					<option value="2">전체</option>
-					<option value="3" >책</option>
-					<option value="4">강의</option>
-				
-					
-				</select>
-				
-		</div>
-		
-		</div>
-		
-		<div class="goods_table_wrap">
-			<!-- 상품 리스트 O -->
-			<c:if test="${listcheck != 'empty'}">
-				<table class="goods_table">
-					<thead>
-						<tr>
+		<div class="container- fluid my-5">
+			
+			<div class="row mb-4 ">
+				<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품LIST</h1>
+			</div>
+			
+			<div id="catdiv">
+				<div class="row input-group mb-3">
+					<label for="categoryNum" class="visually-hidden">categoryName</label>
+					<select class="form-select" name="categoryNum" id="categoryName">
+						<option value="2">전체</option>
+						<option value="3" >책</option>
+						<option value="4">강의</option>
 						
-							<td class="th_column_1">상품 번호</td>
-							<td class="th_column_4">상품 이미지</td>
-							<td class="th_column_1">상품 이름</td>
-							<td class="th_column_3">가격</td>
-							<td class="th_column_4">등록날짜</td>
-							<td class="th_column_5">조회수</td>
-							<td class="th_column_5">카테고리</td>
-						</tr>
-					</thead>
-
-					<%-- 		<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-					<td class="tbl_td">${fileDTO.save}</td>
-				</c:forEach> --%>
-					<tbody class="table-group-divider">
-
-						<c:forEach items="${list}" var="dto">
-
+						
+					</select>
+					
+				</div>
+				
+			</div>
+			
+			<div class="goods_table_wrap">
+				<!-- 상품 리스트 O -->
+				<c:if test="${listcheck != 'empty'}">
+					<table class="goods_table">
+						<thead>
+							<tr>
+								
+								<td class="th_column_1">상품 번호</td>
+								<td class="th_column_4">상품 이미지</td>
+								<td class="th_column_1">상품 이름</td>
+								<td class="th_column_3">가격</td>
+								<td class="th_column_4">등록날짜</td>
+								<td class="th_column_5">조회수</td>
+								<td class="th_column_5">카테고리</td>
+							</tr>
+						</thead>
+						
+						<%-- 		<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
+							<td class="tbl_td">${fileDTO.save}</td>
+						</c:forEach> --%>
+						<tbody class="table-group-divider">
+							
+							<c:forEach items="${list}" var="dto">
+								
+							
+							<div class="container-xxl py-5">
+								<div class="container ">
+									
+									<div class="row g-4 justify-content-center">
+										<div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+											<div class="course-item bg-light">
+												<div class="position-relative overflow-hidden">
+													<img class="img-fluid" src="img/course-1.jpg" alt="">
+													<div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+														<a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+														<a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+													</div>
+												</div>
+												<div class="text-center p-4 pb-0">
+													<h3 class="mb-0">₩${dto.price}</h3>
+													<div class="mb-3">
+														<small class="fa fa-star text-primary"></small>
+														<small class="fa fa-star text-primary"></small>
+														<small class="fa fa-star text-primary"></small>
+														<small class="fa fa-star text-primary"></small>
+														<small class="fa fa-star text-primary"></small>
+														<small>(123)</small>
+													</div>
+													<h5 class="mb-4"><a href="./productDetail?num=${dto.num}">${dto.title}</a></h5>
+												</div>
+												<div class="d-flex border-top">
+													<small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+													<small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>${dto.regDate}</small>
+													<small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+								
 
 							<tr>
 								<td>${dto.num}</td>
@@ -183,6 +225,7 @@
 
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
+<c:import url="../template/tempjs.jsp"></c:import>
 <script src="../../../resources/js/productAjax.js"></script>
 <script src="../../../resources/js/category.js"></script>
 <script src="/resources/css/goodsManage.css"></script>
