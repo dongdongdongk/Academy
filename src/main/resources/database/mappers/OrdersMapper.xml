@@ -32,29 +32,35 @@
   			(
 	  			SELECT ROWNUM R, N.* FROM
 		  			(
-			  			SELECT ORDERNUM, ID, ALLPRICE, PURCHASEDATE, NUM FROM ORDERS
+			  			SELECT ORDERNUM, PURCHASEDATE, TITLE, INFO FROM ORDERS
 			  			<include refid="ordersCondition"></include>
-			  			ORDER BY ORDERNUM DESC
+			  			ORDER BY ORDERNUM ASC
 		  			) N
   			)
   			WHERE R BETWEEN #{startRow} AND #{lastRow}
   	</select>
   
-  	<select id="getOrdersDetail" parameterType="OrdersDTO" resultType="OrdersDTO">
+  	<select id="getOrdersDetail" parameterType="OrdersDTO" resultMap="ordersDetailResult">
   		SELECT * FROM ORDERS
   		WHERE ORDERNUM = #{orderNum}
   	</select>
+  	<resultMap type="OrdersDTO" id="ordersDetailResult">
+ 		<id column="ORDERNUM" property="orderNum"/>
+ 		<result column="PURCHASEDATE" property="purchaseDate"/>
+ 		<result column="TITLE" property="title"/>
+ 		<result column="INFO" property="info"/>
   	
+  	</resultMap>
   	<insert id="setOrdersAdd" parameterType="OrdersDTO">
-  		<selectKey keyProperty="num" resultType="Long" order="BEFORE">
+  		<selectKey keyProperty="orderNum" resultType="Long" order="BEFORE">
 			SELECT ORDERS_SEQ.NEXTVAL FROM DUAL
 		</selectKey>
   		INSERT INTO ORDERS
-  		VALUES (#{orderNum}, #{id}, #{allPrice}, SYSDATE ,#{num})
+  		VALUES ( #{orderNum} ,SYSDATE, #{title}, #{info})
   	</insert>
   	
   	<update id="setOrdersUpdate" parameterType="OrdersDTO">
-  		UPDATE QNA SET TITLE = #{title}, CONTENTS = #{contents}
+  		UPDATE ORDERS SET TITLE = #{title}, INFO = #{info}
   		WHERE ORDERNUM = #{orderNum}
   	</update>
   	

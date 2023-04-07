@@ -6,79 +6,68 @@
 <head>
 <meta charset="UTF-8">
 <title>상세 정보</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 <c:import url="../template/common_css.jsp"></c:import>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
-<body>
-	
-		<div class="container-fluid my-5">
-			<div class="row mb-4">
-				<h3 class="col-md-7 mx-auto text-center border-bottom border-dark pb-4">상세정보</h3>
-			</div>
-	
+</head>
+<body class="courses-page">
+            <div class="page-header">
+              <div class="page-header-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <header class="entry-header">
+                                    <h1>${dto.title}</h1>
+                                </header><!-- .entry-header -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .page-header-overlay -->
+            </div><!-- .page-header -->
+<c:import url="../template/header.jsp"></c:import>
+<header style="margin-top: 50px;">	
+		
 			<div class="row col-md-7 mx-auto">
 				<div class="row g-3">
-					<div class="col-md-6">
-	    				<label for="writer" class="form-label">작성자</label>
-	  				</div>
-	  				
-	  				<div class="col-md-6">
-	  					<label for="writer" class="form-label">${detail.writer}</label>
-	  				</div>
-	  				
-	  				<div class="col-md-6">
-	    				<label for="title" class="form-label">제목</label>
-	  				</div>
-	  				
-	  				<div class="col-md-6">
-	  					<label for="title" class="form-label">${detail.title}</label>
-	  				</div>
-	  				
-	  				<div class="col-md-6">
-	    				<label for="contents" class="form-label">내용</label>
-	  				</div>
-	  				
-	  				<div class="col-md-6">
-	  					<label for="contents" class="form-label">${detail.contents}</label>
-	  				</div>
-	  				
-	  				<div class="col-md-6">
-	    				<label for="regDate" class="form-label">등록일</label>	    				
-	  				</div>
-	  				
-	  				<div class="col-md-6">
-	  					<label for="regDate" class="form-label">${detail.regDate}</label>
-	  				</div>
-	  				
-	  				<div class="col-md-6">
-	    				<label for="hit" class="form-label">조회수</label>
-	  				</div>
-	  				
-	  				<div class="col-md-6">
-	  					<label for="hit" class="form-label">${detail.hit}</label>
-	  				</div>
-	  				
-	  				
-	  				<div>
-						<form action="./qnaUpdate" id="frm">
-							<input type="hidden" name="num" value="${detail.num}">
-							<button id="update" type="submit" class="btn btn-primary col-md-2 mt-4">글 수정</button>
-							<button id="delete" type="button" class="btn btn-primary col-md-2 mt-4">글 삭제</button>
-						</form>
-					</div>
-					
-					<div class="row col-md-2 mx-auto mt-5">
-						<a class="btn btn-primary" href="./qnaList">글 목록</a>
-					</div>
-					
-					<div class="row col-md-2 mx-auto mt-5">
-						<a class="btn btn-primary" href="./qnaReply?num=${detail.num}">답글 작성</a>
-					</div>
-					
+					 <h3>${dto.info}</h3>
+					 
+					 
 				</div>
 			</div>
-		</div>
 		
+		<form action="./ordersUpdate" id="frm">
+          <input type="hidden" name="orderNum" value="${dto.orderNum}">
+          <c:if test="${not empty member}">
+            <c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
+              <button id="delete" type="button" class="btn btn-outline-danger"><a href="./delete?orderNum=${dto.orderNum}">상품삭제</a></button>
+              <button id="ordersUpdate" type="submit" class="btn btn-outline-primary">상품수정</button>
+            </c:if>
+          </c:if>
+       
+           <button id="list" type="button" class="btn btn-outline-secondary"><a href="./ordersList">목록으로</a></button>
+        </form>
+		 
+		</header>
+<c:import url="../template/common_js.jsp"></c:import>
+<c:import url="../template/bottom.jsp"></c:import>		
 		<script src="../resources/js/boardForm.js"></script>
 		<c:import url="../template/common_js.jsp"></c:import>
 </body>
 </html>
+	  				
+	  				
+	  				
+	  				
+	  				
+	  			
+	  				
+	  				
+	  				
+	  				
+	  				
+	  				
+	  				
+				
+					

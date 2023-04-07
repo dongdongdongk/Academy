@@ -18,11 +18,8 @@
 		</div>
 	
 		<div class="row col-md-7 mx-auto">
-			<form class="row g-3" action="./qnaAdd" method="post">
-				<div class="col-md-6">
-    				<label for="writer" class="form-label">작성자</label>
-    				<input type="text" name="writer" class="form-control" id="writer">
-  				</div>
+			<form class="row g-3" action="./ordersAdd" method="post">
+				
   				
   				<div class="col-md-12 mt-5">
     				<label for="title" class="form-label">제목</label>
@@ -30,8 +27,8 @@
   				</div>
   				
   				<div class="col-md-12 mt-5">
-    				<label for="contents" class="form-label">내용</label>
-    				<textarea class="form-control" name="contents" id="contents" placeholder="내용을 입력하세요"></textarea>
+    				<label for="info" class="form-label">내용</label>
+    				<textarea class="form-control" name="info" id="info" placeholder="내용을 입력하세요"></textarea>
   				</div>
 
 				<div class="row col-md-2 mx-auto mt-5">
@@ -43,7 +40,7 @@
 	
 	<c:import url="../template/common_js.jsp"></c:import>
 	<script>
-		$("#contents").summernote();
+		$("#info").summernote();
 	</script>
 </body>
 </html>

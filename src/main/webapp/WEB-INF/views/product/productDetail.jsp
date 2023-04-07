@@ -26,10 +26,9 @@
       <c:if test="${not empty dto}">
         <h3>상품 번호 : ${dto.num}</h3>
         <h3>상품 이름 : ${dto.title}</h3>
-        <h3>상품 내용 : ${dto.info}</h3>
         <h3>상품 가격 : ${dto.price}</h3>
         <h3>카테고리 : ${dto.categoryNum}</h3>
-        
+        <h3>상품 내용 : ${dto.info}</h3>
 
         <div class="row">
           <c:forEach items="${dto.productImgDTOs}" var="fileDTO">
@@ -57,13 +56,7 @@
       </c:if>
     </div>
      <div class="col-md-4">
-      <div class="card my-4">
-        <div class="card-header">이 책이 좋아요!</div>
-        <div class="card-body">
-          <p class="card-text">좋아요 수: 100</p>
-          <a href="#" class="btn btn-primary">좋아요</a>
-        </div>
-      </div>
+      
       <div class="card my-4">
         <div class="card-header">이 책과 관련된 할인사이트</div>
         <div class="card-body">

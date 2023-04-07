@@ -4,8 +4,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table th {
+  font-weight: bold;
+  background-color: #212529;
+  color: #fff;
+  border-color: #32383e;
+}
+.table td {
+  background-color: #f8f9fa;
+}
+
+.table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.table a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+</style>
 <meta charset="UTF-8">
-<title>주문 목록</title>
+<title>흥델쌤 강의 목록</title>
 <c:import url="../template/common_css.jsp"></c:import>
 
 <!-- Bootstrap CSS -->
@@ -26,46 +63,44 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/resources/css/style.css">
 </head>
-<body>
+<body class="courses-page">
+            <div class="page-header">
+              <div class="page-header-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <header class="entry-header">
+                                    <h1>흥달쌤강의</h1>
+                                </header><!-- .entry-header -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .page-header-overlay -->
+            </div><!-- .page-header -->
 	
 	<c:import url="../template/header.jsp"></c:import>
-	<header style="margin-top: 200px;">
+	<header style="margin-top: 50px;">
 	<hr>
-	
-	<div class="container-fluid">
-		<div class="row my-5 col-md-2 mx-auto">
-			<h1>주문 게시판 디비로보네요</h1>
-		</div>
-		
 		<div class="row col-md-7 mx-auto">
 			<table class="table">
 			  	<thead class="table-dark">
 			 		<tr>
-						<th>주문번호</th><th>ID</th><th>구매상태</th><th>총금액</th>
+						<th>강의 목차</th>
 					</tr>
 			 	</thead>
 			 	
-			  	<%-- <tbody>
+			  	<tbody>
 			  		<c:forEach items="${list}" var="dto">
 						<tr>
-							<td>${dto.num}</td>
-							<td class="tbl_td">
-									<div class="row">
-										<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-											<div class="col-md-4 mb-4">
-												<img src="../resources/images/${fileDTO.save}" class="img-fluid">
-											</div>
-										</c:forEach>
-									</div>
-								</td>
-							<td>${dto.writer}</td>
-							<td>${dto.hit}</td>
-						</tr>
-					</c:forEach>
-			  	</tbody> --%>
+							<td class="tbl_td"><a href="./ordersDetail?orderNum=${dto.orderNum}">${dto.title}</a></td>
+							
+				    </c:forEach>
+									
+				
+			  	</tbody>
 			</table>
 			
-			<div class="row">
+			<%-- <div class="row">
 				<nav aria-label="Page navigation example">
 				  <ul class="pagination">
 				  
@@ -120,17 +155,17 @@
 				    <button type="submit" class="btn btn-primary mb-3">검색</button>
 				  </div>
 				</form>
-			</div>
-			
+			</div> --%>
+			<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
 			<div class="row col-auto mx-auto">
 				<a class="btn btn-primary mb-3" href="./ordersAdd">글 등록</a>
 			</div>	
-				
-			<div class="row col-auto mx-auto">
+				</c:if>
+			<!-- <div class="row col-auto mx-auto">
 				<a class="btn btn-primary mb-3" href="/">홈</a>
-			</div>	
+			</div>	 -->
 		</div>
-	</div>
+	
 </header>	
 	<c:import url="../template/common_js.jsp"></c:import>
 	<c:import url="../template/bottom.jsp"></c:import>

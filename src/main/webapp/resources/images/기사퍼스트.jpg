@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+	</style>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>성안당 - 정보처리기사</title>
+	
+	<meta name="format-detection" content="telephone=no, address=no, email=no"/>
+<script type="text/javascript" src="//bm.cyber.co.kr/hub/lib/dist/js/jquery.js"></script>
+<script type="text/javascript" src="//bm.cyber.co.kr/scripts/common.js"></script>
+<script type="text/javascript" src="//bm.cyber.co.kr//m/template/default/js/starplayer_app.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	window.sp = StarPlayerApp;
+	window.sp.license = "4B4FF3BD-4E5D-43B6-BAA4-2FD2BC27C289";
+	window.sp.version = "1.4.0";
+	window.sp.android_version = "1.0.0";
+	window.sp.ios_version = "1.0.0";
+	window.sp.pmp = "true";
+	window.sp.offline_check = "true";
+	window.app = function(info_url_){
+		sp.executeApp(info_url_);
+	}
+//]]>
+</script>
+<script type="text/javascript">window.PBVAR = {"pc_base_url":"\/\/bm.cyber.co.kr\/","base_url":"\/\/bm.cyber.co.kr\/","hub_url":"\/\/bm.cyber.co.kr\/hub\/","ajax_url":"\/\/bm.cyber.co.kr\/hub\/ajax","fileupload_url":"\/\/bm.cyber.co.kr\/hub\/fileupload","file_base_url":"\/\/bm.cyber.co.kr\/data_user\/hub\/","filedownload_url":"\/\/bm.cyber.co.kr\/hub\/filedownload","gnu_fileupload_url":"\/\/bm.cyber.co.kr\/hub\/gnu-fileupload","login_url":"\/\/bm.cyber.co.kr\/login.php","user_logged_in":false,"hub_cart_url":"\/\/bm.cyber.co.kr\/hub\/information_pro\/mypage\/cart","is_mobile":false};</script>
+<script type="text/javascript" src="//bm.cyber.co.kr/hub/lib/dist/comp-lib/all-main.js?version=1.0.5"></script>
+
+<!-- NAVER SCRIPT -->
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script> 
+<script type="text/javascript"> 
+if (!wcs_add) var wcs_add={};
+wcs_add["wa"] = "s_34e1705561a0";
+if (!_nasa) var _nasa={};
+wcs.inflow();
+wcs_do(_nasa);
+</script>
+<!-- NAVER SCRIPT END -->
+
+<!-- WIDERPLANET  SCRIPT START 2020.3.9 -->
+<div id="wp_tg_cts" style="display:none;"></div>
+<script type="text/javascript">
+var wptg_tagscript_vars = wptg_tagscript_vars || [];
+wptg_tagscript_vars.push(
+(function() {
+	return {
+		wp_hcuid:"",
+		ti:"47104",	
+		ty:"Home",	
+		device:"web"
+		
+	};
+}));
+</script>
+<script type="text/javascript" async src="//cdn-aitg.widerplanet.com/js/wp_astg_4.0.js"></script>
+<!-- // WIDERPLANET  SCRIPT END 2020.3.9 -->
+<style type="text/css">
+.bootstrap-select.form-control{
+	height: auto;
+}
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner,
+.bootstrap-select .dropdown-menu li a span.text{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	word-break: keep-all;
+	width: 100%;
+	display: block !important;
+}
+.bootstrap-select .dropdown-menu{
+	max-width: 100%;
+}
+</style>
+	<script type="text/plain" id="pb-crypt-public-key">-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1AXqaRxSPqPPPaSUoZa3
+Aka3YWMHjGw3nW0P0ZsQAYLKO/qgE8YColAFqHhlaEjjmzWrbS1uKWN83yezLdg7
+iBKVz0wsuI9uUiuV1p1d2/pYm8mkjRUvxK5D7fCAMssfePtND4lTRAO9O4NAjXPD
+vS9M42rHpjzQ/+T1WWk1p35UHvGHEfEeJie104oH6j++aRpLdb5yoz5ZUiusDbGN
+vcW7O7g1s0YEztS2pgOdqqehgWkt9/P94DQ+9AojZp1xueO/Kw0siIqBII5dypIj
+8GP51A+S0jbzcoy5lTz0UxRGruwSAIlmD25DrlCzaZynyMibkJjCMWxPiJKRiCU3
+kQIDAQAB
+-----END PUBLIC KEY-----</script>
+
+	<link rel="stylesheet" type="text/css" href="//bm.cyber.co.kr/hub/lib/dist/css/page-builder/common.css">
+	<meta name="image" content="//bm.cyber.co.kr/data_user/hub/20220613/1shHRmxPYuCB1jT.jpg">
+<meta itemprop="image" content="//bm.cyber.co.kr/data_user/hub/20220613/1shHRmxPYuCB1jT.jpg">
+<meta property="og:image" content="//bm.cyber.co.kr/data_user/hub/20220613/1shHRmxPYuCB1jT.jpg">
+	<meta NAME="ROBOTS" CONTENT="INDEX,FOLLOW" />
+<meta NAME="ROBOTS" CONTENT="ALL" />
+<meta NAME="AUTHOR" CONTENT="국가기술자격 교육 No.1 성안당 e러닝 - https://bm.cyber.co.kr" />
+<meta NAME="SOURCE-URL" CONTENT="https://bm.cyber.co.kr/hub/information_pro" />
+<meta NAME="PUBLISHER" CONTENT="국가기술자격 교육 No.1 성안당 e러닝 - https://bm.cyber.co.kr" />
+<meta name="description" lang="ko" content=“비단길 정보처리기사 필기+실기 대비"/>
+<meta name="keywords" lang="ko" content=“정보처리기사, 정보처리기사필기, 정보처리기사실기, 정보처리기사출제기준, 정보처리기사기출문제,정보처리기사응시자격, 비단길, 권우석, 정보처리기사자격증, 정보처리기사강의"/> 
+<meta name="description" content="국가기술자격 교육 No.1 성안당 e러닝, 정보처리기사인강, 정보처리기사강의, 필기, 실기, 필기+실기 패키지">
+<!-- OG TAG -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="합격이 쉬워진다 성안당 e러닝" />
+<meta property="og:title" content="성안당 e러닝 정보처리기사"/>
+<meta property="og:url" content="https://bm.cyber.co.kr/hub/information_pro"/>
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="100" />
+<meta property="og:description" content=" 정보처리기사, 정보처리기사필기, 정보처리기사실기, 정보처리기사출제기준, 정보처리기사기출문제,정보처리기사응시자격, 비단길, 권우석, 정보처리기사자격증, 정보처리기사강의"/> 
+	<link rel="stylesheet" type="text/css" href="//bm.cyber.co.kr/hub/information_pro/styles.css">
+	<link rel="stylesheet" type="text/css" href="//bm.cyber.co.kr/hub/fonts/nanumbarungothic/font.css">
+	<link rel="stylesheet" type="text/css" href="//bm.cyber.co.kr/hub/fonts/nanumbarungothic/font.css">
+	<link rel="stylesheet" type="text/css" href="//bm.cyber.co.kr/hub/fonts/nanumbarungothic/font.css">
+			<style type="text/css">
+		@media (max-width: 1099px){
+			#pb-common-video-player-modal .modal-content>.close-btn{
+				right: 0px !important;
+				top: -60px !important;
+			}
+
+			.page-free-lectures .free-lecture-item>.wrap>.col-featured-image>.featured-image{
+				padding-top: 56%;
+			}
+		}
+
+		.btn.btn-fileupload:before{
+				display: none;
+				user-select: none !important;
+				pointer-events: none !important;
+
+			}
+	</style>
+
+<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+<script type="text/javascript">
+	kakaoPixel('8566051405231274194').pageView();
+</script>
+<!--//  2019-02-28, hclee, 카카오모먼트 카카오픽셀/스크립트 설치요청  -->
+
+<!-- 2017-01-02, hclee, 구글로그 분석 스크립트 -->
+<meta name="google-site-verification" content="IfcMaHMWeSzb3gkq3D_UzGya-8NZX9uSOJ5gAgZjKVE" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66394216-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+</head>
+<body class="with-fixed-header">
+<div class="pb-responsive-var">
+	<div class="xs"></div><div class="sm"></div><div class="md"></div><div class="lg"></div>
+</div>
+
+<div class="hidden"><a href="" id="naver_id_login"></a></div></div>
+
+<header id="pb-header" class="pb-header header-type-center">
+	<div class="top-frame"><div class="container">
+				<div class="ci-frame">
+			<div class="home-link">
+				<a href="//bm.cyber.co.kr/">
+					<img src="//bm.cyber.co.kr/hub/themes/default/img/header-logo.png" class="ci-image">
+					<img src="//bm.cyber.co.kr/hub/themes/default/img/header-logo-white.png" class="ci-image light">
+				</a>
+				<div class="template-title">
+					<a href="//bm.cyber.co.kr/hub/information_pro/" class="hidden-xs">정보처리기사</a>
+											<a href="//bm.cyber.co.kr/hub/information_pro/" class="visible-xs">정보처리기사</a>
+									</div>
+				
+			</div>
+		</div>
+				
+		<ul class="submenu-list">
+			
+				<li><a href="//bm.cyber.co.kr/login.php">로그인</a></li>
+				<li><a href="javascript:pb_naver_login();"><img src="//bm.cyber.co.kr/hub/themes/default/img/header-login-naver.png"></a></li>
+				<li><a href="javascript:pb_kakao_login();"><img src="//bm.cyber.co.kr/hub/themes/default/img/header-login-kakao.png"></a></li>
+				<li><a href="//bm.cyber.co.kr/member.php">회원가입</a></li>
+
+						
+		</ul>
+	</div></div>
+	<div class="bottom-frame"><div class="container">
+		<div class="ci-frame">
+			<div class="home-link">
+				<a href="//bm.cyber.co.kr/">
+					<img src="//bm.cyber.co.kr/hub/themes/default/img/header-logo.png" class="ci-image">
+					<img src="//bm.cyber.co.kr/hub/themes/default/img/header-logo-white.png" class="ci-image light">
+				</a>
+				<a href="//bm.cyber.co.kr/hub/information_pro/" class="template-title">
+					<span class="hidden-xs">정보처리기사</span>
+											<span class="visible-xs">정보처리기사</span>
+									</a>
+				
+
+				
+			</div>
+		</div>
+		<div class="menu-frame">
+			<ul class="mainmenu-list-pc" id="pb-mainmenu-list-pc">
+										<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/mypage">마이페이지</a></li>
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/lectures">수강신청</a></li>
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/books">교재구매</a></li>
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/professor">교수소개</a></li>
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/resources">시험 정보·자료</a></li>
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/free-lectures">무료강의</a></li>
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/cs-center">고객지원센터</a></li>
+									
+				
+			</ul>
+
+
+			<a href="#" class="mega-menu-toggle-btn collapsed" id="pb-header-mega-menu-toggle-btn">
+				<span class="icon-bar first"></span>
+				<span class="icon-bar second"></span>
+				<span class="icon-bar third"></span>
+				<span class="icon-bar four"></span>
+			</a>
+		</div>
+			
+	</div></div>
+
+	<div class="pb-mega-menu-panel in out end" id="pb-mega-menu-panel">
+		
+		<div class="wrap">
+			<div class="background">
+				<div class="arrow-frame"><div class="arrow"></div></div>
+			</div>
+
+			<div class="content-wrap"><div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-3">
+						<img src="//bm.cyber.co.kr/hub/themes/default/img/megamenu-logo.png" class="ci-image">
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-9">
+						
+						<ul class="menu-list">
+							
+																					<li class="">
+												<a href="//bm.cyber.co.kr/hub/information_pro/mypage">마이페이지</a>
+
+												<ul class="submenu-list">
+													<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/mypage/">나의 강의실</a></li>		
+													<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/mypage/cart">장바구니</a></li>		
+												</ul>
+											</li>
+										
+																		<li class="">
+										<a href="//bm.cyber.co.kr/hub/information_pro/lectures">수강/교재</a>
+
+										<ul class="submenu-list">
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/lectures">수강신청</a></li>	
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/books">교재구매</a></li>	
+										</ul>
+									</li>
+
+																		<li class="">
+										<a href="//bm.cyber.co.kr/hub/information_pro/professor">교수소개</a>
+
+										<ul class="submenu-list">
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/professor">교수소개</a></li>	
+										</ul>
+									</li>
+
+																		<li class="">
+										<a href="//bm.cyber.co.kr/hub/information_pro/resources">시험 정보·자료</a>
+
+										<ul class="submenu-list">
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/resources?tab_index=001">자격증 소개</a></li>	
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/resources?tab_index=002">시험일정/합격률</a></li>	
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/resources?tab_index=003">응시자격/방법</a></li>	
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/resources?tab_index=004">출제기준</a></li>	
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/resources?tab_index=005">기출/공개문제</a></li>
+
+										</ul>
+									</li>
+
+																		<li class="">
+										<a href="//bm.cyber.co.kr/hub/information_pro/free-lectures">무료강의</a>
+
+										<ul class="submenu-list">
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/free-lectures">무료강의</a></li>	
+												
+										</ul>
+									</li>
+
+																		<li class="">
+										<a href="//bm.cyber.co.kr/hub/information_pro/cs-center">고객지원센터</a>
+
+										<ul class="submenu-list">
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/cs-center">공지 &amp; 새소식</a></li>	
+											<li class="hidden-xs hidden-sm"><a href="//bm.cyber.co.kr/hub/information_pro/cs-center/error-report">학습장애조치</a></li>	
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/cs-center/private-consult">1:1 비공개 상담</a></li>	
+											<li class="hidden-xs hidden-sm"><a href="//bm.cyber.co.kr/hub/information_pro/cs-center/remote-support">1:1 원격지원</a></li>	
+											<li class=""><a href="//bm.cyber.co.kr/hub/information_pro/cs-center/use-policy">이용정책</a></li>	
+												
+										</ul>
+									</li>
+
+									
+							<li class="visible-xs">
+
+																	
+										<a href="//bm.cyber.co.kr/login.php">로그인</a>
+								
+										<ul class="submenu-list">
+											<li><a href="//bm.cyber.co.kr/member.php">회원가입</a></li>
+
+										</ul>
+
+										
+
+																	
+
+								
+							</li>		
+						</ul>
+
+					</div>
+				</div>
+			</div></div>
+		</div>
+	</div>
+
+
+</header>
+
+<form method="post" id="pb-sns-register-form" style="margin:0" action="//bm.cyber.co.kr/member.php?action=agree">
+<input type="hidden" name="email" value="">
+<input type="hidden" name="name" value="">
+<input type="hidden" name="nick" value="">
+<input type="hidden" name="gender" value="">
+<input type="hidden" name="birth1" value="">
+<input type="hidden" name="birth2" value="">
+<input type="hidden" name="birth3" value="">
+<input type="hidden" name="birth4" value="">
+<input type="hidden" name="sns_id" value="">
+<input type="hidden" name="sns_version" value="">
+</form>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var window_el_ = $(window);
+		var body_el_ = $("body");
+		var pb_header_ = $("#pb-header");
+		var last_scroll_top_ = window_el_.scrollTop();
+		var last_scroll_direction_ = "up";
+		var scroll_deep_start_top_ = last_scroll_top_;
+
+		if(body_el_.hasClass("with-fixed-header")){
+			window_el_.scroll(function(event_){
+				var scroll_top_ = window_el_.scrollTop();
+				var scroll_direction_ = scroll_top_ > last_scroll_top_ ? "down" : "up";
+
+				body_el_.toggleClass('with-header-scroll-white-fixed', (scroll_top_ >= 200));
+
+				if(scroll_direction_ === last_scroll_direction_){
+					var scroll_deep_ = Math.abs(scroll_deep_start_top_ - scroll_top_);
+						
+					if(scroll_deep_ >= 200){
+						body_el_.toggleClass('with-header-scroll-fixed', (scroll_direction_ === "down"));
+					}
+
+				}else{
+					scroll_deep_start_top_ = scroll_top_;
+				}
+
+				last_scroll_top_ = scroll_top_;
+				last_scroll_direction_ = scroll_direction_;
+			});
+			window_el_.scroll();
+		}
+		
+
+			
+
+		var megamenu_panel_ = $("#pb-mega-menu-panel");
+
+		$("#pb-header-mega-menu-toggle-btn").click(function(){
+			var toggle_ = !body_el_.hasClass("with-mega-menu-panel");
+			body_el_.toggleClass("with-mega-menu-panel", toggle_);
+
+
+			if(toggle_){
+				megamenu_panel_.toggleClass("end", false);
+				setTimeout(function(){
+					megamenu_panel_.toggleClass("out", false);
+				},30);
+			}else{
+				megamenu_panel_.toggleClass("out", true);
+				setTimeout(function(){
+					megamenu_panel_.toggleClass("end", true);
+				},500);
+			}
+
+
+			return false;
+		});
+
+		// AOS.init();
+	});
+
+
+</script>
+<script type="text/javascript" src="/webheads/js/naverLogin_implicit-1.0.2.js"></script>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script type='text/javascript'>
+window._naver_login_instance = new naver_id_login("bK2lKgEvXj9aInnQCTxY", "https://bm.cyber.co.kr/hub/_check_naver_login");
+		_naver_login_instance.setPopup();
+		_naver_login_instance.init_naver_id_login();
+
+Kakao.init('ffbe05c2288394f11c7af74de9d79f16');
+
+window._pb_naver_login_callback = function(result_){
+	PB.post("naver-login",{
+		'naver_data' : result_
+	}, function(result_, response_json_){
+		if(!result_ || response_json_.success !== true){
+
+			if(response_json_.do_register){
+
+				var sns_register_form_ = $("#pb-sns-register-form");
+
+				sns_register_form_.find("[name='email']").val(result_['email']);
+				sns_register_form_.find("[name='name']").val(result_['username']);
+				sns_register_form_.find("[name='nick']").val(result_['username']);
+
+				sns_register_form_.find("[name='birth2']").val(result_['birth2']);
+				sns_register_form_.find("[name='birth3']").val(result_['birth3']);
+				sns_register_form_.find("[name='gender']").val(result_['gender']);
+
+				sns_register_form_.find("[name='sns_id']").val(result_['id']);
+				sns_register_form_.find("[name='sns_version']").val("naver");
+
+				sns_register_form_.submit();
+
+			}else{
+				PB.alert({
+					title : response_json_.error_title || "에러발생",
+					content : response_json_.error_message || "로그인 중, 에러가 발행했습니다.",
+				});
+			}
+
+			
+
+			return;
+		}
+
+		location.reload();
+
+	}, true);
+}
+
+function pb_naver_login(){
+	$("#naver_id_login_anchor").trigger("click");
+}
+
+function pb_kakao_login(){
+	Kakao.Auth.login({
+		success: function(authObj) {
+			Kakao.API.request({
+				url: '/v2/user/me',
+				success: function(res) {
+
+					var kakao_mem = new Array();
+					kakao_mem['id'] = res.id;
+					kakao_mem['email'] = res.kaccount_email;
+					kakao_mem['nickname'] = res.properties.nickname;
+					Kakao.API.request({
+						url: '/v2/user/me',
+						success: function(res2) {
+							kakao_mem['birthday'] = res2.birthday;
+							kakao_mem['birthdayType'] = res.birthdayType;
+						},
+						fail: function(error) {
+							akakakoSnsLogin(kakao_mem);
+						}
+					});
+
+					_pb_check_login_for_kakao(kakao_mem);
+				},
+				fail: function(error) {
+
+					alert(JSON.stringify(err));
+				}
+			});
+
+		},
+		fail: function(err) {
+
+		  alert(JSON.stringify(err));
+		}
+	});
+}	
+
+function _pb_check_login_for_kakao(kakao_data_){
+	var request_data_ = {
+		id : kakao_data_.id,
+		email : kakao_data_.email ? kakao_data_.email : null,
+		username : kakao_data_.nickname ? kakao_data_.nickname : null,
+		birthday : kakao_data_.birthday ? kakao_data_.birthday : null,
+		birthday_type : kakao_data_.birthdayType ? (kakao_data_.birthdayType === "SOLAR" ? "1" : "2") : null,		
+	}
+
+	PB.post("kakao-login",{
+		'kakao_data' : request_data_
+	}, function(result_, response_json_){
+		if(!result_ || response_json_.success !== true){
+
+			if(response_json_.do_register){
+
+				var sns_register_form_ = $("#pb-sns-register-form");
+
+				sns_register_form_.find("[name='email']").val(request_data_['email']);
+				sns_register_form_.find("[name='name']").val(request_data_['username']);
+				sns_register_form_.find("[name='nick']").val(request_data_['username']);
+
+				var birth_m_  ='';
+				var birth_d_ = '';
+				if(request_data_['birthday']){
+					birth_m_  = request_data_['birthday'].substring(0,2);
+					birth_d_ = request_data_['birthday'].substring(3,2);
+				}
+
+				sns_register_form_.find("[name='birth2']").val(birth_m_);
+				sns_register_form_.find("[name='birth3']").val(birth_d_);
+				sns_register_form_.find("[name='birth4']").val(request_data_['birthday_type']);
+
+				sns_register_form_.find("[name='sns_id']").val(request_data_['id']);
+				sns_register_form_.find("[name='sns_version']").val("kakao");
+
+				sns_register_form_.submit();
+
+			}else{
+				PB.confirm({
+					title : response_json_.error_title || "에러발생",
+					content : response_json_.error_message || "로그인 중, 에러가 발행했습니다.",
+				});
+			}
+
+			return;
+		}
+
+		location.reload();
+
+	}, true);
+}
+
+</script>
+
+<div class="body-content-frame">
+
+<style type="text/css">
+}
+</style>
+<div class="body-content ">
+	<style type="text/css"> .pb-element-class-6x1opo7jcr{
+	background-color:#f3f6ff;
+}  .pb-element-class-t65adzo1sb{
+}  .pb-element-class-6v9qv28ka2{
+}  .pb-element-class-5vcpk7wbna{
+}  .pb-element-class-by7j63n3gf{
+	background-color:#203000;
+}  .pb-element-class-ww637r099c{
+	background-color:#5d7a0e;
+}  .pb-element-class-s80y5ryurm{
+}  .pb-element-class-75q14tkt1r{
+}  .pb-element-class-d1j5yj5l3d{
+}  .pb-element-class-ipxkedqjra{
+	margin-top:-30px;
+}  .pb-element-class-aamkvygmpl{
+}  .pb-element-class-m9wkw1wa82{
+} </style>
+
+		<div class="swiper-container pb-hub-slider-001  " id="pb-hub-slider-001-spXCY">
+			<div class="swiper-wrapper">		<div class="swiper-slide  " id='pb-hub-slider-001-slide-cFyPj' data-header-theme-color="color-theme-light" style="background-color: 20220610/8r30qSx1wlJbXaB.jpg;">
+			<div class="inner-wrapper"
+
+							>
+			<div class="background" 
+								style="background-image: url('//bm.cyber.co.kr/data_user/hub/20220610/8r30qSx1wlJbXaB.jpg')"
+							></div>
+			<div class="wrap">
+				<div class="col-featured-image">
+												<a href="https://bm.cyber.co.kr/sq/22/11" data-href-mobile="https://bm.cyber.co.kr/m/sq/22/11" class="featured-image-link" target="_blank"><img src="//bm.cyber.co.kr/data_user/hub/20220610/y4wSZrFENd9dRcB.png" class="featured-image" data-thumbs="//bm.cyber.co.kr/data_user/hub/20220610/tJGZBGqgkeuuslH.jpg" data-aos="fade" data-aos-delay="300" data-aos-anchor="#pb-hub-slider-001-slide-cFyPj"></a>
+										
+					
+				</div>
+
+				<div class="col-content"><div class="v-wrap" data-aos="fade" data-aos-delay="600" data-aos-anchor="#pb-hub-slider-001-slide-cFyPj">
+											<a class="title" href="https://bm.cyber.co.kr/sq/22/11" data-href-mobile="https://bm.cyber.co.kr/m/sq/22/11" target="_blank">
+													</a>
+						<a class="content" href="https://bm.cyber.co.kr/sq/22/11" data-href-mobile="https://bm.cyber.co.kr/m/sq/22/11" target="_blank">
+							<p><img src="//bm.cyber.co.kr/data_user/hub//20220610/KwkkfGdhl0i0oQY.png" style="width: 100%;" data-filename="20220610/슬라이더(기본형)---서브.png"><br></p>						</a>
+											
+				</div></div>
+			</div>
+		</div></div>
+		</div>
+			<div class="swiper-pagination" data-aos="fade" data-aos-delay="800" data-aos-anchor="#pb-hub-slider-001-spXCY"></div>
+			<div class="swiper-button-container">
+				<div class="container">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>	
+		</div>
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			$("#pb-hub-slider-001-spXCY [data-href-mobile]").click(function(){
+				if(PBVAR['is_mobile']){
+					var target_link_ = $(this);
+					document.location = target_link_.attr("data-href-mobile");
+					return false;
+				}
+				
+			});
+		});
+		</script>
+		<script type="text/javascript">
+jQuery(document).ready(function(){
+
+	function _slider_001_header_color_handler(target_slide_){
+		var header_theme_color_ = target_slide_.attr("data-header-theme-color");
+			header_theme_color_ = (!header_theme_color_ || header_theme_color_ === "" ? "color-theme-default" : header_theme_color_);
+
+		var pb_header_el_ = $("#pb-header");
+		// var pb_header_offset_ = pb_header_el_.offset();
+		// var scroll_top_ = $(window).scrollTop();
+		
+
+		pb_header_el_.toggleClass("color-theme-light color-theme-dark color-theme-default", false);
+		pb_header_el_.toggleClass(header_theme_color_, true);
+	}
+
+	var slider_001_ = $("#pb-hub-slider-001-spXCY");
+	
+	var slider_001_module_ = new Swiper(slider_001_, {
+		// loop: true,
+		autoplay : {
+			delay : 3000,
+			disableOnInteraction : false,
+		},
+		autoHeight: true,
+		pagination: {
+			el: '#pb-hub-slider-001-spXCY .swiper-pagination',
+			clickable : true,
+			renderBullet : function(index_, class_name_){
+				var thumbnail_image_url_ = $(this['slides'][index_]).find("[data-thumbs]").attr("data-thumbs");
+				return '<div class="' + class_name_ + '"><img class="thumbnail-image" src="'+thumbnail_image_url_+'"></div>';
+			}
+		},
+		navigation: {
+			nextEl: '#pb-hub-slider-001-spXCY .swiper-button-next',
+			prevEl: '#pb-hub-slider-001-spXCY .swiper-button-prev',
+		},
+		effect : "fade",
+		fadeEffect : {
+			crossFade: false
+		},
+		on : {
+			init : function(){
+				_slider_001_header_color_handler($(this['slides'][this.activeIndex]));
+			},
+			slideChange : function(){
+				_slider_001_header_color_handler($(this['slides'][this.activeIndex]));
+
+			}
+		}
+	});
+});
+		</script>
+				<div class="pb-hub-block-menu-group-001  pb-element-class-6x1opo7jcr" id="pb-hub-block-menu-group-001-TkOIW"><div class="wrap container">
+			<div class="col-left">
+				<div class="top-frame">
+					<div class="block-item block-item-001" data-aos="fade-right"><div class="wrap">
+						<div class="background-frame">
+							<div class="background" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20200219/블럭메뉴그룹(4단블록)---첫번째.jpg');"></div>
+							<div class="background-overlay"></div>
+						</div>
+						<h3 class="subject">
+							<small>정보처리분야 NO.1 권우석의</small>
+							비단길 정보처리기사						</h3>
+
+						<ul class="item-list">
+		<li><a href="https://bm.cyber.co.kr/lecture.php?action=package&uid=653" data-href-mobile="https://bm.cyber.co.kr/m/lecture.php?action=package&uid=653&code=01010902" target="_blank"><span>정보처리기사 필기+실기(2023년 대비)</span></a></li>
+
+		
+		<li><a href="https://bm.cyber.co.kr/lecture.php?action=view&no=1272" data-href-mobile="https://bm.cyber.co.kr/m/lecture.php?action=view&no=1272&code=01010902" target="_blank"><span>정보처리기사 필기(2023년 대비)</span></a></li>
+
+		
+		<li><a href="https://bm.cyber.co.kr/lecture.php?action=view&no=1320" data-href-mobile="https://bm.cyber.co.kr/m/lecture.php?action=view&no=1320&code=01010902" target="_blank"><span>정보처리기사 실기(2023년 대비)</span></a></li>
+
+		</ul>
+
+					</div></div>
+				</div>
+			</div>
+			<div class="col-right">
+				<div class="top-frame">
+					<div class="block-item block-item-002" data-aos="fade-left"><a href="https://bm.cyber.co.kr/hub/information_pro/resources?tab_index=005" data-href-mobile="https://bm.cyber.co.kr/hub/information_pro/resources?tab_index=005" class="wrap">
+						<div class="background-frame">
+							<div class="background" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20200204/블럭메뉴그룹(4단블록)---두번째.jpg');"></div>
+							<div class="background-overlay"></div>
+						</div>
+						<h3 class="subject">
+							<span>최신 기출문제 다운로드</span>
+							<small>성안당 회원이라면 누구나 최신 기출문제를 무료로 다운로드 받으실 수 있습니다.</small>
+						</h3>
+
+					</a></div>
+				</div>
+				<div class="bottom-frame">
+					<div class="block-item block-item-003" data-aos="fade-up"><a href="https://bm.cyber.co.kr/hub/information_pro/resources?tab_index=002" data-href-mobile="https://bm.cyber.co.kr/hub/information_pro/resources?tab_index=002" class="wrap">
+						<div class="background-frame">
+							<div class="background" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20200204/블럭메뉴그룹(4단블록)---3번째.jpg');"></div>
+							<div class="background-overlay"></div>
+						</div>
+						<h3 class="subject">
+							<span>시험일정/ 합격률</span>
+							<small>올해의 시험일정과 최근 5개년 합격률을 확인해 보세요.</small>
+						</h3>
+					</a></div>
+					<div class="block-item block-item-004" data-aos="fade-up"><a href="https://bm.cyber.co.kr/hub/information_pro/resources?tab_index=003" data-href-mobile="https://bm.cyber.co.kr/hub/information_pro/resources?tab_index=003" class="wrap">
+						<div class="background-frame">
+							<div class="background" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20200204/블럭메뉴그룹(4단블록)---4번째.jpg');"></div>
+							<div class="background-overlay"></div>
+						</div>
+						<h3 class="subject">
+							<span>응시자격/ 응시방법</span>
+							<small>시험을 준비하기 전 응시자격을 미리 확인해 보세요.</small>
+						</h3>
+					</a></div>
+				</div>
+			</div>
+		</div></div>
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			$("#pb-hub-block-menu-group-001-TkOIW [data-href-mobile]").click(function(){
+				if(PBVAR['is_mobile']){
+					var target_link_ = $(this);
+					document.location = target_link_.attr("data-href-mobile");
+					return false;
+				}
+				
+			});
+		});
+		</script>
+				<div class="pb-hub-imagemap-001  pb-element-class-by7j63n3gf image-align-center" id="pb-hub-imagemap-001-iV5lV"><div class="wrap">
+			
+			<div class="hidden-xs">
+				<img src="//bm.cyber.co.kr/data_user/hub/20221027/YVmz3F2kiD65fbC.jpg" class="target-image" usemap="#pb-hub-imagemap-001-iV5lV-map" style="max-width:100%">
+				<map name="pb-hub-imagemap-001-iV5lV-map" id="pb-hub-imagemap-001-iV5lV-map"></map>
+				<script type="text/plain" id="pb-hub-imagemap-001-iV5lV-map-string"></script>
+			</div>
+						<div class="visible-xs">
+				<img src="//bm.cyber.co.kr/data_user/hub/20221027/o1ouOSwDyDD23hp.jpg" class="target-image" usemap="#pb-hub-imagemap-001-iV5lV-map-xs" style="max-width:100%">
+				<map name="pb-hub-imagemap-001-iV5lV-map-xs" id="pb-hub-imagemap-001-iV5lV-map-xs"></map>
+				<script type="text/plain" id="pb-hub-imagemap-001-iV5lV-map-xs-string"></script>
+			</div>
+				
+		</div></div>
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			var temp_map_el_ = $('<div></div>');
+				temp_map_el_.html($("#pb-hub-imagemap-001-iV5lV-map-string").html());
+
+			$("#pb-hub-imagemap-001-iV5lV-map").html(temp_map_el_.children("map").html());
+			$('#pb-hub-imagemap-001-iV5lV-map').imageMapResize();
+
+							var temp_map_xs_el_ = $('<div></div>');
+					temp_map_xs_el_.html($("#pb-hub-imagemap-001-iV5lV-map-xs-string").html());
+
+				$("#pb-hub-imagemap-001-iV5lV-map-xs").html(temp_map_xs_el_.children("map").html());
+				$('#pb-hub-imagemap-001-iV5lV-map-xs').imageMapResize();
+					});
+		</script>
+				<div class="pb-hub-imagemap-001  pb-element-class-ww637r099c image-align-center" id="pb-hub-imagemap-001-kNlip"><div class="wrap">
+			
+			<div class="hidden-xs">
+				<img src="//bm.cyber.co.kr/data_user/hub/20220610/yjY91yTEkfrVDY0.jpg" class="target-image" usemap="#pb-hub-imagemap-001-kNlip-map" style="max-width:100%">
+				<map name="pb-hub-imagemap-001-kNlip-map" id="pb-hub-imagemap-001-kNlip-map"></map>
+				<script type="text/plain" id="pb-hub-imagemap-001-kNlip-map-string"><!-- Image Map Generated by http://www.image-map.net/ -->
+<img src="링크형이미지_2.jpg" usemap="#image-map">
+
+<map name="image-map">
+    <area target="_blank" alt="" title="" href="https://cafe.naver.com/gunsystem" coords="244,627,974,562" shape="rect">
+</map></script>
+			</div>
+						<div class="visible-xs">
+				<img src="//bm.cyber.co.kr/data_user/hub/20220610/jTInwELkpODtRTA.jpg" class="target-image" usemap="#pb-hub-imagemap-001-kNlip-map-xs" style="max-width:100%">
+				<map name="pb-hub-imagemap-001-kNlip-map-xs" id="pb-hub-imagemap-001-kNlip-map-xs"></map>
+				<script type="text/plain" id="pb-hub-imagemap-001-kNlip-map-xs-string"><!-- Image Map Generated by http://www.image-map.net/ -->
+<img src="M_링크형이미지_2.jpg" usemap="#image-map">
+
+<map name="image-map">
+    <area target="_self" alt="" title="" href="http://m.gisafirst.com/" coords="739,966,34,905" shape="rect">
+</map></script>
+			</div>
+				
+		</div></div>
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			var temp_map_el_ = $('<div></div>');
+				temp_map_el_.html($("#pb-hub-imagemap-001-kNlip-map-string").html());
+
+			$("#pb-hub-imagemap-001-kNlip-map").html(temp_map_el_.children("map").html());
+			$('#pb-hub-imagemap-001-kNlip-map').imageMapResize();
+
+							var temp_map_xs_el_ = $('<div></div>');
+					temp_map_xs_el_.html($("#pb-hub-imagemap-001-kNlip-map-xs-string").html());
+
+				$("#pb-hub-imagemap-001-kNlip-map-xs").html(temp_map_xs_el_.children("map").html());
+				$('#pb-hub-imagemap-001-kNlip-map-xs').imageMapResize();
+					});
+		</script>
+				<div class="pb-hub-teacher-001   light teacher-count-1" id="pb-hub-teacher-001-ku4Sj"><div class="wrap"><div class="inner-wrap">
+			<div class="background" data-aos="fade-left" data-aos-delay="400" data-aos-anchor="#pb-hub-teacher-001-ku4Sj"></div>
+
+			<h2 class="title-group pb-common-title-001 for-mobile-title without-border visible-xs" data-aos="fade" data-aos-anchor="#pb-hub-teacher-001-ku4Sj">
+				<div class="title with-highlight">
+					<div class="main">정보처리기사</div><div class="subject">Professor</div>
+				</div>
+				<small class="subject">온라인 정보처리 부문 일타강사!</small>
+			</h2>
+
+			<div class="wrap" style="width: ">
+				<div class="col-teacher-images">
+					<div class="back-group">
+						<div class="outer" data-aos="zoom-in"><div class="inner" data-aos="zoom-in" data-aos-delay="200">
+							<div class="circle" data-aos="zoom-in" data-aos-delay="400" data-aos-anchor="#pb-hub-teacher-001-ku4Sj"></div>
+						</div></div>
+					</div>
+					<ul class="image-tab" role="tablist">
+													<li role="presentation" class="active" data-teacher-tab="#pb-hub-teacher-001-ku4Sj-tab-0">
+								<div class="image-wrap">
+									<img src="//bm.cyber.co.kr/data_user/hub/20220610/MUH8moQnzmwo6zZ.png" class="teacher-image" data-aos="fade-right">
+								</div>
+							</li>
+												
+						
+					</ul>
+
+					
+				</div>
+
+				<div class="col-content">
+					<div class="background" data-aos="fade-left" data-aos-delay="400" data-aos-anchor="#pb-hub-teacher-001-ku4Sj"></div>
+					<h2 class="title-group pb-common-title-001 without-border" data-aos="fade" data-aos-delay="400" data-aos-anchor="#pb-hub-teacher-001-ku4Sj">
+						
+						<div class="title with-highlight">
+							<div class="main">정보처리기사</div><div class="subject">Professor</div>
+						</div>
+						<small class="subject">온라인 정보처리 부문 일타강사!</small>
+					</h2>
+
+
+					<div class="pb-common-tab-group-001  teacher-info-tab" data-aos="fade" data-aos-delay="800" data-aos-anchor="#pb-hub-teacher-001-ku4Sj">
+
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+														<li role="presentation" class="active"><a href="#pb-hub-teacher-001-ku4Sj-tab-0" role="tab" data-toggle="tab" data-teacher-tab-link>권우석 교수</a></li>
+													</ul>
+
+						<div class="tab-content">
+							
+								<div role="tabpanel" class="tab-pane active" id="pb-hub-teacher-001-ku4Sj-tab-0">
+									<h3 class="subject">
+										<div class="main">누구나 쉽게 이해되는 정보처리기사 강의</div>
+										<small>비전공자, 초보자도 문제 없다!</small>
+									</h3>
+									<ul class="history-list list-col-2">
+																					<li>現)기사퍼스트대표이사</li>
+																					<li>現)(재)한국디지털융합진흥원교육지원본부팀장</li>
+																					<li>영남대학교 디지털융합비지니스전공(박사)</li>
+																					<li>영남대학교 E-비즈니스전공(석사)</li>
+																					<li>한국U러닝 연합회 e러닝 지도사</li>
+																					<li>평생교육사(교육과학기술부)</li>
+																					<li>성안당·영진·웰북출판사 교재 집필 및 감수</li>
+																					<li>EBS 컴퓨터활용능력 필기/실기감수</li>
+																					<li>LG CNS등 다수업체 컴퓨터 자격증 교육</li>
+																					<li>네이버 컴퓨터자격증 1위 카페 운영자</li>
+																			</ul>
+									<a href="javascript:pb_open_video_player('ZPsHZo_5tSQ');" data-youtube-player="ZPsHZo_5tSQ" class="pb-common-btn-001-secondary" >샘플강의 보러가기<i class="arrow"></i></a>
+								</div>
+														
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div></div></div>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				var all_teacher_tab_links_= $("#pb-hub-teacher-001-ku4Sj [data-teacher-tab-link]");
+				$("#pb-hub-teacher-001-ku4Sj [data-teacher-tab]").click(function(){
+					var target_el_ = $("#pb-hub-teacher-001-ku4Sj li.active [data-teacher-tab-link]").parent().next();
+					if(target_el_.length <= 0) target_el_ = $("#pb-hub-teacher-001-ku4Sj li.active [data-teacher-tab-link]").parent().prev();
+
+					var target_link_ = target_el_.find("a");
+					target_link_.tab("show");
+				});
+
+				all_teacher_tab_links_.on("show.bs.tab", function(){
+					$("#pb-hub-teacher-001-ku4Sj [data-teacher-tab]").toggleClass("active", false);
+					$("#pb-hub-teacher-001-ku4Sj [data-teacher-tab='"+$(this).attr("href")+"']").toggleClass("active", true);
+				})
+			})
+		</script>
+				<div class="pb-hub-block-menu-group-002  pb-element-class-s80y5ryurm" id="pb-hub-block-menu-group-002-ApgFr"><div class="wrap">
+			<div class="background-frame">
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+			<div class="content-frame"><div class="container">
+				<div class="wrap">
+					<div class="col-left" data-aos="fade-right">
+						<div class="schedule-list-group">
+							<div class="col-icon">
+								<i class="icon material-icons">access_time</i>
+							</div>
+							<div class="col-list">
+								<h3 class="subject">주요 시험 일정
+									<div class="button-wrap">
+
+																			<a href="//bm.cyber.co.kr/hub/_file_download?rel_path=20221129%2FsP1SWxujh9N77u8.jpg&display_name=%EC%8B%9C%ED%97%98+%EC%A0%84%EC%B2%B4+%EC%9D%BC%EC%A0%95+%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg" class="btn small-style pb-common-btn-001-secondary excel-download-btn" target="_blank"><i class="arrow"></i>시험 전체 일정 다운로드</a>
+
+																		</div>
+								</h3>
+
+								<ul class="schedule-list menu-group-item-list lighten">
+																			<li>
+											<div>
+												<span class="ctg"><span>기사•산업기사</span></span>
+												<span class="item-name schedule-name">
+													<div class="top-frame">
+														제1회													</div>
+													
+													<div class="bottom-frame">
+														<span>2023-04-22~05-07</span>
+																													<span class="comment">실기 시험일</span>
+																
+													</div>
+													
+												</span>
+												<span class="dday">D-16</span>
+											</div>
+										</li>
+																			<li>
+											<div>
+												<span class="ctg"><span>기사•산업기사</span></span>
+												<span class="item-name schedule-name">
+													<div class="top-frame">
+														제2회													</div>
+													
+													<div class="bottom-frame">
+														<span>2023-04-17~04-20</span>
+																													<span class="comment">필기 원서접수일</span>
+																
+													</div>
+													
+												</span>
+												<span class="dday">D-11</span>
+											</div>
+										</li>
+																			<li>
+											<div>
+												<span class="ctg"><span>기사•산업기사</span></span>
+												<span class="item-name schedule-name">
+													<div class="top-frame">
+														제2회													</div>
+													
+													<div class="bottom-frame">
+														<span>2023-05-13~06-04</span>
+																													<span class="comment">필기 시험일</span>
+																
+													</div>
+													
+												</span>
+												<span class="dday">D-37</span>
+											</div>
+										</li>
+																			<li>
+											<div>
+												<span class="ctg"><span>기사•산업기사</span></span>
+												<span class="item-name schedule-name">
+													<div class="top-frame">
+														제2회													</div>
+													
+													<div class="bottom-frame">
+														<span>2023-06-27~06-30</span>
+																													<span class="comment">실기 원서접수일</span>
+																
+													</div>
+													
+												</span>
+												<span class="dday">D-82</span>
+											</div>
+										</li>
+																			<li>
+											<div>
+												<span class="ctg"><span>기사•산업기사</span></span>
+												<span class="item-name schedule-name">
+													<div class="top-frame">
+														제2회													</div>
+													
+													<div class="bottom-frame">
+														<span>2023-07-22~08-06</span>
+																													<span class="comment">실기 시험일</span>
+																
+													</div>
+													
+												</span>
+												<span class="dday">D-107</span>
+											</div>
+										</li>
+																	</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-right" data-aos="fade-left">
+						
+						<div class="quest-list-group">
+							<div class="pb-common-tab-group-001">
+
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active"><a href="#pb-hub-block-menu-group-002-ApgFr-tab-002" role="tab" data-toggle="tab">최신 기출/공개문제</a></li>
+									<li role="presentation"><a href="#pb-hub-block-menu-group-002-ApgFr-tab-001" role="tab" data-toggle="tab">최신 출제기준</a></li>
+								</ul>
+
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane " id="pb-hub-block-menu-group-002-ApgFr-tab-001">
+										<ul class="exam-std-list menu-group-item-list">
+																							<li data-sort-char="0000100001">
+													<a href="//bm.cyber.co.kr/hub/_board_file_download/exam_tip/231/0" target="_blank">
+														<span class="ctg"><span>정보처리기사</span></span>
+														<span class="item-name schedule-name">정보처리기사 출제기준(2023.1.1~2025.12.31)														</span>
+																												<div class="new-badge-col">
+															<span class="new-badge">N</span>
+														</div>
+																												<span class="append"><div class="material-icons">arrow_drop_down</div></span>
+													</a>
+												</li>
+																						
+											
+										</ul>
+
+									</div>
+									<div role="tabpanel" class="tab-pane active" id="pb-hub-block-menu-group-002-ApgFr-tab-002">
+										<ul class="exam-quest-list menu-group-item-list">
+																							<li data-sort-char="0000100001">
+													<a href="//bm.cyber.co.kr/hub/_board_file_download/kichool/578/0" target="_blank">
+														<span class="ctg"><span>정보처리기사</span></span>
+														<span class="item-name schedule-name">2022년 2회 정보처리기사 필기 기출문제														</span>
+																													<div class="new-badge-col">
+																<span class="new-badge">N</span>
+															</div>
+																												<span class="append"><div class="material-icons">arrow_drop_down</div></span>
+													</a>
+												</li>
+																							<li data-sort-char="0000100002">
+													<a href="//bm.cyber.co.kr/hub/_board_file_download/kichool/577/0" target="_blank">
+														<span class="ctg"><span>정보처리기사</span></span>
+														<span class="item-name schedule-name">2022년 1회 정보처리기사 필기 기출문제														</span>
+																													<div class="new-badge-col">
+																<span class="new-badge">N</span>
+															</div>
+																												<span class="append"><div class="material-icons">arrow_drop_down</div></span>
+													</a>
+												</li>
+																							<li data-sort-char="0000100003">
+													<a href="//bm.cyber.co.kr/hub/_board_file_download/kichool/576/0" target="_blank">
+														<span class="ctg"><span>정보처리기사</span></span>
+														<span class="item-name schedule-name">2021년 정보처리기사 필기 기출문제														</span>
+																												<span class="append"><div class="material-icons">arrow_drop_down</div></span>
+													</a>
+												</li>
+																							<li data-sort-char="0000100004">
+													<a href="//bm.cyber.co.kr/hub/_board_file_download/kichool/575/0" target="_blank">
+														<span class="ctg"><span>정보처리기사</span></span>
+														<span class="item-name schedule-name">2020년 정보처리기사 필기 기출문제														</span>
+																												<span class="append"><div class="material-icons">arrow_drop_down</div></span>
+													</a>
+												</li>
+																					</ul>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div></div>
+		</div></div>
+				<div class="pb-hub-free-lecture-001  pb-element-class-75q14tkt1r" id="pb-hub-free-lecture-001-facQZ"><div class="wrap">
+			<div class="container title-group-container">
+				<h2 class="title-group pb-common-title-001" data-aos="fade">
+					<div class="top-subtext">
+						<div><img src="//bm.cyber.co.kr/hub/img/common-title-ci-small-white.png" class="ci-image"></div> 공식 YouTube
+					</div>
+					<div class="title">
+						<div class="main">FREE LECTURE</div><div class="subject">필수합격 무료강의</div>
+					</div>
+					<small class="subject">다년간 쌓아온 성안당만의 노하우로 합격을 준비하세요!</small>
+				</h2>
+							</div>
+
+			<div class="free-lecture-list-group">
+
+				<div class="background"></div>
+
+				<div class="container free-lecture-list" data-aos="fade-left">
+
+					<div class="swiper-container media-slider" id="pb-hub-free-lecture-001-facQZ-slider">
+						<div class="swiper-wrapper">
+															<div class="swiper-slide media-item"><a class="wrap" href="javascript:pb_open_video_player('ZPsHZo_5tSQ');" data-youtube-player="ZPsHZo_5tSQ">
+									<div class="thumbnail-wrap" style="padding-top: 55%">
+										<div class="label-badge">정보처리기사</div>
+										<div class="overlay">
+											<i class="play-icon material-icons">play_arrow</i>
+										</div>
+										<div class="thumbnail" style="background-image: url('https://i.ytimg.com/vi/ZPsHZo_5tSQ/maxresdefault.jpg')"></div>
+									</div>
+									<div class="content-wrap">
+										<div class="name">[권우석의 비단길] 정보처리기사 필기 - 시험 소개 및 합격 전략</div>
+										<div class="desc">#권우석 #정보처리기사 #성안당 #비단길 #정보처리기사필기 #정보처리기사기출문제</div>
+									</div>
+								</a></div>	
+															<div class="swiper-slide media-item"><a class="wrap" href="javascript:pb_open_video_player('_eMxZ_8skh4');" data-youtube-player="_eMxZ_8skh4">
+									<div class="thumbnail-wrap" style="padding-top: 55%">
+										<div class="label-badge">정보처리기사</div>
+										<div class="overlay">
+											<i class="play-icon material-icons">play_arrow</i>
+										</div>
+										<div class="thumbnail" style="background-image: url('https://i.ytimg.com/vi/_eMxZ_8skh4/maxresdefault.jpg')"></div>
+									</div>
+									<div class="content-wrap">
+										<div class="name">[권우석의 비단길]  정보처리기사 필기 - 교재 및 강의 활용법(3주 합격법)</div>
+										<div class="desc"> #권우석 #정보처리기사 #성안당 #비단길 #정보처리기사필기 #정보처리기사교재 #정보처리기사강의</div>
+									</div>
+								</a></div>	
+														
+						</div>
+					</div>
+						
+				
+				</div>
+				
+			</div>
+
+			<div class="button-area" data-aos="fade">
+				<a href="//bm.cyber.co.kr/hub/information_pro/free-lectures" class="pb-common-btn-001-primary ">
+					무료강의 더보기
+					<i class="arrow"></i>
+				</a>
+			</div>
+
+		</div></div>
+		<script type="text/javascript">
+jQuery(document).ready(function(){
+	var media_slider_ = $("#pb-hub-free-lecture-001-facQZ-slider");
+	var media_slider_module_ = new Swiper(media_slider_, {
+		slidesPerView : "auto",
+		loop : false,
+		navigation: {
+			nextEl: '#pb-hub-free-lecture-001-facQZ-slider-button .swiper-button-next',
+			prevEl: '#pb-hub-free-lecture-001-facQZ-slider-button .swiper-button-prev',
+		},
+	});
+});
+		</script>
+				<div class="pb-hub-book-001  pb-element-class-d1j5yj5l3d" id="pb-hub-book-001-69Ucu"><div class="wrap">
+			<div class="container title-group-container">
+				<h2 class="title-group pb-common-title-002" data-aos="fade">
+					<div class="content-wrap">
+						<div class="title with-highlight">
+							<div class="main">BOOKS</div><div class="subject">강의도서</div>
+						</div>
+						<small class="subject">국내최대 이공계 출판사 성안당 수험서</small>
+						<div class="clearfix"></div>
+					</div>
+					<div class="nav-wrap">
+						<div class="pb-common-tab-group-001">
+
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist" id="pb-hub-book-001-69Ucu-tab">
+
+								
+									<li role="presentation"><a href="#pb-hub-book-001-69Ucu-tab-198" data-ctg-id="198" role="tab" data-toggle="tab">전체</a></li>
+								
+								
+															</ul>
+
+						</div>
+					</div>
+
+				</h2>
+
+							</div>
+
+			<div class="book-list-group" >
+
+				<div class="background"></div>
+
+				<div class="container book-list">
+
+					<div class="swiper-container media-slider " id="pb-hub-book-001-69Ucu-slider" data-aos="fade-left">
+						<div class="swiper-wrapper">
+															<div class="swiper-slide media-item book-is-3d" data-isbn='978-89-315-5729-9' data-ctg-id="198"><div class="wrap" >
+									<div class="thumbnail-wrap">
+																				<a href="//bm.cyber.co.kr/hub/information_pro/books" class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20220519/1OAUdmLHey16bHE.jpg')"></a>
+										
+									</div>
+									<div class="content-wrap">
+										<div class="name" style="margin-bottom: 20px;">2022 비단길 정보처리기사 필기</div>
+
+																					
+										
+										<a href="" class="btn-lg buy-btn btn btn-secondary btn-border with-icon with-icon" data-cart-to-order-item="5729">
+												<i class="icon material-icons">shopping_cart</i> 구매하기 
+											</a>
+																			</div>
+								</div></div>	
+															<div class="swiper-slide media-item book-is-3d" data-isbn='978-89-315-5730-5' data-ctg-id="198"><div class="wrap" >
+									<div class="thumbnail-wrap">
+																				<a href="//bm.cyber.co.kr/hub/information_pro/books" class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20220519/5ZKoteMxJYGM1F1.jpg')"></a>
+										
+									</div>
+									<div class="content-wrap">
+										<div class="name" style="margin-bottom: 20px;"> 2022 비단길 정보처리기사 실기</div>
+
+																					
+										
+										<a href="" class="btn-lg buy-btn btn btn-secondary btn-border with-icon with-icon" data-cart-to-order-item="5730">
+												<i class="icon material-icons">shopping_cart</i> 구매하기 
+											</a>
+																			</div>
+								</div></div>	
+													</div>
+						
+					</div>
+						
+				
+				</div>
+				
+			</div>
+
+			<div class="button-area">
+				<a href="//bm.cyber.co.kr/hub/information_pro/books" class="pb-common-btn-001-primary ">
+					수강교재 더보기
+					<i class="arrow"></i>
+				</a>
+			</div>
+
+		</div></div>
+		<script type="text/javascript">
+jQuery(document).ready(function(){
+	var media_slider_ = $("#pb-hub-book-001-69Ucu-slider");
+	var media_slider_module_ = new Swiper(media_slider_, {
+		slidesPerView : "auto",
+		navigation: {
+			nextEl: '#pb-hub-book-001-69Ucu-slider-button .swiper-button-next',
+			prevEl: '#pb-hub-book-001-69Ucu-slider-button .swiper-button-prev',
+		},
+		// centeredSlides: true,
+		// loop: true,
+		// slidesPerView : 4,
+		// slidesPerGroup: 1,
+		// paginationClickable: true,
+		// spaceBetween: 30
+	});
+
+		
+		var tab_menu_el_ = $("#pb-hub-book-001-69Ucu-tab");
+		var all_slides_ = media_slider_.find(".swiper-slide[data-ctg-id]");
+
+		tab_menu_el_.find("a[data-ctg-id]").click($.proxy(function(event_){
+			var ctg_id_ = $(event_.currentTarget).attr("data-ctg-id");
+			var isbn_map_ = [];
+
+			var target_slides_ = [];
+
+			this['slides'].each(function(){
+				var slide_ = $(this);
+				var toggled_ = slide_.attr("data-ctg-id") === ctg_id_;
+
+				slide_.toggle(toggled_);
+
+				if(toggled_) target_slides_.push(slide_);
+			});
+
+			//filtering isbn
+			var isbn_map_ = [];
+			$.each(target_slides_, function(){
+				var slide_ = $(this);
+				var isbn_ = slide_.attr("data-isbn");
+				var toggled_ = (isbn_map_.indexOf(isbn_) < 0);
+				isbn_map_.push(isbn_);
+
+				slide_.toggle(toggled_);
+			});
+
+			$("#pb-hub-book-001-69Ucu-slider-button").toggle((target_slides_.length > 4));
+
+			setTimeout($.proxy(function(){
+				this.update();
+			}, this['slider_module']), 50);
+		},{
+			slides : all_slides_,
+			slider_module : media_slider_module_,
+		})).first().click();
+});
+
+		</script>
+				<div class="pb-hub-notice-001  pb-element-class-ipxkedqjra lighten" id="pb-hub-notice-001-QwibP"><div class="wrap">
+			<div class="container title-group-container">
+				<div class="title-group" data-aos="fade">
+					<div class="col-title"><h3 class="title">EVENTS&NEWS</h3></div>
+					<div class="col-navbar">
+						
+						<div class="pb-common-tab-group-001 ">
+
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#pb-hub-notice-001-QwibP-tab-all" role="tab" data-toggle="tab">전체</a></li>
+								<li role="presentation"><a href="##pb-hub-notice-001-QwibP-tab-notice" role="tab" data-toggle="tab">공지사항</a></li>
+								<li role="presentation"><a href="##pb-hub-notice-001-QwibP-tab-event" role="tab" data-toggle="tab">이벤트</a></li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="content-wrap" data-aos="fade">
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="pb-hub-notice-001-QwibP-tab-all">
+
+							<div class="notice-list-wrap ">
+
+																<div class="col-left">
+																			<div class="notice-item"><a class="wrap" href="javascript:pb_view_notice(520)"  target="">
+											<div class="thumbnail-wrap"><div class="thumbnail-frame">
+												<div class="label-badge">공지사항</div>
+												<div class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20221021/hZhIJM08hc6KNkw.jpg')"></div>
+											</div></div>
+											<div class="content-wrap">
+												<div class="name">4년 연속 소비자의 선택 대상 수상</div>
+												<div class="desc">성안당 e러닝, 2019년, 2020년,2021년, 2022년 4년 연속 교육 ·국가기술 자격시험 부문 소비자의 선택 대상 쾌거!</div>
+											</div>
+										</a></div>
+																	</div>
+															
+								<div class="col-right">
+																			<div class="notice-item" style="    min-height: 115px;"><a class="wrap" href="https://bm.cyber.co.kr/gnu/bbs/board.php?bo_table=pass_story"  target="_blank" >
+											<div class="thumbnail-wrap"><div class="thumbnail-frame">
+												<div class="label-badge">이벤트</div>
+												<div class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20220107/78xXuR5sfA4XZmP.jpg')"></div>
+											</div></div>
+											<div class="content-wrap">
+												<div class="name">[합격수기 이벤트] 작성자 100% 상품권 지급!</div>
+												<div class="desc">합격수기 작성자 전원에게 문화상품권 1만원 권 및 최우수수기 작성자에게는 백화점 상품권 3만원 권 제공!</div>
+											</div>
+										</a></div>
+																			<div class="notice-item" style="    min-height: 115px;"><a class="wrap" href="https://bm.cyber.co.kr/gnu/bbs/board.php?bo_table=event&wr_id=12"  target="_blank" >
+											<div class="thumbnail-wrap"><div class="thumbnail-frame">
+												<div class="label-badge">이벤트</div>
+												<div class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20220107/S08GwNLMauRNmAU.jpg')"></div>
+											</div></div>
+											<div class="content-wrap">
+												<div class="name">[수강연장 혜택] 통큰 열공지원 3종</div>
+												<div class="desc">★ 친구와 함께 신청 시 20일 수강기간 plus+관련 분야 재직자라면 30일 수강기간  plus+
+2개 이상 강좌 동시 신청자라면 50일 수강기간 plus!</div>
+											</div>
+										</a></div>
+																			<div class="notice-item" style="    min-height: 115px;"><a class="wrap" href="https://bm.cyber.co.kr/season.php?seq=19/08"  target="_blank" >
+											<div class="thumbnail-wrap"><div class="thumbnail-frame">
+												<div class="label-badge">이벤트</div>
+												<div class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20220107/tz8ueJ6xn63DD0b.jpg')"></div>
+											</div></div>
+											<div class="content-wrap">
+												<div class="name">[100% 포인트 증정] 신규 가입 이벤트</div>
+												<div class="desc">회원 가입 시 5천 포인트 즉시 지급 및 한글+엑셀+파워포인트 ITQ(정보기술자격)강좌 제공</div>
+											</div>
+										</a></div>
+																				
+									
+								</div>
+							</div>
+
+							<div class="button-area">
+								<a href="//bm.cyber.co.kr/hub/information_pro/cs-center" class="pb-common-btn-001-primary">
+									더보기
+									<i class="arrow"></i>
+								</a>
+							</div>
+
+						</div>
+						<div role="tabpanel" class="tab-pane" id="pb-hub-notice-001-QwibP-tab-notice">
+
+							<div class="notice-list-wrap only-with-right">
+					
+								<div class="col-right">
+																			<div class="notice-item" style="    min-height: 115px;"><a class="wrap" href="https://pgweb.tosspayments.com/tosspayments/MainPopUp.do" target="_blank" >
+											<div class="thumbnail-wrap"><div class="thumbnail-frame">
+												<div class="label-badge">공지사항</div>
+												<div class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20230102/vISfao97quZU82A.jpg')"></div>
+											</div></div>
+											<div class="content-wrap">
+												<div class="name">2023년 신용카드 무이자 할부 안내</div>
+												<div class="desc">카드사별 무이자 할부 및 부분 무이자 안내 공지입니다.</div>
+											</div>
+										</a></div>
+																			<div class="notice-item" style="    min-height: 115px;"><a class="wrap" href="javascript:pb_view_notice(520)" target="" >
+											<div class="thumbnail-wrap"><div class="thumbnail-frame">
+												<div class="label-badge">공지사항</div>
+												<div class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20221021/hZhIJM08hc6KNkw.jpg')"></div>
+											</div></div>
+											<div class="content-wrap">
+												<div class="name">4년 연속 소비자의 선택 대상 수상</div>
+												<div class="desc">성안당 e러닝, 2019년, 2020년,2021년, 2022년 4년 연속 교육 ·국가기술 자격시험 부문 소비자의 선택 대상 쾌거!</div>
+											</div>
+										</a></div>
+																				
+									
+								</div>
+							</div>
+
+							<div class="button-area">
+								<a href="//bm.cyber.co.kr/hub/information_pro/cs-center" class="pb-common-btn-001-primary">
+									공지사항 더보기
+									<i class="arrow"></i>
+								</a>
+							</div>
+						</div>
+
+						<div role="tabpanel" class="tab-pane" id="pb-hub-notice-001-QwibP-tab-event">
+
+							<div class="notice-list-wrap only-with-right">
+					
+								<div class="col-right">
+																			<div class="notice-item" style="    min-height: 115px;"><a class="wrap" href="https://bm.cyber.co.kr/gnu/bbs/board.php?bo_table=pass_story" data-  target="_blank">
+											<div class="thumbnail-wrap"><div class="thumbnail-frame">
+												<div class="label-badge">이벤트</div>
+												<div class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20220107/78xXuR5sfA4XZmP.jpg')"></div>
+											</div></div>
+											<div class="content-wrap">
+												<div class="name">[합격수기 이벤트] 작성자 100% 상품권 지급!</div>
+												<div class="desc">합격수기 작성자 전원에게 문화상품권 1만원 권 및 최우수수기 작성자에게는 백화점 상품권 3만원 권 제공!</div>
+											</div>
+										</a></div>
+																			<div class="notice-item" style="    min-height: 115px;"><a class="wrap" href="https://bm.cyber.co.kr/gnu/bbs/board.php?bo_table=event&wr_id=12" data-  target="_blank">
+											<div class="thumbnail-wrap"><div class="thumbnail-frame">
+												<div class="label-badge">이벤트</div>
+												<div class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20220107/S08GwNLMauRNmAU.jpg')"></div>
+											</div></div>
+											<div class="content-wrap">
+												<div class="name">[수강연장 혜택] 통큰 열공지원 3종</div>
+												<div class="desc">★ 친구와 함께 신청 시 20일 수강기간 plus+관련 분야 재직자라면 30일 수강기간  plus+
+2개 이상 강좌 동시 신청자라면 50일 수강기간 plus!</div>
+											</div>
+										</a></div>
+																			<div class="notice-item" style="    min-height: 115px;"><a class="wrap" href="https://bm.cyber.co.kr/season.php?seq=19/08" data-  target="_blank">
+											<div class="thumbnail-wrap"><div class="thumbnail-frame">
+												<div class="label-badge">이벤트</div>
+												<div class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20220107/tz8ueJ6xn63DD0b.jpg')"></div>
+											</div></div>
+											<div class="content-wrap">
+												<div class="name">[100% 포인트 증정] 신규 가입 이벤트</div>
+												<div class="desc">회원 가입 시 5천 포인트 즉시 지급 및 한글+엑셀+파워포인트 ITQ(정보기술자격)강좌 제공</div>
+											</div>
+										</a></div>
+																			<div class="notice-item" style="    min-height: 115px;"><a class="wrap" href="https://bm.cyber.co.kr/sq/21/04" data-  target="_blank">
+											<div class="thumbnail-wrap"><div class="thumbnail-frame">
+												<div class="label-badge">이벤트</div>
+												<div class="thumbnail" style="background-image: url('//bm.cyber.co.kr/data_user/hub/20220107/ICLC6XKbTlc5eEK.jpg')"></div>
+											</div></div>
+											<div class="content-wrap">
+												<div class="name">진행중인 이벤트 모아보기</div>
+												<div class="desc">2022년 자격증 취득을 목표로 한 성안당 회원을 위해 준비한 선물♥</div>
+											</div>
+										</a></div>
+																				
+									
+								</div>
+							</div>
+
+							<div class="button-area">
+								<a href="//bm.cyber.co.kr/hub/information_pro/cs-center" class="pb-common-btn-001-primary">
+									이벤트 더보기
+									<i class="arrow"></i>
+								</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+			
+			
+
+		</div></div>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+			$("#pb-hub-notice-001-QwibP [data-href-mobile]").click(function(){
+				if(PBVAR['is_mobile']){
+					var target_link_ = $(this);
+					document.location = target_link_.attr("data-href-mobile");
+					return false;
+				}
+				
+			});
+		});
+		</script>
+	
+				<div class="pb-hub-footer-common-banner-001  pb-element-class-aamkvygmpl" id="pb-hub-book-002-HwjMp"><div class="wrap">
+			<div class="clearfix"></div>
+			<div style="max-width: 1080px; margin: 0 auto;">
+				<img src="//bm.cyber.co.kr/hub/img/footer-common-banner-001.gif" class="img-responsive" style="width: 100%;">
+			</div>
+			<div class="clearfix"></div>
+		</div></div>
+				<div class="pb-hub-footer-common-banner-002  pb-element-class-m9wkw1wa82" id="pb-hub-book-002-Cbbgo"><div class="wrap" style="background-color: #686b78;">
+			<div class="clearfix"></div>
+			<div style="max-width: 1200px; margin: 0 auto;">
+				<img src="//bm.cyber.co.kr/hub/img/footer-common-banner-002.gif" class="img-responsive" style="width: 100%;">
+			</div>
+			<div class="clearfix"></div>
+		</div></div>
+		
+<script type="text/javascript"></script>
+
+	
+
+</div></div>
+<footer id="pb-footer" class="pb-footer"><div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-3 col-md-2">
+			<img src="//bm.cyber.co.kr/hub/themes/default/img/footer-logo.png" class="ci-image">
+		</div>
+		<div class="col-xs-12 col-sm-8 col-md-10">
+			<div class="top-frame">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-8">
+						<div class="footer-item company-info">
+							<h3 class="subject">COMPANY INFO</h3>
+							<ul>
+								<li>
+									<div><span>대표 이종춘</span><span>개인정보보호책임자 지정민</span></div>
+									<div>사업자등록번호 526-87-00162</div>
+								</li>
+								<li>
+									<div><span>팩스번호 : 031-950-6390</span>&nbsp;&nbsp;<span>이메일 help@cyber.co.kr</span></div>
+									<div>10881 경기도 파주시 문발로 112</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-4">
+						<div class="footer-item">
+							<h3 class="subject">CONTACT US</h3>
+							<ul>
+								<li class="large">031·950·6332</li>
+
+																<li><div style="margin-top: 10px;"></div>상담시간 09:00~18:00(주말, 공휴일 휴무)<br/>점심시간 12:00~13:00</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-frame">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-8">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6">
+																							</div>
+							<div class="col-xs-6 col-sm-6">
+																							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-4"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></footer>
+<script type="text/javascript">
+window.browser_popup = function(userID, mode, code, movie_id,order,uid,browserinfo,view_type){
+	w = "1000";
+	h = "600"; 
+
+	var is_mobile_ = PBVAR['is_mobile'];
+
+	window.open(PBVAR['base_url']+'/movieSubmit.php?order='+order+'&userID='+userID+'&mode='+mode+'&lecture_code='+code+'&movie_id='+movie_id+'&uid='+uid+'&browserinfo='+browserinfo+'&view_type='+view_type,'sample',"width="+w+",height="+h+",scrollbars=no,resizable=yes,copyhistory=no");
+	//return false;
+}
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var floating_banner_els_ = $("[data-floating-banner]");
+	floating_banner_els_.each(function(){
+		var floating_banner_el_ = $(this);
+
+		var close_btn_el_ = floating_banner_el_.find("[data-close-btn]");
+		var link_el_ = floating_banner_el_.find("a.banner-link");
+
+		link_el_.click(function(){
+			if(PBVAR['is_mobile']){
+				var target_link_ = $(this);
+				document.location = target_link_.attr("data-href-mobile");
+				return false;
+			}
+		});
+
+		close_btn_el_.click(function(){
+			$(this).closest("[data-floating-banner]").remove();
+			return false;
+		});
+
+		floating_banner_el_.find("[data-map-string]").each(function(){
+			var target_image_ = $(this);
+			var map_string_id_ = target_image_.attr("data-map-string");
+			var map_id_ = target_image_.attr("usemap");
+
+			var temp_map_el_ = $('<div></div>');
+				temp_map_el_.html($(map_string_id_).html());
+			
+			$(map_id_).html(temp_map_el_.children("map").html());
+			$(map_id_).imageMapResize();
+		});
+	});
+});
+</script>
+
+	
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var strip_banner_els_ = $("[data-strip-banner]");
+
+	strip_banner_els_.each(function(){
+		var strip_banner_el_ = $(this);
+		var close_btn_el_ = strip_banner_el_.find("[data-close-btn]");
+		var link_el_ = strip_banner_el_.find("[data-href-mobile]");
+
+		link_el_.click(function(){
+			if(PBVAR['is_mobile']){
+				var target_link_ = $(this);
+				document.location = target_link_.attr("data-href-mobile");
+				return false;
+			}
+		});
+
+		close_btn_el_.click(function(){
+			$(this).closest("[data-strip-banner]").remove();
+			_pb_hub_check_strip_banner();
+			return false;
+		});
+
+		strip_banner_el_.find("[data-map-string]").each(function(){
+			var target_image_ = $(this);
+			var map_string_id_ = target_image_.attr("data-map-string");
+			var map_id_ = target_image_.attr("usemap");
+
+			var temp_map_el_ = $('<div></div>');
+				temp_map_el_.html($(map_string_id_).html());
+			
+			$(map_id_).html(temp_map_el_.children("map").html());
+			$(map_id_).imageMapResize();
+		});
+
+
+	});
+
+
+	_pb_hub_check_strip_banner();
+});
+
+jQuery(document).ready(function(){
+	setTimeout(function(){
+		_pb_hub_check_strip_banner();
+	}, 100);
+
+	$(window).resize(_pb_hub_check_strip_banner);
+
+	_pb_hub_check_strip_banner();
+});
+function _pb_hub_check_strip_banner(){
+	var body_el_ = $("body");
+	body_el_.toggleClass("with-strip-footer-banner", ($("[data-strip-banner-footer]").length > 0));
+	body_el_.toggleClass("with-strip-header-banner", ($("[data-strip-banner-header]").length > 0));
+
+	var strip_banner_el_ = $("[data-strip-banner-header]");
+
+	if(strip_banner_el_.length <= 0){
+		var header_ = $("#pb-header");
+
+		header_.css({"top" : ""});
+		body_el_.css({"paddingTop": ""});
+	}else{
+		var header_ = $("#pb-header");
+
+		var header_is_fixed_ = header_.css("position") === "fixed";
+
+		var header_top_ = strip_banner_el_.outerHeight();
+		var body_top_padding_ = (header_is_fixed_ ? 0 : header_.outerHeight()) + header_top_;
+
+		header_.css({"top" : header_top_});
+		body_el_.css({"paddingTop": body_top_padding_});
+	}
+}
+</script>
+
+
+
+
+<script type="text/javascript">
+function pb_view_notice(id_){
+	PB.post("template-theme-default-load-notice-modal", {
+		post_id : id_
+	}, function(result_, response_json_){
+		if(!result_ || response_json_.success !== true){
+			PB.alert({
+				title : "에러발생",
+				content : "교재정보를 불러오는 중, 에러가 발생했습니다.",
+
+			});
+			return;
+		}
+
+		$("#pb-notice-popup").remove();
+		$(response_json_.popup_html).appendTo("body");
+
+		var popup_ = $("#pb-notice-popup");
+
+		popup_.modal("show");
+
+	}, true);
+
+}	
+</script>
+
+	<link rel="stylesheet" type="text/css" href="//bm.cyber.co.kr/hub/lib/dist/css/pages/pb-popup.css">
+<script type="text/javascript" src="//bm.cyber.co.kr/hub/lib/dist/js/pb-popup.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+
+	
+});
+</script>
+<div class="modal fade pb-common-video-player-modal" tabindex="-1" role="dialog" id="pb-common-video-player-modal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<a  class="close-btn" data-dismiss="modal" aria-label="Close" href="#"><i class="icon material-icons">close</i></a>
+			
+			<div class="modal-body" data-modal-body></div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var video_player_modal_ = $("#pb-common-video-player-modal");
+
+	video_player_modal_.on("hidden.bs.modal", function(){
+		video_player_modal_.find("[data-modal-body]").empty();
+	});
+})
+window.pb_open_video_player = function(youtube_id_){
+	var video_player_modal_ = $("#pb-common-video-player-modal");
+	var youtube_el_html_ = ' \
+	<div class="embed-responsive embed-responsive-16by9"> \
+		<iframe width="100%" height="400" src="https://www.youtube.com/embed/'+youtube_id_+'?autoplay=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; modestbranding; autoplay;" allowfullscreen class="embed-responsive-item"></iframe> \
+		</div>';
+
+	video_player_modal_.find("[data-modal-body]").append(youtube_el_html_);
+	video_player_modal_.modal("show");
+}
+</script>
+	
+</body>
+</html>

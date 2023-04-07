@@ -51,17 +51,17 @@ public class ProductDAO {
 //	}
 	 
 	public int setProductUpdate(ProductDTO productDTO)throws Exception{
-		System.out.println("프로덕트 컨트롤러4");
+		
 		return sqlSession.update(NAMESPACE+"setProductUpdate", productDTO);
 	}
 	
 	public int setProductDelete(ProductDTO productDTO)throws Exception{
-		System.out.println("업데이트 사진2");
+		
 		return sqlSession.delete(NAMESPACE+"setProductDelete", productDTO);
 	}
 	
 	public int setProductImgAdd(ProductImgDTO productImgDTO)throws Exception{
-		System.out.println("업데이트 사진1");
+		
 		return sqlSession.insert(NAMESPACE+"setProductImgAdd", productImgDTO);
 	}
 	
