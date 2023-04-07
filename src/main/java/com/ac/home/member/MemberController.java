@@ -116,7 +116,8 @@ public class MemberController {
 	            cookie.setMaxAge(0);
 	            response.addCookie(cookie);
 	        }
-	    }
+	    } 
+	    
 	    mv.setViewName("redirect:../");
 	    return mv;
 	}
