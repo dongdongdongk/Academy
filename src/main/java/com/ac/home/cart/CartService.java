@@ -1,9 +1,18 @@
 package com.ac.home.cart;
 
+
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.ac.home.product.ProductDTO;
+
+import com.ac.home.member.MemberDTO;
 
 import com.ac.home.member.MemberDTO;
 import com.ac.home.member.paymentmethod.PaymentMethodDTO;
@@ -30,6 +39,15 @@ public class CartService{
 		return cartDAO.getSumPrice(cartDTO);
 	}
 	
+	public Long cartCheck(CartDTO cartDTO) throws Exception {
+		return cartDAO.cartCheck(cartDTO);
+	}
+	public int getCartUpdate(CartDTO cartDTO) throws Exception {
+		
+		return cartDAO.getCartUpdate(cartDTO);
+	}
+	
+	
     public MemberDTO getMemberCart(String memberId) throws Exception {
         return cartDAO.getMemberCart(memberId);
     }
@@ -38,3 +56,5 @@ public class CartService{
         return cartDAO.getPaymentMethods(memberId);
     }
 }
+	
+	

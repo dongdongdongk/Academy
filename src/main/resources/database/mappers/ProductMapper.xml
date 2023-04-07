@@ -37,6 +37,12 @@
  	 	<include refid="searchCondition"></include>	
  	</select>
  	
+ 	<select id="getProductLogin" parameterType="ProductDTO" resultType="ProductDTO">
+  		SELECT *
+		FROM 
+		PRODUCT 
+		WHERE TITLE = #{title}
+  	</select>
  
  	<select id="getProductList" parameterType="Pager" resultMap="productDetailResult">
  		SELECT * FROM
@@ -70,23 +76,19 @@
  	</select>
  	
  	<resultMap type="ProductDTO" id="productDetailResult">
- 		<!-- Primary key -->
  		<id column="NUM" property="num"/>
- 		<!-- 그외 나머지 -->
  		<result column="TITLE" property="title"/>
  		<result column="PRICE" property="price"/>
- 		<result column="SALEQTY" property="saleQty"/>
  		<result column="INFO" property="info"/>
  		<result column="REGDATE" property="regDate"/>
- 		<result column="GRADE" property="grade"/>
- 		<!-- 1:1 -->
+ 		<result column="CATEGORYNUM" property="categoryNum"/>
+ 		
  		<collection property="productImgDTOs" javaType="List" ofType="ProductImgDTO">
  			<id column="FILENUM" property="fileNum"/>
  			<result column="SAVE" property="save"/>
  			<result column="UPLOAD" property="upLoad"/>
  		</collection>
- 		<!-- 1:N -->
- 		<!-- <collection property=""></collection> -->
+
  		<collection property="categoryDTOs" javaType="List" ofType="categoryDTO">
  			<id column="ID" property="id"/>
  			<result column="NAME" property="name"/>
@@ -98,23 +100,16 @@
  			SELECT PRODUCT_SEQ.NEXTVAL FROM DUAL
  		</selectKey>
  		INSERT INTO PRODUCT 
- 		VALUES (#{num} ,#{title}, #{price}, 0, #{info},SYSDATE, 0.0, 0)
+ 		VALUES (#{num} ,#{title}, #{price}, #{info}, SYSDATE, #{categoryNum})
  	</insert>
- 	
- 	<insert id="setCategoryAdd" parameterType="MemberDTO">
-  		INSERT INTO PRODUCTKIND (NUM,ID)
-  		VALUES (#{num}, (SELECT ID FROM CATEGORY WHERE ID = 1))
-  	</insert>
-	
 
  	<delete id="setProductDelete" parameterType="ProductDTO">
- 		DELETE PRODUCT WHERE NUM=#{num, jdbcType=BIGINT}
- 		
+ 		DELETE PRODUCT WHERE NUM=#{num}
  	</delete> 
  	
  	<update id="setProductUpdate" parameterType="ProductDTO">
  		UPDATE PRODUCT SET TITLE=#{title}, PRICE=#{price}, INFO=#{info}
- 		WHERE NUM=#{num}
+ 		WHERE NUM= #{num}
  	</update>
  	
  	<insert id="setProductImgAdd" parameterType="ProductImgDTO">
@@ -129,15 +124,6 @@
 	<delete id="getProductFileDelete" parameterType="ProductImgDTO">
 		DELETE PRODUCTIMG WHERE FILENUM=#{fileNum}
 	</delete>
-	
-	
-	<!-- <update id="setProductHit" parameterType="ProductDTO">
-  		UPDATE PRODUCT SET HIT = #{hit} + 1
-		WHERE NUM = #{num}
-  	</update>
-	 -->
-	
-  	
   </mapper>
 		
  	

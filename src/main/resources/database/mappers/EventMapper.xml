@@ -87,6 +87,11 @@
 		WHERE N.NUM=#{num}	
   </select>
   
+  <select id="getDateCheck" parameterType="EventDTO" resultType="EventDTO">
+  		SELECT STARTDATE, ENDDATE
+  		FROM EVENT
+  </select>
+  
   <delete id="setEventDelete" parameterType="EventDTO">
   		DELETE EVENT WHERE NUM=#{num}
   </delete>

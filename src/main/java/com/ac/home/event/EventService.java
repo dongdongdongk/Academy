@@ -1,5 +1,6 @@
 package com.ac.home.event;
 
+import java.sql.Date;
 import java.util.List;
 
 import javax.servlet.ServletContext;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ac.home.member.MemberDTO;
 import com.ac.home.notice.NoticeDTO;
 import com.ac.home.util.FileManager;
 import com.ac.home.util.Pager;
@@ -77,6 +79,18 @@ public class EventService {
 		return eventDAO.setEventUpdate(eventDTO);
 	}
 	
+//	public EventDTO getDateCheck(EventDTO eventDTO) throws Exception {
+//		eventDTO = eventDAO.getEventDetail(eventDTO);
+//		boolean check  =  true;
+//		Date startDate = eventDTO.getStartDate();
+//		Date endDate = eventDTO.getEndDate();
+//		if(startDate < endDate) {
+//			
+//		}
+//		
+//		
+//		return eventDAO.getDateCheck(eventDTO);
+//	}
 	
 
 }

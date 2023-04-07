@@ -157,6 +157,13 @@ public class EventController {
 			return mv;
 		}
 		
+//		@PostMapping("dateCheck")
+//		public ModelAndView getDateCheck(EventDTO eventDTO) throws Exception {
+//			ModelAndView mv = new ModelAndView();
+//			eventDTO  = eventService.
+//			
+//			
+//		}
 	
 	
 }

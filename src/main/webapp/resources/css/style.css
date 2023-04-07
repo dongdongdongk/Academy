@@ -2716,3 +2716,50 @@ p.footer-copyright {
 .footer-bar-nav ul li a:hover {
     color: #34d986;
 }
+
+
+.radius {
+    border-radius: 30px;
+ }
+    
+ .grayscale {
+     filter: grayscale(100%); 
+     filter: opacity(45%); 
+ }
+
+ .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+
+ .floatLeft {
+    float: left;
+    
+ }
+    
+
+
+
+.thumbnail {
+    width: 241.500px;
+    height: 169.469px;
+    object-fit: cover;
+}
+
+.iconSize {
+    width : 25px;
+    height : 25px;
+}
+
+.checkcolor {
+    color: red;
+    font-weight: 900; 
+    background-color: antiquewhite;
+}
+
+.iconSize2 {
+    width : 20px;
+    height : 20px;
+
+}

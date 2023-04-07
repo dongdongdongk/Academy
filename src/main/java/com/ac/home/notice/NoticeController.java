@@ -115,7 +115,18 @@ public class NoticeController {
 		return mv;
 	}
 	
-	
+	@PostMapping("checked")
+	public ModelAndView setNoticeChecked(NoticeDTO noticeDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		int result = noticeService.setNoticeChecked(noticeDTO);
+		
+		mv.addObject("result", result);
+		mv.setViewName("common/ajaxResult");
+		
+		return mv;
+
+	}
 	
 
 	

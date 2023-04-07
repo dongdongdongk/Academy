@@ -14,21 +14,24 @@
 		LEFT OUTER JOIN
 		PRODUCTIMG
 		USING(NUM)
+		
   	</select>
   	
   	<resultMap type="CartDTO" id="cartProductJoin">
  		<id column="CARTNUM" property="cartNum"/>
  		<result column="ID" property="id"/>
  		<result column="NUM" property="num"/>
- 	
+ 		<result column="QUANTITY" property="quantity"/>
+ 		<result column="TOTALPRICE" property="totalprice"/>
+ 		
  		<collection property="productDTOs" javaType="List" ofType="ProductDTO">
  			<id column="NUM" property="num"/>
  			<result column="TITLE" property="title"/>
  			<result column="PRICE" property="price"/>
- 			<result column="SALEQTY" property="saleQty"/>
  			<result column="INFO" property="info"/>
  			<result column="REGDATE" property="regDate"/>
- 			<result column="GRADE" property="grade"/>
+ 		<!-- 	<result column="CATEGORYNUM" property="categoryNum"/> -->
+ 			<result column="QUANTITY" property="quantity"/>
  		</collection>
  		
  		<collection property="productImgDTOs" javaType="List" ofType="ProductImgDTO">
@@ -38,9 +41,9 @@
  		</collection>
  	</resultMap>
   
-	<insert id="setCartAdd" parameterType="CartDTO">
-		INSERT INTO CART (CARTNUM, ID, NUM) 
-		VALUES (CART_SEQ.NEXTVAL, #{id}, #{num})
+	<insert id="setCartAdd" parameterType="CartDTO" >
+		INSERT INTO CART (CARTNUM, ID, NUM, QUANTITY) 
+		VALUES (CART_SEQ.NEXTVAL, #{id}, #{num}, 1)
 	</insert>
 	
 	<delete id="setCartDelete" parameterType="CartDTO">
@@ -48,13 +51,21 @@
 	</delete>
 	
 	<select id="getSumPrice" resultType="Long" parameterType="CartDTO">
-		SELECT SUM(PRICE)
+		SELECT SUM(PRICE*QUANTITY)
 		FROM CART
 		JOIN PRODUCT
 		USING(NUM)
 		WHERE ID = #{id}
 	</select>
 	
+	<select id="cartCheck" resultType="Long" parameterType="CartDTO">
+		SELECT COUNT(*) FROM CART WHERE NUM = #{num} AND ID = #{id}
+	</select>
+ 	
+ 	<update id="getCartUpdate" parameterType="CartDTO">
+ 	UPDATE CART SET QUANTITY =#{quantity} WHERE CARTNUM =#{cartNum}
+ 	</update>
+ 	
 	<!-- Add getMemberCart query -->
     <select id="getMemberCart" resultMap="memberCart" parameterType="String">
         SELECT *

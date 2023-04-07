@@ -30,6 +30,8 @@
 
             <!-- Styles -->
             <link rel="stylesheet" href="/resources/css/style.css">
+
+            
             <c:import url="../template/common_css.jsp"></c:import>
         </head>
 
@@ -113,11 +115,12 @@
                                             <div class="course-content">
                                                 <figure class="course-thumbnail">
                                                     <c:set var="loop_flag" value="false" />
+                                                    
                                                     <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
                                                         <c:if test="${today > dto.endDate}">
                                                             <c:if test="${not loop_flag }">
                                                                 <c:if test="${not empty dto.eventFileDTOs}">
-                                                                    <img class="radius grayscale" src="../resources/upload/event/${fileDTO.fileName}">
+                                                                    <a href="./detail?num=${dto.num}"><img class="radius grayscale thumbnail" src="../resources/upload/event/${fileDTO.fileName}"></a>
                                                                     <c:set var="loop_flag" value="true" />
                                                                 </c:if>
                                                             </c:if>
@@ -126,7 +129,7 @@
                                                         
                                                             <c:if test="${not loop_flag }">
                                                                 <c:if test="${not empty dto.eventFileDTOs}">
-                                                                    <img class="radius" src="../resources/upload/event/${fileDTO.fileName}">
+                                                                    <a href="./detail?num=${dto.num}"> <img class="radius thumbnail" src="../resources/upload/event/${fileDTO.fileName}"></a>
                                                                     <c:set var="loop_flag" value="true" />
                                                                 </c:if>
                                                             </c:if>
@@ -139,21 +142,22 @@
                             
                                                 <div class="course-content-wrap">
                                                     <header class="entry-header">
-                                                        <h2 class="entry-title"><a
-                                                                href="./detail?num=${dto.num}">${dto.title}</a>
-                            
+                                                        
+                                                        <h2 class="entry-title ellipsis">
+                                                            
                                                             <c:set var="loop_flag" value="false" />
-                                                            <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
-                                                                <c:if test="${not loop_flag }">
-                                                                    <c:if test="${fileDTO.oriName ne null}"><img
-                                                                            class="material-symbols-outlined"
-                                                                            src="/resources/images/file_icon.gif">
-                                                                        <c:set var="loop_flag" value="true" />
+                                                                <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
+                                                                    <c:if test="${not loop_flag }">
+                                                                        <c:if test="${fileDTO.oriName ne null}">
+                                                                            <img class="material-symbols-outlined"src="/resources/images/file_icon.gif">
+                                                                            <c:set var="loop_flag" value="true" />
+                                                                        </c:if>
                                                                     </c:if>
-                                                                </c:if>
-                                                            </c:forEach>
-                                                            </td>
+                                                                </c:forEach>
+                                                            <a href="./detail?num=${dto.num}">${dto.title}</a>
+                                                            
                                                         </h2>
+                                                        
                             
                             
                             
@@ -175,45 +179,66 @@
 
 
                         <div class="row">
-                            <div class="d-felx justify-content-center">
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination d-felx justify-content-center">
-
-                                        <li class="page-item ${pager.before ? 'disabled' : ''}">
-                                            <a class="page-link" href="#" aria-label="Previous" data-board-page="1">
-                                                <span aria-hidden="true">&laquo;</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="page-item ${pager.before ? 'disabled' : ''}">
-                                            <a class="page-link" href="#" aria-label="Previous"
-                                                data-board-page="${pager.startNum-1}">
-                                                <span aria-hidden="true">&lsaquo;</span>
-                                            </a>
-                                        </li>
-
-                                        <c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
-                                            <li class="page-item"><a class="page-link" href="#"
-                                                    data-board-page="${i}">${i}</a></li>
-                                        </c:forEach>
-
-                                        <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
-                                            <a class="page-link" href="#" aria-label="Next"
-                                                data-board-page="${pager.lastNum+1}">
-                                                <span aria-hidden="true">&rsaquo;</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
-                                            <a class="page-link" href="#" aria-label="Next"
-                                                data-board-page="${pager.totalPage}">
-                                                <span aria-hidden="true">&raquo;</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
+                            <nav aria-label="Page navigation example">
+                              <ul class="pagination">
+                              
+                              <li class="page-item ${pager.before ? 'disabled' : ''}">
+                                  <a class="page-link" href="#" aria-label="Previous" data-board-page="1">
+                                    <span aria-hidden="true">&laquo;</span>
+                                  </a>
+                                </li>
+                             
+                                <li class="page-item ${pager.before ? 'disabled' : ''}">
+                                  <a class="page-link" href="#" aria-label="Previous" data-board-page="${pager.startNum-1}">
+                                    <span aria-hidden="true">&lsaquo;</span>
+                                  </a>
+                                </li>
+                                
+                                <c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
+                                    <li class="page-item"><a class="page-link" href="#" data-board-page="${i}">${i}</a></li>
+                                </c:forEach>
+                                
+                                <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
+                                  <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.lastNum+1}">
+                                    <span aria-hidden="true">&rsaquo;</span>
+                                  </a>
+                                </li>
+                                
+                                <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
+                                  <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.totalPage}">
+                                    <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
                         </div>
+                        
+                        
+                        <div class="row">
+                            <form class="row g-3" action="./list" method="get" id="searchForm">
+                                <input type="hidden" name="page" value="1" id="page">
+                              <div class="col-auto">
+                                <label for="kind" class="visually-hidden">Kind</label>
+                                <select class="form-select" name="kind" id="kind" aria-label="Default select example">
+                                  <option value="title" ${pager.kind eq 'title'? 'selected':''}>Title</option>
+                                  <option value="contents" ${pager.kind eq 'contents' ?'selected':''}>Contents</option>
+                                  <option value="writer" ${pager.kind eq 'writer'? 'selected':''}>Writer</option>
+                                </select>
+                              </div>
+                              <div class="col-auto">
+                                <label for="search" class="visually-hidden">Search</label>
+                                <input type="text" class="form-control" value="${pager.search}" name="search" id="search" placeholder="검색어를 입력하세요">
+                              </div>
+                              <div class="col-auto">
+                                <button type="submit" class="btn btn-primary mb-3">검색</button>
+                               
+                              </div>
+                            </form>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
                     </div><!-- .col -->
 
 

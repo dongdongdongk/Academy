@@ -1,15 +1,18 @@
 package com.ac.home.cart;
 
-import java.util.Iterator;
+
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.home.member.MemberDTO;
@@ -58,9 +61,9 @@ public class CartController {
 	@PostMapping(value = "cartAdd")
 	public ModelAndView setCartAdd(CartDTO cartDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
-		
+		    
 		int result = cartService.setCartAdd(cartDTO);
-		
+
 		mv.setViewName("redirect:./cartList");
 		
 		return mv;
@@ -83,5 +86,33 @@ public class CartController {
 
 	    mv.setViewName("redirect:./cartList");
 	    return mv;
+	}
+	@PostMapping("cartUpdate")
+	public ModelAndView getCartUpdate(CartDTO cartDTO)throws Exception{
+		ModelAndView mv = new ModelAndView();
+		
+		int result = cartService.getCartUpdate(cartDTO);
+		
+		
+		mv.addObject("result", result);
+		mv.addObject("dto", result);
+		mv.setViewName("/common/ajaxResult");
+
+		return mv;
+		
+	}
+
+	
+	
+	@PostMapping(value = "cartCheck")
+	public ModelAndView cartCheck(CartDTO cartDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		
+		Long count = cartService.cartCheck(cartDTO);
+		
+		mv.addObject("result", count);
+		mv.setViewName("common/ajaxResult");
+		
+		return mv;
 	}
 }

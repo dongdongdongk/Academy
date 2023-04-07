@@ -95,31 +95,4 @@ public class QnaController {
 		
 		return mv;
 	}
-	
-	@GetMapping(value = "qnaReply")
-	public ModelAndView setReplyAdd(QnaDTO qnaDTO) throws Exception {
-		ModelAndView mv = new ModelAndView();
-		
-		mv.setViewName("board/qnaReply");
-		
-		return mv;
-	}
-	
-	@PostMapping(value = "qnaReply")
-	public ModelAndView setReplyAdd(QnaDTO qnaDTO, ModelAndView mv) throws Exception {
-		
-		int result = qnaService.setReplyAdd(qnaDTO);
-		
-		String message = "등록 실패";
-		
-		if(result > 0) {
-			message = "글이 등록 되었습니다";
-		}
-		
-		mv.addObject("url", "./qnaDetail?num=" + qnaDTO.getNum());
-		mv.addObject("result", message);
-		mv.setViewName("common/result");
-		
-		return mv;
-	}
 }

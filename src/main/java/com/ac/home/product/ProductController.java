@@ -25,8 +25,8 @@ import oracle.sql.json.OracleJsonParser;
 
 import com.ac.home.cart.CartDTO;
 import com.ac.home.cart.CartService;
+import com.ac.home.member.MemberDTO;
 import com.ac.home.product.ProductDTO;
-
 
 @Controller
 @RequestMapping("/product/*")
@@ -35,6 +35,18 @@ public class ProductController {
 	   @Autowired
 	   private ProductService productService;
 	  
+	   
+	   @PostMapping("productIdCheck")
+		public ModelAndView getProductIdCheck(ProductDTO productDTO)throws Exception{
+			boolean check = productService.getProductIdCheck(productDTO);
+			ModelAndView mv = new ModelAndView();
+			
+			mv.addObject("result", check);
+			mv.setViewName("common/ajaxResult");
+			return mv;
+		}
+	   
+	   
 	   //list
 	   @RequestMapping(value="list", method = RequestMethod.GET)
 		public ModelAndView getProductList(Pager pager)throws Exception{
@@ -49,6 +61,45 @@ public class ProductController {
 			return mv;
 		}
 	   
+	   // all list
+	   @GetMapping(value = "allList")
+	 	public ModelAndView getAllList(Pager pager)throws Exception{
+	 		ModelAndView mv = new ModelAndView();
+	 		
+	 		List<ProductDTO> ar = productService.getProductList(pager);
+	 		
+	 		mv.addObject("list",ar);  
+	 		mv.setViewName("product/productAll");
+	 		      
+	 		return mv;
+	 	}
+	   
+	   // book list
+	   @GetMapping(value = "bookList")
+	 	public ModelAndView getBookList(Pager pager)throws Exception{
+	 		ModelAndView mv = new ModelAndView();
+	 		
+	 		List<ProductDTO> ar = productService.getProductList(pager);
+	 		
+	 		mv.addObject("list",ar);  
+	 		mv.setViewName("product/productBook");
+	 		      
+	 		return mv;
+	 	}
+	   
+	   // cr list
+	   @GetMapping(value = "crList")
+	 	public ModelAndView getCrList(Pager pager)throws Exception{
+	 		ModelAndView mv = new ModelAndView();
+	 		
+	 		List<ProductDTO> ar = productService.getProductList(pager);
+	 		
+	 		mv.addObject("list",ar);  
+	 		mv.setViewName("product/productCr");
+	 		      
+	 		return mv;
+	 	}
+	   
 		//detail
 		@RequestMapping(value = "productDetail", method = RequestMethod.GET)
 		public ModelAndView getProductDetail(ProductDTO productDTO)throws Exception{
@@ -57,7 +108,7 @@ public class ProductController {
 			
 			productDTO = productService.getProductDetail(productDTO);
 		
-			mv.setViewName("product/productDetail");
+			
 			mv.addObject("dto", productDTO);
 			mv.setViewName("product/productDetail");
 			
@@ -99,12 +150,13 @@ public class ProductController {
 			
 		}
 		
-		//�닔�젙 �뤌 �씠�룞
+		
 		@RequestMapping(value="update", method = RequestMethod.GET)
 		public ModelAndView setProductUpdate(ProductDTO productDTO) throws Exception{
 			ModelAndView mv = new ModelAndView();
-			productDTO = productService.getProductDetail(productDTO);
 			
+			productDTO = productService.getProductDetail(productDTO);
+			System.out.println("프로덕트 컨트롤러1");
 			mv.setViewName("product/productUpdate");
 			mv.addObject("dto", productDTO);
 			return mv;
@@ -114,7 +166,7 @@ public class ProductController {
 			ModelAndView mv = new ModelAndView();
 		
 			int result = productService.setProductUpdate(productDTO,pic);
-			
+			System.out.println("프로덕트 컨트롤러2");
 			mv.setViewName("redirect:./list");
 			
 			return mv;
@@ -126,17 +178,15 @@ public class ProductController {
 			int result = productService.getProductFileDelete(productImgDTO);
 			
 			mv.addObject("dto", result);
-			mv.setViewName("./common/ajaxResult");
+			mv.setViewName("/common/ajaxResult");
 			
 			return mv;
 		}
+	
 	 
-		
-		
-		
-
+	
 	}
-	   
+
 	   
 	   
 	

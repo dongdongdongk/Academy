@@ -102,6 +102,7 @@ public class MemberController {
 	public ModelAndView getMemberLogin(MemberDTO memberDTO, HttpServletRequest request, HttpServletResponse response) throws Exception {
 	    ModelAndView mv = new ModelAndView();
 	    memberDTO = memberService.getMemberLogin(memberDTO);
+	    
 	    if (memberDTO != null) {
 	        HttpSession session = request.getSession();
 	        session.setAttribute("member", memberDTO);

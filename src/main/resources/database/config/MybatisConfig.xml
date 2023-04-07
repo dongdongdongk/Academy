@@ -7,6 +7,7 @@
  	<typeAliases>
 
   		<typeAlias type="com.ac.home.qna.QnaDTO" alias="QnaDTO"/>
+  		<typeAlias type="com.ac.home.qna.QnaCommentDTO" alias="QnaCommentDTO"/>
   		<typeAlias type="com.ac.home.cr.CrDTO" alias="CrDTO"/>
 
  		<typeAlias type="com.ac.home.member.MemberDTO" alias="MemberDTO"/>

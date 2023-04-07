@@ -94,9 +94,6 @@
                                     <li><a href="/notice/list">Notice</a></li>
                                     <li><a href="/qna/qnaList">QNA</a></li>
                                     <li><a href="/event/list">EVENT</a></li>
-                                    <li><a href="/orders/ordersList">ORDER</a></li>
-                                    
-                                  
                                 </ul>
 
                                 <div class="hamburger-menu d-lg-none">
@@ -131,7 +128,7 @@
                             </div><!-- .entry-content -->
 
                             <footer class="entry-footer read-more">
-                                <a href="#">더보기</a>
+                                <a href="/product/list">더보기</a>
                             </footer><!-- .entry-footer -->
                         </div><!-- .hero-content-wrap -->
                     </div><!-- .col -->
@@ -157,7 +154,7 @@
                     </div><!-- .entry-content -->
 
                     <footer class="entry-footer read-more">
-                        <a href="#">더보기<i class="fa fa-long-arrow-right"></i></a>
+                        <a href="/qna/qnaList">더보기<i class="fa fa-long-arrow-right"></i></a>
                     </footer><!-- .entry-footer -->
                 </div><!-- .icon-box -->
 
@@ -175,7 +172,7 @@
                     </div><!-- .entry-content -->
 
                     <footer class="entry-footer read-more">
-                        <a href="#">더보기<i class="fa fa-long-arrow-right"></i></a>
+                        <a href="/product/list">더보기<i class="fa fa-long-arrow-right"></i></a>
                     </footer><!-- .entry-footer -->
                 </div><!-- .icon-box -->
 
@@ -193,7 +190,7 @@
                     </div><!-- .entry-content -->
 
                     <footer class="entry-footer read-more">
-                        <a href="#">더보기<i class="fa fa-long-arrow-right"></i></a>
+                        <a href="/product/list">더보기<i class="fa fa-long-arrow-right"></i></a>
                     </footer><!-- .entry-footer -->
                 </div><!-- .icon-box -->
 
@@ -211,7 +208,7 @@
                     </div><!-- .entry-content -->
 
                     <footer class="entry-footer read-more">
-                        <a href="#">더보기<i class="fa fa-long-arrow-right"></i></a>
+                        <a href="/qna/qnaList">더보기<i class="fa fa-long-arrow-right"></i></a>
                     </footer><!-- .entry-footer -->
                 </div><!-- .icon-box -->
             </div><!-- .row -->
@@ -225,7 +222,7 @@
                     <header class="heading flex justify-content-between align-items-center">
                         <h2 class="entry-title">주요 과정</h2>
 
-                        <a class="btn mt-4 mt-sm-0" href="#">전체 보기</a>
+                        <a class="btn mt-4 mt-sm-0" href="/product/list">전체 보기</a>
                     </header><!-- .heading -->
                 </div><!-- .col -->
 
@@ -250,7 +247,7 @@
                                 <h2 class="entry-title"><a href="#">The Complete Android Developer Course</a></h2>
 
                                 <div class="entry-meta flex flex-wrap align-items-center">
-                                    <div class="course-author"><a href="#">장현서 </a></div>
+                                    <div class="course-author"><a href="#">김동현 </a></div>
 
                                     <div class="course-date">July 21, 2018</div>
                                 </div><!-- .course-date -->
@@ -294,7 +291,7 @@
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
-                                    $32 <span class="price-drop">$59</span>
+                                    32000원 <span class="price-drop">59000원</span>
                                 </div><!-- .course-cost -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
@@ -371,7 +368,7 @@
                                 </div><!-- .entry-content -->
 
                                 <div class="entry-footer">
-                                    <h3 class="testimonial-user">장현서 - <span>Goodee Academy</span></h3>
+                                    <h3 class="testimonial-user">장*서 - <span>Goodee Academy</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -393,7 +390,7 @@
                                 </div><!-- .entry-content -->
 
                                 <div class="entry-footer">
-                                    <h3 class="testimonial-user">장현서 - <span>Goodee Academy</span></h3>
+                                    <h3 class="testimonial-user">정*구 - <span>Goodee Academy</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -415,7 +412,7 @@
                                 </div><!-- .entry-content -->
 
                                 <div class="entry-footer">
-                                    <h3 class="testimonial-user">장현서 - <span>Goodee Academy</span></h3>
+                                    <h3 class="testimonial-user">이*원 - <span>Goodee Academy</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->

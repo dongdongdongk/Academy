@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.ac.home.member.MemberDTO;
 import com.ac.home.member.paymentmethod.PaymentMethodDTO;
+import com.ac.home.product.ProductDTO;
 
 @Repository
 public class CartDAO {
@@ -31,6 +32,14 @@ public class CartDAO {
 	
 	public Long getSumPrice(CartDTO cartDTO) throws Exception {
 		return sqlSession.selectOne(NAMESPACE + "getSumPrice", cartDTO);
+	}
+	
+	public Long cartCheck(CartDTO cartDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE + "cartCheck", cartDTO);
+	}
+	public int getCartUpdate(CartDTO cartDTO)throws Exception{
+		
+		return sqlSession.update(NAMESPACE+"getCartUpdate", cartDTO);
 	}
 	
     public MemberDTO getMemberCart(String memberId) throws Exception {

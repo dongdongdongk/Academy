@@ -1,6 +1,6 @@
 package com.ac.home.util;
 
-public class Pager {
+public class Pager {	
 	private Long num;
 	private String kind;
 	private String search;
@@ -19,8 +19,15 @@ public class Pager {
 	
 	private boolean before;
 	private boolean after;
-	
-	
+
+	public Long getNum() {
+		return num;
+	}
+
+	public void setNum(Long num) {
+		this.num = num;
+	}
+
 	public String getKind() {
 		return kind;
 	}

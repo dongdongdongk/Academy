@@ -1,38 +1,32 @@
-const btn =document.getElementById("btn");
-const btn1 =document.getElementById("btn1");
-let count =0;
-
-btn.addEventListener("click",function(){
+$("#categoryNum").on("change", function() {
+    let selectedValue = $(this).val();
     
-    if(count==1){
-        alert("카테고리는 최대 3개까지만 가능합니다");
-        return;
+    if (selectedValue === "3") {
+        $.ajax({
+            url: "/product/allList",
+            type: "GET",
+            success: function(result) {
+                console.log("전체 상품보기")
+                $("#productContent").html(result);
+            }
+          });
+    } else if (selectedValue === "1") {
+        $.ajax({
+            url: "/product/bookList",
+            type: "GET",
+            success: function(result) {
+                console.log("책 상품보기")
+                $("#productContent").html(result);
+            }
+          });
+    } else if (selectedValue === "2") {
+        $.ajax({
+            url: "/product/crList",
+            type: "GET",
+            success: function(result) {
+                console.log("강의 상품보기")
+                $("#productContent").html(result);
+            }
+          });
     }
-
-    let ar ='<div><select class="form-select" name="categoryNum">'
-            +'<option value="2">전체</option>'  
-            +'<option value="3" >책</option>'
-			+'<option value="4">강의</option>'
-           
-			
-			
-            +'</select><button type="button" class="btn btn-outline-danger del">카테고리 삭제</button></div>'
-    
-    
-    
-    
-    $("#btn").before(ar);
-
-    
-
-    count++;
-    
-})
-$("#catdiv").on("click",".del",function(e){
-    if(count==0){
-        alert("카테고리는 최소 하나이상 포함되어야 합니다");
-    }else{
-    $(this).parent().remove();
-    count--;
-}
-})
+});

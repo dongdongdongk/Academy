@@ -2,25 +2,24 @@ package com.ac.home.qna;
 
 import java.sql.Date;
 
-public class QnaDTO {
+public class QnaCommentDTO {
+	private Long commentNum;
 	private Long num;
-	private String title;
 	private String contents;
 	private String writer;
 	private Date regDate;
-	private Long hit;
 	
+	public Long getCommentNum() {
+		return commentNum;
+	}
+	public void setCommentNum(Long commentNum) {
+		this.commentNum = commentNum;
+	}
 	public Long getNum() {
 		return num;
 	}
 	public void setNum(Long num) {
 		this.num = num;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
 	}
 	public String getContents() {
 		return contents;
@@ -39,11 +38,5 @@ public class QnaDTO {
 	}
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
-	}
-	public Long getHit() {
-		return hit;
-	}
-	public void setHit(Long hit) {
-		this.hit = hit;
 	}
 }

@@ -53,5 +53,9 @@ public class NoticeDAO {
 	public int setNoticeHit(NoticeDTO noticeDTO) throws Exception {
 		return sqlSession.update(NAMESPACE + "setNoticeHit" , noticeDTO);
 	}
+	
+	public int setNoticeChecked(NoticeDTO noticeDTO) throws Exception {
+		return sqlSession.update(NAMESPACE + "setNoticeChecked" , noticeDTO);
+	}
 
 }
