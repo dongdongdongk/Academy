@@ -34,7 +34,7 @@ $(".deleteCheck").click(function(){
             success:function(){
                 alert("삭제 되었습니다");
                 ch.parent().parent().remove();
-                count--;
+                count = 0;
             },
             error:function(){
                 alert("삭제 실패 관리자에게 문의 하세요");

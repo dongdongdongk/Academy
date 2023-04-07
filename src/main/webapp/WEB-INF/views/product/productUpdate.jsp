@@ -67,6 +67,8 @@
 <c:import url="../template/bottom.jsp"></c:import>
 <script>
 	setMax(1);
+	setCount(1);
+
 	$("#info").summernote();
 </script>			
 </body>
