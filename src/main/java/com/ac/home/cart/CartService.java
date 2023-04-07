@@ -14,6 +14,9 @@ import com.ac.home.product.ProductDTO;
 
 import com.ac.home.member.MemberDTO;
 
+import com.ac.home.member.MemberDTO;
+import com.ac.home.member.paymentmethod.PaymentMethodDTO;
+
 @Service
 public class CartService{
 	
@@ -45,6 +48,13 @@ public class CartService{
 	}
 	
 	
+    public MemberDTO getMemberCart(String memberId) throws Exception {
+        return cartDAO.getMemberCart(memberId);
+    }
+    
+    public List<PaymentMethodDTO> getPaymentMethods(String memberId) throws Exception {
+        return cartDAO.getPaymentMethods(memberId);
+    }
 }
 	
 	

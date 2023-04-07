@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.ac.home.member.MemberDTO;
+import com.ac.home.member.paymentmethod.PaymentMethodDTO;
 import com.ac.home.product.ProductDTO;
 
 @Repository
@@ -40,4 +42,11 @@ public class CartDAO {
 		return sqlSession.update(NAMESPACE+"getCartUpdate", cartDTO);
 	}
 	
+    public MemberDTO getMemberCart(String memberId) throws Exception {
+        return sqlSession.selectOne(NAMESPACE + "getMemberCart", memberId);
+    }
+
+    public List<PaymentMethodDTO> getPaymentMethods(String memberId) throws Exception {
+        return sqlSession.selectList(NAMESPACE + "getPaymentMethods", memberId);
+    }
 }
