@@ -23,11 +23,10 @@
 		</div>
 
 
-		  
 		<div class="row col-md-7 mx-auto">
 			
-			<table class="table">
-			  	<thead class="table-dark">
+			<table class="table table-hover ">
+			  	<thead class="table-info">
 			 		<tr>
 						<th>NUM</th>
 						<th>TITLE</th>
