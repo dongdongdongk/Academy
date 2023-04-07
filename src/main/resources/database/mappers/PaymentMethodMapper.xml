@@ -27,4 +27,15 @@
 	        WHERE MEMBER_ID = #{memberId, jdbcType=VARCHAR}
 	    </select>
 
+		<update id="updatePaymentMethod" parameterType="com.ac.home.member.paymentmethod.PaymentMethodDTO">
+		    UPDATE PAYMENTMETHOD
+		    SET PAYMENTMETHOD = #{paymentMethod}, INFO = #{info}
+		    WHERE ID = #{id}
+		</update>
+		
+		<delete id="deletePaymentMethod" parameterType="com.ac.home.member.paymentmethod.PaymentMethodDTO">
+		    DELETE FROM PAYMENTMETHOD
+		    WHERE ID = #{id}
+		</delete>
+
 </mapper>

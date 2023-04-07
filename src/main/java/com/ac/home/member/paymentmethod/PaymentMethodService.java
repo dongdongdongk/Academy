@@ -42,4 +42,12 @@ public class PaymentMethodService {
 
         return false;
     }
+    
+    public void updatePaymentMethod(PaymentMethodDTO paymentDTO) throws Exception {
+        paymentDAO.updatePaymentMethod(paymentDTO);
+    }
+
+    public void deletePaymentMethod(PaymentMethodDTO paymentDTO) throws Exception {
+        paymentDAO.deletePaymentMethod(paymentDTO);
+    }
 }

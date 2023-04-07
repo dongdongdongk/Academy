@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.ac.home.member.MemberDTO;
 
@@ -74,6 +76,36 @@ public class PaymentMethodController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("paymentMethods", new PaymentMethodDTO());
         modelAndView.setViewName("member/payment/paymentmethodadd");
+        return modelAndView;
+    }
+    
+    @PostMapping("/paymentmethodupdate")
+    public ModelAndView updatePaymentMethod(@ModelAttribute("paymentMethods") PaymentMethodDTO paymentDTO, HttpSession session, RedirectAttributes redirectAttributes) throws Exception {
+        ModelAndView modelAndView = new ModelAndView();
+        
+        // DTO값 확인용
+        System.out.println("Received ID: " + paymentDTO.getId());
+
+        // JSP값 확인용
+        System.out.println("Payment Method ID: " + paymentDTO.getId());
+        System.out.println("Payment Method: " + paymentDTO.getPaymentMethod());
+        System.out.println("Payment Method Info: " + paymentDTO.getInfo());
+
+        paymentService.updatePaymentMethod(paymentDTO);
+
+        redirectAttributes.addFlashAttribute("successMessage", "결제수단이 성공적으로 수정되었습니다.");
+        modelAndView.setViewName("redirect:./paymentmethod");
+        return modelAndView;
+    }
+
+    @GetMapping("/paymentmethoddelete")
+    public ModelAndView deletePaymentMethod(@ModelAttribute("paymentMethods") PaymentMethodDTO paymentDTO, HttpSession session, RedirectAttributes redirectAttributes) throws Exception {
+        ModelAndView modelAndView = new ModelAndView();
+
+        paymentService.deletePaymentMethod(paymentDTO);
+
+        redirectAttributes.addFlashAttribute("successMessage", "결제수단이 성공적으로 삭제되었습니다.");
+        modelAndView.setViewName("redirect:./paymentmethod");
         return modelAndView;
     }
 }
