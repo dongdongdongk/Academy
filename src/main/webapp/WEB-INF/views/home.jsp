@@ -44,7 +44,7 @@
                                 <p><i class="fa fa-phone"></i>010-1234-5678 </p>
                             </div><!-- .header-bar-text -->
                         </div><!-- .col -->
-
+                        
                         <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
                             <!-- <div class="header-bar-search">
                                 <form class="flex align-items-stretch">
@@ -84,15 +84,6 @@
                                 <h1 class="site-title"><a href="/" rel="home">Acade<span>my</span></a></h1>
                             </div><!-- .site-branding -->
                         </div><!-- .col -->
-									                      	<details>
-									  <summary><a href="/notice/list">공지사항</a></summary>
-									  <ul>
-									    <li><a href="/qna/qnaList">1. 질문응답 1번입니다.</a></li>
-									    <li><a href="/event/list">2. 이벤트 2번입니다.</a></li>
-									    <li><a href="/product/list">3. 강의 3번입니다.</a></li>
-									  </ul>
-									</details>
-						
                         <div class="col-3 col-lg-9 flex justify-content-end align-content-center" id="gnb">
                             <nav class="site-navigation flex justify-content-end align-items-center">
                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
@@ -102,6 +93,9 @@
                                     <li><a href="/notice/list">공지사항</a></li>
                                     <li><a href="/qna/qnaList">질문응답</a></li>
                                     <li><a href="/event/list">이벤트</a></li>
+                                    <li><a href="/orders/ordersList">orders</a></li>
+                                   
+                                    
                                     
 				                 </ul>
 

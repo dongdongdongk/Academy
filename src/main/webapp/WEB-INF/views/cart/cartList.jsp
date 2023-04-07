@@ -57,11 +57,12 @@
 											<td>${product.price}</td>
 											<td> <div class="form_spinner_box size_sm">
 							        <span class="ui-spinner ui-widget ui-widget-content ui-corner-all ui-spinner-right">
-							        <button id="btnN${dto.cartNum}" data-cart-id="${dto.cartNum}"  type="button" class="increase ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget btnN">
+							        <button id="btnN${dto.cartNum}" data-cart-id="${dto.cartNum}"  type="button" class="btn btn-outline-success btnN">
 							       <span class="offscreen ui-icon ui-icon-triangle-1-n">-</span></button>
 							        
-									<input type="number" id="quantity${dto.cartNum}" value="${dto.quantity}" class="form_spinner ui-spinner-input" title="수량" autocomplete="off">
-							        <button id="btnP${dto.cartNum}" data-cart-id="${dto.cartNum}"  type="button" class="decrease ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget btnP">
+									<input type="text" id="quantity${dto.cartNum}" value="${dto.quantity}" class="input is-primary" title="수량" autocomplete="off" style="width: 40px;">
+							        
+							        <button id="btnP${dto.cartNum}" data-cart-id="${dto.cartNum}"  type="button" class="btn btn-outline-success btnP">
 							        <span class="offscreen ui-icon ui-icon-triangle-1-s">+</span></button></span>
 							        </div></td>
 											<td>${product.price*dto.quantity}</td>

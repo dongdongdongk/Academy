@@ -5,6 +5,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+.goods_table {
+  margin: 0 auto;
+}
+</style>
 <meta charset="UTF-8">
 <title></title>
 <c:import url="../template/common_css.jsp"></c:import>
@@ -42,10 +47,10 @@
 		
 		<div class="goods_table_wrap">
 			<c:if test="${listcheck != 'empty'}">
-				<table class="goods_table">
+				<table class="goods_table" style="width: 70%;">
 					<thead>
 						<tr>
-							<td class="th_column_1">상품 번호</td>
+							<!-- <td class="th_column_1">상품 번호</td> -->
 							<td class="th_column_4">상품 이미지</td>
 							<td class="th_column_1">상품 이름</td>
 							<td class="th_column_3">가격</td>
@@ -56,7 +61,7 @@
 					<tbody id="productContent" class="table-group-divider">
 						<c:forEach items="${list}" var="dto">
 							<tr>
-								<td>${dto.num}</td>
+								<%-- <td>${dto.num}</td> --%>
 								<td class="tbl_td">
 									<div class="row">
 										<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
@@ -78,7 +83,8 @@
 		</div>
 
 		<!-- paging -->
-		<div class="row col-md-7 mx-auto">
+		<div class="row">
+		<div class="row col-md-2 mx-auto">
 			<nav aria-label="Page navigation example">
 				<ul class="pagination">
 					<li class="page-item"><a class="page-link" href="#"
@@ -115,17 +121,17 @@
 				</ul>
 			</nav>
 		</div>
-
+		</div>
 
 		<!-- 검색창 -->
-		<div class="row col-md-7 mx-auto">
+		<div class="row col-md-4 mx-auto">
 			<form class="row g-3" action="./list" method="get" id="searchForm">
 				<input type="hidden" name="page" value="1" id="page">
 				<div class="col-auto">
 					<label for="kind" class="visually-hidden">Kind</label> <select
 						class="form-select" name="kind" id="kind"
 						aria-label="Default select example">
-						<option value="title" ${pager.kind eq 'title'? 'selected':''}>Title</option>
+						<option value="title" ${pager.kind eq 'title'? 'selected':''}>상품 이름</option>
 						<%-- <option value="contents" ${pager.kind eq 'info'? 'selected':''}>info</option> --%>
 						<%-- <option value="writer" ${pager.kind eq 'writer'? 'selected':''}>Writer</option> --%>
 					</select>
@@ -143,17 +149,17 @@
 			<c:if test="${not empty member}">
 
 				<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
-					<div class="row col-md-7 mx-auto">
+					<div class="row justify-content-end col-md-4 mx-auto">
 						<a href="./productAdd" class="btn btn-primary col-5">상품등록</a>
 					</div>
 				</c:if>
 			</c:if>
 
 		</div>
-
-	</div>
 	
-
+	</div>
+		
+	
 </header>
 
 <c:import url="../template/common_js.jsp"></c:import>

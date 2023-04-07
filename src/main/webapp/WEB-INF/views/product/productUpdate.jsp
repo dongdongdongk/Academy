@@ -68,7 +68,7 @@
 
 </header>
 	
-<!-- <script src="../resources/js/fileManger.js"></script> -->
+
 <script src="../../../resources/js/fileManger.js"></script>
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>

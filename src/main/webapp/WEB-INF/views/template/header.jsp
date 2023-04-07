@@ -99,6 +99,8 @@
 	                                    <li><a href="/notice/list">공지사항</a></li>
 	                                    <li><a href="/qna/qnaList">질문응답</a></li>
 	                                    <li><a href="/event/list">이벤트</a></li>
+									
+
 	                                </ul>
 	
 	                                <div class="hamburger-menu d-lg-none">
@@ -118,3 +120,4 @@
 	            </div><!-- .nav-bar -->
 	        </header><!-- .site-header -->
 		</div><!-- .hero-content -->
+		

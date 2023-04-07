@@ -2,6 +2,8 @@ package com.ac.home.orders;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,8 +36,10 @@ public class OrdersService {
 		return ordersDAO.setOrdersUpdate(ordersDTO);
 	}
 	
-	public int setOrdersDelete(OrdersDTO ordersDTO) throws Exception {
-		return ordersDAO.setOrdersDelete(ordersDTO);
+	public int setOrdersDelete(OrdersDTO ordersDTO,HttpSession session) throws Exception {
+		
+		int result = ordersDAO.setOrdersDelete(ordersDTO);
+		return result;
 	}
 	
 	
