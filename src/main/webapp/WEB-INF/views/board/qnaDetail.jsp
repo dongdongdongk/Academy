@@ -118,6 +118,7 @@
 		</div>
 	
 		<script src="../resources/js/boardForm.js"></script>
+		<c:import url="../template/kakao.jsp"></c:import>
 		<c:import url="../template/common_js.jsp"></c:import>
 		<c:import url="../template/bottom.jsp"></c:import>
 		<script src="/resources/js/qnaReply.js"></script>

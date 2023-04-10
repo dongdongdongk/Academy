@@ -41,6 +41,7 @@
 	<a href= "./list">목록</a>
 	</header>
 <c:import url="../template/common_js.jsp"></c:import>
-<c:import url="../template/bottom.jsp"></c:import>	
+<c:import url="../template/bottom.jsp"></c:import>
+<c:import url="../template/kakao.jsp"></c:import>	
 </body>
 </html>

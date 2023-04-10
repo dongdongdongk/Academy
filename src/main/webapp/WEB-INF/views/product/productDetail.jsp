@@ -82,6 +82,7 @@
 
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
+<c:import url="../template/kakao.jsp"></c:import>
 <script src="/resources/js/productCart.js"></script>
 <script src="../../../resources/js/productDetail.js"></script>
 </body>

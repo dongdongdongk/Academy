@@ -37,5 +37,6 @@
 	
 	
 	<a href= "./list">목록</a>
+<c:import url="../template/kakao.jsp"></c:import>	
 </body>
 </html>
