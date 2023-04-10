@@ -73,14 +73,11 @@
 											<td class="th_column_1">상품 이름</td>
 											<td class="th_column_3">가격</td>
 											<td class="th_column_4">등록날짜</td>
-											<td class="th_column_5">조회수</td>
 											<td class="th_column_5">카테고리</td>
 										</tr>
 									</thead>
 
-									<%-- <c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-										<td class="tbl_td">${fileDTO.save}</td>
-										</c:forEach> --%>
+		
 										<tbody class="table-group-divider">
 
 											<c:forEach items="${list}" var="dto">
@@ -103,22 +100,12 @@
 															href="./productDetail?num=${dto.num}">${dto.title}</a></td>
 													<td class="tbl_td">${dto.price}</td>
 													<td class="tbl_td">${dto.regDate}</td>
-													<td class="tbl_td">${dto.hit}</td>
 													<c:forEach items="${dto.categoryDTOs}" var="category">
 														<td class="tbl_td">${category.name}</td>
 													</c:forEach>
 
 
 
-
-
-													<%-- <c:choose>
-														<c:when test="${dto.grade eq 1}">판매중</c:when>
-														<c:otherwise>판매중</c:otherwise>
-														</c:choose>
-														<c:if test="${dto.grade eq 1}">판매중</c:if>
-														<c:if test="${dto.grade eq 0}">판매중단</c:if>
-														--%>
 
 												</tr>
 											</c:forEach>
