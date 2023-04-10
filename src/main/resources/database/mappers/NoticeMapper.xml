@@ -33,7 +33,9 @@
 						NOTICEFILES B
 						ON(R.NUM = B.NUM)
 						<include refid="noticeCondition"></include>						
-						ORDER BY ROWNUM DESC
+						ORDER BY 
+ 						CASE WHEN R.CHECKED = 1 THEN 0 ELSE 1 END, 
+  						ROWNUM DESC
 					) B 
 			)
 		WHERE R BETWEEN #{startRow}  AND #{lastRow} 
@@ -89,7 +91,7 @@
   	</resultMap>
  	 
  	 <update id="setNoticeUpdate" parameterType="NoticeDTO">
-  		UPDATE NOTICE SET TITLE=#{title}, CONTENTS=#{contents} WHERE NUM=#{num}
+  		UPDATE NOTICE SET TITLE=#{title}, CONTENTS=#{contents}, CHECKED=#{checked} WHERE NUM=#{num}
   	</update>
   	
   	

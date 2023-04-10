@@ -31,13 +31,16 @@
             <!-- Styles -->
             <link rel="stylesheet" href="/resources/css/style.css">
 
-            
+            <c:import url="../template/tempcss.jsp"></c:import>
             <c:import url="../template/common_css.jsp"></c:import>
         </head>
 
         <c:import url="../template/header.jsp"></c:import>
 
         <body class="courses-page">
+           
+           
+           
             <div class="page-header">
                
 
@@ -69,7 +72,7 @@
 
 
 
-            <ul class="nav justify-content-center grey lighten-4 py-4">
+            <ul class="nav justify-content-center grey lighten-4 py-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <li class="nav-item">
                     <a class="nav-link active" id="allEvent">전체</a>
                 </li>
@@ -95,7 +98,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="breadcrumbs">
+                        <div class="breadcrumbs wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                             <ul class="flex flex-wrap align-items-center p-0 m-0">
                                 <li><a href="/"><i class="fa fa-home"></i> 홈</a></li>
                                 <li>이벤트</li>
@@ -111,7 +114,7 @@
                                 <div class="row mx-m-25">
                                 
                                     <c:forEach items="${list}" var="dto">
-                                        <div class="col-3 col-md-3 px-25">
+                                        <div class="col-3 col-md-3 px-25 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                                             <div class="course-content">
                                                 <figure class="course-thumbnail">
                                                     <c:set var="loop_flag" value="false" />
@@ -252,6 +255,8 @@
 
             <c:import url="../template/common_js.jsp"></c:import>
             <c:import url="../template/kakao.jsp"></c:import>
+            <c:import url="../template/tempjs.jsp"></c:import>
+            <script src="../resources/js/temp/move.js"></script>
             <script src="../resources/js/pageing.js"></script>
             <script type='text/javascript' src='/resources/js/jquery.js'></script>
             <script type='text/javascript' src='/resources/js/swiper.min.js'></script>

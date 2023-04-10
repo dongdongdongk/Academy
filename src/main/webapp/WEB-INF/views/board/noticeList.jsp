@@ -34,11 +34,10 @@
 		</div>
 
 
-		  
 		<div class="row col-md-7 mx-auto">
 			
-			<table class="table">
-			  	<thead class="table-dark">
+			<table class="table table-hover ">
+			  	<thead class="table-info">
 			 		<tr>
 						<th>NUM</th>
 						<th>TITLE</th>
@@ -50,18 +49,8 @@
 			 	
 			  	<tbody>
 			  		<c:forEach items="${list}" var="dto">
-						<tr>
-
-							<c:if test="${not empty member}">
-
-								<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">	
-									<td><input type="checkbox" class="check-item" data-num-check="${dto.checked}"></td>
-								</c:if>
-							</c:if>
-
-
-
-							<td><input hidden type="checkbox" class="check-item" data-num-check="${dto.checked}"></td>
+						<tr class="check-item" data-num-check="${dto.checked}">
+							<!-- <td><input hidden type="checkbox" class="check-item" data-num-check="${dto.checked}"></td> -->
 							<td class="noticeNum" data-num-id="${dto.num}">${dto.num}</td>
 							<td class="d-flex align-items-center">
 								
