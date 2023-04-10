@@ -87,13 +87,13 @@ public class CartController {
 	    mv.setViewName("redirect:./cartList");
 	    return mv;
 	}
+	
 	@PostMapping("cartUpdate")
 	public ModelAndView getCartUpdate(CartDTO cartDTO)throws Exception{
 		ModelAndView mv = new ModelAndView();
 		
 		int result = cartService.getCartUpdate(cartDTO);
-		
-		
+
 		mv.addObject("result", result);
 		mv.addObject("dto", result);
 		mv.setViewName("/common/ajaxResult");
@@ -102,8 +102,6 @@ public class CartController {
 		
 	}
 
-	
-	
 	@PostMapping(value = "cartCheck")
 	public ModelAndView cartCheck(CartDTO cartDTO) throws Exception {
 		ModelAndView mv = new ModelAndView();
