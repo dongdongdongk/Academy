@@ -44,9 +44,10 @@
 
 /* 슬라이더 이미지 구현 */
 .post-slider{
-  width:70%;
+  width:80%;
   margin:0px auto;
   position:relative;
+  background-color: #f3f7f8 !important;
 }
 .post-slider .silder-title{
   text-align:center;
@@ -83,6 +84,9 @@
   display:inline-block;
   background:white;
   border-radius: 5px;
+  padding: 45px 40px;
+  box-sizing: border-box;
+  display: block;
 }
 .post-slider .post-wrapper .post .post-info{
   font-size:15px;
@@ -96,3 +100,21 @@
   border-top-right-radius:5px;
 }
 
+.post-slider .post-wrapper .post .star {
+  display: flex;
+}
+
+.post-slider .post-wrapper .post .star .svg {
+  width: 30px;
+  height: 30px;
+  filter: invert(88%) sepia(25%) saturate(659%) hue-rotate(61deg) brightness(99%) contrast(98%);
+}
+
+.post-slider .post-wrapper .post .pointColor {
+  display: flex;
+}
+
+.post-slider .post-wrapper .post .pointColor .svg {
+  width: 20px;
+  height: 20px;
+}

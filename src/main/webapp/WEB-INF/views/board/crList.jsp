@@ -38,10 +38,189 @@
 			</div> -->
 	
 			<div class="page-wrapper" style="position:relative;">
+				<!-- <div class="w1230">
+					<h3 class="title">수강후기</h3>
+			
+					<ul class="review_list rolling">
+						<li>
+							<a onclick="showReview('168053')">
+								<dl class="star">
+									<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-1" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-2" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-3" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-4" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-5" alt="별점아이콘" decoding="async"/></dd>
+								</dl>
+								<span>워**듀</span>
+								<h4>
+									강의 수강덕에 늦은 나이인데도 합격했습니다.
+								</h4>
+								<h5 class="pointColor">
+									<img src="/theme/6/img/main/videoBtn.svg" class="svg Bg_svg" alt="과정아이콘" decoding="async" />
+									정보처리기사 실기
+								</h5>
+								<p>기존 워너에듀IT 홈페이지 박**(p*****@da..) 회원님의 후기입니다.비전공...</p>
+							</a>
+						</li>
+						
+						<li>
+							<a onclick="showReview('168052')">
+								<dl class="star">
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168052-1" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168052-2" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168052-3" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168052-4" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168052-5" alt="별점아이콘" decoding="async"/></dd>
+								</dl>
+								<span>워**듀</span>
+								<h4>
+									필기 합격 이후 실기 후기로 다시 찾아 뵙게 되었습니다!!
+								</h4>
+								<h5 class="pointColor">
+									<img src="/theme/6/img/main/videoBtn.svg" class="svg Bg_svg" alt="과정아이콘" decoding="async" />
+									정보처리기사 실기
+								</h5>
+								<p>기존 워너에듀IT 홈페이지 전**(ich******..) 회원님의 후기입니다.필기 합...</p>
+							</a>
+						</li>
+						
+						<li>
+							<a onclick="showReview('168051')">
+								<dl class="star">
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168051-1" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168051-2" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168051-3" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168051-4" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168051-5" alt="별점아이콘" decoding="async"/></dd>
+								</dl>
+								<span>워**듀</span>
+								<h4>
+									정보처리기사 필기 합격후기 ( 7일의 노력 )
+								</h4>
+								<h5 class="pointColor">
+									<img src="/theme/6/img/main/videoBtn.svg" class="svg Bg_svg" alt="과정아이콘" decoding="async" />
+									정보처리기사 필기
+								</h5>
+								<p>기존 워너에듀IT 홈페이지 신**(s******@n..)회원님의 후기입니다.2021 정...</p>
+							</a>
+						</li>
+						
+						<li>
+							<a onclick="showReview('168050')">
+								<dl class="star">
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168050-1" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168050-2" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168050-3" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168050-4" alt="별점아이콘" decoding="async"/></dd>
+									<dd><img src="/theme/6/img/main/star.svg" class="svg" id="star-168050-5" alt="별점아이콘" decoding="async"/></dd>
+								</dl>
+								<span>워**듀</span>
+								<h4>
+									필기 합격을 이루고.. 실기 합격의 길로 가는 길
+								</h4>
+								<h5 class="pointColor">
+									<img src="/theme/6/img/main/videoBtn.svg" class="svg Bg_svg" alt="과정아이콘" decoding="async" />
+									정보처리기사 실기
+								</h5>
+								<p>기존 워너에듀IT 홈페이지 박**(j********..) 회원님의 후기입니다. 4학년 ...</p>
+							</a>
+						</li>
+						
+					</ul>
+				</div> -->
+
 				<div class="post-slider">
-				  <!-- <h1 class="silder-title"></h1> -->
-				  <!-- <i class="fas fa-chevron-left prev material-symbols-outlined"></i>
-				  <i class="fas fa-chevron-right next material-symbols-outlined"></i> -->
+					<div class="post-wrapper">
+					  <div class="post">
+						<a onclick="showReview('168053')">
+							<dl class="star">
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-1" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-2" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-3" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-4" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-5" alt="별점아이콘" decoding="async"/></dd>
+							</dl>
+							<span>장현서</span>
+							<h4>
+								강의 수강덕에 늦은 나이인데도 합격했습니다.
+							</h4>
+							<h5 class="pointColor">
+								<img src="/resources/images/videoBtn.svg" class="svg Bg_svg" alt="과정아이콘" decoding="async" />
+								정보처리기사 실기
+							</h5>
+							<p>기존 워너에듀IT 홈페이지 박**(p*****@da..) 회원님의 후기입니다.비전공...</p>
+						</a>
+					  </div>
+	  
+					  <div class="post">
+						<a onclick="showReview('168053')">
+							<dl class="star">
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-1" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-2" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-3" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-4" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-5" alt="별점아이콘" decoding="async"/></dd>
+							</dl>
+							<span>장현서</span>
+							<h4>
+								강의 수강덕에 늦은 나이인데도 합격했습니다.
+							</h4>
+							<h5 class="pointColor">
+								<img src="/resources/images/videoBtn.svg" class="svg Bg_svg" alt="과정아이콘" decoding="async" />
+								정보처리기사 실기
+							</h5>
+							<p>기존 워너에듀IT 홈페이지 박**(p*****@da..) 회원님의 후기입니다.비전공...</p>
+						</a>
+					  </div>
+	  
+					  <div class="post">
+						<a onclick="showReview('168053')">
+							<dl class="star">
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-1" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-2" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-3" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-4" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-5" alt="별점아이콘" decoding="async"/></dd>
+							</dl>
+							<span>장현서</span>
+							<h4>
+								강의 수강덕에 늦은 나이인데도 합격했습니다.
+							</h4>
+							<h5 class="pointColor">
+								<img src="/resources/images/videoBtn.svg" class="svg Bg_svg" alt="과정아이콘" decoding="async" />
+								정보처리기사 실기
+							</h5>
+							<p>기존 워너에듀IT 홈페이지 박**(p*****@da..) 회원님의 후기입니다.비전공...</p>
+						</a>
+					  </div>
+	  
+					  <div class="post">
+						<a onclick="showReview('168053')">
+							<dl class="star">
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-1" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-2" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-3" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-4" alt="별점아이콘" decoding="async"/></dd>
+								<dd><img src="/resources/images/star.svg" class="svg" id="star-168053-5" alt="별점아이콘" decoding="async"/></dd>
+							</dl>
+							<span>장현서</span>
+							<h4>
+								강의 수강덕에 늦은 나이인데도 합격했습니다.
+							</h4>
+							<h5 class="pointColor">
+								<img src="/resources/images/videoBtn.svg" class="svg Bg_svg" alt="과정아이콘" decoding="async" />
+								정보처리기사 실기
+							</h5>
+							<p>기존 워너에듀IT 홈페이지 박**(p*****@da..) 회원님의 후기입니다.비전공...</p>
+						</a>
+					  </div>
+	  
+					</div>
+				  </div>
+
+
+
+				<!-- <div class="post-slider">
 				  <div class="post-wrapper">
 					
 					<div class="post">
@@ -77,12 +256,12 @@
 					</div>
 	
 				  </div>
-				</div>
+				</div> -->
 			  </div>
 	
 	
 			<div class="row col-md-7 mx-auto">
-				<table class="table">
+				<!-- <table class="table">
 				  	<thead class="table-dark">
 				 		<tr>
 							<th>번호</th><th>제목</th><th>작성자</th><th>등록일</th>
@@ -133,7 +312,7 @@
 						</li>
 					  </ul>
 					</nav>
-				</div>
+				</div> -->
 	
 			<div class="row col-md-3 mx-auto mt-5">
 				<a class="btn" href="./crAdd">수강후기 등록</a>
