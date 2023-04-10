@@ -18,38 +18,31 @@ function setMax(m){
 }
 
 $(".deleteCheck").click(function(){
+
     let result=confirm('파일이 영구 삭제 됩니다');
+    let fileNum = $(this).val();
     let ch = $(this);
+
     if(result){
-        console.log($(this).val())
-        let fileNum = $(this).val();
+
         $.ajax({
             type:'POST',
-            url:'./productDelete',
+            url:'/product/productDelete',
             data:{
-                fileNum:fileNum
+                fileNum: fileNum
             },
-            success:function(response){
-                if(response.trim() > 0){
-                    alert("삭제 되었습니다");
-                    
-                    //this : ajax객체 자기 자신
-                    console.log(ch)
-                    ch.parent().parent().remove();
-                    count--;
-                }else {
-                    alert("삭제 실패<br> 관리자에게 문의 하세요");
-            
-                }
+            success:function(){
+                alert("삭제 되었습니다");
+                ch.parent().parent().remove();
+                count = 0;
             },
             error:function(){
-
+                alert("삭제 실패 관리자에게 문의 하세요");
             }
         })
     }else {
         $(this).prop('checked', false);
     }
-
 })
 
 $("#fileList").on("click", ".dels", function(e){
@@ -57,7 +50,8 @@ $("#fileList").on("click", ".dels", function(e){
     count--;
 })
 
-$("#fileAdd").click(()=>{
+$("#fileAdd").on("click", () => {
+
     if(count>=max){
         alert('첨부파일은 최대 '+max+ ' 까지만 가능');
         return;
@@ -70,6 +64,6 @@ $("#fileAdd").click(()=>{
         child = child+ '</div>'
     $("#fileList").append(child);
 
-    idx++;
+    idx++;   
     
-});
+});   

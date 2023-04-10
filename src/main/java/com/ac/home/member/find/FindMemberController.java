@@ -6,30 +6,30 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.ac.home.member.MemberDTO;
-import com.ac.home.member.MemberService;
 import com.ac.home.member.mail.MailSendService;
 
 @Controller
 @RequestMapping("/member/find")
 public class FindMemberController {
 
-	@Autowired
-	private FindMemberService findMemberService;
+    @Autowired
+    private FindMemberService findMemberService;
 
     // ID 찾기
     @GetMapping("/findId")
-    public String findId() {
-        return "member/find/findId";
+    public ModelAndView findId() {
+        return new ModelAndView("member/find/findId");
     }
 
     @PostMapping("/findId")
-    public String findIdResult(String name, String email, String emaildomain, Model model) throws Exception {
+    public ModelAndView findIdResult(String name, String email, String emaildomain) throws Exception {
+        ModelAndView modelAndView = new ModelAndView("member/find/findId");
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setName(name);
         memberDTO.setEmail(email);
@@ -42,22 +42,23 @@ public class FindMemberController {
         memberDTO = findMemberService.getMemberId(memberDTO);
 
         if (memberDTO != null) {
-            model.addAttribute("successMessage", "찾으시는 아이디는 " + memberDTO.getId() + " 입니다.");
+            modelAndView.addObject("successMessage", "찾으시는 아이디는 " + memberDTO.getId() + " 입니다.");
         } else {
-            model.addAttribute("errorMessage", "일치하는 회원 정보가 없습니다.");
+            modelAndView.addObject("errorMessage", "일치하는 회원 정보가 없습니다.");
         }
 
-        return "member/find/findId";
+        return modelAndView;
     }
 
     // 비밀번호 찾기
     @GetMapping("/findPassword")
-    public String findPassword() {
-        return "member/find/findPassword";
+    public ModelAndView findPassword() {
+        return new ModelAndView("member/find/findPassword");
     }
 
     @PostMapping("/findPassword")
-    public String findPasswordProcess(HttpServletRequest request, Model model, String id, String email, String emaildomain) {
+    public ModelAndView findPasswordProcess(HttpServletRequest request, String id, String email, String emaildomain) {
+        ModelAndView modelAndView = new ModelAndView("member/find/findPassword");
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setId(id);
         memberDTO.setEmail(email);
@@ -77,15 +78,15 @@ public class FindMemberController {
 
                 sendEmailWithTempPassword(email, emaildomain, tempPassword);
 
-                model.addAttribute("successMessage", "임시 비밀번호가 이메일로 전송되었습니다.");
+                modelAndView.addObject("successMessage", "임시 비밀번호가 이메일로 전송되었습니다.");
             } else {
-                model.addAttribute("errorMessage", "일치하는 회원 정보가 없습니다.");
+                modelAndView.addObject("errorMessage", "일치하는 회원 정보가 없습니다.");
             }
         } catch (Exception e) {
-            model.addAttribute("errorMessage", "비밀번호 찾기 처리 중 오류가 발생했습니다.");
+            modelAndView.addObject("errorMessage", "비밀번호 찾기 처리 중 오류가 발생했습니다.");
             e.printStackTrace();
         }
-        return "member/find/findPassword";
+        return modelAndView;
     }
 
     // 임시 비밀번호 생성 메소드

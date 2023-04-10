@@ -135,8 +135,8 @@
 					</nav>
 				</div>
 	
-			<div class="row col-md-2 mx-auto mt-5">
-				<a class="btn btn-primary" href="./crAdd">수강후기 등록</a>
+			<div class="row col-md-3 mx-auto mt-5">
+				<a class="btn" href="./crAdd">수강후기 등록</a>
 			</div>	
 			
 			<div id="cr2">

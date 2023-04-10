@@ -102,6 +102,7 @@ public class MemberController {
 	public ModelAndView getMemberLogin(MemberDTO memberDTO, HttpServletRequest request, HttpServletResponse response) throws Exception {
 	    ModelAndView mv = new ModelAndView();
 	    memberDTO = memberService.getMemberLogin(memberDTO);
+	    
 	    if (memberDTO != null) {
 	        HttpSession session = request.getSession();
 	        session.setAttribute("member", memberDTO);
@@ -116,8 +117,14 @@ public class MemberController {
 	            cookie.setMaxAge(0);
 	            response.addCookie(cookie);
 	        }
+
+	        mv.setViewName("redirect:../");
+	        
+	    } else {
+	        mv.addObject("errorMessage", "로그인에 실패했습니다.");
+	        mv.setViewName("member/memberLogin");
 	    }
-	    mv.setViewName("redirect:../");
+	    
 	    return mv;
 	}
 	

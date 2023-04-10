@@ -21,4 +21,11 @@
 	        <td class="tbl_td">${dto.categoryNum eq 1 ? '책' : '강의'}</td>
 	    </tr>
    	</c:if>
-</c:forEach>							
+</c:forEach>	
+
+
+
+
+
+
+

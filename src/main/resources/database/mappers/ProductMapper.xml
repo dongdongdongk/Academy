@@ -83,7 +83,6 @@
  		<result column="REGDATE" property="regDate"/>
  		<result column="CATEGORYNUM" property="categoryNum"/>
  		
- 		
  		<collection property="productImgDTOs" javaType="List" ofType="ProductImgDTO">
  			<id column="FILENUM" property="fileNum"/>
  			<result column="SAVE" property="save"/>
@@ -103,10 +102,9 @@
  		INSERT INTO PRODUCT 
  		VALUES (#{num} ,#{title}, #{price}, #{info}, SYSDATE, #{categoryNum})
  	</insert>
- 	
+
  	<delete id="setProductDelete" parameterType="ProductDTO">
  		DELETE PRODUCT WHERE NUM=#{num}
- 		
  	</delete> 
  	
  	<update id="setProductUpdate" parameterType="ProductDTO">

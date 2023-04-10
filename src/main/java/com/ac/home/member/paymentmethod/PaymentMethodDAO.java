@@ -36,8 +36,15 @@ public class PaymentMethodDAO {
 	    sqlSession.insert(NAMESPACE + ".addPaymentMethods", paramMap);
 	}
 
-
 	public int getNextPaymentId() throws Exception {
 	    return sqlSession.selectOne(NAMESPACE + ".getNextPaymentId");
+	}
+	
+	public void updatePaymentMethod(PaymentMethodDTO paymentDTO) throws Exception {
+	    sqlSession.update(NAMESPACE + ".updatePaymentMethod", paymentDTO);
+	}
+
+	public void deletePaymentMethod(PaymentMethodDTO paymentDTO) throws Exception {
+	    sqlSession.delete(NAMESPACE + ".deletePaymentMethod", paymentDTO);
 	}
 }

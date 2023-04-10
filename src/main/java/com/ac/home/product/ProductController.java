@@ -178,7 +178,7 @@ public class ProductController {
 			int result = productService.getProductFileDelete(productImgDTO);
 			
 			mv.addObject("dto", result);
-			mv.setViewName("./common/ajaxResult");
+			mv.setViewName("/common/ajaxResult");
 			
 			return mv;
 		}
