@@ -150,6 +150,8 @@
 	</div>
 	<c:import url="../template/common_js.jsp"></c:import>
 	<script src="/resources/js/productCart.js"></script>
+	<c:import url="../template/bottom.jsp"></c:import>
+	<c:import url="../template/kakao.jsp"></c:import>
 </body>
 
 </html>
