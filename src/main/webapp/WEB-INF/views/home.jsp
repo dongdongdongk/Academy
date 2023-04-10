@@ -89,12 +89,25 @@
                             <nav class="site-navigation flex justify-content-end align-items-center">
                                 <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                     <li class="current-menu-item"><a href="/">Home</a></li>
-                                    <li><a href="/cr/crList">Review</a></li>
+                                    <!-- <li><a href="/cr/crList">Review</a></li>
                                     <li><a href="/product/list">Courses</a></li>
                                     <li><a href="/notice/list">Notice</a></li>
                                     <li><a href="/qna/qnaList">QNA</a></li>
-                                    <li><a href="/event/list">EVENT</a></li>
+                                    <li><a href="/event/list">EVENT</a></li> -->
                                 </ul>
+
+                                <div class="dropdown">
+                                    <button class="dropbtn">Dropdown</button>
+                                    <div>
+                                        <ul class="dropdown-content">
+                                            <li><a href="/cr/crList">Review</a></li>
+                                            <li><a href="/product/list">Courses</a></li>
+                                            <li><a href="/notice/list">Notice</a></li>
+                                            <li><a href="/qna/qnaList">QNA</a></li>
+                                            <li><a href="/event/list">EVENT</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
 
                                 <div class="hamburger-menu d-lg-none">
                                     <span></span>
