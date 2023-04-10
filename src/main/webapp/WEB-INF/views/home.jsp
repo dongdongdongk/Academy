@@ -253,22 +253,20 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star-o"></span>
-
-                                    <span class="course-ratings-count">(4 votes)</span>
                                 </div><!-- .course-ratings -->
 
-                                <h2 class="entry-title"><a href="#">The Complete Android Developer Course</a></h2>
+                                <h2 class="entry-title"><a href="#">전체 Android 개발자 과정</a></h2>
 
                                 <div class="entry-meta flex flex-wrap align-items-center">
                                     <div class="course-author"><a href="#">김동현 </a></div>
 
-                                    <div class="course-date">July 21, 2018</div>
+                                    <div class="course-date">2023년 4월 10일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
-                                    <span class="free-cost">Free</span>
+                                    <span class="free-cost">무료</span>
                                 </div><!-- .course-cost -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
@@ -293,12 +291,12 @@
                                     <span class="course-ratings-count">(4 votes)</span>
                                 </div><!-- .course-ratings -->
 
-                                <h2 class="entry-title"><a href="#">Learn Photoshop, Web Design & Profitable</a></h2>
+                                <h2 class="entry-title"><a href="#">웹 디자인에 대해</a></h2>
 
                                 <div class="entry-meta flex flex-wrap align-items-center">
                                     <div class="course-author"><a href="#">장현서</a></div>
 
-                                    <div class="course-date">Aug 21, 2018</div>
+                                    <div class="course-date">2023년 4월 10일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -470,18 +468,18 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">The Complete Android Developer Course</a></h2>
+                                <h2 class="entry-title"><a href="#">전체 Android 개발자 과정</a></h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">Ms. Lara Croft </a></div>
+                                    <div class="course-author"><a href="#">장현서 </a></div>
 
-                                    <div class="course-date">July 21, 2018</div>
+                                    <div class="course-date">2023년 4월 10일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
-                                    $45 <span class="price-drop">$68</span>
+                                    45000원 <span class="price-drop">68000원</span>
                                 </div><!-- .course-cost -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
@@ -490,8 +488,6 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star-o"></span>
-
-                                    <span class="course-ratings-count">(4 votes)</span>
                                 </div><!-- .course-ratings -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
@@ -506,18 +502,18 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">The Ultimate Drawing Course Beginner to Advanced</a></h2>
+                                <h2 class="entry-title"><a href="#">자바과정 초급에서 고급으로</a></h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">Michelle Golden</a></div>
+                                    <div class="course-author"><a href="#">장현서</a></div>
 
-                                    <div class="course-date">Mar 14, 2018</div>
+                                    <div class="course-date">2023년 4월 10일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
-                                    <span class="free-cost">Free</span>
+                                    <span class="free-cost">무료</span>
                                 </div><!-- .price-drop -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
@@ -526,8 +522,6 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star-o"></span>
-
-                                    <span class="course-ratings-count">(4 votes)</span>
                                 </div><!-- .course-ratings -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
@@ -542,18 +536,18 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">The Complete Digital Marketing Course</a></h2>
+                                <h2 class="entry-title"><a href="#">전체 디지털 마케팅 과정</a></h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">Ms. Lucius</a></div>
+                                    <div class="course-author"><a href="#">장현서</a></div>
 
-                                    <div class="course-date">Dec 18, 2018</div>
+                                    <div class="course-date">2023년 4월 10일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
-                                    $55 <span class="price-drop">$78</span>
+                                    55000원<span class="price-drop">78000원</span>
                                 </div><!-- .course-cost -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
@@ -563,7 +557,6 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star-o"></span>
 
-                                    <span class="course-ratings-count">(4 votes)</span>
                                 </div><!-- .course-ratings -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
@@ -578,18 +571,18 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">The Unreal Engine Developer Course</a></h2>
+                                <h2 class="entry-title"><a href="#">언리얼 엔진 개발자 과정</a></h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">Mr. John Wick</a></div>
+                                    <div class="course-author"><a href="#">장현서</a></div>
 
-                                    <div class="course-date">Otc 17, 2018</div>
+                                    <div class="course-date">2023년 4월 10일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
-                                    <span class="free-cost">Free</span>
+                                    <span class="free-cost">무료</span>
                                 </div><!-- .course-cost -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
@@ -598,8 +591,6 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star-o"></span>
-
-                                    <span class="course-ratings-count">(4 votes)</span>
                                 </div><!-- .course-ratings -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
@@ -614,18 +605,18 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">Progressive Web Apps (PWA) - The Complete Guide</a></h2>
+                                <h2 class="entry-title"><a href="#">Progressive Web Apps</a></h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">Mr. Tom Redder</a></div>
+                                    <div class="course-author"><a href="#">장현서</a></div>
 
-                                    <div class="course-date">Sep 14, 2018</div>
+                                    <div class="course-date">2023년 4월 10일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
-                                    $38 <span class="price-drop">$48</span>
+                                    38000원<span class="price-drop">48000원</span>
                                 </div><!-- .course-cost -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
@@ -635,7 +626,6 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star-o"></span>
 
-                                    <span class="course-ratings-count">(4 votes)</span>
                                 </div><!-- .course-ratings -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
@@ -650,18 +640,18 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">Cryptocurrency Investment Course 2018</a></h2>
+                                <h2 class="entry-title"><a href="#">암호화폐 투자 강좌 2018</a></h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">Russell Stephens</a></div>
+                                    <div class="course-author"><a href="#">장현서</a></div>
 
-                                    <div class="course-date">Nov 06, 2018</div>
+                                    <div class="course-date">2023년 4월 10일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
-                                    <span class="free-cost">Free</span>
+                                    <span class="free-cost">무료</span>
                                 </div><!-- .course-cost -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
@@ -671,7 +661,6 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star-o"></span>
 
-                                    <span class="course-ratings-count">(4 votes)</span>
                                 </div><!-- .course-ratings -->
                             </footer><!-- .entry-footer -->
                         </div><!-- .course-content-wrap -->
@@ -701,16 +690,16 @@
 
                             <div class="posted-date position-absolute">
                                 <div class="day">23</div>
-                                <div class="month">mar</div>
+                                <div class="month">4</div>
                             </div><!-- .posted-date -->
                         </figure><!-- .event-thumbnail -->
 
                         <header class="entry-header flex flex-wrap align-items-center">
-                            <h2 class="entry-title"><a href="#">The Complete Financial Analyst Training & Investing Course</a></h2>
+                            <h2 class="entry-title"><a href="#">전체 재무 분석가 교육 및 투자 과정</a></h2>
 
                             <div class="event-location"><i class="fa fa-map-marker"></i>40 Baria Sreet 133/2 NewYork City, US</div>
 
-                            <div class="event-duration"><i class="fa fa-calendar"></i>10 Dec - 12 dec</div>
+                            <div class="event-duration"><i class="fa fa-calendar"></i>2023년 4월 10일</div>
                         </header><!-- .entry-header -->
                     </div><!-- .featured-event-content -->
                 </div><!-- .col -->
@@ -724,15 +713,13 @@
                         <div class="event-content-wrap">
                             <header class="entry-header">
                                 <div class="posted-date">
-                                    <i class="fa fa-calendar"></i> 22 Mar 2018
+                                    <i class="fa fa-calendar"></i> 2023년 4월 10일
                                 </div><!-- .posted-date -->
 
-                                <h2 class="entry-title"><a href="#">Personalized online learning experience</a></h2>
+                                <h2 class="entry-title"><a href="#">맞춤형 온라인 학습 경험</a></h2>
 
                                 <div class="entry-meta flex flex-wrap align-items-center">
-                                    <div class="post-author"><a href="#">Ms. Lara Croft </a></div>
-
-                                    <div class="post-comments">02 Comments  </div>
+                                    <div class="post-author"><a href="#">장현서</a></div>
                                 </div><!-- .entry-meta -->
                             </header><!-- .entry-header -->
 
@@ -750,15 +737,13 @@
                         <div class="event-content-wrap">
                             <header class="entry-header">
                                 <div class="posted-date">
-                                    <i class="fa fa-calendar"></i> 22 Mar 2018
+                                    <i class="fa fa-calendar"></i> 2023년 4월 10일
                                 </div><!-- .posted-date -->
 
-                                <h2 class="entry-title"><a href="#">Which investment project should my company choose?</a></h2>
+                                <h2 class="entry-title"><a href="#">우리 회사는 어떤 투자 프로젝트를 선택해야 하나요?</a></h2>
 
                                 <div class="entry-meta flex flex-wrap align-items-center">
-                                    <div class="post-author"><a href="#">Ms. Lara Croft </a></div>
-
-                                    <div class="post-comments">02 Comments  </div>
+                                    <div class="post-author"><a href="#">장현서 </a></div>
                                 </div><!-- .entry-meta -->
                             </header><!-- .entry-header -->
 
