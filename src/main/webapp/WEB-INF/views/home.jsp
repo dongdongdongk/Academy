@@ -254,12 +254,12 @@
                                     <span class="fa fa-star-o"></span>
                                 </div><!-- .course-ratings -->
 
-                                <h2 class="entry-title"><a href="#">전체 Android 개발자 과정</a></h2>
+                                <h2 class="entry-title">전체 Android 개발자 과정</h2>
 
                                 <div class="entry-meta flex flex-wrap align-items-center">
-                                    <div class="course-author"><a href="#">김동현 </a></div>
+                                    <div class="course-author">김동현</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -275,7 +275,7 @@
                 <div class="col-12 col-lg-6">
                     <div class="course-content flex flex-wrap justify-content-between align-content-lg-stretch">
                         <figure class="course-thumbnail">
-                            <a href="#"><img src="/resources/images/2.jpg" alt=""></a>
+                            <img src="/resources/images/2.jpg" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -290,12 +290,12 @@
                                     <span class="course-ratings-count">(4 votes)</span>
                                 </div><!-- .course-ratings -->
 
-                                <h2 class="entry-title"><a href="#">웹 디자인에 대해</a></h2>
+                                <h2 class="entry-title">웹 디자인에 대해</h2>
 
                                 <div class="entry-meta flex flex-wrap align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -449,11 +449,11 @@
 
                         <nav class="courses-menu mt-3 mt-lg-0">
                             <ul class="flex flex-wrap justify-content-md-end align-items-center">
-                                <li class="active"><a href="#">All</a></li>
-                                <li><a href="#">Java</a></li>
-                                <li><a href="#">C</a></li>
-                                <li><a href="#">Python</a></li>
-                                <li><a href="#">Database</a></li>
+                                <li class="active">All</li>
+                                <li>Java</li>
+                                <li>C</li>
+                                <li>Python</li>
+                                <li>Database</li>
                             </ul>
                         </nav><!-- .courses-menu -->
                     </header><!-- .heading -->
@@ -467,12 +467,12 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">전체 Android 개발자 과정</a></h2>
+                                <h2 class="entry-title">전체 Android 개발자 과정</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서 </a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -501,12 +501,12 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">자바과정 초급에서 고급으로</a></h2>
+                                <h2 class="entry-title">자바과정 초급에서 고급으로</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -535,12 +535,12 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">전체 디지털 마케팅 과정</a></h2>
+                                <h2 class="entry-title">전체 디지털 마케팅 과정</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -570,12 +570,12 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">언리얼 엔진 개발자 과정</a></h2>
+                                <h2 class="entry-title">언리얼 엔진 개발자 과정</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -607,9 +607,9 @@
                                 <h2 class="entry-title"><a href="#">Progressive Web Apps</a></h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -639,12 +639,12 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">암호화폐 투자 강좌 2018</a></h2>
+                                <h2 class="entry-title">암호화폐 투자 강좌 2023</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -698,7 +698,7 @@
 
                             <div class="event-location"><i class="fa fa-map-marker"></i>40 Baria Sreet 133/2 NewYork City, US</div>
 
-                            <div class="event-duration"><i class="fa fa-calendar"></i>2023년 4월 10일</div>
+                            <div class="event-duration"><i class="fa fa-calendar"></i>2023년 4월 14일</div>
                         </header><!-- .entry-header -->
                     </div><!-- .featured-event-content -->
                 </div><!-- .col -->
@@ -712,7 +712,7 @@
                         <div class="event-content-wrap">
                             <header class="entry-header">
                                 <div class="posted-date">
-                                    <i class="fa fa-calendar"></i> 2023년 4월 10일
+                                    <i class="fa fa-calendar"></i> 2023년 4월 14일
                                 </div><!-- .posted-date -->
 
                                 <h2 class="entry-title"><a href="#">맞춤형 온라인 학습 경험</a></h2>
@@ -736,13 +736,13 @@
                         <div class="event-content-wrap">
                             <header class="entry-header">
                                 <div class="posted-date">
-                                    <i class="fa fa-calendar"></i> 2023년 4월 10일
+                                    <i class="fa fa-calendar"></i> 2023년 4월 14일
                                 </div><!-- .posted-date -->
 
-                                <h2 class="entry-title"><a href="#">우리 회사는 어떤 투자 프로젝트를 선택해야 하나요?</a></h2>
+                                <h2 class="entry-title">우리 회사는 어떤 투자 프로젝트를 선택해야 하나요?</h2>
 
                                 <div class="entry-meta flex flex-wrap align-items-center">
-                                    <div class="post-author"><a href="#">장현서 </a></div>
+                                    <div class="post-author">장현서</div>
                                 </div><!-- .entry-meta -->
                             </header><!-- .entry-header -->
 
@@ -759,60 +759,59 @@
     <section class="home-gallery">
         <div class="gallery-wrap flex flex-wrap">
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/a.jpg" alt=""></a>
+                <img src="/resources/images/a.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/b.jpg" alt=""></a>
+                <img src="/resources/images/b.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid2x2">
-                <a href="#"><img src="/resources/images/c.jpg" alt=""></a>
+                <img src="/resources/images/c.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/d.jpg" alt=""></a>
+                <img src="/resources/images/d.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/e.jpg" alt=""></a>
+                <img src="/resources/images/e.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid2x1">
-                <a href="#"><img src="/resources/images/g.jpg" alt=""></a>
+                <img src="/resources/images/g.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid2x1">
-                <a href="#"><img src="/resources/images/h.jpg" alt=""></a>
+                <img src="/resources/images/h.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/i.jpg" alt=""></a>
+                <img src="/resources/images/i.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid2x2 ">
-                <a href="#"><img src="/resources/images/j.jpg" alt=""></a>
+                <img src="/resources/images/j.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/k.jpg" alt=""></a>
+                <img src="/resources/images/k.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/l.jpg" alt=""></a>
+                <img src="/resources/images/l.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid2x1">
-                <a href="#"><img src="/resources/images/m.jpg" alt=""></a>
+                <img src="/resources/images/m.jpg" alt="">
             </div><!-- .gallery-grid -->
 
-            <div class="gallery-grid gallery-grid3x1">
-                <a href="#"><img src="/resources/images/n.jpg" alt=""></a>
-            </div><!-- .gallery-grid -->
-
-            <div class="gallery-grid gallery-grid1x1">
+            <!-- <div class="gallery-grid gallery-grid3x1">
+                <a href=""><img src="/resources/images/n.jpg" alt=""></a>
+            </div> -->
+            <!-- <div class="gallery-grid gallery-grid1x1">
                 <a href="#"><img src="/resources/images/o.jpg" alt=""></a>
-            </div><!-- .gallery-grid -->
+            </div> -->
         </div><!-- .gallery-wrap -->
     </section><!-- .home-gallery -->
 
@@ -836,9 +835,9 @@
                         <img src="/resources/images/logo-4.png" alt="">
                     </div><!-- .logo-wrap -->
 
-                    <div class="logo-wrap">
+                    <!-- <div class="logo-wrap">
                         <img src="/resources/images/logo-5.png" alt="">
-                    </div><!-- .logo-wrap -->
+                    </div> -->
                 </div><!-- .col -->
             </div><!-- .row -->
         </div><!-- .container -->
@@ -877,15 +876,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <h2 class="w-100">빠른 링크</h2>
 
                             <ul class="w-50">
-                                <li><a href="/cr/crList">REVIEW</a></li>
-                                <li><a href="/product/list">COURSES</a></li>
-                                <li><a href="/notice/list">NOTICE</a></li>
-                                <li><a href="/qna/qnaList">QNA</a></li>
+                                <li><a href="/cr/crList">수강후기</a></li>
+                                <li><a href="/product/list">강의&책</a></li>
+                                <li><a href="/notice/list">공지사항</a></li>
+                                <li><a href="/qna/qnaList">질문&응답</a></li>
                             </ul>
 
                             <ul class="w-50">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/event/list">Events</a></li>
+                                <li><a href="/">메인화면</a></li>
+                                <li><a href="/event/list">이벤트</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Instructor</a></li>
                             </ul>
@@ -897,10 +896,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <h2>Follow</h2>
 
                             <ul class="follow-us flex flex-wrap align-items-center">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://ko-kr.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
                             </ul>
                         </div><!-- .quick-links -->
                     </div><!-- .col -->
@@ -908,26 +907,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             </div><!-- .container -->
         </div><!-- .footer-widgets -->
 
-        <div class="footer-bar">
-            <div class="container">
-                <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <div class="download-apps flex flex-wrap justify-content-center justify-content-lg-start align-items-center">
-                            <a href="#"><img src="/resources/images/app-store.png" alt=""></a>
-                            <a href="#"><img src="/resources/images/play-store.png" alt=""></a>
-                        </div><!-- .download-apps -->
-
-                    </div>
-
-                    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
-                        <div class="footer-bar-nav">
-                            <ul class="flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-                                <li><a href="#">이용약관</a></li>
-                                <li><a href="#">환불규정</a></li>
-                                <li><a href="#">개인정보처리방침</a></li>
-                            </ul>
-                        </div><!-- .footer-bar-nav -->
-                    </div><!-- .col-12 -->
+      
                 </div><!-- .row -->
             </div><!-- .container -->
         </div><!-- .footer-bar -->
