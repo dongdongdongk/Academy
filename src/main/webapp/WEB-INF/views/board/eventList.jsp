@@ -251,6 +251,7 @@
        
 
             <c:import url="../template/common_js.jsp"></c:import>
+            <c:import url="../template/kakao.jsp"></c:import>
             <script src="../resources/js/pageing.js"></script>
             <script type='text/javascript' src='/resources/js/jquery.js'></script>
             <script type='text/javascript' src='/resources/js/swiper.min.js'></script>
