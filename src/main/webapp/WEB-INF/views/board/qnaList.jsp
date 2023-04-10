@@ -28,16 +28,29 @@
 
 	<link rel="stylesheet" href="/resources/css/list.css">
 </head>
-<body>
+<body class="courses-page">
+            <div class="page-header">
+              <div class="page-header-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <header class="entry-header">
+                                    <h1>질문응답</h1>
+                                </header><!-- .entry-header -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .page-header-overlay -->
+            </div><!-- .page-header -->
 	
 	<c:import url="../template/header.jsp"></c:import>
-	<header style="margin-top: 200px;">
+	<header style="margin-top: 50px;">
 	<hr>
 	
 	<div class="container-fluid">
-		<div class="row mb-4 ">
+		<!-- <div class="row mb-4 ">
 			<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">QNA LIST</h1>
-		</div>
+		</div> -->
 		
 		<div class="row col-md-7 mx-auto">
 			<table class="table">
@@ -127,6 +140,7 @@
 	</header>
 	<c:import url="../template/common_js.jsp"></c:import>
 	<c:import url="../template/bottom.jsp"></c:import>
+	<c:import url="../template/kakao.jsp"></c:import>
 	<script src="../resources/js/pageing.js"></script>
 </body>
 </html>

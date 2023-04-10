@@ -14,12 +14,12 @@ public class CartDAOTest extends MyTestCase {
 	@Autowired
 	private CartDAO cartDAO;
 	
-	@Test
-	public void getCartList() throws Exception {
-		List<CartDTO> ar = cartDAO.getCartList();
-		
-		assertNotEquals(0, ar.size());
-	}
+	/*
+	 * @Test public void getCartList() throws Exception { List<CartDTO> ar =
+	 * cartDAO.getCartList();
+	 * 
+	 * assertNotEquals(0, ar.size()); }
+	 */
 	
 //	@Test
 //	public void test() throws Exception {

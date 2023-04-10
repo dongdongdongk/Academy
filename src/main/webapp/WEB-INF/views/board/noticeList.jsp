@@ -9,18 +9,28 @@
 <link rel="stylesheet" href="/resources/css/menu/eventIcon.css">
 <link rel="stylesheet" href="/resources/css/style.css">
 <c:import url="../template/common_css.jsp"></c:import>
-<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
-  integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
-<script>
-  Kakao.init('41d534ae5dc3fb8670ff2f84bd5cf770'); // 사용하려는 앱의 JavaScript 키 입력
-</script>
+
 
 </head>
-<body>
+<body class="courses-page">
+            <div class="page-header">
+              <div class="page-header-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <header class="entry-header">
+                                    <h1>공지사항</h1>
+                                </header><!-- .entry-header -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .page-header-overlay -->
+            </div><!-- .page-header -->
 <c:import url="../template/header.jsp"></c:import>
+	<header style="margin-top: 50px;">
 	<div class="container-fluid">
 		<div class="row my-5 col-md-2 mx-auto">
-			<h1>NoticeList</h1>
+		<!-- 	<h1>NoticeList</h1> -->
 		</div>
 
 
@@ -106,24 +116,7 @@
 				</nav>
 			</div>
 		
-			<div class="d-flex align-items-center">
-				<div id="add-channel-button"></div>
-		
-				<div id="kakao-talk-channel-chat-button"></div>
-			</div>
-		
-		<script>
-			Kakao.Channel.createAddChannelButton({
-			  container: '#add-channel-button',
-			  channelPublicId: '_zRYLxj',
-			});
-
-			Kakao.Channel.createChatButton({
-  			container: '#kakao-talk-channel-chat-button',
- 			channelPublicId: '_zRYLxj'
-			});
-		
-		</script>
+			
 		
 			
 			<div class="row">
@@ -152,11 +145,13 @@
 			
 			
 		</div>
-	</div>
+		</header>
 	
-	</header>
+	
+
 	<c:import url="../template/bottom.jsp"></c:import>
 	<c:import url="../template/common_js.jsp"></c:import>
+	<c:import url="../template/kakao.jsp"></c:import>
 	<script src="/resources/js/listTop.js"></script>		
 	<script src="/resources/js/pageing.js"></script>
 	

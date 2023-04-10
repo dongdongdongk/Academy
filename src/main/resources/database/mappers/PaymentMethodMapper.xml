@@ -10,10 +10,10 @@
 		</select>
 
 		<select id="getPaymentMethods" resultType="com.ac.home.member.paymentmethod.PaymentMethodDTO" parameterType="com.ac.home.member.paymentmethod.PaymentMethodDTO">
-			SELECT PM.PAYMENTMETHOD, PM.INFO
-			FROM PAYMENTMETHOD PM
-			JOIN MEMBER M ON M.ID = PM.MEMBER_ID
-			WHERE M.ID = #{memberId, jdbcType=VARCHAR}
+		    SELECT PM.ID, PM.PAYMENTMETHOD, PM.INFO
+		    FROM PAYMENTMETHOD PM
+		    JOIN MEMBER M ON M.ID = PM.MEMBER_ID
+		    WHERE M.ID = #{memberId, jdbcType=VARCHAR}
 		</select>
 
 		<insert id="addPaymentMethods" parameterType="com.ac.home.member.paymentmethod.PaymentMethodDTO" useGeneratedKeys="true" keyProperty="id">
@@ -26,5 +26,16 @@
 	        FROM PAYMENTMETHOD
 	        WHERE MEMBER_ID = #{memberId, jdbcType=VARCHAR}
 	    </select>
+
+		<update id="updatePaymentMethod" parameterType="com.ac.home.member.paymentmethod.PaymentMethodDTO">
+		    UPDATE PAYMENTMETHOD
+		    SET PAYMENTMETHOD = #{paymentMethod}, INFO = #{info}
+		    WHERE ID = #{id}
+		</update>
+		
+		<delete id="deletePaymentMethod" parameterType="com.ac.home.member.paymentmethod.PaymentMethodDTO">
+		    DELETE FROM PAYMENTMETHOD
+		    WHERE ID = #{id}
+		</delete>
 
 </mapper>

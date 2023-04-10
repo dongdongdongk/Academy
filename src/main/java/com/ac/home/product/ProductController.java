@@ -156,7 +156,7 @@ public class ProductController {
 			ModelAndView mv = new ModelAndView();
 			
 			productDTO = productService.getProductDetail(productDTO);
-			System.out.println("프로덕트 컨트롤러1");
+			
 			mv.setViewName("product/productUpdate");
 			mv.addObject("dto", productDTO);
 			return mv;
@@ -166,7 +166,7 @@ public class ProductController {
 			ModelAndView mv = new ModelAndView();
 		
 			int result = productService.setProductUpdate(productDTO,pic);
-			System.out.println("프로덕트 컨트롤러2");
+			
 			mv.setViewName("redirect:./list");
 			
 			return mv;

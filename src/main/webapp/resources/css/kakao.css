@@ -1,0 +1,26 @@
+#sidebar {
+    position: fixed;
+    top: 60%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  #sidebar {
+    /* 생략 */
+    animation: sidebarFadeIn 1s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes sidebarFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

@@ -44,7 +44,7 @@
                                 <p><i class="fa fa-phone"></i>010-1234-5678 </p>
                             </div><!-- .header-bar-text -->
                         </div><!-- .col -->
-
+                        
                         <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
                             <!-- <div class="header-bar-search">
                                 <form class="flex align-items-stretch">
@@ -84,8 +84,7 @@
                                 <h1 class="site-title"><a href="/" rel="home">Acade<span>my</span></a></h1>
                             </div><!-- .site-branding -->
                         </div><!-- .col -->
-
-                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center" id="gnb">
                             <nav class="site-navigation flex justify-content-end align-items-center">
                                 <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                     <li class="current-menu-item"><a href="/">Home</a></li>
@@ -939,6 +938,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script type='text/javascript' src='/resources/js/masonry.pkgd.min.js'></script>
 <script type='text/javascript' src='/resources/js/jquery.collapsible.min.js'></script>
 <script type='text/javascript' src='/resources/js/custom.js'></script>
+
 
 </body>
 </html>

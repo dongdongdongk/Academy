@@ -93,12 +93,14 @@
 	                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
 	                            <nav class="site-navigation flex justify-content-end align-items-center">
 	                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-	                                    <li class="current-menu-item"><a href="/">Home</a></li>
-	                                    <li><a href="/cr/crList">Review</a></li>
-	                                    <li><a href="/product/list">Courses</a></li>
-	                                    <li><a href="/notice/list">Notice</a></li>
-	                                    <li><a href="/qna/qnaList">QNA</a></li>
-	                                    <li><a href="/event/list">EVENT</a></li>
+	                                    <!-- <li class="current-menu-item"><a href="/">Home</a></li> -->
+	                                    <li><a href="/cr/crList">수강후기</a></li>
+	                                    <li><a href="/product/list">책&강의</a></li>
+	                                    <li><a href="/notice/list">공지사항</a></li>
+	                                    <li><a href="/qna/qnaList">질문응답</a></li>
+	                                    <li><a href="/event/list">이벤트</a></li>
+									
+
 	                                </ul>
 	
 	                                <div class="hamburger-menu d-lg-none">
@@ -118,3 +120,4 @@
 	            </div><!-- .nav-bar -->
 	        </header><!-- .site-header -->
 		</div><!-- .hero-content -->
+		

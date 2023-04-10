@@ -2,6 +2,8 @@ package com.ac.home.orders;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,7 +41,7 @@ public class OrdersController {
 			
 			
 			
-			mv.addObject("detail", ordersDTO);
+			mv.addObject("dto", ordersDTO);
 			mv.setViewName("orders/ordersDetail");
 			
 			return mv;
@@ -67,11 +69,12 @@ public class OrdersController {
 		
 		@GetMapping(value = "ordersUpdate")
 		public ModelAndView setOrdersUpdate(OrdersDTO ordersDTO, ModelAndView mv) throws Exception {	
+			
 			ordersDTO = ordersService.getOrdersDetail(ordersDTO);
 			
-			mv.addObject("dto", ordersDTO);
-			mv.setViewName("orders/ordersUpdate");
 			
+			mv.setViewName("orders/ordersUpdate");
+			mv.addObject("dto", ordersDTO);
 			return mv;
 		}
 		
@@ -87,11 +90,11 @@ public class OrdersController {
 		}
 		
 		@GetMapping(value = "delete")
-		public ModelAndView setOrdersDelete(OrdersDTO ordersDTO) throws Exception {
+		public ModelAndView setOrdersDelete(OrdersDTO ordersDTO,HttpSession session) throws Exception {
 			ModelAndView mv = new ModelAndView();
 			
-			int result = ordersService.setOrdersDelete(ordersDTO);
-			
+			int result = ordersService.setOrdersDelete(ordersDTO,session);
+			mv.addObject("dto", result);
 			mv.setViewName("redirect:./ordersList");
 			
 			return mv;
