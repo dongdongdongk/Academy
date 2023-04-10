@@ -61,8 +61,8 @@
 
 
 
-						<div class="goods_table_wrap">
-							<!-- 상품 리스트 O -->
+						<!-- <div class="goods_table_wrap">
+							
 							<c:if test="${listcheck != 'empty'}">
 								<table class="goods_table">
 									<thead>
@@ -112,7 +112,7 @@
 										</tbody>
 								</table>
 							</c:if>
-						</div>
+						</div> -->
 
 
 						<c:if test="${listcheck != 'empty'}">
@@ -140,9 +140,12 @@
 													<tr class="my-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
 														<td class="item gy-3">
 															<div class="row gy-3">
-																<div class="col-md-3 text-left">
-																	<img src="https://via.placeholder.com/250x250/5fa9f8/ffffff" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+																<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
+																<div class="col-md-3 mb-3">
+																	<img src="../resources/images/${fileDTO.save}"
+																		class="img-fluid ">
 																</div>
+															</c:forEach>
 																<div class="col-md-9 text-left mt-sm-2">
 																	<h4><a href="./productDetail?num=${dto.num}">${dto.title}</a></h4>
 																	<p class="font-weight-light">등록일:${dto.regDate}</p>
@@ -200,42 +203,7 @@
 
 
 
-						<!-- paging -->
-						<div class="row col-md-7 mx-auto">
-							<nav aria-label="Page navigation example">
-								<ul class="pagination">
-									<li class="page-item"><a class="page-link" href="#" aria-label="Previous"
-											data-board-page="1"> <span aria-hidden="true">&laquo;</span>
-										</a></li>
-
-
-									<li class="page-item ${pager.before?'disabled':''}"><a class="page-link" href="#"
-											aria-label="Previous" data-board-page="${pager.startNum-1}"> <span
-												aria-hidden="true">&lsaquo;</span>
-										</a></li>
-
-									<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
-										<li class="page-item"><a class="page-link" href="#"
-												data-board-page="${i}">${i}</a></li>
-									</c:forEach>
-
-									<li class="page-item ${pager.after eq false ? 'disabled':''}">
-										<%-- ${pager.after eq false ? 'disabled' :''} --%> <a class="page-link" href="#"
-												aria-label="Next" data-board-page="${pager.lastNum+1}"> <span
-													aria-hidden="true">&rsaquo;</span>
-											</a>
-									</li>
-
-									<li class="page-item">
-										<%-- ${pager.after eq false ? 'disabled' :''} --%> <a class="page-link" href="#"
-												aria-label="Next" data-board-page="${pager.totalPage}"> <span
-													aria-hidden="true">&raquo;</span>
-											</a>
-									</li>
-
-								</ul>
-							</nav>
-						</div>
+						
 
 
 						<!-- 검색창 -->
@@ -280,6 +248,7 @@
 				<c:import url="../template/tempjs.jsp"></c:import>
 				<c:import url="../template/common_js.jsp"></c:import>
 				<c:import url="../template/bottom.jsp"></c:import>
+				<c:import url="../template/kakao.jsp"></c:import>
 				<script src="../resources/js/temp/move.js"></script>
 				<script src="../../../resources/js/productAjax.js"></script>
 				<script src="../../../resources/js/category.js"></script>
