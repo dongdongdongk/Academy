@@ -10,9 +10,13 @@
 				<title></title>
 				<c:import url="../template/common_css.jsp"></c:import>
 				<link rel="stylesheet" href="/resources/css/productList.css">
-				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+				<link rel="stylesheet"
+					href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+				<link rel="stylesheet"
+					href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+				<link rel="stylesheet" href="/resources/css/style.css">
 				<c:import url="../template/tempcss.jsp"></c:import>
-			
+
 				<style>
 					.item {
 						padding: 70px;
@@ -61,8 +65,8 @@
 
 
 
-						<div class="goods_table_wrap">
-							<!-- 상품 리스트 O -->
+						<!-- <div class="goods_table_wrap">
+						
 							<c:if test="${listcheck != 'empty'}">
 								<table class="goods_table">
 									<thead>
@@ -77,100 +81,161 @@
 										</tr>
 									</thead>
 
-		
-										<tbody class="table-group-divider">
 
-											<c:forEach items="${list}" var="dto">
+									<tbody class="table-group-divider">
 
-
-												<tr>
-													<td>${dto.num}</td>
-
-													<td class="tbl_td">
-														<div class="row">
-															<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-																<div class="col-md-10 mb-10">
-																	<img src="../resources/images/${fileDTO.save}"
-																		class="img-fluid ">
-																</div>
-															</c:forEach>
-														</div>
-													</td>
-													<td class="tbl_td"><a
-															href="./productDetail?num=${dto.num}">${dto.title}</a></td>
-													<td class="tbl_td">${dto.price}</td>
-													<td class="tbl_td">${dto.regDate}</td>
-													<c:forEach items="${dto.categoryDTOs}" var="category">
-														<td class="tbl_td">${category.name}</td>
-													</c:forEach>
+										<c:forEach items="${list}" var="dto">
 
 
+											<tr>
+												<td>${dto.num}</td>
+
+												<td class="tbl_td">
+													<div class="row">
+														<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
+															<div class="col-md-10 mb-10">
+																<img src="../resources/images/${fileDTO.save}"
+																	class="img-fluid ">
+															</div>
+														</c:forEach>
+													</div>
+												</td>
+												<td class="tbl_td"><a
+														href="./productDetail?num=${dto.num}">${dto.title}</a></td>
+												<td class="tbl_td">${dto.price}</td>
+												<td class="tbl_td">${dto.regDate}</td>
+												<c:forEach items="${dto.categoryDTOs}" var="category">
+													<td class="tbl_td">${category.name}</td>
+												</c:forEach>
 
 
-												</tr>
-											</c:forEach>
-										</tbody>
+
+
+											</tr>
+										</c:forEach>
+									</tbody>
 								</table>
 							</c:if>
-						</div>
+						</div> -->
 
 
 						<c:if test="${listcheck != 'empty'}">
 							<div class="justify-content-center ">
 								<div class="row w-75 mx-auto ">
 									<div class="col-lg-12 col-md-12 col-12 ">
-										<h3 class="display-5 mb-2 text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">ProductList</h3>
+										<!-- <h3 class="display-5 mb-2 text-center wow fadeInUp" data-wow-delay="0.1s"
+											style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+											ProductList</h3>
 										<p class="mb-5 text-center">
-											<i class="text-info font-weight-bold wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">3</i> items in your cart</p>
+											<i class="text-info font-weight-bold wow fadeInUp" data-wow-delay="0.1s"
+												style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">3</i>
+											items in your cart
+										</p> -->
+										<!-- 검색창 -->
+										<div class="row col-md-7 ml-auto">
+											<form class="row g-3" action="./list" method="get" id="searchForm">
+												<input type="hidden" name="page" value="1" id="page">
+												<div class="col-auto" hidden>
+													<label for="kind" class="visually-hidden">Kind</label> <select
+														class="form-select" name="kind" id="kind"
+														aria-label="Default select example">
+														<option value="title" ${pager.kind eq 'title' ? 'selected' :''}>
+															Title</option>
+														<%-- <option value="contents" ${pager.kind eq 'info'
+															? 'selected' :''}>info
+															</option> --%>
+															<%-- <option value="writer" ${pager.kind eq 'writer'
+																? 'selected' :''}>Writer</option> --%>
+													</select>
+												</div>
+												<div class="col-auto ml-auto">
+													<div class="input-group mb-4">
+														<label for="search" class="visually-hidden">Search</label>
+														<span class="material-symbols-outlined pe-2 pt-1">search</span>
+														<input type="text" class="form-control mb-4 "
+															value="${pager.search}" name="search" id="search"
+															placeholder="검색어를 입력하세요">
+													</div>
+												</div>
+
+												<!-- <div class="col-auto">
+													<button type="submit" class="btn btn-primary mb-3">검색</button>
+												</div> -->
+											</form>
+
+
+										</div>
 										<table id="shoppingCart" class="table table-condensed table-responsive">
 											<thead>
 												<tr>
-													<th style="width:60%">Product</th>
-													<th style="width:12%">Price</th>
-													<th style="width:12%">Category</th>
-													<th style="width:6%"></th>
+													<th style="width:65%">Product</th>
+													<th style="width:18%">Price</th>
+													<th style="width:18%">Category</th>
+													<th style="width:3%"></th>
 												</tr>
 											</thead>
-											
-											
+
+
 											<tbody>
-											
 												<c:forEach items="${list}" var="dto">
-												
-													<tr class="my-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-														<td class="item gy-3">
-															<div class="row gy-3">
-																<div class="col-md-3 text-left">
-																	<img src="https://via.placeholder.com/250x250/5fa9f8/ffffff" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+													<tr class="my-6 wow fadeInUp" data-wow-delay="0.1s"
+														style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+														<td class="item pt-5 pb-5">
+															<div class="row">
+																<div class="col-md-4 mb-4 ">
+																	<c:forEach items="${dto.productImgDTOs}"
+																		var="fileDTO">
+																		<img class="thumbnail2 radius"
+																			src="../resources/images/${fileDTO.save}"
+																			class="img-fluid ">
+																	</c:forEach>
 																</div>
-																<div class="col-md-9 text-left mt-sm-2">
-																	<h4><a href="./productDetail?num=${dto.num}">${dto.title}</a></h4>
-																	<p class="font-weight-light">등록일:${dto.regDate}</p>
+																<div class="col-md-7 pr-5 ml-auto my-auto">
+																	<h4 class="mb-5"><a
+																			href="./productDetail?num=${dto.num}">${dto.title}</a>
+																	</h4>
+																	<p class="font-weight-light pt-4">등록일:${dto.regDate}
+																	</p>
 																</div>
 															</div>
 														</td>
-														<td data-th="Price">₩${dto.price}원</td>
-														
-														<td class="actions" data-th="">
-															<div class="text-right">
-																<button class="btn btn-white border-secondary bg-white btn-md mb-2">
-																	<span class="material-symbols-outlined">menu_book</span>
-																</button>
-																<button class="btn btn-white border-secondary bg-white btn-md mb-2">
-																	<span class="material-symbols-outlined">laptop_chromebook</span>
-																</button>
+														<td class="pt-5 pb-5 strongFont align-middle" data-th="Price"><strong>${dto.price}원</strong></td>
+														<td class="actions pt-5 pb-5 align-middle" data-th="">
+															<div class="mr-auto">
+																<c:if test="${dto.categoryNum==1}">
+																	<button
+																		class="btn btn-white border-secondary bg-white btn-md mb-2">
+																		<span
+																			class="material-symbols-outlined mt-1">menu_book</span>
+																	</button>
+																</c:if>
+																<c:if test="${dto.categoryNum==2}">
+																	<button
+																		class="btn btn-white border-secondary bg-white btn-md mb-2">
+																		<span
+																			class="material-symbols-outlined mt-1">laptop_chromebook</span>
+																	</button>
+																</c:if>
 															</div>
 														</td>
 													</tr>
-													
 												</c:forEach>
+
 											</tbody>
 										</table>
-										
+										<c:if test="${not empty member}">
+
+											<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
+												<div class="row col-md-7 mx-auto">
+													<a href="./productAdd" class="btn btn-primary col-5">상품등록</a>
+												</div>
+											</c:if>
+										</c:if>
+
 									</div>
 								</div>
-								
-								
+
+
 								<div class="row mt-4 d-flex align-items-center">
 									<div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
 										<a href="catalog.html">
@@ -200,7 +265,7 @@
 
 
 
-						<!-- paging -->
+						<!-- paging
 						<div class="row col-md-7 mx-auto">
 							<nav aria-label="Page navigation example">
 								<ul class="pagination">
@@ -235,43 +300,9 @@
 
 								</ul>
 							</nav>
-						</div>
+						</div> -->
 
 
-						<!-- 검색창 -->
-						<div class="row col-md-7 mx-auto">
-							<form class="row g-3" action="./list" method="get" id="searchForm">
-								<input type="hidden" name="page" value="1" id="page">
-								<div class="col-auto">
-									<label for="kind" class="visually-hidden">Kind</label> <select class="form-select"
-										name="kind" id="kind" aria-label="Default select example">
-										<option value="title" ${pager.kind eq 'title' ? 'selected' :''}>Title</option>
-										<%-- <option value="contents" ${pager.kind eq 'info' ? 'selected' :''}>info
-											</option> --%>
-											<%-- <option value="writer" ${pager.kind eq 'writer' ? 'selected'
-												:''}>Writer</option> --%>
-									</select>
-								</div>
-								<div class="col-auto">
-									<label for="search" class="visually-hidden">Search</label>
-									<input type="text" class="form-control" value="${pager.search}" name="search"
-										id="search" placeholder="검색어를 입력하세요">
-								</div>
-								<div class="col-auto">
-									<button type="submit" class="btn btn-primary mb-3">검색</button>
-								</div>
-							</form>
-
-							<c:if test="${not empty member}">
-
-								<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
-									<div class="row col-md-7 mx-auto">
-										<a href="./productAdd" class="btn btn-primary col-5">상품등록</a>
-									</div>
-								</c:if>
-							</c:if>
-
-						</div>
 
 					</div>
 

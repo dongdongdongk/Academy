@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
 body {
@@ -2744,6 +2751,12 @@ p.footer-copyright {
     object-fit: cover;
 }
 
+.thumbnail2 {
+    width: 285px;
+    height: 200px;
+    object-fit: cover;
+}
+
 .iconSize {
     width : 25px;
     height : 25px;
@@ -2752,7 +2765,7 @@ p.footer-copyright {
 .checkcolor {
     color: red;
     font-weight: 900; 
-    background-color: antiquewhite;
+    
 }
 
 .iconSize2 {
@@ -2809,3 +2822,33 @@ p.footer-copyright {
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
   
+
+
+  .product-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+    float: left;
+  }
+  
+  .product-details {
+    overflow: hidden;
+  }
+
+  * {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.strongFont {
+
+    color: #19c880;
+
+    font-family: 'Noto Sans KR', sans-serif;
+
+    font-weight: bold;
+
+    font-size: large
+
+}

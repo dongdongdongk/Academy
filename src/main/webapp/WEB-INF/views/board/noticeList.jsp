@@ -36,14 +36,14 @@
 
 		<div class="row col-md-7 mx-auto">
 			
-			<table class="table table-hover ">
-			  	<thead class="table-info">
+			<table class="table table-hover mt-5">
+			  	<thead class="table-light">
 			 		<tr>
-						<th>NUM</th>
-						<th>TITLE</th>
-						<th>WRITER</th>
-						<th>Date</th>
-						<th>HIT</th>
+						<th>No</th>
+						<th>제목</th>
+						<th>작성자</th>
+						<th>등록일</th>
+						<th>조회수</th>
 					</tr>
 			 	</thead>
 			 	
@@ -72,7 +72,7 @@
 
 			<div class="row">
 				<nav aria-label="Page navigation example">
-				  <ul class="pagination">
+				  <ul class="pagination  d-flex justify-content-center">
 				  
 				  <li class="page-item ${pager.before ? 'disabled' : ''}">
 				      <a class="page-link" href="#" aria-label="Previous" data-board-page="1">
