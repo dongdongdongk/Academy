@@ -9,6 +9,7 @@
 </head>
 <c:import url="../template/header.jsp"></c:import>
 <link rel="stylesheet" href="/resources/css/event.css">
+<c:import url="../template/common_css.jsp"></c:import>      
 
 <body class="courses-page">
         <div class="page-header">
@@ -69,10 +70,16 @@
 
 			</div>
 		</div>
+		
+		<!-- TopButton -->
+		<div class="quick" style="display: block;">
+			<a class="topBtn bgColor"></a>
+		</div>
 	</div>
 
-	
+<script src="/resources/js/top.js"></script>
 <c:import url="../template/kakao.jsp"></c:import>	
 <c:import url="../template/bottom.jsp"></c:import>
+<c:import url="../template/common_js.jsp"></c:import>
 </body>
 </html>

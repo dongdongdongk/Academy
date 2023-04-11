@@ -88,22 +88,18 @@
                             <nav class="site-navigation flex justify-content-end align-items-center">
                                 <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                     <li class="current-menu-item"><a href="/">Home</a></li>
-                                    <!-- <li><a href="/cr/crList">Review</a></li>
-                                    <li><a href="/product/list">Courses</a></li>
-                                    <li><a href="/notice/list">Notice</a></li>
-                                    <li><a href="/qna/qnaList">QNA</a></li>
-                                    <li><a href="/event/list">EVENT</a></li> -->
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="/product/list">수강신청</a></li>
                                 </ul>
 
                                 <div class="dropdown">
-                                    <button class="dropbtn">Dropdown</button>
-                                    <div>
+                                    <button class="dropbtn">고객센터</button>
+                                    <div class="dropdown-view">
                                         <ul class="dropdown-content">
-                                            <li><a href="/cr/crList">Review</a></li>
-                                            <li><a href="/product/list">Courses</a></li>
-                                            <li><a href="/notice/list">Notice</a></li>
-                                            <li><a href="/qna/qnaList">QNA</a></li>
-                                            <li><a href="/event/list">EVENT</a></li>
+                                            <li><a href="/cr/crList">수강후기</a></li>
+                                            <li><a href="/notice/list">공지사항</a></li>
+                                            <li><a href="/qna/qnaList">질문응답</a></li>
+                                            <li><a href="/event/list">이벤트</a></li>
                                         </ul>
                                     </div>
                                 </div>
