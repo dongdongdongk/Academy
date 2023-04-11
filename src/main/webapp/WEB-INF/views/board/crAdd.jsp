@@ -10,9 +10,22 @@
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
-<body>
+<body class="courses-page">
+	<div class="page-header">
+	  <div class="page-header-overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<header class="entry-header">
+							<h1>수강후기</h1>
+						</header><!-- .entry-header -->
+					</div><!-- .col -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</div><!-- .page-header-overlay -->
+	</div><!-- .page-header -->
 <c:import url="../template/header.jsp"></c:import>
-	<header style="margin-top: 200px;">
+	<header style="margin-top: 50px;">
 	<div class="container-fluid my-5">
 		<div class="row mb-4">
 			<h3 class="col-md-7 mx-auto text-center border-bottom border-dark pb-4">수강후기 등록</h3>
@@ -22,7 +35,7 @@
 			<form class="row g-3" action="./crAdd" method="post">
 				<div class="col-md-6">
     				<label for="writer" class="form-label">작성자</label>
-    				<input type="text" name="writer" class="form-control" id="writer">
+    				<input type="text" name="writer" class="form-control" id="writer" value="${member.id}" readonly="readonly">
   				</div>
   				
   				<div class="col-md-12 mt-5">
@@ -36,7 +49,7 @@
   				</div>
 
 				<div class="row col-md-2 mx-auto mt-5">
-					<button type="submit" class="btn btn-primary">글등록</button>
+					<button type="submit" class="btn btn-outline-success">글등록</button>
 				</div>
 			</form>
 		</div>
@@ -44,6 +57,7 @@
 	</header>
 	<c:import url="../template/common_js.jsp"></c:import>
 	<c:import url="../template/bottom.jsp"></c:import>
+	<c:import url="../template/kakao.jsp"></c:import>
 	<script>
 		$("#contents").summernote();
 	</script>

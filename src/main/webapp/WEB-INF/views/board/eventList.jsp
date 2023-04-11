@@ -2,100 +2,79 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <jsp:useBean id="now" class="java.util.Date" />
+<!DOCTYPE html>
+<html>
+<head>
+<title>이벤트</title>
 
-        <!DOCTYPE html>
-        <html>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <head>
-            <title>Hello World</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/resources/css/bootstrap.min.css">
 
-            <!-- Required meta tags -->
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="/resources/css/font-awesome.min.css">
 
-            <!-- Bootstrap CSS -->
-            <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+<!-- ElegantFonts CSS -->
+<link rel="stylesheet" href="/resources/css/elegant-fonts.css">
 
-            <!-- FontAwesome CSS -->
-            <link rel="stylesheet" href="/resources/css/font-awesome.min.css">
+<!-- themify-icons CSS -->
+<link rel="stylesheet" href="/resources/css/themify-icons.css">
 
-            <!-- ElegantFonts CSS -->
-            <link rel="stylesheet" href="/resources/css/elegant-fonts.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="/resources/css/swiper.min.css">
 
-            <!-- themify-icons CSS -->
-            <link rel="stylesheet" href="/resources/css/themify-icons.css">
+<!-- Styles -->
+<link rel="stylesheet" href="/resources/css/style.css">
+<link rel="stylesheet" href="/resources/css/event.css">
 
-            <!-- Swiper CSS -->
-            <link rel="stylesheet" href="/resources/css/swiper.min.css">
+<c:import url="../template/tempcss.jsp"></c:import>
+<c:import url="../template/common_css.jsp"></c:import>           
+</head>
 
-            <!-- Styles -->
-            <link rel="stylesheet" href="/resources/css/style.css">
+<c:import url="../template/header.jsp"></c:import>
 
-            <c:import url="../template/tempcss.jsp"></c:import>
-            <c:import url="../template/common_css.jsp"></c:import>
-        </head>
+<body class="courses-page">
+        <div class="page-header">
+            <div class="page-header-overlay">
+                <div class="container">
+                    <div class="row">
+                         <div class="col-12">
+                            <header class="entry-header">
+                                <h1>이벤트</h1>
+                            </header><!-- .entry-header -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .page-header-overlay -->
+        </div><!-- .page-header -->
 
-        <c:import url="../template/header.jsp"></c:import>
-
-        <body class="courses-page">
-           
-           
-           
-            <div class="page-header">
-               
-
-
-
-
-
-
-
-
-
-                <div class="page-header-overlay">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <header class="entry-header">
-                                    <h1>이벤트</h1>
-                                </header><!-- .entry-header -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                    </div><!-- .container -->
-                </div><!-- .page-header-overlay -->
-            </div><!-- .page-header -->
-
-
-
-
-
-
-
-
-            <ul class="nav justify-content-center grey lighten-4 py-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <li class="nav-item">
-                    <a class="nav-link active" id="allEvent">전체</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="continueEvent">진행중</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="endEvent">종료</a>
-                </li>
-            </ul>
-
-
-
-            <!-- 현재날짜 -->
-            <c:set var="now" value="<%=new java.util.Date()%>" />
-            <c:set var="today"><fmt:formatDate value="${now}" pattern="yyyy-MM-dd" /></c:set> 
-
-            <c:out value="${today}" />
-
-
-
+        <div class="category_event">
+            <div class="category_cont">
+                <ul class="category_ul nav justify-content-center grey lighten-4 py-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="allEvent">전체</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="continueEvent">진행중</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="endEvent">종료</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
             <div class="container">
+                 <!-- 현재날짜 -->
+                <div class="date_contents visually-hidden">
+                    <c:set var="now" value="<%=new java.util.Date()%>" />
+                    <c:set var="today"><fmt:formatDate value="${now}" pattern="yyyy-MM-dd" /></c:set> 
+                    <c:out value="${today}"/>
+                </div>
+
                 <div class="row">
                     <div class="col-12">
                         <div class="breadcrumbs wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
@@ -105,6 +84,26 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+
+                <div class="row search_contents">
+                    <form class="row" action="./list" method="get" id="searchForm">
+                        <input type="hidden" name="page" value="1" id="page">
+                      <div class="search_kind col-auto">
+                        <label for="kind" class="visually-hidden">Kind</label>
+                        <select class="form-select" name="kind" id="kind" aria-label="Default select example">
+                          <option value="title" ${pager.kind eq 'title'? 'selected':''}>제목</option>
+                          <option value="contents" ${pager.kind eq 'contents' ?'selected':''}>내용</option>
+                        </select>
+                      </div>
+                      <div class="search_input col-auto">
+                        <label for="search" class="visually-hidden">Search</label>
+                        <input type="text" class="form-control" value="${pager.search}" name="search" id="search" placeholder="검색어를 입력하세요">
+                      </div>
+                      <div class="search_btn col-auto">
+                        <button type="submit" class="btn btn-outline-success">검색</button>
+                      </div>
+                    </form>
                 </div>
 
                 <div class="row">
@@ -127,27 +126,20 @@
                                                                     <c:set var="loop_flag" value="true" />
                                                                 </c:if>
                                                             </c:if>
-                                                        </c:if>                
-                                                        
-                                                        
-                                                            <c:if test="${not loop_flag }">
-                                                                <c:if test="${not empty dto.eventFileDTOs}">
-                                                                    <a href="./detail?num=${dto.num}"> <img class="radius thumbnail" src="../resources/upload/event/${fileDTO.fileName}"></a>
-                                                                    <c:set var="loop_flag" value="true" />
-                                                                </c:if>
+                                                        </c:if>     
+
+                                                        <c:if test="${not loop_flag }">
+                                                            <c:if test="${not empty dto.eventFileDTOs}">
+                                                                <a href="./detail?num=${dto.num}"> <img class="radius thumbnail" src="../resources/upload/event/${fileDTO.fileName}"></a>
+                                                                <c:set var="loop_flag" value="true" />
                                                             </c:if>
-                                                        
-                                                   
-                                                   
+                                                        </c:if>        
                                                     </c:forEach>
-                            
                                                 </figure>
                             
                                                 <div class="course-content-wrap">
                                                     <header class="entry-header">
-                                                        
                                                         <h2 class="entry-title ellipsis">
-                                                            
                                                             <c:set var="loop_flag" value="false" />
                                                                 <c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
                                                                     <c:if test="${not loop_flag }">
@@ -157,13 +149,8 @@
                                                                         </c:if>
                                                                     </c:if>
                                                                 </c:forEach>
-                                                            <a href="./detail?num=${dto.num}">${dto.title}</a>
-                                                            
+                                                            <a href="./detail?num=${dto.num}">${dto.title}</a>               
                                                         </h2>
-                                                        
-                            
-                            
-                            
                                                         <div class="entry-meta flex flex-wrap align-items-center">
                                                             <div class="course-author"><a href="#">${dto.writer} </a>
                                                             </div>
@@ -180,8 +167,7 @@
                             </div>
                         </div> 
 
-
-                        <div class="row">
+                        <!-- <div class="row">
                             <nav aria-label="Page navigation example">
                               <ul class="pagination">
                               
@@ -214,56 +200,30 @@
                                 </li>
                               </ul>
                             </nav>
+                        </div>   -->                       
+                                <c:if test="${not empty member}">
+                                    <div class="event_add">
+                                        <a class="btn" href="./add">이벤트등록</a>   
+                                    </div>
+                                </c:if>
+                            </div>
                         </div>
-                        
-                        
-                        <div class="row">
-                            <form class="row g-3" action="./list" method="get" id="searchForm">
-                                <input type="hidden" name="page" value="1" id="page">
-                              <div class="col-auto">
-                                <label for="kind" class="visually-hidden">Kind</label>
-                                <select class="form-select" name="kind" id="kind" aria-label="Default select example">
-                                  <option value="title" ${pager.kind eq 'title'? 'selected':''}>Title</option>
-                                  <option value="contents" ${pager.kind eq 'contents' ?'selected':''}>Contents</option>
-                                  <option value="writer" ${pager.kind eq 'writer'? 'selected':''}>Writer</option>
-                                </select>
-                              </div>
-                              <div class="col-auto">
-                                <label for="search" class="visually-hidden">Search</label>
-                                <input type="text" class="form-control" value="${pager.search}" name="search" id="search" placeholder="검색어를 입력하세요">
-                              </div>
-                              <div class="col-auto">
-                                <button type="submit" class="btn btn-primary mb-3">검색</button>
-                               
-                              </div>
-                            </form>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
                     </div><!-- .col -->
-
-
                 </div><!-- .row -->
             </div><!-- .container -->
-            <a href="./add">글쓰기</a>
-
-     
-
-       
-
-            <c:import url="../template/common_js.jsp"></c:import>
-            <c:import url="../template/kakao.jsp"></c:import>
-            <c:import url="../template/tempjs.jsp"></c:import>
-            <script src="../resources/js/temp/move.js"></script>
-            <script src="../resources/js/pageing.js"></script>
-            <script type='text/javascript' src='/resources/js/jquery.js'></script>
-            <script type='text/javascript' src='/resources/js/swiper.min.js'></script>
-            <script type='text/javascript' src='/resources/js/masonry.pkgd.min.js'></script>
-            <script type='text/javascript' src='/resources/js/jquery.collapsible.min.js'></script>
-            <script type='text/javascript' src='/resources/js/custom.js'></script>
-            <script type='text/javascript' src='/resources/js/eventDate.js'></script>
-        </body>
-
-        </html>
+            
+            
+        <c:import url="../template/common_js.jsp"></c:import>
+        <c:import url="../template/kakao.jsp"></c:import>
+        <c:import url="../template/tempjs.jsp"></c:import>
+        <c:import url="../template/bottom.jsp"></c:import>
+        <script src="../resources/js/temp/move.js"></script>
+        <script src="../resources/js/pageing.js"></script>
+        <script type='text/javascript' src='/resources/js/jquery.js'></script>
+        <script type='text/javascript' src='/resources/js/swiper.min.js'></script>
+        <script type='text/javascript' src='/resources/js/masonry.pkgd.min.js'></script>
+        <script type='text/javascript' src='/resources/js/jquery.collapsible.min.js'></script>
+        <script type='text/javascript' src='/resources/js/custom.js'></script>
+        <script type='text/javascript' src='/resources/js/eventDate.js'></script>      
+</body>
+</html>

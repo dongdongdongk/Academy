@@ -1,15 +1,27 @@
 .cr-information {
   padding: 50px 30px;
-  text-align: center;
   position: relative;
   padding: 30px 50px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cr-information .title {
+  margin-top: 20px;
+}
+
+.review_list {
+  margin: 100px 150px 40px;
 }
 
 #cr2 h3 {
-  text-align: center;
-  margin-top: 50px;
+  font-size: 1.765rem;
+  font-weight: bold;
+  color: #222;
+  line-heighT: 1;
+  letter-spacing: -0.7pt;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd;
 }
-
 
 #sub_banner {
   position: relative;
@@ -44,8 +56,9 @@
 
 /* 슬라이더 이미지 구현 */
 .post-slider{
-  width:80%;
+  width:100%;
   margin:0px auto;
+  padding-top: 20px;
   position:relative;
   background-color: #f3f7f8 !important;
 }
@@ -67,10 +80,9 @@
   left:30px;
   font-size:2em;
   color:gray;
-    cursor: pointer;
+  cursor: pointer;
 }
 .post-slider .post-wrapper{
-
   width:84%;
   height:350px;
   margin:0px auto;
@@ -100,21 +112,129 @@
   border-top-right-radius:5px;
 }
 
-.post-slider .post-wrapper .post .star {
+.post-slider .post-wrapper .post .post-contents .star {
   display: flex;
 }
 
-.post-slider .post-wrapper .post .star .svg {
-  width: 30px;
-  height: 30px;
-  filter: invert(88%) sepia(25%) saturate(659%) hue-rotate(61deg) brightness(99%) contrast(98%);
-}
-
-.post-slider .post-wrapper .post .pointColor {
+.review_list .cr-information .star {
   display: flex;
 }
 
-.post-slider .post-wrapper .post .pointColor .svg {
+.review_list .cr-information .star .svg {
+  width: 25px;
+  height: 25px;
+  filter: invert(83%) sepia(30%) saturate(6063%) hue-rotate(120deg) brightness(96%) contrast(79%);
+}
+
+.post-slider .post-wrapper .post .post-contents .star .svg {
+  width: 25px;
+  height: 25px;
+  filter: invert(83%) sepia(30%) saturate(6063%) hue-rotate(120deg) brightness(96%) contrast(79%);
+}
+
+.post-slider .post-wrapper .post .post-contents .pointColor {
+  display: flex;
+  color: #1bceb8 !important;
+}
+
+.post-slider .post-wrapper .post .post-contents .pointColor h5 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.review_list .cr-information .pointColor {
+  display: flex;
+}
+
+.review_list .cr-information .pointColor h5 {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+  color: #1bceb8 !important;
+}
+
+.post-slider .post-wrapper .post .post-contents {
+  position: relative;
+}
+
+.post-slider .post-wrapper .post .post-contents span{
+  position: absolute;
+  right: 40px;
+  font-size: 15px;
+  letter-spacing: -0.7pt;
+  line-height: 1;
+  font-weighT: 400;
+  padding-left: 20px;
+  box-sizing: border-box;
+  background-image: url(/resources/images/mypage_g.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  margin-bottom: 10px;
+}
+
+.review_list .cr-information .writer {
+  position: absolute;
+  font-size: 15px;
+  letter-spacing: -0.7pt;
+  line-height: 1;
+  font-weighT: 400;
+  box-sizing: border-box;
+  background-image: url(/resources/images/mypage_g.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  margin-left: 150px;
+  padding-left: 20px;
+}
+
+.post-slider .post-wrapper .post .post-contents h4{
+  font-size: 1.176rem;
+  color: #222;
+  letter-spacing: -0.7pt;
+  line-height: 1.3;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  overflow: hidden;
+  height: 3rem;
+  font-weight: 300;
+  margin-top: 40px;
+}
+
+.post-slider .post-wrapper .post .post-contents p {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.3pt;
+  line-height: 1.4;
+  border-top: 1px solid #ddd;
+  padding-top: 18px;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  overflow: hidden;
+  height: 3.6rem;
+}
+
+.post-slider .post-wrapper .post .post-contents .pointColor .svg {
   width: 20px;
   height: 20px;
+  margin-top: 10px;
 }
+
+.review_list .cr-information .pointColor .svg {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.review_list .review_add {
+  text-align: center;
+  margin-top: 50px;
+}
+
+

@@ -2761,7 +2761,6 @@ p.footer-copyright {
 
 }
 
-
 /* header */
 /* Dropdown Button */
 .dropbtn {
@@ -2783,7 +2782,6 @@ p.footer-copyright {
     list-style: none;
   }
 
-  
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
@@ -2808,3 +2806,4 @@ p.footer-copyright {
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
   
+
