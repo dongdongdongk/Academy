@@ -31,30 +31,58 @@
     margin-left: 650px;
 }
 
-/* .container .search_contents {
-    position: relative;
-} */
-
-/* .container .search_contents .search_kind {
-    width: 120px;
-    height: 50px;
-    position: absolute;
-    margin-left: 740px;
+ul {
+    list-style-type: none;
 }
 
-.container .search_contents .search_input {
-    width: 230px;
-    height: 50px;
-    padding-left: 0px;
-    position: absolute;
-    margin-left: 850px;
+.container-fluid {
+    text-align: center;
 }
 
-.container .search_contents .search_btn {
-    width: 100px;
-    height: 50px;
-    padding-left: 0px;
-    position: absolute;
-    margin-left: 1070px;
-} */
+.event_contents .event_view .view_title {
+    height: 120px;
+    margin-bottom: 70px;
+    border-bottom: 1px solid #ddd;
+}
+
+.event_contents .event_view .view_title h3 {
+    font-size: 1.765rem;
+    color: #222;
+    letter-spacing: -0.7pt;
+    line-height: 2;
+    margin: 0 0 15px;
+    font-weight: bold;
+}
+
+.event_contents .event_view .view_title ul {
+    margin-top: 30px;
+    margin-left: 350px;
+}
+
+.event_contents .event_view .view_title ul li {
+    float: left;
+    margin-right: 65px;
+    letter-spacing: -0.3pt;
+    line-height: 1;
+}
+
+.event_contents .event_view .view_title ul li span {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.bgColor {
+    background-color: #1bceb8 !important;
+    color: white;
+    font-size: 1rem;
+    border: 1px white; 
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+
+
+
 

@@ -5,21 +5,31 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>EventAdd</title>
+<title>이벤트</title>
 <c:import url="../template/common_css.jsp"></c:import>
-<link
-	href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css"
-	rel="stylesheet">
-<script
-	src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
-<body>
-	
+<c:import url="../template/header.jsp"></c:import>
+
+<body class="courses-page">
+        <div class="page-header">
+            <div class="page-header-overlay">
+                <div class="container">
+                    <div class="row">
+                         <div class="col-12">
+                            <header class="entry-header">
+                                <h1>이벤트</h1>
+                            </header><!-- .entry-header -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .page-header-overlay -->
+        </div><!-- .page-header -->
 	
 	<div class="container-fluid my-5">
 		<div class="row mb-4">
-			<h3
-				class="col-md-7 mx-auto text-center border-bottom border-dark pb-4">EventAdd</h3>
+			<h3 class="col-md-7 mx-auto text-center border-bottom border-dark pb-4">이벤트 등록</h3>
 		</div>
 
 		<div class="row col-md-7 mx-auto">
@@ -54,26 +64,28 @@
 					<textarea class="form-control" name="contents" id="contents"
 						placeholder="내용을 입력하세요"></textarea>
 				</div>
-				
-				
+					
+				<div class="col-md-12 mt-5">
+					<label for="file" class="form-label">대표이미지</label>
+				</div>
 
-				<div id="fileList" class="my-5">
-					<div class="input-group mb-3">
+				<div id="fileList">
+					<div class="input-group">
 						<input type="file" class="form-control" id="files" name="files">
 						<button type="button" class="btn btn-outline-danger">X</button>
 					</div>
-				</div>
+				</div>	
+
 				<div class="row col-md-2 mx-auto mt-5">
-					<button type="submit" class="btn btn-primary">글등록</button>
+					<button type="submit" class="btn btn-outline-success">글등록</button>
 				</div>
-				<a href="./list">취소</a>
 			</form>
 		</div>
 	</div>
 
-		<c:import url="../template/common_js.jsp"></c:import>
-
-		
+	<c:import url="../template/common_js.jsp"></c:import>
+	<c:import url="../template/kakao.jsp"></c:import>
+	<c:import url="../template/bottom.jsp"></c:import>
 	<script src="/resources/js/eventDateCheck.js"></script>
 	<script>
 		$("#contents").summernote();

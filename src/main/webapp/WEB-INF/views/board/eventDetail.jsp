@@ -5,38 +5,74 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>EventDetail</title>
+<title>이벤트</title>
 </head>
-<body>
-	<h3 hidden="">${dto.num}</h3>
-	<h3>${dto.title}</h3>
-	<h3>${dto.writer}</h3>
-	<h3>${dto.regDate}</h3>
-	<h3>${dto.hit}</h3>
-	<h3>${dto.contents}</h3>
+<c:import url="../template/header.jsp"></c:import>
+<link rel="stylesheet" href="/resources/css/event.css">
+
+<body class="courses-page">
+        <div class="page-header">
+            <div class="page-header-overlay">
+                <div class="container">
+                    <div class="row">
+                         <div class="col-12">
+                            <header class="entry-header">
+                                <h1>이벤트</h1>
+                            </header><!-- .entry-header -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .page-header-overlay -->
+        </div><!-- .page-header -->
+
+	<div class="container-fluid my-5">
+		<div class="event_contents">
+			<div class="event_view">
+				<div class="view_title">
+					<h3 hidden="">${dto.num}</h3>
+					<h3>
+						<span class="bgColor category">이벤트</span>
+						${dto.title}
+					</h3>
+					<ul>
+						<li>
+							<span>작성자</span>
+							${dto.writer}
+						</li>
+						<li>
+							|
+						</li>
+						<li>
+							<span>작성일</span>
+							${dto.regDate}
+						</li>
+						<li>
+							|
+						</li>
+						<li>
+							<span>조회수</span>
+							${dto.hit}
+						</li>
+					</ul>
+				</div>
+				
+				<h3>${dto.contents}</h3>
+
+				<c:if test="${not empty member}">
+					<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
+						<a class="btn" href= "./delete?num=${dto.num}">삭제</a>
+						<a class="btn" href= "./update?num=${dto.num}">수정</a>
+					</c:if>
+				</c:if>
+
+				<a class="btn" href= "./list">목록</a>
+
+			</div>
+		</div>
+	</div>
+
 	
-	<!-- <div>
-		<c:forEach items="${dto.eventFileDTOs}" var="fileDTO">
-			<c:if test="${not empty dto.eventFileDTOs}">
-				<img src="../resources/upload/event/${fileDTO.fileName}">
-			</c:if>
-		</c:forEach>
-	</div> -->
-	
-	
-	<%-- <c:forEach items="${dto.noticeFileDTOs}" var="fileDTO">
-		<a href="./fileDown?fileNum=${fileDTO.fileNum}">${fileDTO.oriName}</a>
-	</c:forEach>
- --%>
-	<c:if test="${not empty member}">
-            <c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
-	<a href= "./delete?num=${dto.num}">삭제</a>
-	<a href= "./update?num=${dto.num}">수정</a>
-	</c:if>
-	</c:if>
-	
-	
-	<a href= "./list">목록</a>
 <c:import url="../template/kakao.jsp"></c:import>	
+<c:import url="../template/bottom.jsp"></c:import>
 </body>
 </html>

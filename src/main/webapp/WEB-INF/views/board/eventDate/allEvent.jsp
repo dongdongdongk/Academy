@@ -4,14 +4,13 @@
 <jsp:useBean id="now" class="java.util.Date" />
 
  <!-- 현재날짜 -->
- <c:set var="now" value="<%=new java.util.Date()%>" />
- <c:set var="today"><fmt:formatDate value="${now}" pattern="yyyy-MM-dd" /></c:set> 
-
- <c:out value="${today}" />
-
+<div class="date_contents visually-hidden">
+    <c:set var="now" value="<%=new java.util.Date()%>" />
+    <c:set var="today"><fmt:formatDate value="${now}" pattern="yyyy-MM-dd" /></c:set> 
+    <c:out value="${today}" />
+</div>
 
 <div class="featured-courses courses-wrap" id="eventResult">
-    <h2> 전체 </h2>
     <div class="row mx-m-25">
       
         <c:forEach items="${list}" var="dto">
