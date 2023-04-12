@@ -662,7 +662,7 @@ a.btn {
 
 a.btn:hover {
     color: #fff;
-    background: #34d986;
+    background: #7bd1a6;
 }
 
 /*
@@ -2766,6 +2766,12 @@ p.footer-copyright {
     color: red;
     font-weight: 900; 
     
+    
+}
+
+.trfirst {
+
+    background-color: #faf0f0
 }
 
 .iconSize2 {
@@ -2852,3 +2858,37 @@ p.footer-copyright {
     font-size: large
 
 }
+
+.greentop {
+
+    color: #ffffff;
+    background-color:#19c880 ;
+}
+
+
+.image-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 48px;
+    background-color: #19c880;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .image-button img {
+    margin-right: 15px;
+    width: 17px;
+    height: 17px;
+    color: white;
+    filter: brightness(0) invert(1);
+  }
+
+  .green {
+    color: #19c880;
+
+  }

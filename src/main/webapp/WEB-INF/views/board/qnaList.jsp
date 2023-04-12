@@ -53,15 +53,15 @@
 		</div> -->
 		
 		<div class="row col-md-7 mx-auto">
-			<table class="table">
-			  	<thead class="table-dark">
+			<table class="table table-fixed">
+			  	<thead class="table-light">
 			 		<tr>
 						<th>NUM</th><th>TITLE</th><th>WRITER</th><th>HIT</th>
 					</tr>
-			 	</thead>
-			 	
-			  	<tbody>
-			  		<c:forEach items="${list}" var="dto">
+				</thead>
+				
+				<tbody>
+					<c:forEach items="${list}" var="dto">
 						<tr>
 							<td>${dto.num}</td>
 							<td>
@@ -71,40 +71,46 @@
 							<td>${dto.hit}</td>
 						</tr>
 					</c:forEach>
-			  	</tbody>
+				</tbody>
 			</table>
-			
-			<div class="row pager">
+			<div class="col-12 float-right">
+				<button type="button" class="image-button  float-right color-5 wow fadeIn " data-wow-delay="0.1s" onclick="location.href='./qnaAdd'">
+					<img src="/resources/images/pen2.png" alt="Button icon">
+					<span>글쓰기</span>
+				</button>	
+				
+			</div>	
+			<div class="row">
 				<nav aria-label="Page navigation example">
-				  <ul class="pagination">
+				  <ul class="pagination d-flex justify-content-center">
 				  
 				  <li class="page-item ${pager.before ? 'disabled' : ''}">
-				      <a class="page-link" href="#" aria-label="Previous" data-board-page="1">
-				        <span aria-hidden="true">&laquo;</span>
-				      </a>
-				    </li>
+					  <a class="page-link" href="#" aria-label="Previous" data-board-page="1">
+						<span aria-hidden="true">&laquo;</span>
+					  </a>
+					</li>
 				 
-				    <li class="page-item ${pager.before ? 'disabled' : ''}">
-				      <a class="page-link" href="#" aria-label="Previous" data-board-page="${pager.startNum-1}">
-				        <span aria-hidden="true">&lsaquo;</span>
-				      </a>
-				    </li>
-				    
-				    <c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
-				    	<li class="page-item"><a class="page-link" href="#" data-board-page="${i}">${i}</a></li>
-				    </c:forEach>
-				    
-				    <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
-				      <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.lastNum+1}">
-				        <span aria-hidden="true">&rsaquo;</span>
-				      </a>
-				    </li>
-				    
-				    <li class="page-item ${pager.after eq false ? 'disabled' : ''}">
-				      <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.totalPage}">
-				        <span aria-hidden="true">&raquo;</span>
-				      </a>
-				    </li>
+					<li class="page-item ${pager.before ? 'disabled' : ''}">
+					  <a class="page-link" href="#" aria-label="Previous" data-board-page="${pager.startNum-1}">
+						<span aria-hidden="true">&lsaquo;</span>
+					  </a>
+					</li>
+					
+					<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
+						<li class="page-item"><a class="page-link" href="#" data-board-page="${i}">${i}</a></li>
+					</c:forEach>
+					
+					<li class="page-item ${pager.after eq false ? 'disabled' : ''}">
+					  <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.lastNum+1}">
+						<span aria-hidden="true">&rsaquo;</span>
+					  </a>
+					</li>
+					
+					<li class="page-item ${pager.after eq false ? 'disabled' : ''}">
+					  <a class="page-link" href="#" aria-label="Next" data-board-page="${pager.totalPage}">
+						<span aria-hidden="true">&raquo;</span>
+					  </a>
+					</li>
 				  </ul>
 				</nav>
 			</div>
@@ -131,9 +137,6 @@
 				</form>
 			</div>
 			
-			<div class="row col-auto mx-auto">
-				<a class="btn mb-3" href="./qnaAdd">글 등록</a>
-			</div>	
 				
 		</div>
 	</div>

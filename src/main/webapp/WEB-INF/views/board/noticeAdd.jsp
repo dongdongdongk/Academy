@@ -47,7 +47,7 @@
 						<input type="file" class="form-control" id="files" name="files">
 						<button type="button" class="btn btn-outline-danger">X</button>
 					</div>
-					<button type="button" class="btn btn-primary" id="fileAdd">ADD</button>
+					
 
 				</div>
 				<div class="row col-md-2 mx-auto mt-5">

@@ -132,7 +132,7 @@
 											items in your cart
 										</p> -->
 										<!-- 검색창 -->
-										<div class="row col-md-7 ml-auto">
+										<div class="row col-md-12 d-flex justify-content-end">
 											<form class="row g-3" action="./list" method="get" id="searchForm">
 												<input type="hidden" name="page" value="1" id="page">
 												<div class="col-auto" hidden>
@@ -166,7 +166,7 @@
 
 										</div>
 										<table id="shoppingCart" class="table table-condensed table-responsive">
-											<thead>
+											<thead >
 												<tr>
 													<th style="width:65%">Product</th>
 													<th style="width:18%">Price</th>
@@ -223,6 +223,8 @@
 
 											</tbody>
 										</table>
+
+										
 										<c:if test="${not empty member}">
 
 											<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
