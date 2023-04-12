@@ -150,17 +150,17 @@
 												</div>
 												<div class="col-auto ml-auto">
 													<div class="input-group mb-4">
-														<label for="search" class="visually-hidden">Search</label>
-														<span class="material-symbols-outlined pe-2 pt-1 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"">search</span>
-														<input type="text" class="form-control mb-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;""
-															value="${pager.search}" name="search" id="search"
-															placeholder="검색어를 입력하세요">
+													  <input type="text" class="form-control mb-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"
+														value="${pager.search}" name="search" id="search" placeholder="검색어를 입력하세요">
+													  <button type="submit" style="background: none; border: none; cursor: pointer;">
+														<img src="/resources/images/search.png" alt="search" width="30" height="30">
+													  </button>
 													</div>
-												</div>
+												  </div>
 
 												<!-- <div class="col-auto">
 													<button type="submit" class="btn btn-primary mb-3">검색</button>
-												</div> -->
+												</div> material-symbols-outlined -->
 											</form>
 
 
