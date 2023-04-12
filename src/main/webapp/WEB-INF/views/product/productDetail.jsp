@@ -75,11 +75,11 @@
         <h3 class="product-price">${dto.title}</h3>
         <%-- <h3 class="product-price">${dto.price}</h3> --%>
         <%-- <h3>카테고리 : ${dto.categoryNum}</h3> --%>
-        <h3 class="product-price">상품 내용 : ${dto.info}</h3>
+        <h3 class="product-price">${dto.info}</h3>
 
         <div class="row">
           <c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-            <div class="col-md-4 mb-4">
+            <div class="col-md-3 mb-2">
               <img  src="../resources/images/${fileDTO.save}" class="product-price">
             </div>
           </c:forEach>
