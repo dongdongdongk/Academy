@@ -1,31 +1,114 @@
-.sideBar {
-  /* display: inline; */
-  display: flex;
+#contWrap {
+  overflow: hidden;
 }
 
-.vertical-menu {
-    width: 200px; /* Set a width if you like */
-    margin-top: 200px;
-  }
-  
-  .vertical-menu a {
-    /* background-color: #eee; Grey background color */
-    color: black; /* Black text color */
-    display: block; /* Make the links appear below each other */
-    padding: 12px; /* Add some padding */
-    text-decoration: none; /* Remove underline from links */
-  }
-  
-  .vertical-menu a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
-  }
-  
-  .vertical-menu a.active {
-    background-color: #04AA6D; /* Add a green color to the "active/current" link */
-    color: white;
-  }
+#left_menu {
+  margin-top: 200px;
+  position: relative;
+  width: 260px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+  float: left;
+  z-index: 999;
+}
 
-.sideBar .admin_container {
-  margin-left: 300px;
-  margin-top: 130px;
+#left_menu .left_menu {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#left_menu .left_menu .list {
+  background-color: #fff;
+  width: 100%;
+}
+
+#left_menu .left_menu .list>li {
+  background: #fff;
+  border-bottom: 1px solid #ededed;
+}
+
+#left_menu .left_menu .list>li>a {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  color: #222;
+  font-weight: 400;
+  letter-spacing: -0.5pt;
+  z-index: 10;
+  line-height: 1;
+  background-repeat: no-repeat;
+  background-position: top 54% left 13px;
+}
+
+#admincontents {
+  position: relative;
+  width: calc(100% - 260px);
+  padding: 20px !important;
+  box-sizing: border-box;
+  margin-left: 260px;
+  background: #eceff4;
+  height: 100%;
+  min-height: 1009px;
+  min-width: 320px;
+}
+
+#admincontents .tab_button {
+  display: block;
+  width: 20px;
+  height: 35px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #dddddd;
+  border-left: 0;
+  background: #fff url(/resources/images/tab_Arrow_left.png)no-repeat center;
+  position: absolute;
+  top: 180px;
+  left: 0;
+  z-index: 999;
+  cursor: pointer;
+}
+
+#left_menu .left_menu .list a:hover {
+  background-color: #eceff4;
+  color: #1bceb8 !important;
+}
+
+#conWrap #admincontents .lists {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 150px;
+  background: #fff;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 30px 30px;
+}
+
+#conWrap #admincontents .lists h3 {
+  font-size: 1.176rem;
+  color: #222;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.6pt;
+  text-align: center;
+}
+
+#conWrap #left_menu .left_menu .list .icon01 a {
+  background-image: url(/resources/images/mypage_g.png);
+}
+
+#conWrap #left_menu .left_menu .list .icon02 a {
+  background-image: url(/resources/images/left_icon07.png);
+}
+
+#conWrap #left_menu .left_menu .list .icon03 a {
+  background-image: url(/resources/images/left_icon01.png);
+}
+
+#conWrap #left_menu .left_menu .list .icon04 a {
+  background-image: url(/resources/images/left_icon02.png);
+}
+
+#conWrap #left_menu .left_menu .list .icon05 a {
+  background-image: url(/resources/images/left_icon03.png);
 }

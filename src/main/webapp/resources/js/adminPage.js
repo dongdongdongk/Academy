@@ -58,5 +58,3 @@ $("#crList").on("click", function(){
           }
     })
 })
-
-
