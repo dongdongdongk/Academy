@@ -1,0 +1,32 @@
+.category_product {
+    width: 60%;
+    display: table;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin: 50px auto 45px;
+    background: #fff;
+}
+
+.category_product .category_cont .category_ul .nav-item .nav-link {
+    font-size: 1rem;
+    color: #666;
+    letter-spacing: -0.3pt;
+    line-height: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.category_product .category_cont .category_ul .nav-item .nav-link:hover {
+    color: #1bceb8 !important;
+    font-weight: bold;
+}
+
+.event_add {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container .search_contents {
+    margin-left: 650px;
+}

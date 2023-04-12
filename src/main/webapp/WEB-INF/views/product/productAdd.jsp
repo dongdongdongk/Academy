@@ -9,15 +9,26 @@
 <c:import url="../template/common_css.jsp"></c:import>
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+<link rel="stylesheet" href="/resources/css/productAdd.css">
 </head>
-<body>
+<body class="courses-page">
+            <div class="page-header">
+              <div class="page-header-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <header class="entry-header">
+                                    <h1>상품 등록</h1>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 <c:import url="../template/header.jsp"></c:import>
-<header style="margin-top: 200px;">
+<header style="margin-top: 50px;">
 <div class="container-fluid">
-	<div class="row justify-content-center my-4">
-		<h1 class="col-md-7 text-center">상품등록 Product Page</h1>
-	</div>
-	
+
 	<div class="row justify-content-center my-4">
 		<form class="col-md-7" id="frm" action="./productAdd" method="post" enctype="multipart/form-data">
 			

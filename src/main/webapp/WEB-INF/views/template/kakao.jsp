@@ -31,7 +31,6 @@
               container: '#add-channel-button',
               channelPublicId: '_zRYLxj',
             });
-
             Kakao.Channel.createChatButton({
               container: '#kakao-talk-channel-chat-button',
              channelPublicId: '_zRYLxj'

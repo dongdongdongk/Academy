@@ -1,51 +1,66 @@
 <%@page import="com.ac.home.product.ProductDTO" %>
-	<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-		<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-			<!DOCTYPE html>
-			<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
 
-			<head>
-				<meta charset="UTF-8">
-
-				<title></title>
-				<c:import url="../template/common_css.jsp"></c:import>
-				<link rel="stylesheet" href="/resources/css/productList.css">
-				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
-				<c:import url="../template/tempcss.jsp"></c:import>
-			
-				<style>
-					.item {
-						padding: 70px;
-						margin-bottom: 70px;
-					}
-				</style>
-			</head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<c:import url="../template/common_css.jsp"></c:import>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/resources/css/productList.css">
+<link rel="stylesheet" href="/resources/css/categoryProductList.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+<c:import url="../template/tempcss.jsp"></c:import>
+</head>
 
 
-			<body>
+			<body class="courses-page">
+            <div class="page-header">
+              <div class="page-header-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <header class="entry-header">
+                                    <h1>상품</h1>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 				<c:import url="../template/header.jsp"></c:import>
-				<header style="margin-top: 200px;">
+				<header style="margin-top: 30px;">
 
 
 
 
 
-					<div class="container- fluid my-5">
+					
 
-						<div class="row mb-4 ">
-							<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품LIST</h1>
+			
+
+						
+					<div class="category_event">
+						<div class="category_cont">
+							<ul class="category_ul nav justify-content-center grey lighten-4 py-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+								<li class="nav-item">
+									<a class="nav-link active" id="allEvent">전체</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="continueEvent">책</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="endEvent">강의</a>
+								</li>
+							</ul>
 						</div>
+					</div>
+				         
 
-						<div id="catdiv">
-							<div class="row input-group mb-3">
-								<label for="categoryNum" class="visually-hidden">categoryName</label>
-								<select class="form-select" name="categoryNum" id="categoryName">
-									<option value="2">전체</option>
-									<option value="3">책</option>
-									<option value="4">강의</option>
-								</select>
-							</div>
-						</div>
+					
 
 
 
@@ -58,70 +73,20 @@
 
 
 
+						
 
-
-
-						<div class="goods_table_wrap">
-							<!-- 상품 리스트 O -->
-							<c:if test="${listcheck != 'empty'}">
-								<table class="goods_table">
-									<thead>
-										<tr>
-
-											<td class="th_column_1">상품 번호</td>
-											<td class="th_column_4">상품 이미지</td>
-											<td class="th_column_1">상품 이름</td>
-											<td class="th_column_3">가격</td>
-											<td class="th_column_4">등록날짜</td>
-											<td class="th_column_5">카테고리</td>
-										</tr>
-									</thead>
-
-		
-										<tbody class="table-group-divider">
-
-											<c:forEach items="${list}" var="dto">
-
-
-												<tr>
-													<td>${dto.num}</td>
-
-													<td class="tbl_td">
-														<div class="row">
-															<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-																<div class="col-md-10 mb-10">
-																	<img src="../resources/images/${fileDTO.save}"
-																		class="img-fluid ">
-																</div>
-															</c:forEach>
-														</div>
-													</td>
-													<td class="tbl_td"><a
-															href="./productDetail?num=${dto.num}">${dto.title}</a></td>
-													<td class="tbl_td">${dto.price}</td>
-													<td class="tbl_td">${dto.regDate}</td>
-													<c:forEach items="${dto.categoryDTOs}" var="category">
-														<td class="tbl_td">${category.name}</td>
-													</c:forEach>
-
-
-
-
-												</tr>
-											</c:forEach>
-										</tbody>
-								</table>
-							</c:if>
-						</div>
-
-
+	<div class="container-fluid my-10 mx-auto">
+    <div class="d-flex justify-content-center">
+        <div class="my-element" style="width: 80%; margin: 0 auto;">
+						
+						
 						<c:if test="${listcheck != 'empty'}">
-							<div class="justify-content-center ">
+							<div class="d-flex justify-content-center">
 								<div class="row w-75 mx-auto ">
 									<div class="col-lg-12 col-md-12 col-12 ">
-										<h3 class="display-5 mb-2 text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">ProductList</h3>
+										<h3 class="display-5 mb-2 text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"></h3>
 										<p class="mb-5 text-center">
-											<i class="text-info font-weight-bold wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">3</i> items in your cart</p>
+											<i class="text-info font-weight-bold wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"></i></p>
 										<table id="shoppingCart" class="table table-condensed table-responsive">
 											<thead>
 												<tr>
@@ -140,9 +105,12 @@
 													<tr class="my-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
 														<td class="item gy-3">
 															<div class="row gy-3">
-																<div class="col-md-3 text-left">
-																	<img src="https://via.placeholder.com/250x250/5fa9f8/ffffff" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+																<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
+																<div class="col-md-3 mb-3">
+																	<img src="../resources/images/${fileDTO.save}"
+																		class="img-fluid ">
 																</div>
+															</c:forEach>
 																<div class="col-md-9 text-left mt-sm-2">
 																	<h4><a href="./productDetail?num=${dto.num}">${dto.title}</a></h4>
 																	<p class="font-weight-light">등록일:${dto.regDate}</p>
@@ -169,83 +137,18 @@
 										
 									</div>
 								</div>
-								
-								
-								<div class="row mt-4 d-flex align-items-center">
-									<div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
-										<a href="catalog.html">
-											<i class="fas fa-arrow-left mr-2"></i> Continue Shopping</a>
-									</div>
-								</div>
 							</div>
 						</c:if>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						<!-- paging -->
+								<!-- 검색창 -->
 						<div class="row col-md-7 mx-auto">
-							<nav aria-label="Page navigation example">
-								<ul class="pagination">
-									<li class="page-item"><a class="page-link" href="#" aria-label="Previous"
-											data-board-page="1"> <span aria-hidden="true">&laquo;</span>
-										</a></li>
-
-
-									<li class="page-item ${pager.before?'disabled':''}"><a class="page-link" href="#"
-											aria-label="Previous" data-board-page="${pager.startNum-1}"> <span
-												aria-hidden="true">&lsaquo;</span>
-										</a></li>
-
-									<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
-										<li class="page-item"><a class="page-link" href="#"
-												data-board-page="${i}">${i}</a></li>
-									</c:forEach>
-
-									<li class="page-item ${pager.after eq false ? 'disabled':''}">
-										<%-- ${pager.after eq false ? 'disabled' :''} --%> <a class="page-link" href="#"
-												aria-label="Next" data-board-page="${pager.lastNum+1}"> <span
-													aria-hidden="true">&rsaquo;</span>
-											</a>
-									</li>
-
-									<li class="page-item">
-										<%-- ${pager.after eq false ? 'disabled' :''} --%> <a class="page-link" href="#"
-												aria-label="Next" data-board-page="${pager.totalPage}"> <span
-													aria-hidden="true">&raquo;</span>
-											</a>
-									</li>
-
-								</ul>
-							</nav>
-						</div>
-
-
-						<!-- 검색창 -->
-						<div class="row col-md-7 mx-auto">
+						<div class="d-flex justify-content-center">
+        					<div class="my-element" style="width: 80%; margin: 0; margin-top: 20px;">
 							<form class="row g-3" action="./list" method="get" id="searchForm">
 								<input type="hidden" name="page" value="1" id="page">
 								<div class="col-auto">
 									<label for="kind" class="visually-hidden">Kind</label> <select class="form-select"
 										name="kind" id="kind" aria-label="Default select example">
-										<option value="title" ${pager.kind eq 'title' ? 'selected' :''}>Title</option>
+										<option value="title" ${pager.kind eq 'title' ? 'selected' :''}>상품 이름</option>
 										<%-- <option value="contents" ${pager.kind eq 'info' ? 'selected' :''}>info
 											</option> --%>
 											<%-- <option value="writer" ${pager.kind eq 'writer' ? 'selected'
@@ -254,44 +157,44 @@
 								</div>
 								<div class="col-auto">
 									<label for="search" class="visually-hidden">Search</label>
-									<input type="text" class="form-control" value="${pager.search}" name="search"
-										id="search" placeholder="검색어를 입력하세요">
+									<input type="text" class="form-control" value="${pager.search}" name="search" id="search" placeholder="검색어를 입력하세요">
 								</div>
 								<div class="col-auto">
 									<button type="submit" class="btn btn-primary mb-3">검색</button>
 								</div>
 							</form>
-
+							<div class="row mx-auto">
 							<c:if test="${not empty member}">
 
 								<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
 									<div class="row col-md-7 mx-auto">
-										<a href="./productAdd" class="btn btn-primary col-5">상품등록</a>
+										<a href="./productAdd" class="btn btn-outline-warning col-5">상품등록</a>
 									</div>
 								</c:if>
 							</c:if>
-
+							</div>
 						</div>
-
+							</div>
+					     </div>
 					</div>
-
-
-				</header>
+				</div>
+   		</div>		
+</header>
 				<c:import url="../template/topBtn.jsp"></c:import>
-				<c:import url="../template/tempjs.jsp"></c:import>
-				<c:import url="../template/common_js.jsp"></c:import>
-				<c:import url="../template/bottom.jsp"></c:import>
-				<script src="../resources/js/temp/move.js"></script>
-				<script src="../../../resources/js/productAjax.js"></script>
-				<script src="../../../resources/js/category.js"></script>
-				<script src="/resources/css/goodsManage.css"></script>
-				<script src="../resources/js/pageing.js"></script>
-				<script src="../resources/js/fileManger.js"></script>
-				<script>
-					setMax(1);
-					$("#bookDetail").summernote();
-	// setParam('f');
-				</script>
-			</body>
-
-			</html>
+<c:import url="../template/tempjs.jsp"></c:import>
+<c:import url="../template/common_js.jsp"></c:import>
+<c:import url="../template/bottom.jsp"></c:import>
+<script src="../resources/js/temp/move.js"></script>
+<c:import url="../template/kakao.jsp"></c:import>
+<script src="../../../resources/js/productAjax.js"></script>
+<script src="../../../resources/js/category.js"></script>
+<script src="/resources/css/goodsManage.css"></script>
+<script src="../resources/js/pageing.js"></script>
+<script src="../resources/js/fileManger.js"></script>
+<script>
+setMax(1);
+$("#bookDetail").summernote();
+// setParam('f');
+</script>
+</body>
+</html>

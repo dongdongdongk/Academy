@@ -2,14 +2,30 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
+    <meta charset='utf-8' />
     <title>동영상 강좌 서비스</title>
     <c:import url="./template/common_css.jsp"></c:import>
+    <style>
+    #calendar-wrapper {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 60px;
+    width: 100%;
+    display: table;
+  }
+    #calendar {
+        width: 800px;
+        height: 800px;
+        display: inline-block;
+ }
+    </style>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
 
@@ -27,7 +43,209 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/resources/css/style.css">
+	<!--달력 입니다 건들지마세요-->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+    <script>
 
+        document.addEventListener('DOMContentLoaded', function() {
+          let calendarEl = document.getElementById('calendar');
+          let calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth'
+          });
+          calendar.render();
+        });
+  
+      </script>
+      <link href='/fullcalendar/main.css' rel='stylesheet' />
+    <script src='/fullcalendar/main.js'></script>
+    <script>
+    	document.addEventListener('DOMContentLoaded', function() {
+        	var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                // Tool Bar 목록 document : https://fullcalendar.io/docs/toolbar
+                headerToolbar: {
+                    left: 'prevYear,prev,next,nextYear today',
+                    center: 'title',
+                    right: 'dayGridMonth,dayGridWeek,dayGridDay'
+                },
+
+                selectable: true,
+                selectMirror: true,
+
+                navLinks: true, // can click day/week names to navigate views
+                editable: true,
+                // Create new event
+                select: function (arg) {
+                    Swal.fire({
+                        html: "<div class='mb-7'>Create new event?</div><div class='fw-bold mb-5'>Event Name:</div><input type='text' class='form-control' name='event_name' />",
+                        icon: "info",
+                        showCancelButton: true,
+                        buttonsStyling: false,
+                        confirmButtonText: "Yes, create it!",
+                        cancelButtonText: "No, return",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                            cancelButton: "btn btn-active-light"
+                        }
+                    }).then(function (result) {
+                        if (result.value) {
+                            var title = document.querySelector("input[name=;event_name']").value;
+                            if (title) {
+                                calendar.addEvent({
+                                    title: title,
+                                    start: arg.start,
+                                    end: arg.end,
+                                    allDay: arg.allDay
+                                })
+                            }
+                            calendar.unselect()
+                        } else if (result.dismiss === "cancel") {
+                            Swal.fire({
+                                text: "Event creation was declined!.",
+                                icon: "error",
+                                buttonsStyling: false,
+                                confirmButtonText: "Ok, got it!",
+                                customClass: {
+                                    confirmButton: "btn btn-primary",
+                                }
+                            });
+                        }
+                    });
+                },
+
+                // Delete event
+                eventClick: function (arg) {
+                    Swal.fire({
+                        text: "Are you sure you want to delete this event?",
+                        icon: "warning",
+                        showCancelButton: true,
+                        buttonsStyling: false,
+                        confirmButtonText: "Yes, delete it!",
+                        cancelButtonText: "No, return",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                            cancelButton: "btn btn-active-light"
+                        }
+                    }).then(function (result) {
+                        if (result.value) {
+                            arg.event.remove()
+                        } else if (result.dismiss === "cancel") {
+                            Swal.fire({
+                                text: "Event was not deleted!.",
+                                icon: "error",
+                                buttonsStyling: false,
+                                confirmButtonText: "Ok, got it!",
+                                customClass: {
+                                    confirmButton: "btn btn-primary",
+                                }
+                            });
+                        }
+                    });
+                },
+                dayMaxEvents: true, // allow "more" link when too many events
+                // 이벤트 객체 필드 document : https://fullcalendar.io/docs/event-object
+                events: [
+                    {
+                    title: '정보처리기사 1회 필기 원서접수',
+                    start: '2023-01-10',
+                    end: '2023-01-13'
+                    },
+                    {
+                    title: '정보처리기사 1회 필기 시험',
+                    start: '2023-02-13',
+                    end: '2023-02-25'
+                    },
+                    {
+                    title: '정보처리기사 1회 필기 시험 합격자 발표',
+                    start: '2023-03-21'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 1회 실기 원서접수',
+                    start: '2023-03-28',
+                    end: '2023-03-31'
+                    },
+                    {
+                    title: '정보처리기사 1회 실기 시험',
+                    start: '2023-04-23'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 1회 실기 합격자 발표',
+                    start: '2023-06-09'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 2회 필기 원서접수',
+                    start: '2023-04-17',
+                    end: '2023-04-20'
+                    },
+                    {
+                    title: '정보처리기사 2회 필기 시험',
+                    start: '2023-05-13',
+                    end: '2023-05-20'
+                    },
+                    {
+                    title: '정보처리기사 2회 필기 시험 합격자 발표',
+                    start: '2023-06-14'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 2회 실기 원서접수',
+                    start: '2023-06-27',
+                    end: '2023-06-30'
+                    },
+                    {
+                    title: '정보처리기사 2회 실기 시험',
+                    start: '2023-07-22'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 2회 실기 합격자 발표',
+                    start: '2023-09-01'
+                    },
+                    {
+                    title: '정보처리기사 3회 필기 원서접수',
+                    start: '2023-06-19',
+                    end: '2023-06-22'
+                    },
+                    {
+                    title: '정보처리기사 3회 필기 시험',
+                    start: '2023-07-08',
+                    end: '2023-07-23'
+                    },
+                    {
+                    title: '정보처리기사 3회 필기 시험 합격자 발표',
+                    start: '2023-08-02'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 3회 실기 원서접수',
+                    start: '2023-09-04',
+                    end: '2023-09-07'
+                    },
+                    {
+                    title: '정보처리기사 3회 실기 시험',
+                    start: '2023-10-07'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 3회 실기 합격자 발표',
+                    start: '2023-11-15'
+                    },
+                    {
+                    groupId: 999,
+                    title: '장현서 교수 생신',
+                    start: '2023-06-16'
+                    },
+                ]
+            });
+
+            calendar.render();
+        });
+
+    </script>
+    <!--달력 입니다 건들지마세요-->
 </head>
 <body>
     <div class="hero-content">
@@ -144,7 +362,7 @@
             </div><!-- .container -->
         </div><!-- .hero-content-hero-content-overlay -->
     </div><!-- .hero-content -->
-
+    
     <div class="icon-boxes">
         <div class="container-fluid">
             <div class="flex flex-wrap align-items-stretch">
@@ -222,8 +440,12 @@
             </div><!-- .row -->
         </div><!-- .container-fluid -->
     </div><!-- .icon-boxes -->
-
-    <section class="featured-courses horizontal-column courses-wrap">
+    <!--달력 입니다 건들지마세요-->
+    <div id="calendar-wrapper">
+    <div id='calendar'></div>
+    </div>
+    <!--달력 입니다 건들지마세요-->
+    <!-- <section class="featured-courses horizontal-column courses-wrap">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -231,14 +453,14 @@
                         <h2 class="entry-title">주요 과정</h2>
 
                         <a class="btn mt-4 mt-sm-0" href="/product/list">전체 보기</a>
-                    </header><!-- .heading -->
-                </div><!-- .col -->
+                    </header>
+                </div>
 
                 <div class="col-12 col-lg-6">
                     <div class="course-content flex flex-wrap justify-content-between align-content-lg-stretch">
                         <figure class="course-thumbnail">
                             <a href="#"><img src="/resources/images/1.jpg" alt=""></a>
-                        </figure><!-- .course-thumbnail -->
+                        </figure>
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
@@ -248,31 +470,31 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star-o"></span>
-                                </div><!-- .course-ratings -->
+                                </div>
 
-                                <h2 class="entry-title"><a href="#">전체 Android 개발자 과정</a></h2>
+                                <h2 class="entry-title">전체 Android 개발자 과정</h2>
 
                                 <div class="entry-meta flex flex-wrap align-items-center">
-                                    <div class="course-author"><a href="#">김동현 </a></div>
+                                    <div class="course-author">김동현</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
-                                </div><!-- .course-date -->
-                            </header><!-- .entry-header -->
+                                    <div class="course-date">2023년 4월 14일</div>
+                                </div>
+                            </header>
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
                                     <span class="free-cost">무료</span>
-                                </div><!-- .course-cost -->
-                            </footer><!-- .entry-footer -->
-                        </div><!-- .course-content-wrap -->
-                    </div><!-- .course-content -->
-                </div><!-- .col -->
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-12 col-lg-6">
                     <div class="course-content flex flex-wrap justify-content-between align-content-lg-stretch">
                         <figure class="course-thumbnail">
-                            <a href="#"><img src="/resources/images/2.jpg" alt=""></a>
-                        </figure><!-- .course-thumbnail -->
+                            <img src="/resources/images/2.jpg" alt="">
+                        </figure>
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
@@ -284,28 +506,28 @@
                                     <span class="fa fa-star-o"></span>
 
                                     <span class="course-ratings-count">(4 votes)</span>
-                                </div><!-- .course-ratings -->
+                                </div>
 
-                                <h2 class="entry-title"><a href="#">웹 디자인에 대해</a></h2>
+                                <h2 class="entry-title">웹 디자인에 대해</h2>
 
                                 <div class="entry-meta flex flex-wrap align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
-                                </div><!-- .course-date -->
-                            </header><!-- .entry-header -->
+                                    <div class="course-date">2023년 4월 14일</div>
+                                </div>
+                            </header>
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
                                     32000원 <span class="price-drop">59000원</span>
-                                </div><!-- .course-cost -->
-                            </footer><!-- .entry-footer -->
-                        </div><!-- .course-content-wrap -->
-                    </div><!-- .course-content -->
-                </div><!-- .col -->
-            </div><!-- .row -->
-        </div><!-- .container -->
-    </section><!-- .courses-wrap -->
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
     <section class="about-section">
         <div class="container">
@@ -445,11 +667,11 @@
 
                         <nav class="courses-menu mt-3 mt-lg-0">
                             <ul class="flex flex-wrap justify-content-md-end align-items-center">
-                                <li class="active"><a href="#">All</a></li>
-                                <li><a href="#">Java</a></li>
-                                <li><a href="#">C</a></li>
-                                <li><a href="#">Python</a></li>
-                                <li><a href="#">Database</a></li>
+                                <li class="active">All</li>
+                                <li>Java</li>
+                                <li>C</li>
+                                <li>Python</li>
+                                <li>Database</li>
                             </ul>
                         </nav><!-- .courses-menu -->
                     </header><!-- .heading -->
@@ -463,12 +685,12 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">전체 Android 개발자 과정</a></h2>
+                                <h2 class="entry-title">전체 Android 개발자 과정</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서 </a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -497,12 +719,12 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">자바과정 초급에서 고급으로</a></h2>
+                                <h2 class="entry-title">자바과정 초급에서 고급으로</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -531,12 +753,12 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">전체 디지털 마케팅 과정</a></h2>
+                                <h2 class="entry-title">전체 디지털 마케팅 과정</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -566,12 +788,12 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">언리얼 엔진 개발자 과정</a></h2>
+                                <h2 class="entry-title">언리얼 엔진 개발자 과정</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -603,9 +825,9 @@
                                 <h2 class="entry-title"><a href="#">Progressive Web Apps</a></h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -635,12 +857,12 @@
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
-                                <h2 class="entry-title"><a href="#">암호화폐 투자 강좌 2018</a></h2>
+                                <h2 class="entry-title">암호화폐 투자 강좌 2023</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author"><a href="#">장현서</a></div>
+                                    <div class="course-author">장현서</div>
 
-                                    <div class="course-date">2023년 4월 10일</div>
+                                    <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
                             </header><!-- .entry-header -->
 
@@ -694,7 +916,7 @@
 
                             <div class="event-location"><i class="fa fa-map-marker"></i>40 Baria Sreet 133/2 NewYork City, US</div>
 
-                            <div class="event-duration"><i class="fa fa-calendar"></i>2023년 4월 10일</div>
+                            <div class="event-duration"><i class="fa fa-calendar"></i>2023년 4월 14일</div>
                         </header><!-- .entry-header -->
                     </div><!-- .featured-event-content -->
                 </div><!-- .col -->
@@ -708,7 +930,7 @@
                         <div class="event-content-wrap">
                             <header class="entry-header">
                                 <div class="posted-date">
-                                    <i class="fa fa-calendar"></i> 2023년 4월 10일
+                                    <i class="fa fa-calendar"></i> 2023년 4월 14일
                                 </div><!-- .posted-date -->
 
                                 <h2 class="entry-title"><a href="#">맞춤형 온라인 학습 경험</a></h2>
@@ -732,13 +954,13 @@
                         <div class="event-content-wrap">
                             <header class="entry-header">
                                 <div class="posted-date">
-                                    <i class="fa fa-calendar"></i> 2023년 4월 10일
+                                    <i class="fa fa-calendar"></i> 2023년 4월 14일
                                 </div><!-- .posted-date -->
 
-                                <h2 class="entry-title"><a href="#">우리 회사는 어떤 투자 프로젝트를 선택해야 하나요?</a></h2>
+                                <h2 class="entry-title">우리 회사는 어떤 투자 프로젝트를 선택해야 하나요?</h2>
 
                                 <div class="entry-meta flex flex-wrap align-items-center">
-                                    <div class="post-author"><a href="#">장현서 </a></div>
+                                    <div class="post-author">장현서</div>
                                 </div><!-- .entry-meta -->
                             </header><!-- .entry-header -->
 
@@ -755,60 +977,59 @@
     <section class="home-gallery">
         <div class="gallery-wrap flex flex-wrap">
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/a.jpg" alt=""></a>
+                <img src="/resources/images/a.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/b.jpg" alt=""></a>
+                <img src="/resources/images/b.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid2x2">
-                <a href="#"><img src="/resources/images/c.jpg" alt=""></a>
+                <img src="/resources/images/c.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/d.jpg" alt=""></a>
+                <img src="/resources/images/d.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/e.jpg" alt=""></a>
+                <img src="/resources/images/e.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid2x1">
-                <a href="#"><img src="/resources/images/g.jpg" alt=""></a>
+                <img src="/resources/images/g.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid2x1">
-                <a href="#"><img src="/resources/images/h.jpg" alt=""></a>
+                <img src="/resources/images/h.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/i.jpg" alt=""></a>
+                <img src="/resources/images/i.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid2x2 ">
-                <a href="#"><img src="/resources/images/j.jpg" alt=""></a>
+                <img src="/resources/images/j.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/k.jpg" alt=""></a>
+                <img src="/resources/images/k.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid1x1">
-                <a href="#"><img src="/resources/images/l.jpg" alt=""></a>
+                <img src="/resources/images/l.jpg" alt="">
             </div><!-- .gallery-grid -->
 
             <div class="gallery-grid gallery-grid2x1">
-                <a href="#"><img src="/resources/images/m.jpg" alt=""></a>
+                <img src="/resources/images/m.jpg" alt="">
             </div><!-- .gallery-grid -->
 
-            <div class="gallery-grid gallery-grid3x1">
-                <a href="#"><img src="/resources/images/n.jpg" alt=""></a>
-            </div><!-- .gallery-grid -->
-
-            <div class="gallery-grid gallery-grid1x1">
+            <!-- <div class="gallery-grid gallery-grid3x1">
+                <a href=""><img src="/resources/images/n.jpg" alt=""></a>
+            </div> -->
+            <!-- <div class="gallery-grid gallery-grid1x1">
                 <a href="#"><img src="/resources/images/o.jpg" alt=""></a>
-            </div><!-- .gallery-grid -->
+            </div> -->
         </div><!-- .gallery-wrap -->
     </section><!-- .home-gallery -->
 
@@ -832,9 +1053,9 @@
                         <img src="/resources/images/logo-4.png" alt="">
                     </div><!-- .logo-wrap -->
 
-                    <div class="logo-wrap">
+                    <!-- <div class="logo-wrap">
                         <img src="/resources/images/logo-5.png" alt="">
-                    </div><!-- .logo-wrap -->
+                    </div> -->
                 </div><!-- .col -->
             </div><!-- .row -->
         </div><!-- .container -->
@@ -873,16 +1094,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <h2 class="w-100">빠른 링크</h2>
 
                             <ul class="w-50">
-                                <li><a href="/cr/crList">REVIEW</a></li>
-                                <li><a href="/product/list">COURSES</a></li>
-                                <li><a href="/notice/list">NOTICE</a></li>
-                                <li><a href="/qna/qnaList">QNA</a></li>
+                                <li><a href="/cr/crList">수강후기</a></li>
+                                <li><a href="/product/list">강의&책</a></li>
+                                <li><a href="/notice/list">공지사항</a></li>
+                                <li><a href="/qna/qnaList">질문&응답</a></li>
                             </ul>
 
                             <ul class="w-50">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/event/list">Events</a></li>
-                                <li><a href="#">About</a></li>
+                                <li><a href="/">메인화면</a></li>
+                                <li><a href="/event/list">이벤트</a></li>
+                                <li><a href="/template/about">About</a></li>
                                 <li><a href="#">Instructor</a></li>
                             </ul>
                         </div><!-- .quick-links -->
@@ -893,10 +1114,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <h2>Follow</h2>
 
                             <ul class="follow-us flex flex-wrap align-items-center">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://ko-kr.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
                             </ul>
                         </div><!-- .quick-links -->
                     </div><!-- .col -->
@@ -904,26 +1125,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             </div><!-- .container -->
         </div><!-- .footer-widgets -->
 
-        <div class="footer-bar">
-            <div class="container">
-                <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <div class="download-apps flex flex-wrap justify-content-center justify-content-lg-start align-items-center">
-                            <a href="#"><img src="/resources/images/app-store.png" alt=""></a>
-                            <a href="#"><img src="/resources/images/play-store.png" alt=""></a>
-                        </div><!-- .download-apps -->
-
-                    </div>
-
-                    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
-                        <div class="footer-bar-nav">
-                            <ul class="flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-                                <li><a href="#">이용약관</a></li>
-                                <li><a href="#">환불규정</a></li>
-                                <li><a href="#">개인정보처리방침</a></li>
-                            </ul>
-                        </div><!-- .footer-bar-nav -->
-                    </div><!-- .col-12 -->
+      
                 </div><!-- .row -->
             </div><!-- .container -->
         </div><!-- .footer-bar -->
