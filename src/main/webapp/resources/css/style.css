@@ -2771,7 +2771,7 @@ p.footer-copyright {
 
 .trfirst {
 
-    background-color: #faf0f0
+    background-color: #fcf8f8
 }
 
 .iconSize2 {
@@ -2890,5 +2890,10 @@ p.footer-copyright {
 
   .green {
     color: #19c880;
+
+  }
+
+  .tableSize {
+    width:100%
 
   }

@@ -38,7 +38,7 @@
 
 		<div class="row col-md-7 mx-auto " >
 			
-			<table class="table table-fixed wow fadeIn" data-wow-delay="0.1s">
+			<table class="table table-fixed wow fadeIn tableSize" data-wow-delay="0.1s">
 			  	<thead class="table-light">
 			 		<tr>
 						<th>No</th>

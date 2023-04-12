@@ -37,7 +37,7 @@
 					<div class="container- fluid my-5">
 
 						<div class="row mb-4 ">
-							<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품LIST</h1>
+							<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3 wow fadeInDown" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">상품LIST</h1>
 						</div>
 
 						<div id="catdiv">
@@ -151,8 +151,8 @@
 												<div class="col-auto ml-auto">
 													<div class="input-group mb-4">
 														<label for="search" class="visually-hidden">Search</label>
-														<span class="material-symbols-outlined pe-2 pt-1">search</span>
-														<input type="text" class="form-control mb-4 "
+														<span class="material-symbols-outlined pe-2 pt-1 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"">search</span>
+														<input type="text" class="form-control mb-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;""
 															value="${pager.search}" name="search" id="search"
 															placeholder="검색어를 입력하세요">
 													</div>
@@ -165,9 +165,9 @@
 
 
 										</div>
-										<table id="shoppingCart" class="table table-condensed table-responsive">
+										<table id="shoppingCart" class="table table-condensed table-responsive ">
 											<thead >
-												<tr>
+												<tr class="wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"">
 													<th style="width:65%">Product</th>
 													<th style="width:18%">Price</th>
 													<th style="width:18%">Category</th>
@@ -228,9 +228,14 @@
 										<c:if test="${not empty member}">
 
 											<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
-												<div class="row col-md-7 mx-auto">
-													<a href="./productAdd" class="btn btn-primary col-5">상품등록</a>
-												</div>
+												<div class="col-12 float-right">
+													<button type="button" class="image-button  float-right color-5 wow fadeIn " data-wow-delay="0.1s" onclick="location.href='./add'">
+														<img src="/resources/images/pen2.png" alt="Button icon">
+														<span>글쓰기</span>
+													</button>	
+													
+													  <!-- <button type="submit" class="btn btn-primary mb-3 greentop">검색</button>					 -->
+												  </div>
 											</c:if>
 										</c:if>
 
