@@ -99,7 +99,7 @@
 	                                </ul>
 	                                
 	                                <div class="dropdown">
-                                    <button class="dropbtn">고객센터</button>
+                                    	<button class="dropbtn">고객센터</button>
 	                                    <div class="dropdown-view">
 	                                        <ul class="dropdown-content">
 	                                            <li><a href="/cr/crList">수강후기</a></li>

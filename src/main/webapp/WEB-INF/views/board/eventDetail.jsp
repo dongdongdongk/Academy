@@ -7,10 +7,26 @@
 <meta charset="UTF-8">
 <title>이벤트</title>
 </head>
-<c:import url="../template/header.jsp"></c:import>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="/resources/css/font-awesome.min.css">
+
+<!-- ElegantFonts CSS -->
+<link rel="stylesheet" href="/resources/css/elegant-fonts.css">
+
+<!-- themify-icons CSS -->
+<link rel="stylesheet" href="/resources/css/themify-icons.css">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="/resources/css/swiper.min.css">
+
+<!-- Styles -->
+<link rel="stylesheet" href="/resources/css/style.css">
 <link rel="stylesheet" href="/resources/css/event.css">
 <c:import url="../template/common_css.jsp"></c:import>      
-
+<c:import url="../template/header.jsp"></c:import>
 <body class="courses-page">
         <div class="page-header">
             <div class="page-header-overlay">
