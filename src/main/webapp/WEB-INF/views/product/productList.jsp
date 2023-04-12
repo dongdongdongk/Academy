@@ -6,53 +6,60 @@
 
 			<head>
 				<meta charset="UTF-8">
-
+				 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<title></title>
 				<c:import url="../template/common_css.jsp"></c:import>
+				
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
 				<link rel="stylesheet" href="/resources/css/productList.css">
+				<link rel="stylesheet" href="/resources/css/categoryProductList.css">
 				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
 				<c:import url="../template/tempcss.jsp"></c:import>
-			
-				<style>
-					.item {
-						padding: 70px;
-						margin-bottom: 70px;
-					}
-				</style>
 			</head>
 
 
-			<body>
+			<body class="courses-page">
+            <div class="page-header">
+              <div class="page-header-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <header class="entry-header">
+                                    <h1>상품</h1>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 				<c:import url="../template/header.jsp"></c:import>
-				<header style="margin-top: 200px;">
+				<header style="margin-top: 30px;">
 
 
 
 
 
-					<div class="container- fluid my-5">
+					
 
-						<div class="row mb-4 ">
-							<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3">상품LIST</h1>
-						</div>
+			
 
-						<div id="catdiv">
-							<div class="row input-group mb-3">
-								<label for="categoryNum" class="visually-hidden">categoryName</label>
-								<select class="form-select" name="categoryNum" id="categoryName">
-									<option value="2">전체</option>
-									<option value="3">책</option>
-									<option value="4">강의</option>
-								</select>
-							</div>
-						</div>
+						<div class="category_product">
+				          <div class="category_cont">
+				           <ul class="category_ul nav justify-content-center grey lighten-4 py-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+				            <li class="nav-item">
+				                        <a class="nav-link active" id="allEvent">전체</a>
+				                    </li>
+				                    <li class="nav-item">
+				                        <a class="nav-link" id="continueEvent">책</a>
+				                    </li>
+				                    <li class="nav-item">
+				                        <a class="nav-link" id="endEvent">강의</a>
+				                    </li>
+				                </ul>
+				          </div>
+				        </div>
 
-
-
-
-
-
-
+					
 
 
 
@@ -61,67 +68,22 @@
 
 
 
-						<!-- <div class="goods_table_wrap">
-							
-							<c:if test="${listcheck != 'empty'}">
-								<table class="goods_table">
-									<thead>
-										<tr>
-
-											<td class="th_column_1">상품 번호</td>
-											<td class="th_column_4">상품 이미지</td>
-											<td class="th_column_1">상품 이름</td>
-											<td class="th_column_3">가격</td>
-											<td class="th_column_4">등록날짜</td>
-											<td class="th_column_5">카테고리</td>
-										</tr>
-									</thead>
-
-		
-										<tbody class="table-group-divider">
-
-											<c:forEach items="${list}" var="dto">
-
-
-												<tr>
-													<td>${dto.num}</td>
-
-													<td class="tbl_td">
-														<div class="row">
-															<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-																<div class="col-md-10 mb-10">
-																	<img src="../resources/images/${fileDTO.save}"
-																		class="img-fluid ">
-																</div>
-															</c:forEach>
-														</div>
-													</td>
-													<td class="tbl_td"><a
-															href="./productDetail?num=${dto.num}">${dto.title}</a></td>
-													<td class="tbl_td">${dto.price}</td>
-													<td class="tbl_td">${dto.regDate}</td>
-													<c:forEach items="${dto.categoryDTOs}" var="category">
-														<td class="tbl_td">${category.name}</td>
-													</c:forEach>
 
 
 
 
-												</tr>
-											</c:forEach>
-										</tbody>
-								</table>
-							</c:if>
-						</div> -->
+						
 
-
+						<div class="container- fluid my-10">
+						
+						
 						<c:if test="${listcheck != 'empty'}">
-							<div class="justify-content-center ">
+							<div class="d-flex justify-content-center">
 								<div class="row w-75 mx-auto ">
 									<div class="col-lg-12 col-md-12 col-12 ">
-										<h3 class="display-5 mb-2 text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">ProductList</h3>
+										<h3 class="display-5 mb-2 text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"></h3>
 										<p class="mb-5 text-center">
-											<i class="text-info font-weight-bold wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">3</i> items in your cart</p>
+											<i class="text-info font-weight-bold wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"></i></p>
 										<table id="shoppingCart" class="table table-condensed table-responsive">
 											<thead>
 												<tr>
@@ -174,14 +136,11 @@
 								</div>
 								
 								
-								<div class="row mt-4 d-flex align-items-center">
-									<div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
-										<a href="catalog.html">
-											<i class="fas fa-arrow-left mr-2"></i> Continue Shopping</a>
-									</div>
-								</div>
+								
 							</div>
+							
 						</c:if>
+					
 
 
 
@@ -234,7 +193,7 @@
 
 								<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
 									<div class="row col-md-7 mx-auto">
-										<a href="./productAdd" class="btn btn-primary col-5">상품등록</a>
+										<a href="./productAdd" class="btn btn-outline-warning col-5" style="margin-left:0;">상품등록</a>
 									</div>
 								</c:if>
 							</c:if>

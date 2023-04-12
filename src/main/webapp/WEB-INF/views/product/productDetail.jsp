@@ -13,22 +13,48 @@
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
-<body>
+<style>
+.product-price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #11cc8e;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+</style>
+<body class="courses-page">
+            <div class="page-header">
+              <div class="page-header-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <header class="entry-header">
+                                    <h1>상품의 자세한 내용</h1>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 <!-- Header -->
 <c:import url="../template/header.jsp"></c:import>
-<header style="margin-top: 200px;">
+<header style="margin-top: 50px;">
 
 <!-- Main content -->
 <main class="container my-5">
   <div class="row">
     <div class="col-md-8">
-      <h1 class="my-4">책의 자세한 내용</h1>
+     
       <c:if test="${not empty dto}">
-        <h3>상품 번호 : ${dto.num}</h3>
-        <h3>상품 이름 : ${dto.title}</h3>
-        <h3>상품 가격 : ${dto.price}</h3>
-        <h3>카테고리 : ${dto.categoryNum}</h3>
-        <h3>상품 내용 : ${dto.info}</h3>
+        <%-- <h3>상품 번호 : ${dto.num}</h3> --%>
+        <h3 class="product-price">상품 이름 : ${dto.title}</h3>
+        <h3 class="product-price">상품 가격 : ${dto.price}</h3>
+        <%-- <h3>카테고리 : ${dto.categoryNum}</h3> --%>
+        <h3 class="product-price">상품 내용 : ${dto.info}</h3>
 
         <div class="row">
           <c:forEach items="${dto.productImgDTOs}" var="fileDTO">

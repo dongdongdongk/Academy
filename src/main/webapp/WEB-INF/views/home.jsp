@@ -2,14 +2,29 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
+    <meta charset='utf-8' />
     <title>동영상 강좌 서비스</title>
+    <style>
+    #calendar-wrapper {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 60px;
+    width: 100%;
+    display: table;
+  }
+    #calendar {
+        width: 800px;
+        height: 800px;
+        display: inline-block;
+ }
+    </style>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
 
@@ -27,7 +42,204 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/resources/css/style.css">
+	<!--달력 입니다 건들지마세요-->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+    <script>
 
+        document.addEventListener('DOMContentLoaded', function() {
+          let calendarEl = document.getElementById('calendar');
+          let calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth'
+          });
+          calendar.render();
+        });
+  
+      </script>
+      <link href='/fullcalendar/main.css' rel='stylesheet' />
+    <script src='/fullcalendar/main.js'></script>
+    <script>
+    	document.addEventListener('DOMContentLoaded', function() {
+        	var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                // Tool Bar 목록 document : https://fullcalendar.io/docs/toolbar
+                headerToolbar: {
+                    left: 'prevYear,prev,next,nextYear today',
+                    center: 'title',
+                    right: 'dayGridMonth,dayGridWeek,dayGridDay'
+                },
+
+                selectable: true,
+                selectMirror: true,
+
+                navLinks: true, // can click day/week names to navigate views
+                editable: true,
+                // Create new event
+                select: function (arg) {
+                    Swal.fire({
+                        html: "<div class='mb-7'>Create new event?</div><div class='fw-bold mb-5'>Event Name:</div><input type='text' class='form-control' name='event_name' />",
+                        icon: "info",
+                        showCancelButton: true,
+                        buttonsStyling: false,
+                        confirmButtonText: "Yes, create it!",
+                        cancelButtonText: "No, return",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                            cancelButton: "btn btn-active-light"
+                        }
+                    }).then(function (result) {
+                        if (result.value) {
+                            var title = document.querySelector("input[name=;event_name']").value;
+                            if (title) {
+                                calendar.addEvent({
+                                    title: title,
+                                    start: arg.start,
+                                    end: arg.end,
+                                    allDay: arg.allDay
+                                })
+                            }
+                            calendar.unselect()
+                        } else if (result.dismiss === "cancel") {
+                            Swal.fire({
+                                text: "Event creation was declined!.",
+                                icon: "error",
+                                buttonsStyling: false,
+                                confirmButtonText: "Ok, got it!",
+                                customClass: {
+                                    confirmButton: "btn btn-primary",
+                                }
+                            });
+                        }
+                    });
+                },
+
+                // Delete event
+                eventClick: function (arg) {
+                    Swal.fire({
+                        text: "Are you sure you want to delete this event?",
+                        icon: "warning",
+                        showCancelButton: true,
+                        buttonsStyling: false,
+                        confirmButtonText: "Yes, delete it!",
+                        cancelButtonText: "No, return",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                            cancelButton: "btn btn-active-light"
+                        }
+                    }).then(function (result) {
+                        if (result.value) {
+                            arg.event.remove()
+                        } else if (result.dismiss === "cancel") {
+                            Swal.fire({
+                                text: "Event was not deleted!.",
+                                icon: "error",
+                                buttonsStyling: false,
+                                confirmButtonText: "Ok, got it!",
+                                customClass: {
+                                    confirmButton: "btn btn-primary",
+                                }
+                            });
+                        }
+                    });
+                },
+                dayMaxEvents: true, // allow "more" link when too many events
+                // 이벤트 객체 필드 document : https://fullcalendar.io/docs/event-object
+                events: [
+                    {
+                    title: '정보처리기사 1회 필기 원서접수',
+                    start: '2023-01-10',
+                    end: '2023-01-13'
+                    },
+                    {
+                    title: '정보처리기사 1회 필기 시험',
+                    start: '2023-02-13',
+                    end: '2023-02-25'
+                    },
+                    {
+                    title: '정보처리기사 1회 필기 시험 합격자 발표',
+                    start: '2023-03-21'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 1회 실기 원서접수',
+                    start: '2023-03-28',
+                    end: '2023-03-31'
+                    },
+                    {
+                    title: '정보처리기사 1회 실기 시험',
+                    start: '2023-04-23'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 1회 실기 합격자 발표',
+                    start: '2023-06-09'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 2회 필기 원서접수',
+                    start: '2023-04-17',
+                    end: '2023-04-20'
+                    },
+                    {
+                    title: '정보처리기사 2회 필기 시험',
+                    start: '2023-05-13',
+                    end: '2023-05-20'
+                    },
+                    {
+                    title: '정보처리기사 2회 필기 시험 합격자 발표',
+                    start: '2023-06-14'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 2회 실기 원서접수',
+                    start: '2023-06-27',
+                    end: '2023-06-30'
+                    },
+                    {
+                    title: '정보처리기사 2회 실기 시험',
+                    start: '2023-07-22'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 2회 실기 합격자 발표',
+                    start: '2023-09-01'
+                    },
+                    {
+                    title: '정보처리기사 3회 필기 원서접수',
+                    start: '2023-06-19',
+                    end: '2023-06-22'
+                    },
+                    {
+                    title: '정보처리기사 3회 필기 시험',
+                    start: '2023-07-08',
+                    end: '2023-07-23'
+                    },
+                    {
+                    title: '정보처리기사 3회 필기 시험 합격자 발표',
+                    start: '2023-08-02'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 3회 실기 원서접수',
+                    start: '2023-09-04',
+                    end: '2023-09-07'
+                    },
+                    {
+                    title: '정보처리기사 3회 실기 시험',
+                    start: '2023-10-07'
+                    },
+                    {
+                    groupId: 999,
+                    title: '정보처리기사 3회 실기 합격자 발표',
+                    start: '2023-11-15'
+                    },
+                ]
+            });
+
+            calendar.render();
+        });
+
+    </script>
+    <!--달력 입니다 건들지마세요-->
 </head>
 <body>
     <div class="hero-content">
@@ -88,7 +300,8 @@
                             <nav class="site-navigation flex justify-content-end align-items-center">
                                 <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                     <li class="current-menu-item"><a href="/">Home</a></li>
-                                    <!-- <li><a href="/cr/crList">Review</a></li>
+                                    <li><a href="/template/about">about</a></li>
+                                	<!-- <li><a href="/cr/crList">Review</a></li>
                                     <li><a href="/product/list">Courses</a></li>
                                     <li><a href="/notice/list">Notice</a></li>
                                     <li><a href="/qna/qnaList">QNA</a></li>
@@ -148,7 +361,7 @@
             </div><!-- .container -->
         </div><!-- .hero-content-hero-content-overlay -->
     </div><!-- .hero-content -->
-
+    
     <div class="icon-boxes">
         <div class="container-fluid">
             <div class="flex flex-wrap align-items-stretch">
@@ -226,8 +439,12 @@
             </div><!-- .row -->
         </div><!-- .container-fluid -->
     </div><!-- .icon-boxes -->
-
-    <section class="featured-courses horizontal-column courses-wrap">
+    <!--달력 입니다 건들지마세요-->
+    <div id="calendar-wrapper">
+    <div id='calendar'></div>
+    </div>
+    <!--달력 입니다 건들지마세요-->
+    <!-- <section class="featured-courses horizontal-column courses-wrap">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -235,14 +452,14 @@
                         <h2 class="entry-title">주요 과정</h2>
 
                         <a class="btn mt-4 mt-sm-0" href="/product/list">전체 보기</a>
-                    </header><!-- .heading -->
-                </div><!-- .col -->
+                    </header>
+                </div>
 
                 <div class="col-12 col-lg-6">
                     <div class="course-content flex flex-wrap justify-content-between align-content-lg-stretch">
                         <figure class="course-thumbnail">
                             <a href="#"><img src="/resources/images/1.jpg" alt=""></a>
-                        </figure><!-- .course-thumbnail -->
+                        </figure>
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
@@ -252,7 +469,7 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star-o"></span>
-                                </div><!-- .course-ratings -->
+                                </div>
 
                                 <h2 class="entry-title">전체 Android 개발자 과정</h2>
 
@@ -260,23 +477,23 @@
                                     <div class="course-author">김동현</div>
 
                                     <div class="course-date">2023년 4월 14일</div>
-                                </div><!-- .course-date -->
-                            </header><!-- .entry-header -->
+                                </div>
+                            </header>
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
                                     <span class="free-cost">무료</span>
-                                </div><!-- .course-cost -->
-                            </footer><!-- .entry-footer -->
-                        </div><!-- .course-content-wrap -->
-                    </div><!-- .course-content -->
-                </div><!-- .col -->
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-12 col-lg-6">
                     <div class="course-content flex flex-wrap justify-content-between align-content-lg-stretch">
                         <figure class="course-thumbnail">
                             <img src="/resources/images/2.jpg" alt="">
-                        </figure><!-- .course-thumbnail -->
+                        </figure>
 
                         <div class="course-content-wrap">
                             <header class="entry-header">
@@ -288,7 +505,7 @@
                                     <span class="fa fa-star-o"></span>
 
                                     <span class="course-ratings-count">(4 votes)</span>
-                                </div><!-- .course-ratings -->
+                                </div>
 
                                 <h2 class="entry-title">웹 디자인에 대해</h2>
 
@@ -296,20 +513,20 @@
                                     <div class="course-author">장현서</div>
 
                                     <div class="course-date">2023년 4월 14일</div>
-                                </div><!-- .course-date -->
-                            </header><!-- .entry-header -->
+                                </div>
+                            </header>
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
                                     32000원 <span class="price-drop">59000원</span>
-                                </div><!-- .course-cost -->
-                            </footer><!-- .entry-footer -->
-                        </div><!-- .course-content-wrap -->
-                    </div><!-- .course-content -->
-                </div><!-- .col -->
-            </div><!-- .row -->
-        </div><!-- .container -->
-    </section><!-- .courses-wrap -->
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
     <section class="about-section">
         <div class="container">
@@ -885,7 +1102,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <ul class="w-50">
                                 <li><a href="/">메인화면</a></li>
                                 <li><a href="/event/list">이벤트</a></li>
-                                <li><a href="#">About</a></li>
+                                <li><a href="/template/about">About</a></li>
                                 <li><a href="#">Instructor</a></li>
                             </ul>
                         </div><!-- .quick-links -->

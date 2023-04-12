@@ -69,15 +69,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <h2 class="w-100">빠른 링크</h2>
 
                             <ul class="w-50">
-                                <li><a href="/cr/crList">REVIEW</a></li>
-                                <li><a href="/product/list">COURSES</a></li>
-                                <li><a href="/notice/list">NOTICE</a></li>
-                                <li><a href="/qna/qnaList">QNA</a></li>
+                                <li><a href="/cr/crList">수강후기</a></li>
+                                <li><a href="/product/list">강의&책</a></li>
+                                <li><a href="/notice/list">공지사항</a></li>
+                                <li><a href="/qna/qnaList">질문&응답</a></li>
                             </ul>
 
                             <ul class="w-50">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/event/list">Events</a></li>
+                                <li><a href="/">메인화면</a></li>
+                                <li><a href="/event/list">이벤트</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Instructor</a></li>
                             </ul>
@@ -89,38 +89,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <h2>Follow</h2>
 
                             <ul class="follow-us flex flex-wrap align-items-center">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://ko-kr.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
                             </ul>
                         </div><!-- .quick-links -->
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->
         </div><!-- .footer-widgets -->
- <div class="footer-bar">
-            <div class="container">
-                <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <div class="download-apps flex flex-wrap justify-content-center justify-content-lg-start align-items-center">
-                            <a href="#"><img src="/resources/images/app-store.png" alt=""></a>
-                            <a href="#"><img src="/resources/images/play-store.png" alt=""></a>
-                        </div><!-- .download-apps -->
 
-                    </div>
-
-                    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
-                        <div class="footer-bar-nav">
-                            <ul class="flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-                                <li><a href="#">이용약관</a></li>
-                                <li><a href="#">환불규정</a></li>
-                                <li><a href="#">개인정보처리방침</a></li>
-                            </ul>
-                        </div><!-- .footer-bar-nav -->
-                    </div><!-- .col-12 -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .footer-bar -->
 </body>
 </html>
