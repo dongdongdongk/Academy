@@ -257,7 +257,6 @@
 														<span>글쓰기</span>
 													</button>	
 													
-													  <!-- <button type="submit" class="btn btn-primary mb-3 greentop">검색</button>					 -->
 												  </div>
 											</c:if>
 										</c:if>
@@ -275,70 +274,11 @@
 							</div>
 						</c:if>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						<!-- paging
-						<div class="row col-md-7 mx-auto">
-							<nav aria-label="Page navigation example">
-								<ul class="pagination">
-									<li class="page-item"><a class="page-link" href="#" aria-label="Previous"
-											data-board-page="1"> <span aria-hidden="true">&laquo;</span>
-										</a></li>
-
-
-									<li class="page-item ${pager.before?'disabled':''}"><a class="page-link" href="#"
-											aria-label="Previous" data-board-page="${pager.startNum-1}"> <span
-												aria-hidden="true">&lsaquo;</span>
-										</a></li>
-
-									<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
-										<li class="page-item"><a class="page-link" href="#"
-												data-board-page="${i}">${i}</a></li>
-									</c:forEach>
-
-									<li class="page-item ${pager.after eq false ? 'disabled':''}">
-										<%-- ${pager.after eq false ? 'disabled' :''} --%> <a class="page-link" href="#"
-												aria-label="Next" data-board-page="${pager.lastNum+1}"> <span
-													aria-hidden="true">&rsaquo;</span>
-											</a>
-									</li>
-
-									<li class="page-item">
-										<%-- ${pager.after eq false ? 'disabled' :''} --%> <a class="page-link" href="#"
-												aria-label="Next" data-board-page="${pager.totalPage}"> <span
-													aria-hidden="true">&raquo;</span>
-											</a>
-									</li>
-
-								</ul>
-							</nav>
-						</div> -->
-
-
-
 					</div>
-				</div>
-   		</div>		
+
 </header>
-				<c:import url="../template/topBtn.jsp"></c:import>
+
+<c:import url="../template/topBtn.jsp"></c:import>
 <c:import url="../template/tempjs.jsp"></c:import>
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
