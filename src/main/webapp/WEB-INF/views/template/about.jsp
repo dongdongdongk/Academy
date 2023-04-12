@@ -92,8 +92,21 @@
                                     <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                         <li class="current-menu-item"><a href="/">Home</a></li>
                                         <li><a href=>About</a></li>
+                                        <li><a href="/product/list">수강신청</a></li>
                 
                                     </ul>
+                                    
+                                    <div class="dropdown">
+                                        <button class="dropbtn">고객센터</button>
+                                        <div class="dropdown-view">
+                                            <ul class="dropdown-content">
+                                                <li><a href="/cr/crList">수강후기</a></li>
+                                                <li><a href="/notice/list">공지사항</a></li>
+                                                <li><a href="/qna/qnaList">질문응답</a></li>
+                                                <li><a href="/event/list">이벤트</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
 
                                     <div class="hamburger-menu d-lg-none">
                                         <span></span>
@@ -274,9 +287,14 @@
 
                             <div class="col-12 col-lg-6 order-1 order-lg-2 content-wrap h-100">
                                 <div class="entry-content">
-                                	<p>교사, 학생 및 대학으로서 우리는 이 교육을 모든 사람들이 이용할 수 있도록 도울 수 있습니다.</p>
+                                	<p>교사, 학생 및 대학으로서 우리는 이 교육을 모든 사람들이 이용할 수 있도록 도울 수 있습니다. 우린 된다고 생각 합니다.</p>
+                                        
+                                   
+                                    
+                                    
                                 </div><!-- .entry-content -->
 
+                                
                                 <div class="entry-footer">
                                     <h3 class="testimonial-user">장현서 교수  - <span>University in Oxford</span></h3>
                                 </div><!-- .entry-footer -->

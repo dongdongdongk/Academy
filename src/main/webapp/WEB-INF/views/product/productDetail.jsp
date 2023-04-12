@@ -73,17 +73,17 @@
       <c:if test="${not empty dto}">
         <%-- <h3>상품 번호 : ${dto.num}</h3> --%>
         <h3 class="product-price">${dto.title}</h3>
-        <%-- <h3 class="product-price">${dto.price}</h3> --%>
+        <h3 class="product-price">${dto.price}</h3>
         <%-- <h3>카테고리 : ${dto.categoryNum}</h3> --%>
         <h3 class="product-price">${dto.info}</h3>
 
-        <div class="row">
+        <%-- <div class="row">
           <c:forEach items="${dto.productImgDTOs}" var="fileDTO">
             <div class="col-md-3 mb-2">
               <img  src="../resources/images/${fileDTO.save}" class="product-price">
             </div>
           </c:forEach>
-        </div>
+        </div> --%>
        
 		
         <form action="./update" id="frm">
