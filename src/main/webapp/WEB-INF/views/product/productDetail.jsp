@@ -79,7 +79,7 @@
 </header>
 
 
-
+<c:import url="../template/topBtn.jsp"></c:import>
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
 <c:import url="../template/kakao.jsp"></c:import>

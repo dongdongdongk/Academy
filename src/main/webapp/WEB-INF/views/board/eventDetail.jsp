@@ -67,17 +67,11 @@
 				</c:if>
 
 				<a class="btn" href= "./list">목록</a>
-
 			</div>
-		</div>
-		
-		<!-- TopButton -->
-		<div class="quick" style="display: block;">
-			<a class="topBtn bgColor"></a>
 		</div>
 	</div>
 
-<script src="/resources/js/top.js"></script>
+<c:import url="../template/topBtn.jsp"></c:import>
 <c:import url="../template/kakao.jsp"></c:import>	
 <c:import url="../template/bottom.jsp"></c:import>
 <c:import url="../template/common_js.jsp"></c:import>

@@ -116,7 +116,7 @@
 			</div>
 			</div>
 		</div>
-	
+		<c:import url="../template/topBtn.jsp"></c:import>
 		<script src="../resources/js/boardForm.js"></script>
 		<c:import url="../template/kakao.jsp"></c:import>
 		<c:import url="../template/common_js.jsp"></c:import>

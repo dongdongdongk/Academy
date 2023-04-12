@@ -178,8 +178,11 @@
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->
-            
-            
+
+    
+        
+
+        <c:import url="../template/topBtn.jsp"></c:import>
         <c:import url="../template/common_js.jsp"></c:import>
         <c:import url="../template/kakao.jsp"></c:import>
         <c:import url="../template/tempjs.jsp"></c:import>

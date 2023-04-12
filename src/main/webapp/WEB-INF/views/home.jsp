@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>동영상 강좌 서비스</title>
-
+    <c:import url="./template/common_css.jsp"></c:import>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -929,6 +929,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div><!-- .footer-bar -->
     </footer><!-- .site-footer -->
 
+<c:import url="./template/topBtn.jsp"></c:import>
+<c:import url="./template/common_js.jsp"></c:import>
 <script type='text/javascript' src='/resources/js/jquery.js'></script>
 <script type='text/javascript' src='/resources/js/swiper.min.js'></script>
 <script type='text/javascript' src='/resources/js/masonry.pkgd.min.js'></script>

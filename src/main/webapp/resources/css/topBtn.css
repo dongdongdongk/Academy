@@ -1,0 +1,35 @@
+.bgColor {
+    background-color: #1bceb8 !important;
+    color: white;
+    font-size: 1rem;
+    border: 1px white; 
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.quick {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 9999;
+    display: none;
+}
+
+.quick .topBtn {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-image: url(/resources/images/topBtn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 25px auto 0;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 16%);
+}
+
+.quick .topBtn:hover {
+    cursor: pointer;
+}
+
