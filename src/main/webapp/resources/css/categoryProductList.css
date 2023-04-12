@@ -1,0 +1,72 @@
+.category_event {
+    width: 60%;
+    display: table;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin: 50px auto 45px;
+    background: #fff;
+}
+
+.category_event .category_cont .category_ul .nav-item .nav-link {
+    font-size: 1rem;
+    color: #666;
+    letter-spacing: -0.3pt;
+    line-height: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.category_event .category_cont .category_ul .nav-item .nav-link:hover {
+    color: #1bceb8 !important;
+    font-weight: bold;
+}
+
+.event_add {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container .search_contents {
+    margin-left: 650px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+.event_contents .event_view .view_title {
+    height: 120px;
+    margin-bottom: 70px;
+    border-bottom: 1px solid #ddd;
+}
+
+.event_contents .event_view .view_title h3 {
+    font-size: 1.765rem;
+    color: #222;
+    letter-spacing: -0.7pt;
+    line-height: 2;
+    margin: 0 0 15px;
+    font-weight: bold;
+}
+
+.event_contents .event_view .view_title ul {
+    margin-top: 30px;
+    margin-left: 350px;
+}
+
+.event_contents .event_view .view_title ul li {
+    float: left;
+    margin-right: 65px;
+    letter-spacing: -0.3pt;
+    line-height: 1;
+}
+
+.event_contents .event_view .view_title ul li span {
+    margin-right: 20px;
+    font-weight: bold;
+}

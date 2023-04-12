@@ -12,6 +12,7 @@
 <c:import url="../template/common_css.jsp"></c:import>
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+<link rel="stylesheet" href="/resources/css/productDetail.css">
 </head>
 <style>
 .product-price {
@@ -25,6 +26,10 @@
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
+.custom-color {
+    background-color: #0d7dec;
+}
+
 </style>
 <body class="courses-page">
             <div class="page-header">
@@ -33,7 +38,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <header class="entry-header">
-                                    <h1>상품의 자세한 내용</h1>
+                                    <h1>상품 설명</h1>
                                 </header>
                             </div>
                         </div>
@@ -44,22 +49,39 @@
 <c:import url="../template/header.jsp"></c:import>
 <header style="margin-top: 50px;">
 
+
 <!-- Main content -->
-<main class="container my-5">
-  <div class="row">
+<main class="container my-3">
+<div class="col-md-3" style="margin-left: 1px;" style="height: 30px;" style="width: 30px;">
+      
+      <div class="card my-3">
+        <div class="card-header custom-color">이 책과 관련된 할인사이트</div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item"><a href="https://search.shopping.naver.com/book/home">네이버 도서</a></li>
+            <li class="list-group-item"><a href="https://www.kyobobook.co.kr/">교보문고 도서</a></li>
+            <li class="list-group-item"><a href="http://www.yes24.com/">YES24 도서</a></li>
+            <li class="list-group-item"><a href="https://www.aladin.co.kr/">알라딘 도서</a></li>
+            <li class="list-group-item"><a href="http://www.ypbooks.co.kr/">영품문고 도서</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  <div class="row" style="margin-right: 1px;">
     <div class="col-md-8">
      
       <c:if test="${not empty dto}">
         <%-- <h3>상품 번호 : ${dto.num}</h3> --%>
-        <h3 class="product-price">상품 이름 : ${dto.title}</h3>
-        <h3 class="product-price">상품 가격 : ${dto.price}</h3>
+        <h3 class="product-price">${dto.title}</h3>
+        <h3 class="product-price">${dto.price}</h3>
         <%-- <h3>카테고리 : ${dto.categoryNum}</h3> --%>
         <h3 class="product-price">상품 내용 : ${dto.info}</h3>
 
         <div class="row">
           <c:forEach items="${dto.productImgDTOs}" var="fileDTO">
             <div class="col-md-4 mb-4">
-              <img src="../resources/images/${fileDTO.save}" class="img-fluid">
+              <img  src="../resources/images/${fileDTO.save}" class="product-price">
             </div>
           </c:forEach>
         </div>
@@ -81,10 +103,10 @@
         </form>
       </c:if>
     </div>
-     <div class="col-md-4">
+     <!-- <div class="col-md-4" style="margin-left: 0;">
       
       <div class="card my-4">
-        <div class="card-header">이 책과 관련된 할인사이트</div>
+        <div class="card-header custom-color">이 책과 관련된 할인사이트</div>
         <div class="card-body">
           <ul class="list-group">
             <li class="list-group-item"><a href="https://search.shopping.naver.com/book/home">네이버 도서</a></li>
@@ -95,7 +117,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 	
 	  

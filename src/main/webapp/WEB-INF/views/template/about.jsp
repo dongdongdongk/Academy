@@ -246,17 +246,17 @@
                         <div class="row">
                             <div class="col-12 col-lg-6 order-2 order-lg-1 flex align-items-center mt-5 mt-lg-0">
                                 <figure class="user-avatar">
-                                    <img src="/resources/images/team-1.jpg" alt="">
+                                    <img src="/resources/images/교수.png" alt="">
                                 </figure><!-- .user-avatar -->
                             </div><!-- .col -->
 
                             <div class="col-12 col-lg-6 order-1 order-lg-2 content-wrap h-100">
                                 <div class="entry-content">
-                                    <p>교사, 학생 및 대학으로서 우리는 이 교육을 모든 사람들이 이용할 수 있도록 도울 수 있습니다.</p>
+                                    <p>저는 어린 나이에 쌍기술사와 기사 자격증만 8개를 보유하고 있습니다 누구보다도 기사 자격증에 관하여는 자신있고 증명했습니다.</p>
                                 </div><!-- .entry-content -->
 
                                 <div class="entry-footer">
-                                    <h3 class="testimonial-user">장현서 교수 - <span>University in UK</span></h3>
+                                    <h3 class="testimonial-user">이규원 교수 - <span>University in UK</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -268,17 +268,17 @@
                         <div class="row">
                             <div class="col-12 col-lg-6 order-2 order-lg-1 flex align-items-center mt-5 mt-lg-0">
                                 <figure class="user-avatar">
-                                    <img src="/resources/images/user-2.jpg" alt="">
+                                    <img src="/resources/images/교수2.png" alt="">
                                 </figure><!-- .user-avatar -->
                             </div><!-- .col -->
 
                             <div class="col-12 col-lg-6 order-1 order-lg-2 content-wrap h-100">
                                 <div class="entry-content">
-                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                	<p>교사, 학생 및 대학으로서 우리는 이 교육을 모든 사람들이 이용할 수 있도록 도울 수 있습니다.</p>
                                 </div><!-- .entry-content -->
 
                                 <div class="entry-footer">
-                                    <h3 class="testimonial-user">Robert Stephens - <span>University in Oxford</span></h3>
+                                    <h3 class="testimonial-user">장현서 교수  - <span>University in Oxford</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -290,17 +290,17 @@
                         <div class="row">
                             <div class="col-12 col-lg-6 flex order-2 order-lg-1 align-items-center mt-5 mt-lg-0">
                                 <figure class="user-avatar">
-                                    <img src="/resources/images/user-3.jpg" alt="">
+                                    <img src="/resources/images/교수3.png" alt="">
                                 </figure><!-- .user-avatar -->
                             </div><!-- .col -->
 
                             <div class="col-12 col-lg-6 order-1 order-lg-2 content-wrap h-100">
                                 <div class="entry-content">
-                                    <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                                   	<p>저는 누구보다 수험생 여러분의 마음을 잘 알고 이해하는  교수진으로써 함께 앞으로 더욱 빛나는 미래를 그립시다</p>
                                 </div><!-- .entry-content -->
 
                                 <div class="entry-footer">
-                                    <h3 class="testimonial-user">James Stephens - <span>University in Cambridge</span></h3>
+                                    <h3 class="testimonial-user">김동현 교수 - <span>University in Cambridge</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -329,7 +329,7 @@
 
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="team-member">
-                    <img src="/resources/images/team-1.jpg" alt="">
+                    <img src="/resources/images/교수.png" alt="">
 
                     <h3>장현서</h3>
                     <h4>JAVA</h4>
@@ -344,10 +344,10 @@
 
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="team-member">
-                    <img src="/resources/images/team-2.jpg" alt="">
+                    <img src="/resources/images/교수2.png" alt="">
 
                     <h3>김동현</h3>
-                    <h4>Phython</h4>
+                    <h4>Python</h4>
 
                     <ul class="p-0 m-0 d-flex justify-content-center align-items-center">
                         <li><a href="https://ko-kr.facebook.com/"><i class="fa fa-facebook"></i></a></li>
@@ -359,7 +359,7 @@
 
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="team-member">
-                    <img src="/resources/images/user-1.jpg" alt="">
+                    <img src="/resources/images/교수3.png" alt="">
 
                     <h3>이규원</h3>
                     <h4>DATABASE</h4>
@@ -374,7 +374,7 @@
 
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="team-member">
-                    <img src="/resources/images/team-4.jpg" alt="">
+                    <img src="/resources/images/교수4.png" alt="">
 
                     <h3>정상구</h3>
                     <h4>C#</h4>
@@ -478,22 +478,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             </div><!-- .container -->
         </div><!-- .footer-widgets -->
 
-        <div class="footer-bar">
-            <div class="container">
-                <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <div class="download-apps flex flex-wrap justify-content-center justify-content-lg-start align-items-center">
-                            <a href="#"><img src="images/app-store.png" alt=""></a>
-                            <a href="#"><img src="images/play-store.png" alt=""></a>
-                        </div><!-- .download-apps -->
-
-                    </div>
+       
     </footer><!-- .site-footer -->
-    <script type='text/javascript' src='js/jquery.js'></script>
-    <script type='text/javascript' src='js/swiper.min.js'></script>
-    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
-    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
-    <script type='text/javascript' src='js/custom.js'></script>
-
+   	<script type='text/javascript' src='/resources/js/jquery.js'></script>
+	<script type='text/javascript' src='/resources/js/swiper.min.js'></script>
+	<script type='text/javascript' src='/resources/js/masonry.pkgd.min.js'></script>
+	<script type='text/javascript' src='/resources/js/jquery.collapsible.min.js'></script>
+	<script type='text/javascript' src='/resources/js/custom.js'></script>
 </body>
 </html>
