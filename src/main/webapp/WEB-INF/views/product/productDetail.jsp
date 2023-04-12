@@ -49,32 +49,31 @@
 <c:import url="../template/header.jsp"></c:import>
 <header style="margin-top: 50px;">
 
-
-<!-- Main content -->
-<main class="container my-3">
 <div class="col-md-3" style="margin-left: 1px;" style="height: 30px;" style="width: 30px;">
       
-      <div class="card my-3">
+      <div id="sidebar3" class="card my-3" id="">
         <div class="card-header custom-color">이 책과 관련된 할인사이트</div>
         <div class="card-body">
           <ul class="list-group">
             <li class="list-group-item"><a href="https://search.shopping.naver.com/book/home">네이버 도서</a></li>
             <li class="list-group-item"><a href="https://www.kyobobook.co.kr/">교보문고 도서</a></li>
             <li class="list-group-item"><a href="http://www.yes24.com/">YES24 도서</a></li>
-            <li class="list-group-item"><a href="https://www.aladin.co.kr/">알라딘 도서</a></li>
-            <li class="list-group-item"><a href="http://www.ypbooks.co.kr/">영품문고 도서</a></li>
           </ul>
         </div>
       </div>
     </div>
+
+<!-- Main content -->
+<main class="container my-3" style="margin-right: 10px;" style="margin-top: 50px;">
+
     
-  <div class="row" style="margin-right: 1px;">
+  <div class="row">
     <div class="col-md-8">
      
       <c:if test="${not empty dto}">
         <%-- <h3>상품 번호 : ${dto.num}</h3> --%>
         <h3 class="product-price">${dto.title}</h3>
-        <h3 class="product-price">${dto.price}</h3>
+        <%-- <h3 class="product-price">${dto.price}</h3> --%>
         <%-- <h3>카테고리 : ${dto.categoryNum}</h3> --%>
         <h3 class="product-price">상품 내용 : ${dto.info}</h3>
 
@@ -103,21 +102,7 @@
         </form>
       </c:if>
     </div>
-     <!-- <div class="col-md-4" style="margin-left: 0;">
-      
-      <div class="card my-4">
-        <div class="card-header custom-color">이 책과 관련된 할인사이트</div>
-        <div class="card-body">
-          <ul class="list-group">
-            <li class="list-group-item"><a href="https://search.shopping.naver.com/book/home">네이버 도서</a></li>
-            <li class="list-group-item"><a href="https://www.kyobobook.co.kr/">교보문고 도서</a></li>
-            <li class="list-group-item"><a href="http://www.yes24.com/">YES24 도서</a></li>
-            <li class="list-group-item"><a href="https://www.aladin.co.kr/">알라딘 도서</a></li>
-            <li class="list-group-item"><a href="http://www.ypbooks.co.kr/">영품문고 도서</a></li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
+   
   </div>
 	
 	  
