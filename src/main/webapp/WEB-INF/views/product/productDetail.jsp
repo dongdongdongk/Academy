@@ -29,7 +29,9 @@
 .custom-color {
     background-color: #0d7dec;
 }
-
+.ii{
+display : inline-block;
+}
 </style>
 <body class="courses-page">
             <div class="page-header">
@@ -71,20 +73,18 @@
     <div class="col-md-8">
      
       <c:if test="${not empty dto}">
-        <%-- <h3>상품 번호 : ${dto.num}</h3> --%>
-        <h3 class="product-price">${dto.title}</h3>
-        <h3 class="product-price">${dto.price}</h3>
-        <%-- <h3>카테고리 : ${dto.categoryNum}</h3> --%>
-        <h3 class="product-price">${dto.info}</h3>
-
-        <%-- <div class="row">
-          <c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-            <div class="col-md-3 mb-2">
-              <img  src="../resources/images/${fileDTO.save}" class="product-price">
+        <c:forEach items="${dto.productImgDTOs}" var="fileDTO">
+            <div class="col-md-3 mb-3 ii">
+              <img  src="../resources/images/${fileDTO.save}" class="product-price" style="width: 150%;">
             </div>
-          </c:forEach>
-        </div> --%>
-       
+        </c:forEach>
+      
+	    <div style="display: flex; justify-content: space-between; align-items: center;">
+		<h3 class="product-price" style="width: 30%; margin-right: 100px;">${dto.title}</h3>
+		<h3 class="product-price" style="width: 20%; margin-right: 50px;">${dto.price}</h3>
+		</div>
+        <h3 class="product-price">${dto.info}</h3>
+      
 		
         <form action="./update" id="frm">
           <input type="hidden" name="num" value="${dto.num}">

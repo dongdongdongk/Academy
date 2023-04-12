@@ -252,7 +252,7 @@
 
 											<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
 												<div class="col-12 float-right">
-													<button type="button" class="image-button  float-right color-5 wow fadeIn " data-wow-delay="0.1s" onclick="location.href='./add'">
+													<button type="button" class="image-button  float-right color-5 wow fadeIn " data-wow-delay="0.1s" onclick="location.href='./productAdd'">
 														<img src="/resources/images/pen2.png" alt="Button icon">
 														<span>글쓰기</span>
 													</button>	
@@ -264,14 +264,6 @@
 									</div>
 								</div>
 
-
-								<div class="row mt-4 d-flex align-items-center">
-									<div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
-										<a href="catalog.html">
-											<i class="fas fa-arrow-left mr-2"></i> Continue Shopping</a>
-									</div>
-								</div>
-							</div>
 						</c:if>
 
 					</div>
