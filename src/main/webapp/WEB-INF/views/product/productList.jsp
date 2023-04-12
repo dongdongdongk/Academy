@@ -9,11 +9,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title></title>
 <c:import url="../template/common_css.jsp"></c:import>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="/resources/css/productList.css">
-<link rel="stylesheet" href="/resources/css/categoryProductList.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+				<link rel="stylesheet"
+					href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+				<link rel="stylesheet" href="/resources/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/resources/css/categoryProductList.css">
 <c:import url="../template/tempcss.jsp"></c:import>
+				<style>
+					.item {
+						padding: 70px;
+						margin-bottom: 70px;
+					}
+				</style>
 </head>
 
 
@@ -40,6 +49,8 @@
 
 					
 
+						<div class="row mb-4 ">
+							<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3 wow fadeInDown" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">상품LIST</h1>
 			
 
 						
@@ -75,107 +86,254 @@
 
 						
 
-	<div class="container-fluid my-10 mx-auto">
-    <div class="d-flex justify-content-center">
-        <div class="my-element" style="width: 80%; margin: 0 auto;">
+
+
+						<!-- <div class="goods_table_wrap">
 						
-						
+							<c:if test="${listcheck != 'empty'}">
+								<table class="goods_table">
+									<thead>
+										<tr>
+
+											<td class="th_column_1">상품 번호</td>
+											<td class="th_column_4">상품 이미지</td>
+											<td class="th_column_1">상품 이름</td>
+											<td class="th_column_3">가격</td>
+											<td class="th_column_4">등록날짜</td>
+											<td class="th_column_5">카테고리</td>
+										</tr>
+									</thead>
+
+
+									<tbody class="table-group-divider">
+
+										<c:forEach items="${list}" var="dto">
+
+
+											<tr>
+												<td>${dto.num}</td>
+
+												<td class="tbl_td">
+													<div class="row">
+														<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
+															<div class="col-md-10 mb-10">
+																<img src="../resources/images/${fileDTO.save}"
+																	class="img-fluid ">
+															</div>
+														</c:forEach>
+													</div>
+												</td>
+												<td class="tbl_td"><a
+														href="./productDetail?num=${dto.num}">${dto.title}</a></td>
+												<td class="tbl_td">${dto.price}</td>
+												<td class="tbl_td">${dto.regDate}</td>
+												<c:forEach items="${dto.categoryDTOs}" var="category">
+													<td class="tbl_td">${category.name}</td>
+												</c:forEach>
+
+
+
+
+											</tr>
+										</c:forEach>
+									</tbody>
+								</table>
+							</c:if>
+						</div> -->
+
+
 						<c:if test="${listcheck != 'empty'}">
 							<div class="d-flex justify-content-center">
 								<div class="row w-75 mx-auto ">
 									<div class="col-lg-12 col-md-12 col-12 ">
-										<h3 class="display-5 mb-2 text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"></h3>
+										<!-- <h3 class="display-5 mb-2 text-center wow fadeInUp" data-wow-delay="0.1s"
+											style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+											ProductList</h3>
 										<p class="mb-5 text-center">
-											<i class="text-info font-weight-bold wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"></i></p>
-										<table id="shoppingCart" class="table table-condensed table-responsive">
-											<thead>
-												<tr>
-													<th style="width:60%">Product</th>
-													<th style="width:12%">Price</th>
-													<th style="width:12%">Category</th>
-													<th style="width:6%"></th>
+											<i class="text-info font-weight-bold wow fadeInUp" data-wow-delay="0.1s"
+												style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">3</i>
+											items in your cart
+										</p> -->
+										<!-- 검색창 -->
+										<div class="row col-md-12 d-flex justify-content-end">
+											<form class="row g-3" action="./list" method="get" id="searchForm">
+												<input type="hidden" name="page" value="1" id="page">
+												<div class="col-auto" hidden>
+													<label for="kind" class="visually-hidden">Kind</label> <select
+														class="form-select" name="kind" id="kind"
+														aria-label="Default select example">
+														<option value="title" ${pager.kind eq 'title' ? 'selected' :''}>
+															Title</option>
+														<%-- <option value="contents" ${pager.kind eq 'info'
+															? 'selected' :''}>info
+															</option> --%>
+															<%-- <option value="writer" ${pager.kind eq 'writer'
+																? 'selected' :''}>Writer</option> --%>
+													</select>
+												</div>
+												<div class="col-auto ml-auto">
+													<div class="input-group mb-4">
+													  <input type="text" class="form-control mb-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"
+														value="${pager.search}" name="search" id="search" placeholder="검색어를 입력하세요">
+													  <button type="submit" style="background: none; border: none; cursor: pointer;">
+														<img src="/resources/images/search.png" alt="search" width="30" height="30">
+													  </button>
+													</div>
+												  </div>
+
+												<!-- <div class="col-auto">
+													<button type="submit" class="btn btn-primary mb-3">검색</button>
+												</div> material-symbols-outlined -->
+											</form>
+
+
+										</div>
+										<table id="shoppingCart" class="table table-condensed table-responsive ">
+											<thead >
+												<tr class="wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"">
+													<th style="width:65%">Product</th>
+													<th style="width:18%">Price</th>
+													<th style="width:18%">Category</th>
+													<th style="width:3%"></th>
 												</tr>
 											</thead>
-											
-											
+
+
 											<tbody>
-											
 												<c:forEach items="${list}" var="dto">
-												
-													<tr class="my-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-														<td class="item gy-3">
-															<div class="row gy-3">
-																<c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-																<div class="col-md-3 mb-3">
-																	<img src="../resources/images/${fileDTO.save}"
-																		class="img-fluid ">
+													<tr class="my-6 wow fadeInUp" data-wow-delay="0.1s"
+														style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+														<td class="item pt-5 pb-5">
+															<div class="row">
+																<div class="col-md-4 mb-4 ">
+																	<c:forEach items="${dto.productImgDTOs}"
+																		var="fileDTO">
+																		<img class="thumbnail2 radius"
+																			src="../resources/images/${fileDTO.save}"
+																			class="img-fluid ">
+																	</c:forEach>
 																</div>
-															</c:forEach>
-																<div class="col-md-9 text-left mt-sm-2">
-																	<h4><a href="./productDetail?num=${dto.num}">${dto.title}</a></h4>
-																	<p class="font-weight-light">등록일:${dto.regDate}</p>
+																<div class="col-md-7 pr-5 ml-auto my-auto">
+																	<h4 class="mb-5"><a
+																			href="./productDetail?num=${dto.num}">${dto.title}</a>
+																	</h4>
+																	<p class="font-weight-light pt-4">등록일:${dto.regDate}
+																	</p>
 																</div>
 															</div>
 														</td>
-														<td data-th="Price">₩${dto.price}원</td>
-														
-														<td class="actions" data-th="">
-															<div class="text-right">
-																<button class="btn btn-white border-secondary bg-white btn-md mb-2">
-																	<span class="material-symbols-outlined">menu_book</span>
-																</button>
-																<button class="btn btn-white border-secondary bg-white btn-md mb-2">
-																	<span class="material-symbols-outlined">laptop_chromebook</span>
-																</button>
+														<td class="pt-5 pb-5 strongFont align-middle" data-th="Price"><strong>${dto.price}원</strong></td>
+														<td class="actions pt-5 pb-5 align-middle" data-th="">
+															<div class="mr-auto">
+																<c:if test="${dto.categoryNum==1}">
+																	<button
+																		class="btn btn-white border-secondary bg-white btn-md mb-2">
+																		<span
+																			class="material-symbols-outlined mt-1">menu_book</span>
+																	</button>
+																</c:if>
+																<c:if test="${dto.categoryNum==2}">
+																	<button
+																		class="btn btn-white border-secondary bg-white btn-md mb-2">
+																		<span
+																			class="material-symbols-outlined mt-1">laptop_chromebook</span>
+																	</button>
+																</c:if>
 															</div>
 														</td>
 													</tr>
-													
 												</c:forEach>
+
 											</tbody>
 										</table>
+
 										
+										<c:if test="${not empty member}">
+
+											<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
+												<div class="col-12 float-right">
+													<button type="button" class="image-button  float-right color-5 wow fadeIn " data-wow-delay="0.1s" onclick="location.href='./add'">
+														<img src="/resources/images/pen2.png" alt="Button icon">
+														<span>글쓰기</span>
+													</button>	
+													
+													  <!-- <button type="submit" class="btn btn-primary mb-3 greentop">검색</button>					 -->
+												  </div>
+											</c:if>
+										</c:if>
+
+									</div>
+								</div>
+
+
+								<div class="row mt-4 d-flex align-items-center">
+									<div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
+										<a href="catalog.html">
+											<i class="fas fa-arrow-left mr-2"></i> Continue Shopping</a>
 									</div>
 								</div>
 							</div>
 						</c:if>
-								<!-- 검색창 -->
-						<div class="row col-md-7 mx-auto">
-						<div class="d-flex justify-content-center">
-        					<div class="my-element" style="width: 80%; margin: 0; margin-top: 20px;">
-							<form class="row g-3" action="./list" method="get" id="searchForm">
-								<input type="hidden" name="page" value="1" id="page">
-								<div class="col-auto">
-									<label for="kind" class="visually-hidden">Kind</label> <select class="form-select"
-										name="kind" id="kind" aria-label="Default select example">
-										<option value="title" ${pager.kind eq 'title' ? 'selected' :''}>상품 이름</option>
-										<%-- <option value="contents" ${pager.kind eq 'info' ? 'selected' :''}>info
-											</option> --%>
-											<%-- <option value="writer" ${pager.kind eq 'writer' ? 'selected'
-												:''}>Writer</option> --%>
-									</select>
-								</div>
-								<div class="col-auto">
-									<label for="search" class="visually-hidden">Search</label>
-									<input type="text" class="form-control" value="${pager.search}" name="search" id="search" placeholder="검색어를 입력하세요">
-								</div>
-								<div class="col-auto">
-									<button type="submit" class="btn btn-primary mb-3">검색</button>
-								</div>
-							</form>
-							<div class="row mx-auto">
-							<c:if test="${not empty member}">
 
-								<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
-									<div class="row col-md-7 mx-auto">
-										<a href="./productAdd" class="btn btn-outline-warning col-5">상품등록</a>
-									</div>
-								</c:if>
-							</c:if>
-							</div>
-						</div>
-							</div>
-					     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<!-- paging
+						<div class="row col-md-7 mx-auto">
+							<nav aria-label="Page navigation example">
+								<ul class="pagination">
+									<li class="page-item"><a class="page-link" href="#" aria-label="Previous"
+											data-board-page="1"> <span aria-hidden="true">&laquo;</span>
+										</a></li>
+
+
+									<li class="page-item ${pager.before?'disabled':''}"><a class="page-link" href="#"
+											aria-label="Previous" data-board-page="${pager.startNum-1}"> <span
+												aria-hidden="true">&lsaquo;</span>
+										</a></li>
+
+									<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
+										<li class="page-item"><a class="page-link" href="#"
+												data-board-page="${i}">${i}</a></li>
+									</c:forEach>
+
+									<li class="page-item ${pager.after eq false ? 'disabled':''}">
+										<%-- ${pager.after eq false ? 'disabled' :''} --%> <a class="page-link" href="#"
+												aria-label="Next" data-board-page="${pager.lastNum+1}"> <span
+													aria-hidden="true">&rsaquo;</span>
+											</a>
+									</li>
+
+									<li class="page-item">
+										<%-- ${pager.after eq false ? 'disabled' :''} --%> <a class="page-link" href="#"
+												aria-label="Next" data-board-page="${pager.totalPage}"> <span
+													aria-hidden="true">&raquo;</span>
+											</a>
+									</li>
+
+								</ul>
+							</nav>
+						</div> -->
+
+
+
 					</div>
 				</div>
    		</div>		

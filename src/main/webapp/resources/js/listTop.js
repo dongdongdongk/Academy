@@ -2,8 +2,8 @@
 $(document).ready(function() {
    $(".check-item").each(function() {
        if($(this).attr('data-num-check') == '1') {
-           let $row = $(this).closest('tr');
-           $row.insertBefore($row.parent().find('tr:first'));
+           let $row = $(this).closest('tr').addClass("trfirst");
+           $row.insertBefore($row.parent().find('tr:first').addClass("trfirst"));
            $row.find('.title').addClass("checkcolor");
            let img = '<img class="iconSize" src="/resources/images/notice.png">';
            $row.find('.title').append(img);

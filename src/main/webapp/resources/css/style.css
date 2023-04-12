@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
 body {
@@ -655,7 +662,7 @@ a.btn {
 
 a.btn:hover {
     color: #fff;
-    background: #34d986;
+    background: #7bd1a6;
 }
 
 /*
@@ -2744,6 +2751,12 @@ p.footer-copyright {
     object-fit: cover;
 }
 
+.thumbnail2 {
+    width: 285px;
+    height: 200px;
+    object-fit: cover;
+}
+
 .iconSize {
     width : 25px;
     height : 25px;
@@ -2752,7 +2765,13 @@ p.footer-copyright {
 .checkcolor {
     color: red;
     font-weight: 900; 
-    background-color: antiquewhite;
+    
+    
+}
+
+.trfirst {
+
+    background-color: #fcf8f8
 }
 
 .iconSize2 {
@@ -2818,3 +2837,74 @@ p.footer-copyright {
     color: #19c880;
   }
  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+
+
+  .product-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+    float: left;
+  }
+  
+  .product-details {
+    overflow: hidden;
+  }
+
+  * {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.strongFont {
+
+    color: #19c880;
+
+    font-family: 'Noto Sans KR', sans-serif;
+
+    font-weight: bold;
+
+    font-size: large
+
+}
+
+.greentop {
+
+    color: #ffffff;
+    background-color:#19c880 ;
+}
+
+
+.image-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 48px;
+    background-color: #19c880;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .image-button img {
+    margin-right: 15px;
+    width: 17px;
+    height: 17px;
+    color: white;
+    filter: brightness(0) invert(1);
+  }
+
+  .green {
+    color: #19c880;
+
+  }
+
+  .tableSize {
+    width:100%
+
+  }
