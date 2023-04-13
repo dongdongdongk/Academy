@@ -49,10 +49,10 @@ public class ProductController {
 	   
 	   //list
 	   @RequestMapping(value="list", method = RequestMethod.GET)
-		public ModelAndView getProductList(Pager pager)throws Exception{
+		public ModelAndView getProductList()throws Exception{
 			ModelAndView mv = new ModelAndView();
 		
-			List<ProductDTO> ar = productService.getProductList(pager);
+			List<ProductDTO> ar = productService.getProductList();
 			
 		      mv.addObject("list",ar);
 		      
@@ -63,10 +63,10 @@ public class ProductController {
 	   
 	   // all list
 	   @GetMapping(value = "allList")
-	 	public ModelAndView getAllList(Pager pager)throws Exception{
+	 	public ModelAndView getAllList()throws Exception{
 	 		ModelAndView mv = new ModelAndView();
 	 		
-	 		List<ProductDTO> ar = productService.getProductList(pager);
+	 		List<ProductDTO> ar = productService.getProductList();
 	 		
 	 		mv.addObject("list",ar);  
 	 		mv.setViewName("product/productAll");
@@ -76,10 +76,10 @@ public class ProductController {
 	   
 	   // book list
 	   @GetMapping(value = "bookList")
-	 	public ModelAndView getBookList(Pager pager)throws Exception{
+	 	public ModelAndView getBookList()throws Exception{
 	 		ModelAndView mv = new ModelAndView();
 	 		
-	 		List<ProductDTO> ar = productService.getProductList(pager);
+	 		List<ProductDTO> ar = productService.getProductList();
 	 		
 	 		mv.addObject("list",ar);  
 	 		mv.setViewName("product/productBook");
@@ -89,10 +89,10 @@ public class ProductController {
 	   
 	   // cr list
 	   @GetMapping(value = "crList")
-	 	public ModelAndView getCrList(Pager pager)throws Exception{
+	 	public ModelAndView getCrList()throws Exception{
 	 		ModelAndView mv = new ModelAndView();
 	 		
-	 		List<ProductDTO> ar = productService.getProductList(pager);
+	 		List<ProductDTO> ar = productService.getProductList();
 	 		
 	 		mv.addObject("list",ar);  
 	 		mv.setViewName("product/productCr");

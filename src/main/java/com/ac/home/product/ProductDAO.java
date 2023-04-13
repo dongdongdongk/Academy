@@ -20,15 +20,8 @@ public class ProductDAO {
 	private SqlSession sqlSession;
 	private final String NAMESPACE="com.ac.home.product.ProductDAO.";
 	
-	public Long getProductCount(Pager pager) throws Exception{
-	
-		return sqlSession.selectOne(NAMESPACE+"getProductCount", pager);
-	}
-	
-	public List<ProductDTO> getProductList(Pager pager)throws Exception{
-		
-		return sqlSession.selectList(NAMESPACE+"getProductList", pager);
-		
+	public List<ProductDTO> getProductList()throws Exception{
+		return sqlSession.selectList(NAMESPACE+"getProductList");
 	}
 	
 	public ProductDTO getProductDetail(ProductDTO productDTO)throws Exception{
@@ -43,12 +36,6 @@ public class ProductDAO {
 		
 		return sqlSession.insert(NAMESPACE+"setProductAdd", productDTO);
 	}
-	
-	
-//	public int setCategoryAdd(ProductDTO productDTO)throws Exception{
-//		
-//		  return sqlSession.insert(NAMESPACE+"setCategoryAdd", productDTO); 
-//	}
 	 
 	public int setProductUpdate(ProductDTO productDTO)throws Exception{
 		
@@ -73,9 +60,6 @@ public class ProductDAO {
 		
 		return sqlSession.delete(NAMESPACE+"getProductFileDelete", productImgDTO);
 	}
-	
-
-
 	
 }
 	

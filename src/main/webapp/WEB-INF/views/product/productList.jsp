@@ -39,19 +39,18 @@
 				<c:import url="../template/header.jsp"></c:import>
 				<header style="margin-top: 30px;">
 						<div class="row mb-4 ">
-							<h1 class="col-md-7 mx-auto text-center border-bottom border-dark pb-3 wow fadeInDown" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">상품LIST</h1>
 			
 					<div class="category_event">
 						<div class="category_cont">
 							<ul class="category_ul nav justify-content-center grey lighten-4 py-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
 								<li class="nav-item">
-									<a class="nav-link active" id="allEvent">전체</a>
+									<a class="nav-link active" id="allList">전체</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" id="continueEvent">책</a>
+									<a class="nav-link" id="bookList">책</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" id="endEvent">강의</a>
+									<a class="nav-link" id="crList">강의</a>
 								</li>
 							</ul>
 						</div>
@@ -94,7 +93,7 @@
 												</tr>
 											</thead>
 
-											<tbody>
+											<tbody id="productContent">
 												<c:forEach items="${list}" var="dto">
 													<tr class="my-6 wow fadeInUp" data-wow-delay="0.1s"
 														style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
@@ -144,7 +143,7 @@
 										<c:if test="${not empty member}">
 											<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
 												<div class="col-12 float-right">
-													<button type="button" class="image-button  float-right color-5 wow fadeIn " data-wow-delay="0.1s" onclick="location.href='./add'">
+													<button type="button" class="image-button  float-right color-5 wow fadeIn " data-wow-delay="0.1s" onclick="location.href='./productAdd'">
 														<img src="/resources/images/pen2.png" alt="Button icon">
 														<span>글쓰기</span>
 													</button>	

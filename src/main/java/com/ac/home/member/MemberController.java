@@ -195,10 +195,10 @@ public class MemberController {
 	
 	// 관리자 페이지 상품 관리
 	@GetMapping(value = "productList")
-	public ModelAndView getProductList(Pager pager)throws Exception{
+	public ModelAndView getProductList()throws Exception{
 		ModelAndView mv = new ModelAndView();
 		
-		List<ProductDTO> ar = productService.getProductList(pager);
+		List<ProductDTO> ar = productService.getProductList();
 		
 	    mv.addObject("list", ar);
 	      
