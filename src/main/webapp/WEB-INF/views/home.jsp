@@ -1023,6 +1023,13 @@
             <div class="gallery-grid gallery-grid2x1">
                 <img src="/resources/images/m.jpg" alt="">
             </div><!-- .gallery-grid -->
+            <div class="gallery-grid gallery-grid2x1">
+                <img src="/resources/images/자연10.png" alt="">
+            </div><!-- .gallery-grid -->
+            <div class="gallery-grid gallery-grid1x1">
+                <a href="#"><img src="/resources/images/o.jpg" alt=""></a>
+            </div><!-- .gallery-grid -->
+           
 
             <!-- <div class="gallery-grid gallery-grid3x1">
                 <a href=""><img src="/resources/images/n.jpg" alt=""></a>

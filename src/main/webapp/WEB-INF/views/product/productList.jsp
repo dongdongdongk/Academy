@@ -99,7 +99,7 @@
 														style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
 														<td class="item pt-5 pb-5">
 															<div class="row">
-																<div class="col-md-4 mb-4 ">
+																<div class="col-md-4 mb-3 ">
 																	<c:forEach items="${dto.productImgDTOs}"
 																		var="fileDTO">
 																		<img class="thumbnail2 radius"

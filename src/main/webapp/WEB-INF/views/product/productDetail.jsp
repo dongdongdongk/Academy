@@ -15,21 +15,23 @@
 <link rel="stylesheet" href="/resources/css/productDetail.css">
 </head>
 <style>
-.product-price {
+/* .product-price {
   font-size: 32px;
   font-weight: bold;
   color: #fff;
   text-align: center;
   padding: 10px;
   border-radius: 5px;
-  background-color: #11cc8e;
+  background-color: #11b6cc;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-}
+} */
 .custom-color {
     background-color: #0d7dec;
 }
-
+.ii{
+display : inline-block;
+}
 </style>
 <body class="courses-page">
             <div class="page-header">
@@ -64,43 +66,44 @@
     </div>
 
 <!-- Main content -->
-<main class="container my-3" style="margin-right: 10px;" style="margin-top: 50px;">
+<main class="container my-3" style="margin-right: 250px;" style="margin-top: 50px;">
 
     
-  <div class="row">
-    <div class="col-md-8">
-     
+  <div class="row product-container">
+    <div class="product_info">
       <c:if test="${not empty dto}">
-        <%-- <h3>상품 번호 : ${dto.num}</h3> --%>
-        <h3 class="product-price">${dto.title}</h3>
-        <%-- <h3 class="product-price">${dto.price}</h3> --%>
-        <%-- <h3>카테고리 : ${dto.categoryNum}</h3> --%>
-        <h3 class="product-price">${dto.info}</h3>
-
-        <div class="row">
-          <c:forEach items="${dto.productImgDTOs}" var="fileDTO">
-            <div class="col-md-3 mb-2">
-              <img  src="../resources/images/${fileDTO.save}" class="product-price">
+        <c:forEach items="${dto.productImgDTOs}" var="fileDTO">
+            <div class="col-md-3 mb-3 ii">
+              <img  src="../resources/images/${fileDTO.save}" class="product-price" style="width: 150%;">
             </div>
-          </c:forEach>
+        </c:forEach>
+
+        <div class="product_detail">
+          <h3 class="product-price">${dto.title}</h3>
+        <h3 class="product-price">${dto.price}</h3>
         </div>
-       
-		
-        <form action="./update" id="frm">
-          <input type="hidden" name="num" value="${dto.num}">
-          <c:if test="${not empty member}">
-            <c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
-              <button id="delete" type="button" class="btn btn-outline-danger"><a href="./delete?num=${dto.num}">상품삭제</a></button>
-              <button id="update" type="submit" class="btn btn-outline-primary">상품수정</button>
+		</div>
+
+      <div class="product-btn">
+        
+          <form action="./update" id="frm">
+            <input type="hidden" name="num" value="${dto.num}">
+            <c:if test="${not empty member}">
+              <c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
+                <button id="delete" type="button" class="btn btn-outline-danger"><a href="./delete?num=${dto.num}">상품삭제</a></button>
+                <button id="update" type="submit" class="btn btn-outline-primary">상품수정</button>
+              </c:if>
             </c:if>
-          </c:if>
-          <c:if test="${not empty member}">
-	          <button id="addToCartBtn" data-member-id="${member.id}" data-product-id="${dto.num}" type="button" class="btn btn-outline-primary">장바구니</button>          
-          </c:if>
-          
-          <button id="list" type="button" class="btn btn-outline-secondary"><a href="./list">목록으로</a></button>
-        </form>
-      </c:if>
+            <c:if test="${not empty member}">
+              <button id="addToCartBtn" data-member-id="${member.id}" data-product-id="${dto.num}" type="button" class="btn btn-outline-primary">장바구니</button>          
+            </c:if>
+            
+            <button id="list" type="button" class="btn btn-outline-secondary"><a href="./list">목록으로</a></button>
+          </form>
+        </c:if>
+       <!-- <h3 class="product-price">${dto.info}</h3> -->
+      </div>
+      <h3 class="product-price">${dto.info}</h3>
     </div>
    
   </div>
