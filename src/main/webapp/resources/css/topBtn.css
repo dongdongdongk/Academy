@@ -8,6 +8,16 @@
     margin-right: 10px;
     margin-bottom: 5px;
 }
+.bgColor1 {
+    background-color: gray !important;
+    color: white;
+    font-size: 1rem;
+    border: 1px white; 
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
 
 .quick {
     position: fixed;

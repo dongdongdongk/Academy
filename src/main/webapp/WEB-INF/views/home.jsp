@@ -534,7 +534,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6 align-content-lg-stretch">
                     <header class="heading">
-                        <h2 class="entry-title">정보처리기사 실기 파이널 맛보기</h2>
+                        <h2 class="entry-title">정보처리기사 실기 파이널</h2>
 
                         <p>제대로 배우고 제대로 놀아봅시다. 무기력했던 생활에 활력을 불어넣어요 어디에서도 찾아볼 수 없었던 특별한 클래스 지금 시작하세요.</p>
                     </header><!-- .heading -->
@@ -566,8 +566,10 @@
 
                 <div class="col-12 col-lg-6 flex align-content-center mt-5 mt-lg-0">
                     <div class="ezuca-video position-relative">
-                        <div class="video-play-btn position-absolute">
-                            <button onclick="OpenWindow('https://www.wannaedu.com/template/viewer.jsp?id=223&lid=305811', '새 창', 800, 600)" ></button>
+                        <div class="video-play-btn position-absolute" onclick="OpenWindow('https://www.wannaedu.com/template/viewer.jsp?id=223&lid=305811', '새 창', 800, 600)">
+                            <!-- <button onclick="OpenWindow('https://www.wannaedu.com/template/viewer.jsp?id=223&lid=305811', '새 창', 800, 600)" > -->
+                            <img src="/resources/images/bbuu3333.png" alt=""> 
+                        <!-- </button> -->
                             
                         </div><!-- .video-play-btn -->
                         
@@ -681,7 +683,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                            <img src="/resources/images/1.jpg" alt="">
+                            <img src="/resources/images/스크린샷 2023-04-10 114359.png" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -715,7 +717,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                            <img src="/resources/images/2.jpg" alt="">
+                            <img src="/resources/images/스크린샷 2023-04-10 114350.png" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -731,7 +733,7 @@
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
-                                    <span class="free-cost">무료</span>
+                                    <span class="free-cost">30000원</span>
                                 </div><!-- .price-drop -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
@@ -749,7 +751,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                           <img src="/resources/images/3.jpg" alt="">
+                           <img src="/resources/images/스크린샷 2023-04-10 114409.png" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -784,7 +786,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                          <img src="/resources/images/4.jpg" alt="">
+                          <img src="/resources/images/스크린샷 2023-04-10 114325.png" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -800,7 +802,7 @@
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
-                                    <span class="free-cost">무료</span>
+                                    <span class="free-cost">40000원</span>
                                 </div><!-- .course-cost -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
@@ -818,7 +820,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                           <img src="/resources/images/5.jpg" alt="">
+                           <img src="/resources/images/스크린샷 2023-04-10 114233.png" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -853,7 +855,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                            <img src="/resources/images/6.jpg" alt="">
+                            <img src="/resources/images/스크린샷 2023-04-10 114313.png" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -869,7 +871,7 @@
 
                             <footer class="entry-footer flex justify-content-between align-items-center">
                                 <div class="course-cost">
-                                    <span class="free-cost">무료</span>
+                                    <span class="free-cost">35000원</span>
                                 </div><!-- .course-cost -->
 
                                 <div class="course-ratings flex justify-content-end align-items-center">
