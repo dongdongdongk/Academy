@@ -362,7 +362,7 @@
 
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="team-member">
-                    <img src="/resources/images/교수2.png" alt="">
+                    <img src="/resources/images/교수2b.png" alt="">
 
                     <h3>김동현</h3>
                     <h4>Python</h4>

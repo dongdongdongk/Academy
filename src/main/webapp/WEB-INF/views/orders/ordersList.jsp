@@ -74,7 +74,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <header class="entry-header">
-                                    <h1>흥달쌤강의</h1>
+                                    <h1>강의 영상</h1>
                                 </header><!-- .entry-header -->
                             </div><!-- .col -->
                         </div><!-- .row -->
