@@ -23,6 +23,38 @@
   border-bottom: 1px solid #ddd;
 }
 
+#sub_banner {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  margin-top: 100px;
+}
+
+#sub_banner h2 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.941rem;
+  color: white;
+  text-align: center;
+  letter-spacing: -0.7pt;
+  line-height: 1;
+  font-weight: bold;
+  z-index: 99;
+}
+
+#sub_banner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #b6f0d0;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 슬라이더 이미지 구현 */
 .post-slider{
   width:100%;
   margin:0px auto;
@@ -30,18 +62,36 @@
   position:relative;
   background-color: #f3f7f8 !important;
 }
-
+.post-slider .silder-title{
+  text-align:center;
+  margin:30px auto;
+}
+.post-slider .next{
+  position:absolute;
+  top:50%;
+  right:30px;
+  font-size:2em;
+  color:gray;
+  cursor: pointer;
+}
+.post-slider .prev{
+  position:absolute;
+  top:50%;
+  left:30px;
+  font-size:2em;
+  color:gray;
+  cursor: pointer;
+}
 .post-slider .post-wrapper{
   width:84%;
-  height:400px;
+  height:350px;
   margin:0px auto;
   overflow: hidden;
   padding:10px 0px 10px 0px;
-  display: flex;
 }
 .post-slider .post-wrapper .post{
-  width:500px;
-  height:350px;
+  width:300px;
+  height:300px;
   margin:0px 10px;
   display:inline-block;
   background:white;
@@ -94,7 +144,6 @@
 
 .review_list .cr-information .pointColor {
   display: flex;
-  margin-top: 20px;
 }
 
 .review_list .cr-information .pointColor h5 {
@@ -133,8 +182,7 @@
   background-image: url(/resources/images/mypage_g.png);
   background-repeat: no-repeat;
   background-position: center left;
-  margin-left: 200px;
-  margin-top: 3px;
+  margin-left: 150px;
   padding-left: 20px;
 }
 
@@ -169,7 +217,7 @@
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   overflow: hidden;
-  height: 3.8rem;
+  height: 3.6rem;
 }
 
 .post-slider .post-wrapper .post .post-contents .pointColor .svg {
@@ -189,6 +237,4 @@
   margin-top: 50px;
 }
 
-.cr-information .cr-informationdetails {
-  margin-top: 10px;
-}
+
