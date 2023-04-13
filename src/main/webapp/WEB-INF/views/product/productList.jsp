@@ -23,6 +23,7 @@
 </style>				
 </head>
 <body class="courses-page">
+	<c:import url="../template/header.jsp"></c:import>
             <div class="page-header">
               <div class="page-header-overlay">
                     <div class="container">
@@ -36,26 +37,25 @@
                     </div>
                 </div>
             </div>
-				<c:import url="../template/header.jsp"></c:import>
+
+			<div class="category_event">
+				<div class="category_cont">
+					<ul class="category_ul nav justify-content-center grey lighten-4 py-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+						<li class="nav-item">
+							<a class="nav-link active" id="allList">전체</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="bookList">교재</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="crList">강의</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+				
 				<header style="margin-top: 30px;">
-						<div class="row mb-4 ">
-			
-					<div class="category_event">
-						<div class="category_cont">
-							<ul class="category_ul nav justify-content-center grey lighten-4 py-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-								<li class="nav-item">
-									<a class="nav-link active" id="allList">전체</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" id="bookList">책</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" id="crList">강의</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				         
+					<div class="row mb-4 ">
 						<c:if test="${listcheck != 'empty'}">
 							<div class="d-flex justify-content-center">
 								<div class="row w-75 mx-auto ">

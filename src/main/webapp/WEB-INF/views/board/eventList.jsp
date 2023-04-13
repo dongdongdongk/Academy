@@ -86,23 +86,34 @@
                     </div>
                 </div>
 
-                <div class="row search_contents">
-                    <form class="row" action="./list" method="get" id="searchForm">
-                        <input type="hidden" name="page" value="1" id="page">
-                      <div class="search_kind col-auto">
-                        <label for="kind" class="visually-hidden">Kind</label>
-                        <select class="form-select" name="kind" id="kind" aria-label="Default select example">
-                          <option value="title" ${pager.kind eq 'title'? 'selected':''}>제목</option>
-                          <option value="contents" ${pager.kind eq 'contents' ?'selected':''}>내용</option>
-                        </select>
-                      </div>
-                      <div class="search_input col-auto">
-                        <label for="search" class="visually-hidden">Search</label>
-                        <input type="text" class="form-control" value="${pager.search}" name="search" id="search" placeholder="검색어를 입력하세요">
-                      </div>
-                      <div class="search_btn col-auto">
-                        <button type="submit" class="btn btn-outline-success">검색</button>
-                      </div>
+                <div class="row col-md-12 d-flex justify-content-end">
+                    <form class="row g-3 " action="./list" method="get" id="searchForm">
+                        
+                        <div class="col-auto ml-auto">
+                            <div class="input-group mb-4">
+                                <input type="hidden" name="page" value="1" id="page">
+                                <div class="col-auto">
+                                    <label for="kind" class="visually-hidden">Kind</label>
+                                    <select class="form-select wow fadeInUp" data-wow-delay="0.1s" name="kind" id="kind"
+                                        aria-label="Default select example">
+                                        <option value="title" ${pager.kind eq 'title' ? 'selected' :''}>제목</option>
+                                        <option value="contents" ${pager.kind eq 'contents' ?'selected':''}>내용
+                                        </option>
+                                        <option value="writer" ${pager.kind eq 'writer' ? 'selected' :''}>작성자
+                                        </option>
+                                    </select>
+                                </div>
+                                <input type="text" class="form-control mb-4 wow fadeInUp" data-wow-delay="0.1s"
+                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"
+                                    value="${pager.search}" name="search" id="search" placeholder="검색어를 입력하세요">
+                                <button type="submit" style="background: none; border: none; cursor: pointer;"
+                                    class="align-items-start">
+                                    <img src="/resources/images/search.png" alt="search" width="30" height="30"
+                                        class="mb-3 wow fadeInUp" data-wow-delay="0.1s"
+                                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                                </button>
+                            </div>
+                        </div>
                     </form>
                 </div>
 
