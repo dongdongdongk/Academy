@@ -2899,6 +2899,36 @@ p.footer-copyright {
     filter: brightness(0) invert(1);
   }
 
+  .image-buttonclose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 50px;
+    background-color: #df3030;
+    border: none;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+
+  .image-buttonclose img {
+    margin-right: 15px;
+    width: 17px;
+    height: 17px;
+    color: white;
+    filter: brightness(0) invert(1);
+  }
+
+
+
+
+
+
+
+
   .green {
     color: #19c880;
 
@@ -2907,4 +2937,16 @@ p.footer-copyright {
   .tableSize {
     width:100%
 
+  }
+
+  .fontlight {
+    color: #a09c9c;
+    font-style: #a09c9c; 
+
+  }
+
+
+  .addTitleSize {
+    height: 50px;
+    width: 872px;
   }

@@ -175,8 +175,8 @@
 													<div class="input-group mb-4">
 													  <input type="text" class="form-control mb-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;"
 														value="${pager.search}" name="search" id="search" placeholder="검색어를 입력하세요">
-													  <button type="submit" style="background: none; border: none; cursor: pointer;">
-														<img src="/resources/images/search.png" alt="search" width="30" height="30">
+													  <button type="submit" style="background: none; border: none; cursor: pointer;" class="align-items-start">
+														<img src="/resources/images/search.png" alt="search" width="30" height="30" class="mb-3 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
 													  </button>
 													</div>
 												  </div>
@@ -265,12 +265,7 @@
 								</div>
 
 
-								<div class="row mt-4 d-flex align-items-center">
-									<div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
-										<a href="catalog.html">
-											<i class="fas fa-arrow-left mr-2"></i> Continue Shopping</a>
-									</div>
-								</div>
+								
 							</div>
 						</c:if>
 
