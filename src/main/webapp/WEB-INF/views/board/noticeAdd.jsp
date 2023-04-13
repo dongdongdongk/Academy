@@ -44,7 +44,7 @@
 						<label for="contents" class="form-label">내용</label>
 					  </div>
 					  <div class="col-sm-10">
-						<textarea class="form-control" name="contents" id="contents" placeholder="내용을 입력하세요"></textarea>
+						<textarea class="form-control addMarginRight" name="contents" id="contents" placeholder="내용을 입력하세요"></textarea>
 					  </div>
 					</div>
 				  </div>

@@ -2950,3 +2950,7 @@ p.footer-copyright {
     height: 50px;
     width: 872px;
   }
+
+  .addMarginRight {
+    margin-right: 10px;
+  }
