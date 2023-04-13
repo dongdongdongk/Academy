@@ -9,7 +9,6 @@
 <c:import url="../template/common_css.jsp"></c:import>
 <c:import url="../template/tempcss.jsp"></c:import>
 <link rel="stylesheet" href="/resources/css/crList.css">
-<link rel="stylesheet" href="/resources/css/reset.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -150,7 +149,7 @@
 						${dto.title}
 					</div>
 					<div>
-						<details class="cr-information details">
+						<details class="cr-informationdetails">
 							<summary>내용보기</summary>
 							<p>${dto.contents}</p>
 						</details>
