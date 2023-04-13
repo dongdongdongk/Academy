@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>수강후기 목록</title>
 <c:import url="../template/common_css.jsp"></c:import>
+<c:import url="../template/tempcss.jsp"></c:import>
 <link rel="stylesheet" href="/resources/css/crList.css">
 <link rel="stylesheet" href="/resources/css/reset.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -149,7 +150,7 @@
 						${dto.title}
 					</div>
 					<div>
-						<details>
+						<details class="cr-information details">
 							<summary>내용보기</summary>
 							<p>${dto.contents}</p>
 						</details>
@@ -168,7 +169,9 @@
 <c:import url="../template/common_js.jsp"></c:import>
 <c:import url="../template/bottom.jsp"></c:import>
 <c:import url="../template/kakao.jsp"></c:import>
+<c:import url="../template/tempjs.jsp"></c:import>
 <script src="../resources/js/pageing.js"></script>
 <script src="/resources/js/crList.js"></script>
+<script src="/resources/js/slideToggle.js"></script>
 </body>
 </html>
