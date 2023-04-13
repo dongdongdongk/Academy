@@ -534,7 +534,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6 align-content-lg-stretch">
                     <header class="heading">
-                        <h2 class="entry-title">About Academy</h2>
+                        <h2 class="entry-title">정보처리기사 실기 파이널 맛보기</h2>
 
                         <p>제대로 배우고 제대로 놀아봅시다. 무기력했던 생활에 활력을 불어넣어요 어디에서도 찾아볼 수 없었던 특별한 클래스 지금 시작하세요.</p>
                     </header><!-- .heading -->
@@ -567,10 +567,11 @@
                 <div class="col-12 col-lg-6 flex align-content-center mt-5 mt-lg-0">
                     <div class="ezuca-video position-relative">
                         <div class="video-play-btn position-absolute">
-                            <img src="/resources/images/video-icon.png" alt="Video Play">
+                            <button onclick="OpenWindow('https://www.wannaedu.com/template/viewer.jsp?id=223&lid=305811', '새 창', 800, 600)" ></button>
+                            
                         </div><!-- .video-play-btn -->
-
-                        <img src="/resources/images/video-screenshot.png" alt="">
+                        
+                        <img src="/resources/images/4444.jpg" alt="">
                     </div><!-- .ezuca-video -->
                 </div><!-- .col -->
             </div><!-- .row -->
@@ -586,7 +587,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-6 order-2 order-lg-1 flex align-items-center mt-5 mt-lg-0">
                                 <figure class="user-avatar">
-                                    <img src="/resources/images/user-1.jpg" alt="">
+                                    <img src="/resources/images/11.png" alt="">
                                 </figure><!-- .user-avatar -->
                             </div><!-- .col -->
 
@@ -596,7 +597,7 @@
                                 </div><!-- .entry-content -->
 
                                 <div class="entry-footer">
-                                    <h3 class="testimonial-user">장*서 - <span>Goodee Academy</span></h3>
+                                    <h3 class="testimonial-user">정*인 - <span>Goodee Academy</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -608,7 +609,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-6 order-2 order-lg-1 flex align-items-center mt-5 mt-lg-0">
                                 <figure class="user-avatar">
-                                    <img src="/resources/images/user-2.jpg" alt="">
+                                    <img src="/resources/images/22.png" alt="">
                                 </figure><!-- .user-avatar -->
                             </div><!-- .col -->
 
@@ -618,7 +619,7 @@
                                 </div><!-- .entry-content -->
 
                                 <div class="entry-footer">
-                                    <h3 class="testimonial-user">정*구 - <span>Goodee Academy</span></h3>
+                                    <h3 class="testimonial-user">윈* - <span>Goodee Academy</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -630,7 +631,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-6 flex order-2 order-lg-1 align-items-center mt-5 mt-lg-0">
                                 <figure class="user-avatar">
-                                    <img src="/resources/images/user-3.jpg" alt="">
+                                    <img src="/resources/images/33.png" alt="">
                                 </figure><!-- .user-avatar -->
                             </div><!-- .col -->
 
@@ -640,7 +641,7 @@
                                 </div><!-- .entry-content -->
 
                                 <div class="entry-footer">
-                                    <h3 class="testimonial-user">이*원 - <span>Goodee Academy</span></h3>
+                                    <h3 class="testimonial-user">이*훈 - <span>Goodee Academy</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -680,7 +681,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                            <a href="#"><img src="/resources/images/1.jpg" alt=""></a>
+                            <img src="/resources/images/1.jpg" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -688,7 +689,7 @@
                                 <h2 class="entry-title">전체 Android 개발자 과정</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author">장현서</div>
+                                    <div class="course-author">박**</div>
 
                                     <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
@@ -714,7 +715,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                            <a href="#"><img src="/resources/images/2.jpg" alt=""></a>
+                            <img src="/resources/images/2.jpg" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -722,7 +723,7 @@
                                 <h2 class="entry-title">자바과정 초급에서 고급으로</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author">장현서</div>
+                                    <div class="course-author">이**</div>
 
                                     <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
@@ -748,7 +749,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                            <a href="#"><img src="/resources/images/3.jpg" alt=""></a>
+                           <img src="/resources/images/3.jpg" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -756,7 +757,7 @@
                                 <h2 class="entry-title">전체 디지털 마케팅 과정</h2>
 
                                 <div class="entry-meta flex align-items-center">
-                                    <div class="course-author">장현서</div>
+                                    <div class="course-author">정**</div>
 
                                     <div class="course-date">2023년 4월 14일</div>
                                 </div><!-- .course-date -->
@@ -783,7 +784,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                            <a href="#"><img src="/resources/images/4.jpg" alt=""></a>
+                          <img src="/resources/images/4.jpg" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -817,7 +818,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                            <a href="#"><img src="/resources/images/5.jpg" alt=""></a>
+                           <img src="/resources/images/5.jpg" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -852,7 +853,7 @@
                 <div class="col-12 col-md-6 col-lg-4 px-25">
                     <div class="course-content">
                         <figure class="course-thumbnail">
-                            <a href="#"><img src="/resources/images/6.jpg" alt=""></a>
+                            <img src="/resources/images/6.jpg" alt="">
                         </figure><!-- .course-thumbnail -->
 
                         <div class="course-content-wrap">
@@ -1145,7 +1146,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script type='text/javascript' src='/resources/js/masonry.pkgd.min.js'></script>
 <script type='text/javascript' src='/resources/js/jquery.collapsible.min.js'></script>
 <script type='text/javascript' src='/resources/js/custom.js'></script>
-
+<script type='text/javascript' src='/resources/js/homeScreen.js'></script>
 
 </body>
 </html>

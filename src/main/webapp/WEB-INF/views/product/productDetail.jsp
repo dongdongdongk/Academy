@@ -15,17 +15,6 @@
 <link rel="stylesheet" href="/resources/css/productDetail.css">
 </head>
 <style>
-/* .product-price {
-  font-size: 32px;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #11b6cc;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-} */
 .custom-color {
     background-color: #0d7dec;
 }
@@ -77,12 +66,12 @@ display : inline-block;
               <img  src="../resources/images/${fileDTO.save}" class="product-price" style="width: 150%;">
             </div>
         </c:forEach>
-
+	</c:if>
         <div class="product_detail">
-          <h3 class="product-price">${dto.title}</h3>
-        <h3 class="product-price">${dto.price}</h3>
-        </div>
-		</div>
+          <h3 class="product-price">상품명 : ${dto.title}</h3>
+       	  <h3 class="product-price1">가 격 : ${dto.price}</h3>
+        
+		
 
       <div class="product-btn">
         
@@ -100,10 +89,11 @@ display : inline-block;
             
             <button id="list" type="button" class="btn btn-outline-secondary"><a href="./list">목록으로</a></button>
           </form>
-        </c:if>
+       </div>
+       </div>
        <!-- <h3 class="product-price">${dto.info}</h3> -->
       </div>
-      <h3 class="product-price">${dto.info}</h3>
+      <h3 class="product-price2">${dto.info}</h3>
     </div>
    
   </div>
