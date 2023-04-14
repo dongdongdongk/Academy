@@ -29,6 +29,11 @@ $(document).ready(function() {
       }
     });
   });
+  
+$(".btn_order").on("click", function() {
+  alert("주문이 완료되었습니다.");
+});
+  
 });
 
 $(".deleteBtn").on("click", function() {
