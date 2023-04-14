@@ -14,4 +14,4 @@ function OpenWindow(url, windowName, width, height) {
   }
 
 
-  OpenWindow('https://www.example.com', '새 창', 800, 600);
+  
