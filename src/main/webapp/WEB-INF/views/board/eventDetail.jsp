@@ -48,8 +48,20 @@
 				<div class="view_title">
 					<h3 hidden="">${dto.num}</h3>
 					<h3>
-						<span class="bgColor category">이벤트</span>
+				<c:choose>
+					<c:when test="${dto.endDate.after(dto.regDate)}">
+					
+					<!-- 등록일이 종료일보다 늦은 경우 -->
+					<span class="bgColor category">진행중</span>
+				</c:when>
+				<c:when test="${dto.regDate.after(dto.endDate)}">
+					<!-- 종료일이 등록일보다 늦은 경우 -->
+					<span class="bgColor1 category">종료</span>
+				</c:when>
+				</c:choose>	
 						${dto.title}
+						
+			
 					</h3>
 					<ul>
 						<li>
