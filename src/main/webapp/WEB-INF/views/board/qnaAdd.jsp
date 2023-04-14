@@ -25,18 +25,30 @@
     				<input type="text" name="writer" class="form-control" id="writer" value="${member.id}" readonly="readonly">
   				</div>
   				
-  				<div class="col-md-12 mt-5">
-    				<label for="title" class="form-label">제목</label>
-    				<input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력하세요">
-  				</div>
+  				<div class="col-md-12 mt-3">
+					<label for="title" class="form-label strongFont2">제목</label> <input type="text"
+						class="form-control" name="title" id="title"
+						placeholder="제목을 입력하세요">
+				</div>
   				
-  				<div class="col-md-12 mt-5">
-    				<label for="contents" class="form-label">내용</label>
-    				<textarea class="form-control" name="contents" id="contents" placeholder="내용을 입력하세요"></textarea>
-  				</div>
+				<div class="col-md-12 mt-3">
+					<label for="contents" class="form-label strongFont2">내용</label>
+					<textarea class="form-control " name="contents" id="contents"
+						placeholder="내용을 입력하세요"></textarea>
+				</div>
 
-				<div class="row col-md-2 mx-auto mt-5">
-					<button type="submit" class="btn btn-primary">글등록</button>
+				<div class="col-md-12 mt-6">
+					<div class="d-flex justify-content-between mt-4">
+						<button type="submit" class="image-button color-5 wow fadeIn mr-3" data-wow-delay="0.1s">
+							<img src="/resources/images/pen2.png" alt="Button icon">
+							<span>글등록</span>
+						</button>
+		
+						<button type="button" class="image-buttonclose color-5 wow fadeIn" data-wow-delay="0.1s" onclick="location.href='./list'">
+							<img src="/resources/images/close.png" alt="Button icon">
+							<span>취소</span>
+						</button>
+					</div>
 				</div>
 			</form>
 		</div>
@@ -45,7 +57,10 @@
 	<c:import url="../template/common_js.jsp"></c:import>
 	<c:import url="../template/bottom.jsp"></c:import>
 	<script>
-		$("#contents").summernote();
+		$("#contents").summernote({
+			height : 500,
+			width : 1139.95
+		});
 	</script>
 </body>
 </html>

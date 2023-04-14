@@ -27,27 +27,22 @@
 		<div class="row col-md-7 mx-auto">
 			<form class="row g-3" action="./add" method="post"
 				enctype="multipart/form-data">
-				<div class="col-md-6">
-					<label for="writer" class="form-label">작성자</label> <input
+				<div class="col-md-4">
+					<label for="writer" class="form-label strongFont2">작성자</label> <input
 						type="text" name="writer" class="form-control" id="writer" readonly value="${member.id}">
 				</div>
 
-				<div class="col-md-12 mt-5 d-flex align-items-center">
-					<label for="title" class="form-label me-3">제목</label> <input type="text"
-						class="form-control addTitleSize" name="title" id="title"
+				<div class="col-md-12 mt-3">
+					<label for="title" class="form-label strongFont2">제목</label> <input type="text"
+						class="form-control" name="title" id="title"
 						placeholder="제목을 입력하세요">
 				</div>
 
-				<div class="col-md-12 mt-5">
-					<div class="row">
-					  <div class="col-sm-2">
-						<label for="contents" class="form-label">내용</label>
-					  </div>
-					  <div class="col-sm-10">
-						<textarea class="form-control addMarginRight" name="contents" id="contents" placeholder="내용을 입력하세요"></textarea>
-					  </div>
-					</div>
-				  </div>
+				<div class="col-md-12 mt-3">
+					<label for="contents" class="form-label strongFont2">내용</label>
+					<textarea class="form-control " name="contents" id="contents"
+						placeholder="내용을 입력하세요"></textarea>
+				</div>
 
 				<div id="fileList" class="my-5">
 					<div class="input-group mb-3">
@@ -65,17 +60,18 @@
 					
 
 				</div>
-				<div class="col-md-2 mx-auto mt-5">
-					<button type="button" class="image-button  float-right color-5 wow fadeIn " data-wow-delay="0.1s" onclick="location.href='./qnaAdd'">
-						<img src="/resources/images/pen2.png" alt="Button icon">
-						<span>글등록</span>
-					</button>
-					
-					<button type="button" class="image-buttonclose color-5 wow fadeIn ml-3 " data-wow-delay="0.1s" onclick="location.href='./list'">
-						<img src="/resources/images/close.png" alt="Button icon">
-						<span>취소</span>
-					</button>
-					
+				<div class="col-md-12 mt-2">
+					<div class="d-flex justify-content-between">
+						<button type="submit" class="image-button color-5 wow fadeIn mr-3" data-wow-delay="0.1s">
+							<img src="/resources/images/pen2.png" alt="Button icon">
+							<span>글등록</span>
+						</button>
+		
+						<button type="button" class="image-buttonclose color-5 wow fadeIn" data-wow-delay="0.1s" onclick="location.href='./list'">
+							<img src="/resources/images/close.png" alt="Button icon">
+							<span>취소</span>
+						</button>
+					</div>
 				</div>
 				
 				
@@ -90,7 +86,7 @@
 	<script>
 		$("#contents").summernote({
 			height : 500,
-			width : 1088
+			width : 1187.48
 		});
 	</script>
 	
