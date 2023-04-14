@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Hello World</title>
+<c:import url="../template/tempcss.jsp"></c:import>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -130,7 +131,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <header class="entry-header">
+                        <header class="entry-header wow fadeInDown" data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
                             <h1>ABOUT</h1>
                         </header><!-- .entry-header -->
                     </div><!-- .col -->
@@ -144,15 +146,17 @@
 
         <div class="row">
             <div class="col-12">
-                <div class="about-heading">
-                    <h2 class="entry-title">Welcome to Academy</h2>
+                <div class="about-heading wow fadeInDown" data-wow-delay="0.1s"
+                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
+                    <h2 class="entry-title ">Welcome to Academy</h2>
 
                     <p>우리의 강사진을 믿고 따라오시면 합격의 문으로 단번에 들어 오실수 있습니다.</p>
                 </div><!-- .about-heading -->
             </div><!-- .col -->
 
             <div class="col-12 col-lg-6">
-                <div class="about-stories">
+                <div class="about-stories wow fadeInUp" data-wow-delay="0.1s"
+                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                     <h3>Our Stories</h3>
 
                     <p>
@@ -171,7 +175,8 @@
 
                     <p>장현서 강사는 쌍기술사는 물론 정보처리기사등 많은 자격증을 취득한 이론과 실무에 완변한 강사입니다. </p>
 
-                    <ul class="p-0 m-0 green-ticked">
+                    <ul class="p-0 m-0 green-ticked wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <li>컴퓨터시스템응용기술사</li>
                         <li>정보관리기술사</li>
                         <li>정보처리기사 등</li>
@@ -180,7 +185,8 @@
             </div><!-- .col -->
 
             <div class="col-12 col-lg-6">
-                <div class="about-values">
+                <div class="about-values wow fadeInUp" data-wow-delay="0.1s"
+                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                     <h3>Our Stories</h3>
 
                     <p>이해하기 쉬운 설명으로 초심자에게 매우 적합한 강의, 어려운 컴퓨터 용어들을 이해 위주의 수업으로 최대한 쉽게 학습할 수 있도록 가르친다
@@ -192,7 +198,8 @@
 
                     <p>이규원 강사는 쌍기술사는 물론이고 기사 자격증만 총 8개가 있습니다. 기사 자격증에서만큼은 그 누구 보다 빠르고 확실하게 취득할수 있게 여러분을 인도 해줄 것입니다</p>
 
-                    <ul class="p-0 m-0 green-ticked">
+                    <ul class="p-0 m-0 green-ticked wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <li>정보관리기술사</li>
                         <li>컴퓨터시스템응용기술사</li>
                         <li>정보보안기사 등</li>
@@ -207,13 +214,15 @@
             <div class="row">
                 <div class="col-12 col-lg-6 align-content-lg-stretch">
                     <header class="heading">
-                        <h2 class="entry-title">About Academy</h2>
+                        <h2 class="entry-title wow fadeInUp" data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">About Academy</h2>
 
                         <p>제대로 배우고 제대로 놀아봅시다. 무기력했던 생활에 활력을 불어넣어요 어디에서도 찾아볼 수 없었던 특별한 클래스 지금 시작하세요.</p>
                     </header><!-- .heading -->
 
                     <div class="entry-content ezuca-stats">
-                        <div class="stats-wrap flex flex-wrap justify-content-lg-between">
+                        <div class="stats-wrap flex flex-wrap justify-content-lg-between wow fadeInUp" data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                             <div class="stats-count">
                                 50<span>M+</span>
                                 <p>학승 중인 학생</p>
@@ -238,8 +247,9 @@
                 </div><!-- .col -->
 
                 <div class="col-12 col-lg-6 flex align-content-center mt-5 mt-lg-0">
-                    <div class="ezuca-video position-relative">
-                        <div class="video-play-btn position-absolute">
+                    <div class="ezuca-video position-relative wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="video-play-btn position-absolute ">
                             <img src="/resources/images/video-icon.png" alt="Video Play">
                         </div><!-- .video-play-btn -->
 
@@ -257,18 +267,21 @@
                 <div class="swiper-slide">
                     <div class="container">
                         <div class="row">
-                            <div class="col-12 col-lg-6 order-2 order-lg-1 flex align-items-center mt-5 mt-lg-0">
+                            <div class="col-12 col-lg-6 order-2 order-lg-1 flex align-items-center mt-5 mt-lg-0 wow fadeInUp" data-wow-delay="0.1s"
+                            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                                 <figure class="user-avatar">
                                     <img src="/resources/images/교수.png" alt="">
                                 </figure><!-- .user-avatar -->
                             </div><!-- .col -->
 
                             <div class="col-12 col-lg-6 order-1 order-lg-2 content-wrap h-100">
-                                <div class="entry-content">
+                                <div class="entry-content wow fadeInUp" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                                     <p>저는 어린 나이에 쌍기술사와 기사 자격증만 8개를 보유하고 있습니다 누구보다도 기사 자격증에 관하여는 자신있고 증명했습니다.</p>
                                 </div><!-- .entry-content -->
 
-                                <div class="entry-footer">
+                                <div class="entry-footer wow fadeInUp" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                                     <h3 class="testimonial-user">이규원 교수 - <span>University in UK</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
@@ -280,13 +293,15 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-lg-6 order-2 order-lg-1 flex align-items-center mt-5 mt-lg-0">
-                                <figure class="user-avatar">
+                                <figure class="user-avatar wow fadeInUp" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                                     <img src="/resources/images/교수2.png" alt="">
                                 </figure><!-- .user-avatar -->
                             </div><!-- .col -->
 
                             <div class="col-12 col-lg-6 order-1 order-lg-2 content-wrap h-100">
-                                <div class="entry-content">
+                                <div class="entry-content wow fadeInUp" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                                 	<p>교사, 학생 및 대학으로서 우리는 이 교육을 모든 사람들이 이용할 수 있도록 도울 수 있습니다. 우린 된다고 생각 합니다.</p>
                                         
                                    
@@ -295,7 +310,8 @@
                                 </div><!-- .entry-content -->
 
                                 
-                                <div class="entry-footer">
+                                <div class="entry-footer wow fadeInUp" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                                     <h3 class="testimonial-user">장현서 교수  - <span>University in Oxford</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
@@ -313,11 +329,13 @@
                             </div><!-- .col -->
 
                             <div class="col-12 col-lg-6 order-1 order-lg-2 content-wrap h-100">
-                                <div class="entry-content">
+                                <div class="entry-content wow fadeInUp" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                                    	<p>저는 누구보다 수험생 여러분의 마음을 잘 알고 이해하는  교수진으로써 함께 앞으로 더욱 빛나는 미래를 그립시다</p>
                                 </div><!-- .entry-content -->
 
-                                <div class="entry-footer">
+                                <div class="entry-footer wow fadeInUp" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                                     <h3 class="testimonial-user">김동현 교수 - <span>University in Cambridge</span></h3>
                                 </div><!-- .entry-footer -->
                             </div><!-- .col -->
@@ -339,13 +357,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="team-heading">
+                <div class="team-heading wow fadeInUp" data-wow-delay="0.1s"
+                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                     <h2 class="entry-title">팀 구성진</h2>
                     <p>모두의 미래를 책임지고 빛을 향해 달려가는 길로 인도 하겠습니다.</p>
                 </div><!-- .team-heading -->
             </div><!-- .col -->
 
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s"
+            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <div class="team-member">
                     <img src="/resources/images/교수.png" alt="">
 
@@ -360,7 +380,8 @@
                 </div><!-- .team-member -->
             </div><!-- .col -->
 
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s"
+            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <div class="team-member">
                     <img src="/resources/images/교수2.png" alt="">
 
@@ -375,7 +396,8 @@
                 </div><!-- .team-member -->
             </div><!-- .col -->
 
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s"
+            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <div class="team-member">
                     <img src="/resources/images/교수3.png" alt="">
 
@@ -390,7 +412,8 @@
                 </div><!-- .team-member -->
             </div><!-- .col -->
 
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s"
+            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <div class="team-member">
                     <img src="/resources/images/교수4.png" alt="">
 
@@ -498,6 +521,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
        
     </footer><!-- .site-footer -->
+    <c:import url="../template/tempjs.jsp"></c:import>
    	<script type='text/javascript' src='/resources/js/jquery.js'></script>
 	<script type='text/javascript' src='/resources/js/swiper.min.js'></script>
 	<script type='text/javascript' src='/resources/js/masonry.pkgd.min.js'></script>

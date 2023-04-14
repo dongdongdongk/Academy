@@ -35,7 +35,7 @@
 						<include refid="noticeCondition"></include>						
 						ORDER BY 
  						CASE WHEN R.CHECKED = 1 THEN 0 ELSE 1 END, 
-  						ROWNUM DESC
+  						REGDATE DESC
 					) B 
 			)
 		WHERE R BETWEEN #{startRow}  AND #{lastRow} 

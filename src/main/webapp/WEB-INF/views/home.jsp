@@ -6,6 +6,7 @@
 <head>
     <meta charset='utf-8' />
     <title>동영상 강좌 서비스</title>
+    <c:import url="./template/tempcss.jsp"></c:import>
     <c:import url="./template/common_css.jsp"></c:import>
     <style>
     #calendar-wrapper {
@@ -344,16 +345,19 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
-                            <header class="entry-header">
+                            <header class="entry-header wow fadeInDown" data-wow-delay="0.1s"
+                            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
                                 <h4>온라인 과정 시작하기</h4>
                                 <h1>세상의 모든 배움의 시작</h1>
                             </header><!-- .entry-header -->
 
-                            <div class="entry-content">
+                            <div class="entry-content wow fadeInDown" data-wow-delay="0.1s"
+                            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
                                 <p>어디에서도 찾아볼 수 없었던 특별한 클래스 지금 시작하세요.</p>
                             </div><!-- .entry-content -->
 
-                            <footer class="entry-footer read-more">
+                            <footer class="entry-footer read-more wow fadeInDown" data-wow-delay="0.1s"
+                            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
                                 <a href="/product/list">더보기</a>
                             </footer><!-- .entry-footer -->
                         </div><!-- .hero-content-wrap -->
@@ -367,73 +371,89 @@
         <div class="container-fluid">
             <div class="flex flex-wrap align-items-stretch">
                 <div class="icon-box">
-                    <div class="icon">
+                    <div class="icon wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <span class="ti-user"></span>
                     </div><!-- .icon -->
 
                     <header class="entry-header">
-                        <h2 class="entry-title">전문가에게 배우세요</h2>
+                        <h2 class="entry-title wow fadeInUp" data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">전문가에게 배우세요</h2>
                     </header><!-- .entry-header -->
 
-                    <div class="entry-content">
+                    <div class="entry-content wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <p>기본에 충실하면서도 개념 하나하나를 놓치지 않는 전문가의 꼼꼼한 설명으로 지금까지 많은 사람들을 훌륭한 개발자로 성장하게 했습니다</p>
                     </div><!-- .entry-content -->
 
-                    <footer class="entry-footer read-more">
+                    <footer class="entry-footer read-more wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <a href="/qna/qnaList">더보기<i class="fa fa-long-arrow-right"></i></a>
                     </footer><!-- .entry-footer -->
                 </div><!-- .icon-box -->
 
                 <div class="icon-box">
-                    <div class="icon">
+                    <div class="icon wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <span class="ti-folder"></span>
                     </div><!-- .icon -->
 
-                    <header class="entry-header">
+                    <header class="entry-header wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <h2 class="entry-title">모든 강좌 무제한 시청</h2>
                     </header><!-- .entry-header -->
 
-                    <div class="entry-content">
+                    <div class="entry-content wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <p>웹사이트에 등록된 모든 무료/유료 강좌를 무제한으로 시청할 수 있습니다.</p>
                     </div><!-- .entry-content -->
 
-                    <footer class="entry-footer read-more">
+                    <footer class="entry-footer read-more wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <a href="/product/list">더보기<i class="fa fa-long-arrow-right"></i></a>
                     </footer><!-- .entry-footer -->
                 </div><!-- .icon-box -->
 
                 <div class="icon-box">
-                    <div class="icon">
+                    <div class="icon wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <span class="ti-book"></span>
                     </div><!-- .icon -->
 
-                    <header class="entry-header">
+                    <header class="entry-header wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <h2 class="entry-title">비법이 담긴 도서 증정</h2>
                     </header><!-- .entry-header -->
 
-                    <div class="entry-content">
+                    <div class="entry-content wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <p>강사의 10년간의 경험이 담긴 소책자를 택배로 배송해드립니다.</p>
                     </div><!-- .entry-content -->
 
-                    <footer class="entry-footer read-more">
+                    <footer class="entry-footer read-more wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <a href="/product/list">더보기<i class="fa fa-long-arrow-right"></i></a>
                     </footer><!-- .entry-footer -->
                 </div><!-- .icon-box -->
 
                 <div class="icon-box">
-                    <div class="icon">
+                    <div class="icon wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <span class="ti-world"></span>
                     </div><!-- .icon -->
 
-                    <header class="entry-header">
+                    <header class="entry-header wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <h2 class="entry-title">성장을 위한 클래스</h2>
                     </header><!-- .entry-header -->
 
-                    <div class="entry-content">
+                    <div class="entry-content wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <p>지금보다 나은 인생을 원하신다면 최고 전문가의 이야기를 들어보세요.</p>
                     </div><!-- .entry-content -->
 
-                    <footer class="entry-footer read-more">
+                    <footer class="entry-footer read-more wow fadeInUp" data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <a href="/qna/qnaList">더보기<i class="fa fa-long-arrow-right"></i></a>
                     </footer><!-- .entry-footer -->
                 </div><!-- .icon-box -->
@@ -441,7 +461,8 @@
         </div><!-- .container-fluid -->
     </div><!-- .icon-boxes -->
     <!--달력 입니다 건들지마세요-->
-    <div id="calendar-wrapper">
+    <div id="calendar-wrapper" class="wow fadeInUp" data-wow-delay="0.1s"
+    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
     <div id='calendar'></div>
     </div>
     <!--달력 입니다 건들지마세요-->
@@ -533,14 +554,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-6 align-content-lg-stretch">
-                    <header class="heading">
+                    <header class="heading wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <h2 class="entry-title">About Academy</h2>
 
                         <p>제대로 배우고 제대로 놀아봅시다. 무기력했던 생활에 활력을 불어넣어요 어디에서도 찾아볼 수 없었던 특별한 클래스 지금 시작하세요.</p>
                     </header><!-- .heading -->
 
                     <div class="entry-content ezuca-stats">
-                        <div class="stats-wrap flex flex-wrap justify-content-lg-between">
+                        <div class="stats-wrap flex flex-wrap justify-content-lg-between wow fadeInUp" data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                             <div class="stats-count">
                                 50<span>M+</span>
                                 <p>학습 중인 학생</p>
@@ -565,8 +588,9 @@
                 </div><!-- .col -->
 
                 <div class="col-12 col-lg-6 flex align-content-center mt-5 mt-lg-0">
-                    <div class="ezuca-video position-relative">
-                        <div class="video-play-btn position-absolute">
+                    <div class="ezuca-video position-relative wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="video-play-btn position-absolute ">
                             <img src="/resources/images/video-icon.png" alt="Video Play">
                         </div><!-- .video-play-btn -->
 
@@ -579,9 +603,10 @@
 
     <section class="testimonial-section">
         <!-- Swiper -->
-        <div class="swiper-container testimonial-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
+        <div class="swiper-container testimonial-slider ">
+            <div class="swiper-wrapper wow fadeInUp" data-wow-delay="0.1s"
+            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <div class="swiper-slide ">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-lg-6 order-2 order-lg-1 flex align-items-center mt-5 mt-lg-0">
@@ -660,7 +685,8 @@
 
     <section class="featured-courses vertical-column courses-wrap">
         <div class="container">
-            <div class="row mx-m-25">
+            <div class="row mx-m-25 wow fadeInUp" data-wow-delay="0.1s"
+            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <div class="col-12 px-25">
                     <header class="heading flex flex-wrap justify-content-between align-items-center">
                         <h2 class="entry-title">주요 과정</h2>
@@ -892,7 +918,8 @@
     </section><!-- .courses-wrap -->
 
     <section class="latest-news-events">
-        <div class="container">
+        <div class="container wow fadeInUp" data-wow-delay="0.1s"
+        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
             <div class="row">
                 <div class="col-12">
                     <header class="heading flex justify-content-between align-items-center">
@@ -974,7 +1001,8 @@
         </div><!-- .container -->
     </section><!-- .latest-news-events -->
 
-    <section class="home-gallery">
+    <section class="home-gallery wow fadeInUp" data-wow-delay="0.1s"
+    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
         <div class="gallery-wrap flex flex-wrap">
             <div class="gallery-grid gallery-grid1x1">
                 <img src="/resources/images/a.jpg" alt="">
@@ -1140,6 +1168,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 <c:import url="./template/topBtn.jsp"></c:import>
 <c:import url="./template/common_js.jsp"></c:import>
+<c:import url="./template/tempjs.jsp"></c:import>
 <script type='text/javascript' src='/resources/js/jquery.js'></script>
 <script type='text/javascript' src='/resources/js/swiper.min.js'></script>
 <script type='text/javascript' src='/resources/js/masonry.pkgd.min.js'></script>
