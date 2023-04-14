@@ -59,7 +59,7 @@
 								
 								<div>
 									<c:if test="${member.id eq dto.writer}">
-										<form action="./noticeUpdate" id="frm">
+										<form action="./update" id="frm">
 											<input type="hidden" name="num" value="${dto.num}">
 											<div class="d-flex">
 												<button type="submit" class="image-button color-5 wow fadeIn mr-3"
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 			</header>
-			<div class="modal fade" id="contentsModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+			<!-- <div class="modal fade" id="contentsModal" tabindex="-1" aria-labelledby="exampleModalLabel"
 				aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -105,7 +105,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 
 
@@ -128,14 +128,14 @@
 				<a href="./fileDown?fileNum=${fileDTO.fileNum}">${fileDTO.oriName}</a>
 				</c:forEach>
 				--%>
-				<c:if test="${not empty member}">
+				<!-- <c:if test="${not empty member}">
 					<c:if test="${member.roleDTO.roleName eq 'ADMIN'}">
 						<a href="./delete?num=${dto.num}">삭제</a>
 						<a href="./update?num=${dto.num}">수정</a>
 					</c:if>
 				</c:if>
 
-				<a href="./list">목록</a>
+				<a href="./list">목록</a> -->
 				</header>
 				<c:import url="../template/topBtn.jsp"></c:import>
 				<c:import url="../template/common_js.jsp"></c:import>

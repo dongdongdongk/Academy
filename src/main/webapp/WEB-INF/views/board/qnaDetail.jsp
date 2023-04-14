@@ -84,6 +84,9 @@
 								</form>
 							  </c:if>
 						 </div>
+						 <div class="container-fluid my-5 mx-auto" id="commentListResult" style="margin-left: -15px !important;">
+						 
+						 </div>
 					
 					</div>
 					
@@ -100,9 +103,6 @@
 				</div>
 				
 			</div>
-			<!-- <div class="container-fluid my-5" id="commentListResult">
-			
-			</div> -->
 		</div>
 	</header>	
 
@@ -143,5 +143,6 @@
 		<c:import url="../template/bottom.jsp"></c:import>
 		<script src="/resources/js/qnaReply.js"></script>
 		<script src="../resources/js/temp/move.js"></script>
+		<script src="/resources/js/commentListResult.js"></script>
 </body>
 </html>
